@@ -1,0 +1,13 @@
+.title {
+  font-size: 3rem;
+  font-weight: lighter;
+  background-color: var(--nord1);
+  padding: var(--title-padding) 0;
+  margin: 0;
+}
+@media screen and (prefers-color-scheme: light) {
+  .title {
+    background-color: var(--nord5);
+    color: var(--nord3);
+  }
+}

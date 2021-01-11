@@ -1,14 +1,11 @@
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import styles from './subtitle.module.css'
 
-const StyledSubtitle = styled.h3`
-  font-weight: lighter;
-  font-size: 2rem;
-  background-color: var(--nord1);
-  padding: var(--title-padding) 0;
-  @media screen and (prefers-color-scheme: light) {
-    background-color: var(--nord5);
-    color: var(--nord3);
-  }
-`
+const SubTitle = ({ children }) => (
+  <h3 className={styles.subtitle}>{children}</h3>
+)
+SubTitle.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
-export default StyledSubtitle
+export default SubTitle

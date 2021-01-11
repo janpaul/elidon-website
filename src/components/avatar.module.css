@@ -1,0 +1,16 @@
+.figure {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  margin: calc(var(--padding) * 8) auto;
+}
+.image {
+  border-radius: calc(var(--avatar-size) / 2);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  filter: grayscale(100%);
+}
+@media screen and (prefers-color-scheme: light) {
+  .image {
+    transform: scaleX(-1);
+  }
+}

@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+}
+.icon {
+  color: var(--linkcolor);
+  margin: calc(2 * var(--padding));
+}

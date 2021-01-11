@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+.header {
+  flex-grow: 0;
+  display: none;
+}
+
+.main {
+  flex-grow: 1;
+  justify-content: left;
+  width: 100vw;
+}
+.footer {
+  font-size: 1rem;
+  padding-bottom: var(--padding);
+  text-align: center;
+}
+@media screen and (orientation: portrait) {
+  .footer {
+    padding-bottom: var(--mobile-bottom-padding);
+  }
+}
