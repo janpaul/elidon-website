@@ -9,11 +9,23 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^3.13.0",
+    "babel-plugin-styled-components": "^1.12.0",
     "next": "10.0.5",
+    "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
-  }
+  },
+  "repository": {
+         "type": "git",
+         "url": "git@github.com:janpaul/elidon-website.git"
+       },
+  "bugs": {
+         "url": "https://github.com/janpaul/elidon-website/issues"
+       }
 }

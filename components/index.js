@@ -1,0 +1,5 @@
+export { default as Title } from './title'
+export { default as Subtitle } from './subtitle'
+export { default as Social } from './social'
+export { default as Avatar } from './avatar'
+export { default as Layout } from './layout'
