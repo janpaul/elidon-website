@@ -5,6 +5,7 @@ import Image from 'next/image'
 const StyledFigure = styled.figure`
   width: var(--avatar-size);
   height: var(--avatar-size);
+  margin: calc(var(--padding) * 8) auto;
 `
 const StyledImage = styled(Image)`
   border-radius: calc(var(--avatar-size) / 2);
