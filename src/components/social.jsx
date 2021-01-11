@@ -8,7 +8,7 @@ import {
   Instagram,
   Signal,
 } from '@icons-pack/react-simple-icons'
-import contact from '../contact.json'
+import contact from '../../contact.json'
 
 const Wrapper = styled.section`
   display: flex;
