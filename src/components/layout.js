@@ -1,13 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { NextDotJs, ReactJs, Vercel } from '@icons-pack/react-simple-icons'
 import styles from './layout.module.css'
+
+const FOOTER_ICON_SIZE = 12
 
 const Layout = ({ children }) => {
   return (
     <section className={styles.wrapper}>
       <header className={styles.header}>this is the header</header>
       <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}>&copy; 2021 elidon consultancy</footer>
+      <footer className={styles.footer}>
+        <span>&copy; 2021 elidon consultancy</span>,{' '}
+        <span>
+          powered by{' '}
+          <a href="https://reactjs.org" className={styles.iconLink}>
+            <ReactJs size={FOOTER_ICON_SIZE} />
+          </a>
+          <a href="https://nextjs.org" className={styles.iconLink}>
+            <NextDotJs size={FOOTER_ICON_SIZE} />
+          </a>
+          <a href="https://vercel.com" className={styles.iconLink}>
+            <Vercel size={FOOTER_ICON_SIZE} />
+          </a>
+        </span>
+      </footer>
     </section>
   )
 }

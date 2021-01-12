@@ -19,6 +19,9 @@
   padding-bottom: var(--padding);
   text-align: center;
 }
+.iconLink {
+  margin-right: var(--padding);
+}
 @media screen and (orientation: portrait) {
   .footer {
     padding-bottom: var(--mobile-bottom-padding);
