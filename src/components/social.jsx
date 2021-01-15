@@ -13,7 +13,7 @@ import styles from './social.module.css'
 const ICON_SIZE = 32
 
 const Social = () => (
-  <section className={styles.wrapper}>
+  <section className={`social-block ${styles.wrapper}`}>
     <a href={`mailto:${contact.email}`} className={styles.icon}>
       <Hey size={ICON_SIZE} />
     </a>
