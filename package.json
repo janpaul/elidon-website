@@ -10,7 +10,7 @@
     "cypress": "cypress open"
   },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^3.13.0",
+    "@icons-pack/react-simple-icons": "^4.0.0",
     "next": "10.0.5",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
