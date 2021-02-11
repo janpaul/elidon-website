@@ -1,0 +1,6 @@
+.table {
+  width: 100vw;
+}
+.table thead th {
+  text-align: left;
+}
