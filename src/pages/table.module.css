@@ -1,6 +1,19 @@
 .table {
-  width: 100vw;
+  margin: auto;
+  border: 1px solid var(--fgcolor);
+  padding: var(--padding);
+  border-radius: var(--padding);
 }
 .table thead th {
   text-align: left;
+  font-weight: lighter;
+}
+.table tbody tr:nth-child(even) {
+  background-color: var(--nord1);
+}
+.table tbody tr:nth-child(odd) {
+  background-color: var(--nord2);
+}
+.table tbody tr:hover {
+  background-color: var(--nord3);
 }

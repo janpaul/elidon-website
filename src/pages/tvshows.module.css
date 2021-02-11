@@ -1,0 +1,4 @@
+.quickLinks a {
+  font-size: 1rem;
+  margin-right: var(--padding);
+}

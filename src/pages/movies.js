@@ -30,7 +30,7 @@ const Movies = () => (
                 <td>{movie.year}</td>
                 <td>
                   <a href={_movieUrl(movie.id, movie.format)} target="_blank" rel="noopener noreferrer">
-                    View
+                    Watch
                   </a>
                 </td>
               </tr>
