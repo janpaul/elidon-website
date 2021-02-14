@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <header className={styles.header}>this is the header</header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        <span>&copy; 2021 elidon consultancy</span>,{' '}
+        <span>&copy; 1974 - 2021 elidon consultancy</span>,{' '}
         <span>
           powered by{' '}
           <a href="https://reactjs.org" className={styles.iconLink}>
