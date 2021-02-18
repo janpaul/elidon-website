@@ -5,7 +5,7 @@
   padding: var(--title-padding) 0;
 }
 @media screen and (prefers-color-scheme: light) {
-  .title {
+  .subtitle {
     background-color: var(--nord5);
     color: var(--nord3);
   }
