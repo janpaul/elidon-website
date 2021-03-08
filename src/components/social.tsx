@@ -1,6 +1,6 @@
 import React from 'react'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
-import contact from '../contact.json'
+import contact, { social } from '../contact.json'
 import styles from './social.module.css'
 
 const ICON_SIZE = 32
@@ -13,16 +13,16 @@ const Social = () => (
     <a href={`sgnl://${contact.phone}`} className={styles.icon}>
       <Signal size={ICON_SIZE} />
     </a>
-    <a href={`https://twitter.com/${contact.twitter}`} className={styles.icon}>
+    <a href={`https://twitter.com/${social.twitter}`} className={styles.icon}>
       <Twitter size={ICON_SIZE} />
     </a>
-    <a href={`https://github.com/${contact.github}`} className={styles.icon}>
+    <a href={`https://github.com/${social.github}`} className={styles.icon}>
       <Github size={ICON_SIZE} />
     </a>
-    <a href={`https://reddit.com/u/${contact.reddit}`} className={styles.icon}>
+    <a href={`https://reddit.com/u/${social.reddit}`} className={styles.icon}>
       <Reddit size={ICON_SIZE} />
     </a>
-    <a href={`https://instagram.com/${contact.instagram}`} className={styles.icon}>
+    <a href={`https://instagram.com/${social.instagram}`} className={styles.icon}>
       <Instagram size={ICON_SIZE} />
     </a>
   </section>

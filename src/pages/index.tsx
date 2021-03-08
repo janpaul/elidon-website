@@ -1,5 +1,8 @@
 import Head from 'next/head'
+import { Goodreads, Googlemaps } from '@icons-pack/react-simple-icons'
+
 import { Layout, Title, Subtitle, Avatar, Social } from '../components'
+import { address } from '../contact.json'
 import styles from './index.module.css'
 
 const Home = () => (
@@ -11,7 +14,18 @@ const Home = () => (
     <section className={styles.wrapper}>
       <Title>Jan Paul Stegeman</Title>
       <Avatar />
-      <section>Elidon / Keizersgracht 482 / 1017EG Amsterdam / NL</section>
+      <section>
+        {address.street} {address.number} / {address.zipcode} {address.place} / {address.country}
+      </section>
+      <section>
+        <a
+          href={`https://maps.apple.com/?daddr=${address.place}+${address.street}+${address.number}&dirflg=d`}
+          target="_blank"
+          title="Show the address in Apple Maps"
+        >
+          <Googlemaps /> Take me there!
+        </a>
+      </section>
       <Subtitle>Freelance full-stack software engineer based in (and around) Amsterdam.</Subtitle>
       <Social />
     </section>
