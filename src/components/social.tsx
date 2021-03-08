@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Twitter,
-  Github,
-  Hey,
-  Reddit,
-  Instagram,
-  Signal,
-} from '@icons-pack/react-simple-icons'
+import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
 import contact from '../contact.json'
 import styles from './social.module.css'
 
@@ -29,10 +22,7 @@ const Social = () => (
     <a href={`https://reddit.com/u/${contact.reddit}`} className={styles.icon}>
       <Reddit size={ICON_SIZE} />
     </a>
-    <a
-      href={`https://instagram.com/${contact.instagram}`}
-      className={styles.icon}
-    >
+    <a href={`https://instagram.com/${contact.instagram}`} className={styles.icon}>
       <Instagram size={ICON_SIZE} />
     </a>
   </section>

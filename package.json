@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "4.1.0",
-    "next": "10.0.7",
+    "next": "10.0.8",
     "normalize.css": "8.0.1",
     "prop-types": "15.7.2",
     "react": "17.0.1",
@@ -19,10 +19,10 @@
     "swr": "^0.4.2"
   },
   "devDependencies": {
-    "@types/react": "17.0.2",
-    "cypress": "6.5.0",
+    "@types/react": "17.0.3",
+    "cypress": "6.6.0",
     "prettier": "2.2.1",
-    "typescript": "4.2.2"
+    "typescript": "4.2.3"
   },
   "repository": {
     "type": "git",

@@ -11,9 +11,8 @@ const Home = () => (
     <section className={styles.wrapper}>
       <Title>Jan Paul Stegeman</Title>
       <Avatar />
-      <Subtitle>
-        Freelance full-stack software engineer based in (and around) Amsterdam.
-      </Subtitle>
+      <section>Elidon / Keizersgracht 482 / 1017EG Amsterdam / NL</section>
+      <Subtitle>Freelance full-stack software engineer based in (and around) Amsterdam.</Subtitle>
       <Social />
     </section>
   </Layout>
