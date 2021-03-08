@@ -1,16 +1,16 @@
 import React from 'react'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
-import contact, { social } from '../contact.json'
+import { email, phone, social } from '../contact.json'
 import styles from './social.module.css'
 
 const ICON_SIZE = 32
 
 const Social = () => (
   <section className={`social-block ${styles.wrapper}`}>
-    <a href={`mailto:${contact.email}`} className={styles.icon}>
+    <a href={`mailto:${email}`} className={styles.icon}>
       <Hey size={ICON_SIZE} />
     </a>
-    <a href={`sgnl://${contact.phone}`} className={styles.icon}>
+    <a href={`sgnl://${phone}`} className={styles.icon}>
       <Signal size={ICON_SIZE} />
     </a>
     <a href={`https://twitter.com/${social.twitter}`} className={styles.icon}>
