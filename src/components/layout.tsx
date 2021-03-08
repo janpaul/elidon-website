@@ -2,13 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NextDotJs, ReactJs, Vercel } from '@icons-pack/react-simple-icons'
 import styles from './layout.module.css'
+import HeaderContent from './header'
 
 const FOOTER_ICON_SIZE = 12
 
 const Layout = ({ children }) => {
   return (
     <section className={styles.wrapper}>
-      <header className={styles.header}>this is the header</header>
+      <header className={styles.header}>
+        <HeaderContent />
+      </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <span>&copy; 1974 - {new Date().getFullYear()} elidon consultancy</span>,{' '}

@@ -6,9 +6,11 @@
 }
 .header {
   flex-grow: 0;
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 0.8rem;
 }
-
 .main {
   flex-grow: 1;
   justify-content: left;

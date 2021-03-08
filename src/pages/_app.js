@@ -1,4 +1,5 @@
 import 'normalize.css/normalize.css'
+import { appWithTranslation } from 'next-i18next'
 import '../styles/index.css'
 
 // export const reportWebVitals = metric => {
@@ -7,4 +8,4 @@ import '../styles/index.css'
 
 const MyApp = ({ Component, pageProps }) => <Component {...pageProps} />
 
-export default MyApp
+export default appWithTranslation(MyApp)

@@ -1,0 +1,10 @@
+{
+  "home": {
+    "title": "Jan Paul Stegeman",
+    "map": {
+      "take_me_there": "Breng me er naar toe!",
+      "title": "Toon het adres in Apple Maps"
+    },
+    "subtitle": "Freelance full-stack software specialist die werkt in (en rondom) Amsterdam."
+  }
+}

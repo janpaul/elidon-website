@@ -1,0 +1,10 @@
+{
+  "home": {
+    "title": "Jan Paul Stegeman",
+    "map": {
+      "take_me_there": "Take me there!",
+      "title": "Show the address in Apple Maps"
+    },
+    "subtitle": "Freelance full-stack software engineer based in (and around) Amsterdam."
+  }
+}
