@@ -2,8 +2,8 @@
   "home": {
     "title": "Jan Paul Stegeman",
     "map": {
-      "take_me_there": "Breng me er naar toe!",
-      "title": "Toon het adres in Apple Maps"
+      "title": "Gebruik what3words om te laten zien waar dat is!",
+      "what3words": "bloosde.ginds.naaldhak"
     },
     "subtitle": "Freelance full-stack software specialist die werkt in (en rondom) Amsterdam."
   }

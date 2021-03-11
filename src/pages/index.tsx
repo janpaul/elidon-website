@@ -29,11 +29,12 @@ const Home = () => {
         </section>
         <section>
           <a
-            href={`https://maps.apple.com/?daddr=${address.place}+${address.street}+${address.number}&dirflg=d`}
+            href={`https://w3w.co/${t('home.map.what3words')}`}
             target="_blank"
+            rel="noopener noreferrer"
             title={t('home.map.title')}
           >
-            <Googlemaps /> {t('home.map.take_me_there')}
+            <Googlemaps /> {t('home.map.what3words')}
           </a>
         </section>
         <Subtitle>{t('home.subtitle')}</Subtitle>

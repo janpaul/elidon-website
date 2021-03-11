@@ -2,8 +2,8 @@
   "home": {
     "title": "Jan Paul Stegeman",
     "map": {
-      "take_me_there": "Take me there!",
-      "title": "Show the address in Apple Maps"
+      "title": "Take me to What3Words",
+      "what3words": "knitted.monitors.tanks"
     },
     "subtitle": "Freelance full-stack software engineer based in (and around) Amsterdam."
   }
