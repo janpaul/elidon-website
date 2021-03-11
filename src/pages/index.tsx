@@ -32,8 +32,10 @@ const Home = () => {
             rel="noopener noreferrer"
             title={t('home.map.title')}
           >
-            <img src="/w3w_Symbol_RGB_Red.svg" alt="what3words logo" className={styles.what3words} />
-            <span>{t('home.map.what3words')}</span>
+            <div className={styles.centeredLink}>
+              <img src="/w3w_Symbol_RGB_Red.svg" alt="what3words logo" className={styles.what3words} />
+              <span>{t('home.map.what3words')}</span>
+            </div>
           </a>
         </section>
         <Subtitle>{t('home.subtitle')}</Subtitle>

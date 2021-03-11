@@ -4,6 +4,12 @@
   justify-content: center;
   text-align: center;
 }
+.centeredLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .what3words {
   width: 32px;
   height: auto;
