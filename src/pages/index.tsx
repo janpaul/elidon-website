@@ -2,8 +2,6 @@ import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
-import { Googlemaps } from '@icons-pack/react-simple-icons'
-
 import { Layout, Title, Subtitle, Avatar, Social } from '../components'
 import { address } from '../contact.json'
 import styles from './index.module.css'
@@ -34,7 +32,8 @@ const Home = () => {
             rel="noopener noreferrer"
             title={t('home.map.title')}
           >
-            <Googlemaps /> {t('home.map.what3words')}
+            <img src="/w3w_Symbol_RGB_Red.svg" alt="what3words logo" className={styles.what3words} />
+            <span>{t('home.map.what3words')}</span>
           </a>
         </section>
         <Subtitle>{t('home.subtitle')}</Subtitle>
