@@ -1,10 +1,11 @@
 {
   "home": {
-    "title": "Jan Paul Stegeman",
+    "title": "Jan Paul",
+    "do_not_call": "Please don't call me, I probably won't answer",
     "map": {
       "title": "Take me to What3Words",
       "what3words": "knitted.monitors.tanks"
     },
-    "subtitle": "Freelance full-stack software engineer based in (and around) Amsterdam."
+    "subtitle": "Full-stack software engineer based in (and around) Amsterdam."
   }
 }

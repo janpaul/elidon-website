@@ -3,8 +3,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
 import { Layout, Title, Subtitle, Avatar, Social } from '../components'
-import { address } from '../contact.json'
+import { address, phone, email } from '../contact.json'
 import styles from './index.module.css'
+import React from 'react'
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
@@ -24,6 +25,18 @@ const Home = () => {
         <Avatar />
         <section>
           {address.street} {address.number} / {address.zipcode} {address.place} / {address.country}
+        </section>
+        <section>
+          <span>
+            <a href={`mailto:${email}`}>{email}</a>
+          </span>
+          &nbsp;/&nbsp;
+          <span>
+            <a href={`sgnl://${phone}`} className={styles.icon}>
+              {phone}
+            </a>{' '}
+            <sub>({t('home.do_not_call')})</sub>
+          </span>
         </section>
         <section>
           <a

@@ -1,10 +1,11 @@
 {
   "home": {
-    "title": "Jan Paul Stegeman",
+    "title": "Jan Paul",
+    "do_not_call": "Gaarne niet bellen, ik neem waarschijnlijk niet eens op",
     "map": {
       "title": "Gebruik what3words om te laten zien waar dat is!",
       "what3words": "bloosde.ginds.naaldhak"
     },
-    "subtitle": "Freelance full-stack software specialist die werkt in (en rondom) Amsterdam."
+    "subtitle": "Full-stack software specialist die werkt in (en rondom) Amsterdam."
   }
 }
