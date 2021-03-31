@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Title, Subtitle, Avatar, Social } from '../components'
+import { Layout, Title, Subtitle, Avatar, Social, MetaHeader } from '../components'
 import Contact from '../contact.json'
 import styles from './index.module.css'
 
@@ -8,6 +8,7 @@ const { address, phone, email } = Contact
 const Home = () => {
   return (
     <Layout>
+      <MetaHeader url="https://elidon.net/" />
       <section className={styles.wrapper}>
         <Title>Jan Paul</Title>
         <Avatar />
