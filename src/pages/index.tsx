@@ -1,7 +1,9 @@
-import { Layout, Title, Subtitle, Avatar, Social } from '../components'
-import { address, phone, email } from '../contact.json'
-import styles from './index.module.css'
 import React from 'react'
+import { Layout, Title, Subtitle, Avatar, Social } from '../components'
+import Contact from '../contact.json'
+import styles from './index.module.css'
+
+const { address, phone, email } = Contact
 
 const Home = () => {
   return (

@@ -3,11 +3,14 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { NextDotJs, ReactJs, Vercel } from '@icons-pack/react-simple-icons'
 
-import { description, title, keywords, image, analytics } from '../config.json'
-import { social } from '../contact.json'
+import Config from '../config.json'
+import Contact from '../contact.json'
 import styles from './layout.module.css'
 
 const FOOTER_ICON_SIZE = 12
+
+const { description, title, keywords, image, analytics } = Config
+const { social } = Contact
 
 const Layout = ({ children }) => {
   return (

@@ -1,7 +1,9 @@
 import React from 'react'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
-import { email, phone, social } from '../contact.json'
+import Contact from '../contact.json'
 import styles from './social.module.css'
+
+const { email, phone, social } = Contact
 
 const ICON_SIZE = 32
 
