@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { NextDotJs, ReactJs, Vercel } from '@icons-pack/react-simple-icons'
 
-import { description, title, keywords, image } from '../config.json'
+import { description, title, keywords, image, gaId } from '../config.json'
 import { social } from '../contact.json'
 import styles from './layout.module.css'
 
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={`@${social.twitter}`} />
         <meta name="twitter:author" content={`@${social.twitter}`} />
-        <meta name="og:title" content={title} />
+        <meta name="og:title" content={title} />1
         <meta name="og:site_name" content={title} />
         <meta name="og:description" content={description} />
         <meta name="og:type" content="website" />
@@ -38,6 +38,22 @@ const Layout = ({ children }) => {
         <meta property="og:image:height" content="400" />
         <meta name="og:locale" content="en_EN" />
         {/* end OpenGraph */}
+        {/* start Google Analytics */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', '${gaId}', {
+                      page_path: window.location.pathname,
+                    });
+                  `,
+          }}
+        />
+        {/* end Google Analytics */}
       </Head>
       <section className={styles.wrapper}>
         <main className={styles.main}>{children}</main>
