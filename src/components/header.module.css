@@ -1,7 +1,0 @@
-.list {
-}
-.list > li {
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 1rem;
-}

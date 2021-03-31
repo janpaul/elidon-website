@@ -1,6 +1,5 @@
 .title {
   font-size: 3rem;
-  font-weight: lighter;
   background-color: var(--nord1);
   padding: var(--title-padding) 0;
   margin: 0;
