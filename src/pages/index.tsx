@@ -1,5 +1,3 @@
-import Head from 'next/head'
-
 import { Layout, Title, Subtitle, Avatar, Social } from '../components'
 import { address, phone, email } from '../contact.json'
 import styles from './index.module.css'
@@ -8,10 +6,6 @@ import React from 'react'
 const Home = () => {
   return (
     <Layout>
-      <Head>
-        <title>Jan Paul</title>
-        <link rel="icon" href={'/favicon.ico'} />
-      </Head>
       <section className={styles.wrapper}>
         <Title>Jan Paul</Title>
         <Avatar />
