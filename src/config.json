@@ -17,5 +17,8 @@
     "css"
   ],
   "image": "https://elidon.net/jp.png",
-  "gaId": "G-461YCFNN4E"
+  "analytics": {
+    "enabled": true,
+    "id": "G-461YCFNN4E"
+  }
 }

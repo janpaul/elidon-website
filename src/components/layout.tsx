@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { NextDotJs, ReactJs, Vercel } from '@icons-pack/react-simple-icons'
 
-import { description, title, keywords, image, gaId } from '../config.json'
+import { description, title, keywords, image, analytics } from '../config.json'
 import { social } from '../contact.json'
 import styles from './layout.module.css'
 
@@ -39,20 +39,24 @@ const Layout = ({ children }) => {
         <meta name="og:locale" content="en_EN" />
         {/* end OpenGraph */}
         {/* start Google Analytics */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {analytics.enabled && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${analytics.id}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
 
-                    gtag('config', '${gaId}', {
+                    gtag('config', '${analytics.id}', {
                       page_path: window.location.pathname,
                     });
                   `,
-          }}
-        />
+              }}
+            />
+          </>
+        )}
         {/* end Google Analytics */}
       </Head>
       <section className={styles.wrapper}>
