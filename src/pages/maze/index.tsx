@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from './maze.module.css'
 import { setup, shutdown } from '../../lib/maze/maze'
+import { MetaHeader } from '../../components'
 
 const MazePage = () => {
   const canvasRef = useRef()
@@ -10,9 +11,12 @@ const MazePage = () => {
   }, [])
 
   return (
-    <section className={styles.wrapper}>
-      <canvas id="canvas" ref={canvasRef} height={800} width={800} className={styles.maze} />
-    </section>
+    <>
+      <MetaHeader url="https://elidon.net/maze" title="Maze generator" />
+      <section className={styles.wrapper}>
+        <canvas id="canvas" ref={canvasRef} height={800} width={800} className={styles.maze} />
+      </section>
+    </>
   )
 }
 
