@@ -17,3 +17,16 @@
 .section {
   margin-bottom: 1rem;
 }
+.bodyText {
+  width: 50vw;
+  text-align: left;
+  margin: 1rem auto 4rem auto;
+}
+.bodyText a {
+  color: var(--nord11);
+}
+@media screen and (orientation: portrait) {
+  .bodyText {
+    width: 98vw;
+  }
+}
