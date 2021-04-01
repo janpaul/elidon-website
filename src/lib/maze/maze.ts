@@ -3,6 +3,7 @@ import { Cell } from './cell'
 const INTERVAL = 5
 const MAZE_ROWS = 50
 const MAZE_COLUMNS = 50
+const ENDLESS_MODE = true
 
 let loop: NodeJS.Timeout
 const maze: Cell[] = []
@@ -71,7 +72,12 @@ export const setup = (canvas: HTMLCanvasElement) => {
   loop = setInterval(() => {
     if (done) {
       console.log('ALL DONE')
-      clearInterval(loop)
+      if (ENDLESS_MODE) {
+        maze.forEach(cell => cell.reset())
+        done = false
+      } else {
+        clearInterval(loop)
+      }
     } else {
       update()
       draw(canvas)

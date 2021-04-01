@@ -15,12 +15,7 @@ export class Cell {
     this.x = _x
     this.y = _y
     this.visited = false
-    this.wall = {
-      top: true,
-      right: true,
-      bottom: true,
-      left: true,
-    }
+    this.wall = { top: true, right: true, bottom: true, left: true }
   }
 
   draw(ctx: CanvasRenderingContext2D, cellWidth: number, cellHeight: number, current: boolean): void {
@@ -41,6 +36,11 @@ export class Cell {
 
   markVisited() {
     this.visited = true
+  }
+
+  reset() {
+    this.visited = false
+    this.wall = { top: true, right: true, bottom: true, left: true }
   }
 
   removeWall(direction: WallDirection) {
