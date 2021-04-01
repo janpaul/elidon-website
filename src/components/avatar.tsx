@@ -5,7 +5,7 @@ import config from '../config.json'
 
 const { avatarInterval } = config
 
-const AvatarImages = ['jp.jpg', 'jp2.jpg', 'roos+jp.jpg'].map(image => (
+const AvatarImages = ['jp.jpg', 'jp2.jpg', 'jp3.jpg', 'jp4.jpg', 'roos+jp.jpg', 'roos+jp2.jpg'].map(image => (
   <Image src={`/images/${image}`} alt="my avatar" width={256} height={256} className={styles.image} />
 ))
 
