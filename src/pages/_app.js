@@ -5,8 +5,8 @@ import Config from '../config.json'
 const { analytics } = Config
 
 export const reportWebVitals = metric => {
-  if (analytics.enabled && !!dataLayer) {
-    dataLayer.push({
+  if (analytics.enabled && !!window.dataLayer) {
+    window.dataLayer.push({
       event: 'Vital Reported',
       'vital.name': metric.name,
       'vital.value': metric.value,
