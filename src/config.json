@@ -21,5 +21,6 @@
     "enabled": true,
     "id": "G-461YCFNN4E"
   },
-  "avatarInterval": 10
+  "avatarInterval": 10,
+  "avatarImages": ["jp.jpg", "jp2.jpg", "jp3.jpg", "jp4.jpg", "roos+jp.jpg", "roos+jp2.jpg", "roos+jp3.jpg"]
 }
