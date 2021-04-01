@@ -9,6 +9,7 @@ declare module 'config.json' {
   const keywords: string[]
   const image: string
   const analytics: AnalyticsType
+  const avatarInterval: number
 }
 
 interface SocialType {

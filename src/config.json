@@ -20,5 +20,6 @@
   "analytics": {
     "enabled": true,
     "id": "G-461YCFNN4E"
-  }
+  },
+  "avatarInterval": 10000
 }
