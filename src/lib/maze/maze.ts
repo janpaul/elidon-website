@@ -7,7 +7,7 @@ const MAZE_COLUMNS = 50
 let loop: NodeJS.Timeout
 const maze: Cell[] = []
 const stack: Cell[] = []
-let current: Cell
+let currentCell: Cell
 let done = false
 
 const draw = (canvas: HTMLCanvasElement) => {
@@ -18,44 +18,44 @@ const draw = (canvas: HTMLCanvasElement) => {
   ctx.fillStyle = 'white'
   ctx.fillRect(0, 0, width, height)
   maze.forEach(cell => {
-    cell.draw(ctx, cellWidth, cellHeight, current.x === cell.x && current.y === cell.y)
+    cell.draw(ctx, cellWidth, cellHeight, !done && currentCell.x === cell.x && currentCell.y === cell.y)
   })
 }
 
 const getCell = (x, y) => maze[y * MAZE_COLUMNS + x]
 
 const update = () => {
-  current.markVisited()
+  currentCell.markVisited()
   const visitedCells = maze.filter(cell => cell.visited).length
 
   const neighbors = [
-    current.y > 0 ? getCell(current.x, current.y - 1) : undefined,
-    current.x < MAZE_COLUMNS - 1 ? getCell(current.x + 1, current.y) : undefined,
-    current.y < MAZE_ROWS - 1 ? getCell(current.x, current.y + 1) : undefined,
-    current.x > 0 ? getCell(current.x - 1, current.y) : undefined,
+    currentCell.y > 0 ? getCell(currentCell.x, currentCell.y - 1) : undefined,
+    currentCell.x < MAZE_COLUMNS - 1 ? getCell(currentCell.x + 1, currentCell.y) : undefined,
+    currentCell.y < MAZE_ROWS - 1 ? getCell(currentCell.x, currentCell.y + 1) : undefined,
+    currentCell.x > 0 ? getCell(currentCell.x - 1, currentCell.y) : undefined,
   ].filter(cell => !!cell)
   const unvisitedNeighbors = neighbors.filter(cell => !cell.visited)
   // console.log({ x: current.x, y: current.y, visitedCells, current, neighbors, unvisitedNeighbors })
   if (unvisitedNeighbors.length > 0) {
     // const next = unvisitedNeighbors[0]
-    stack.push(current)
+    stack.push(currentCell)
     const next = unvisitedNeighbors[Math.floor(Math.random() * unvisitedNeighbors.length)]
-    if (next.y < current.y) {
-      current.removeWall('top')
+    if (next.y < currentCell.y) {
+      currentCell.removeWall('top')
       next.removeWall('bottom')
-    } else if (next.y > current.y) {
-      current.removeWall('bottom')
+    } else if (next.y > currentCell.y) {
+      currentCell.removeWall('bottom')
       next.removeWall('top')
-    } else if (next.x < current.x) {
-      current.removeWall('left')
+    } else if (next.x < currentCell.x) {
+      currentCell.removeWall('left')
       next.removeWall('right')
-    } else if (next.x > current.x) {
-      current.removeWall('right')
+    } else if (next.x > currentCell.x) {
+      currentCell.removeWall('right')
       next.removeWall('left')
     }
-    current = next
+    currentCell = next
   } else {
-    current = stack.pop()
+    currentCell = stack.pop()
   }
   done = visitedCells === MAZE_COLUMNS * MAZE_ROWS
 }
@@ -66,7 +66,7 @@ export const setup = (canvas: HTMLCanvasElement) => {
       maze.push(new Cell(x, y))
     }
   }
-  current = getCell(0, 0)
+  currentCell = getCell(0, 0)
   draw(canvas)
   loop = setInterval(() => {
     if (done) {
