@@ -42,8 +42,9 @@ const Home = () => {
         </section>
         <Subtitle>Full-stack software engineer based in (and around) Amsterdam.</Subtitle>
         <p className={styles.bodyText}>
-          My name is Jan Paul and live in <a href="https://www.iamsterdam.com/en">Amsterdam</a>. I practice the martial
-          art <a href="http://www.worldtaekwondo.org/index.html">taekwondo</a> rather fanatically, and I run 5km per day
+          My name is Jan Paul. Together with my lovely wife Roos Koenen (and way too many kids) I live in{' '}
+          <a href="https://www.iamsterdam.com/en">Amsterdam</a>. I practice the martial art{' '}
+          <a href="http://www.worldtaekwondo.org/index.html">taekwondo</a> rather fanatically, and I run 5km per day
           although I will never really do that just for fun. I’m trained as an{' '}
           <a href="https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon">F-16</a> fighter pilot but at
           some point I made the switch to my other hobby - writing software. My main passion is on optimising code and
