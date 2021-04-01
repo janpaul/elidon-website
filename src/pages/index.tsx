@@ -6,12 +6,13 @@ import styles from './index.module.css'
 const { address, phone, email } = Contact
 
 const Home = () => {
+  const avatarChanged = () => false
   return (
     <Layout>
       <MetaHeader url="https://elidon.net/" />
       <section className={styles.wrapper}>
         <Title>Jan Paul</Title>
-        <Avatar />
+        <Avatar onAvatarChange={avatarChanged} />
         <section className={styles.section}>
           {address.street} {address.number} / {address.zipcode} {address.place} / {address.country}
         </section>
