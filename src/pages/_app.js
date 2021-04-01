@@ -1,8 +1,11 @@
 import 'normalize.css/normalize.css'
 import '../styles/index.css'
+import Config from '../config.json'
+
+const { analytics } = Config
 
 export const reportWebVitals = metric => {
-  if (!!dataLayer) {
+  if (analytics.enabled && !!dataLayer) {
     dataLayer.push({
       event: 'Vital Reported',
       'vital.name': metric.name,
