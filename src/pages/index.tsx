@@ -37,7 +37,7 @@ const Home = () => {
         </section>
         <Subtitle>Full-stack software engineer based in (and around) Amsterdam.</Subtitle>
         <p className={styles.bodyText}>
-          My name is Jan Paul. Together with my lovely wife Roos Koenen (and way too many kids) I live in{' '}
+          My name is Jan Paul. Together with my lovely wife Roos (and way too many kids) I live in{' '}
           <a href="https://www.iamsterdam.com/en">Amsterdam</a>. I practice the martial art{' '}
           <a href="http://www.worldtaekwondo.org/index.html">taekwondo</a> rather fanatically, and I run 5km per day
           although I will never really do that just for fun. I’m trained as an{' '}
