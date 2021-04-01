@@ -16,12 +16,7 @@ const Home = () => {
           {address.street} {address.number} / {address.zipcode} {address.place} / {address.country}
         </section>
         <section className={styles.section}>
-          <a
-            href={`https://w3w.co/${address.w3w}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Take me to What3Words"
-          >
+          <a href={`https://w3w.co/${address.w3w}`} title="Take me to What3Words">
             <div className={styles.centeredLink}>
               <img src={'/w3w_Symbol_RGB_Red.svg'} alt="what3words logo" className={styles.what3words} />
               <span>{address.w3w}</span>
