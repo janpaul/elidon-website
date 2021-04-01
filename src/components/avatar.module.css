@@ -2,6 +2,7 @@
   width: var(--avatar-size);
   height: var(--avatar-size);
   margin: calc(var(--padding) * 8) auto;
+  cursor: pointer;
 }
 .image {
   border-radius: calc(var(--avatar-size) / 2);
