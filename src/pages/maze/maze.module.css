@@ -1,0 +1,9 @@
+.wrapper {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+.maze {
+  border: 1px solid black;
+  margin: 1rem;
+}
