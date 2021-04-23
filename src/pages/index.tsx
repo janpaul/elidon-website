@@ -14,10 +14,11 @@ const {
 const Home = () => (
   <Layout>
     <MetaHeader url="https://elidon.net/" />
-    <section className={styles.content}>
+    <section className="content centered">
       <code>elidon.visit();</code>
-      <h3 className={styles.title}>
-        Hi! My name is Jan Paul and I'm a <em>creative</em> and <em>hyperactive</em> guy who writes amazing software.
+      <h3 className="title">
+        Hi! My name is Jan Paul and I'm a <em>creative</em>, <em>smart</em> and <em>hyperactive</em> guy who writes
+        amazing software.
       </h3>
       <div className={styles.social}>
         <a href={`mailto:${email}`}>

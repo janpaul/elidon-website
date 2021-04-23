@@ -1,0 +1,24 @@
+:root {
+  --padding: 3px;
+  --fgcolor: white;
+  --bgcolor: black;
+  --linkcolor: var(--bittersweet-d);
+  --content-bg: var(--sunflower-d);
+  --content-fg: black;
+  --avatar-size: 256px;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --fgcolor: black;
+    --bgcolor: var(--sunflower-d);
+    --linkcolor: black;
+    --content-bg: var(--sunflower);
+    --content-fg: black;
+  }
+}
+@media screen and (orientation: portrait) {
+  :root {
+    --avatar-size: 40vw;
+  }
+}

@@ -1,0 +1,30 @@
+a {
+  color: var(--linkcolor);
+  text-decoration: underline;
+  text-decoration-color: var(--bittersweet-d);
+}
+em {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--bittersweet);
+}
+code {
+  font-family: Monaco, monospace;
+  border-left: 4px solid var(--bittersweet);
+  padding: 1rem 0 1rem 1rem;
+}
+
+.content {
+}
+.content.centered {
+  text-align: center;
+  padding: 20vh 1rem 0 1rem;
+}
+@media screen and (orientation: portrait) {
+  .content.centered {
+    padding-top: 1rem;
+  }
+}
+.title {
+  font-weight: normal;
+}

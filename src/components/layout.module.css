@@ -12,11 +12,13 @@
   flex-direction: column;
   margin: 0;
   padding: 0 var(--padding) 0 var(--padding);
+  min-width: 140px;
 }
 .nametag {
   display: flex;
   flex-direction: column;
-  font-weight: lighter;
+  color: var(--medium-gray-d);
+  /*font-weight: lighter;*/
 }
 .nametag span {
   text-transform: uppercase;
@@ -26,24 +28,38 @@
   display: flex;
   flex-direction: column;
   text-align: right;
-  font-weight: lighter;
   font-size: 1rem;
+  color: var(--medium-gray-d);
 }
 .main {
   flex-grow: 1;
   background-color: var(--content-bg);
-  /*background: linear-gradient(130deg, var(--sunflower-d), var(--sunflower));*/
   color: var(--content-fg);
+}
+.filler {
+  width: 0;
 }
 @media screen and (orientation: portrait) {
   .wrapper {
     flex-direction: column;
   }
   .main {
-    padding-top: 5vh;
+    padding-top: 1rem;
   }
   .header {
     flex-direction: row;
     padding: 0;
+  }
+  .nametag span {
+    text-align: left;
+  }
+  .filler {
+    height: 2rem;
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  .nametag,
+  .contact {
+    color: black;
   }
 }

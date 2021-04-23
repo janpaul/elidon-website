@@ -7,7 +7,7 @@ const AboutPage = () => (
   <Layout>
     <MetaHeader url="https://elidon.net/about" />
     <div className={styles.wrapper}>
-      <h3 className={styles.title}>About me.</h3>
+      <h3 className="title">About me.</h3>
       <p className={styles.bodyText}>
         My name is Jan Paul. Together with my lovely wife Roos (and way too many kids) I live in{' '}
         <a href="https://www.iamsterdam.com/en">Amsterdam</a>. I practice the martial art{' '}

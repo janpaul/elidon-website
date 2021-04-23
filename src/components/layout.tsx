@@ -82,7 +82,10 @@ const Layout = ({ children }) => {
             </span>
           </div>
         </section>
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main}>
+          {children}
+          <div className={styles.filler} />
+        </main>
       </section>
     </>
   )
