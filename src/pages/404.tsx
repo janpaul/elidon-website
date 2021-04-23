@@ -1,12 +1,11 @@
-import { Layout, Title, Avatar } from '../components'
+import { Layout } from '../components'
 import styles from './index.module.css'
 
 const FourOhForPage = () => {
   return (
     <Layout>
       <section className={styles.wrapper}>
-        <Title>404 - Page Not Found</Title>
-        <Avatar />
+        <h1>404 - Page Not Found</h1>
       </section>
     </Layout>
   )
