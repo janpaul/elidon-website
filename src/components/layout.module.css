@@ -9,16 +9,3 @@
   justify-content: left;
   width: 100vw;
 }
-.footer {
-  font-size: 1rem;
-  padding-bottom: var(--padding);
-  text-align: center;
-}
-.iconLink {
-  margin-right: var(--padding);
-}
-@media screen and (orientation: portrait) {
-  .footer {
-    padding-bottom: var(--mobile-bottom-padding);
-  }
-}

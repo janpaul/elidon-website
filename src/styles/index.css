@@ -1,5 +1,23 @@
-@import './nord.css';
-@import './variables.css';
+@import 'palette.css';
+
+:root {
+  --padding: 3px;
+  --fgcolor: white;
+  --bgcolor: black;
+  --linkcolor: var(--bittersweet-d);
+  --content-bg: var(--sunflower-d);
+  --content-fg: black;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --fgcolor: black;
+    --bgcolor: var(--sunflower-d);
+    --linkcolor: black;
+    --content-bg: var(--sunflower);
+    --content-fg: black;
+  }
+}
 
 body {
   margin: 0;
@@ -15,4 +33,5 @@ body {
 }
 a {
   color: var(--linkcolor);
+  text-decoration: none;
 }

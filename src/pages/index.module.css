@@ -1,36 +1,91 @@
 .wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  flex-direction: row;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-content: center;
 }
-.centeredLink {
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 var(--padding) 0 var(--padding);
+}
+.nametag {
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+}
+.nametag span {
+  text-transform: uppercase;
+  text-align: right;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+.content {
+  background-color: var(--content-bg);
+  /*background: linear-gradient(130deg, var(--sunflower-d), var(--sunflower));*/
+  color: var(--content-fg);
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 30vh;
+}
+.avatar {
+  width: 128px;
+  height: auto;
+  filter: grayscale(100%);
+  margin: 0;
+  padding: 0;
+}
+.avatar:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+.title {
+  font-weight: normal;
+}
+.social {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
-.what3words {
-  width: 32px;
-  height: auto;
+.icon {
+  margin: var(--padding);
+  color: var(--content-fg);
+  width: 48px;
+  height: 48px;
 }
-.section {
-  margin-bottom: 1rem;
+.icon:hover {
+  animation: rotation ease-in-out 1s;
 }
-.bodyText {
-  width: 50vw;
-  text-align: left;
-  margin: 1rem auto 4rem auto;
-}
-.bodyText a {
-  color: var(--nord11);
-}
-@media screen and (orientation: portrait) {
-  .bodyText {
-    width: 98vw;
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }
-
-.progressBar {
-  width: 100%;
+@media screen and (orientation: portrait) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .content {
+    padding-top: 10vh;
+  }
+  .avatar {
+    height: 84px;
+    width: auto;
+  }
+  .header {
+    flex-direction: row;
+    padding: 0;
+  }
 }

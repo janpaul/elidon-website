@@ -16,11 +16,9 @@
     "html",
     "css"
   ],
-  "image": "https://elidon.net/jp.png",
+  "image": "https://elidon.net/images/jp.jpg",
   "analytics": {
     "enabled": true,
     "id": "G-461YCFNN4E"
-  },
-  "avatarInterval": 10,
-  "avatarImages": ["jp.jpg", "jp2.jpg", "jp3.jpg", "jp4.jpg", "roos+jp.jpg", "roos+jp2.jpg", "roos+jp3.jpg"]
+  }
 }
