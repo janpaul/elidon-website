@@ -35,18 +35,7 @@
   color: var(--content-fg);
   flex-grow: 1;
   text-align: center;
-  padding-top: 30vh;
-}
-.avatar {
-  width: 128px;
-  height: auto;
-  filter: grayscale(100%);
-  margin: 0;
-  padding: 0;
-}
-.avatar:hover {
-  filter: grayscale(0%);
-  cursor: pointer;
+  padding: 20vh 1rem 0 1rem;
 }
 .title {
   font-weight: normal;
@@ -65,6 +54,22 @@
 .icon:hover {
   animation: rotation ease-in-out 1s;
 }
+.avatar {
+  margin-left: calc(50% - var(--avatar-size) / 2);
+  background-image: url('/images/jp2.jpg');
+  background-position: center center;
+  background-size: contain;
+  margin-top: 2vw;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  border: 2px solid var(--content-fg);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+.avatar:hover {
+  background-image: url('/images/jp.jpg');
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -79,10 +84,6 @@
   }
   .content {
     padding-top: 10vh;
-  }
-  .avatar {
-    height: 84px;
-    width: auto;
   }
   .header {
     flex-direction: row;

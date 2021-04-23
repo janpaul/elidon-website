@@ -39,7 +39,10 @@ const Home = () => (
         </div>
       </section>
       <section className={styles.content}>
-        <h3 className={styles.title}>Hi! My name is Jan Paul and I write software.</h3>
+        <code>elidon.visit();</code>
+        <h3 className={styles.title}>
+          Hi! My name is Jan Paul and I'm a <em>creative</em> and <em>hyperactive</em> guy who writes amazing software.
+        </h3>
         <div className={styles.social}>
           <a href={`mailto:${email}`}>
             <Hey className={styles.icon} />
@@ -59,6 +62,9 @@ const Home = () => (
           <a href={`https://instagram.com/${instagram}`}>
             <Instagram className={styles.icon} />
           </a>
+        </div>
+        <div>
+          <div className={`animate__animated animate__fadeIn animate__slower ${styles.avatar}`} />
         </div>
       </section>
     </section>

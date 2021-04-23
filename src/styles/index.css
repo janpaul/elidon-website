@@ -7,6 +7,7 @@
   --linkcolor: var(--bittersweet-d);
   --content-bg: var(--sunflower-d);
   --content-fg: black;
+  --avatar-size: 256px;
 }
 
 @media screen and (prefers-color-scheme: light) {
@@ -34,4 +35,14 @@ body {
 a {
   color: var(--linkcolor);
   text-decoration: none;
+}
+em {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--bittersweet);
+}
+code {
+  font-family: Monaco, monospace;
+  border-left: 4px solid var(--bittersweet);
+  padding: 1rem 0 1rem 1rem;
 }

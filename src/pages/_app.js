@@ -1,4 +1,5 @@
 import 'normalize.css/normalize.css'
+import 'animate.css/animate.css'
 import '../styles/index.css'
 import Config from '../config.json'
 
