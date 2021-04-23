@@ -34,7 +34,8 @@ body {
 }
 a {
   color: var(--linkcolor);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: var(--bittersweet);
 }
 em {
   font-style: italic;

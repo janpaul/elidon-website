@@ -6,8 +6,8 @@ import Config from '../config.json'
 import Contact from '../contact.json'
 import styles from './layout.module.css'
 
+const { company, address, phone, email, social } = Contact
 const { description, title, keywords, image, analytics } = Config
-const { social } = Contact
 
 const Layout = ({ children }) => {
   return (
@@ -60,6 +60,28 @@ const Layout = ({ children }) => {
         {/* end Google Analytics */}
       </Head>
       <section className={styles.wrapper}>
+        <section className={styles.header}>
+          <div className={styles.nametag}>
+            <span>Jan</span>
+            <span>Paul</span>
+            <span>Stegeman</span>
+          </div>
+          <div className={styles.contact}>
+            <span>{company}</span>
+            <span>
+              {address.street} {address.number}
+            </span>
+            <span>{address.zipcode}</span>
+            <span>{address.place}</span>
+            <span>{address.country}</span>
+            <span>
+              <a href={`sgnl://${phone}`}>{phone}</a>
+            </span>
+            <span>
+              <a href={`mailto:${email}`}>{email}</a>
+            </span>
+          </div>
+        </section>
         <main className={styles.main}>{children}</main>
       </section>
     </>

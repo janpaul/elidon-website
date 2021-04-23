@@ -1,39 +1,4 @@
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
-  justify-content: flex-start;
-  align-content: center;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 0;
-  flex-direction: column;
-  margin: 0;
-  padding: 0 var(--padding) 0 var(--padding);
-}
-.nametag {
-  display: flex;
-  flex-direction: column;
-  font-weight: lighter;
-}
-.nametag span {
-  text-transform: uppercase;
-  text-align: right;
-}
-.contact {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  font-weight: lighter;
-  font-size: 1rem;
-}
 .content {
-  background-color: var(--content-bg);
-  /*background: linear-gradient(130deg, var(--sunflower-d), var(--sunflower));*/
-  color: var(--content-fg);
-  flex-grow: 1;
   text-align: center;
   padding: 20vh 1rem 0 1rem;
 }
@@ -56,6 +21,7 @@
 }
 .avatar {
   margin-left: calc(50% - var(--avatar-size) / 2);
+  margin-bottom: 1rem;
   background-image: url('/images/jp2.jpg');
   background-position: center center;
   background-size: contain;
@@ -76,17 +42,5 @@
   }
   to {
     transform: rotate(359deg);
-  }
-}
-@media screen and (orientation: portrait) {
-  .wrapper {
-    flex-direction: column;
-  }
-  .content {
-    padding-top: 10vh;
-  }
-  .header {
-    flex-direction: row;
-    padding: 0;
   }
 }
