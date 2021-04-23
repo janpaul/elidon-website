@@ -67,7 +67,6 @@ const Layout = ({ children }) => {
             <span>Stegeman</span>
           </div>
           <div className={styles.contact}>
-            <span>{company}</span>
             <span>
               {address.street} {address.number}
             </span>
