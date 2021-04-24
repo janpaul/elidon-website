@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
 import { Layout, MetaHeader } from '../components'
 import Contact from '../contact.json'
@@ -40,8 +41,8 @@ const Home = () => (
           <Instagram className={styles.icon} />
         </a>
       </div>
-      <div>
-        <div className={`animate__animated animate__fadeIn animate__slower ${styles.avatar}`} />
+      <div className={`animate__animated animate__fadeIn animate__slower ${styles.avatar}`}>
+        <Image src={`/images/jp2.jpg`} alt="my avatar" width={256} height={256} />
       </div>
       <Link href="/about">Read more &raquo;</Link>
     </section>
