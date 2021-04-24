@@ -23,16 +23,19 @@
 
 .avatar {
   margin-left: calc(50% - var(--avatar-size) / 2);
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  border: 2px solid var(--bgcolor);
+  margin-bottom: 1rem;
+  background-image: url('/images/jp2.jpg');
+  background-position: center center;
+  background-size: contain;
+  margin-top: 2vw;
+  filter: grayscale(100%);
   border-radius: 50%;
+  border: 2px solid var(--content-fg);
   width: var(--avatar-size);
   height: var(--avatar-size);
 }
-.avatar img {
-  filter: grayscale(100%);
-  border-radius: 50%;
+.avatar:hover {
+  background-image: url('/images/jp.jpg');
 }
 @media screen and (orientation: portrait) {
   .icon {
