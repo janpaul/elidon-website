@@ -7,7 +7,7 @@ const FourOhForPage = () => {
     <Layout>
       <section className="content centered">
         <h1 className="title">404 - Page Not Found</h1>
-        <img src={`/images/panda.png`} className={styles.panda} alt="a stupid panda" />
+        <img src={`/images/panda.webp`} className={styles.panda} alt="a stupid panda" />
       </section>
     </Layout>
   )

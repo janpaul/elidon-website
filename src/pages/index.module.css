@@ -24,7 +24,7 @@
 .avatar {
   margin-left: calc(50% - var(--avatar-size) / 2);
   margin-bottom: 1rem;
-  background-image: url('/images/jp2.jpg');
+  background-image: url('/images/jp2.webp');
   background-position: center center;
   background-size: contain;
   margin-top: 2vw;
@@ -35,7 +35,7 @@
   height: var(--avatar-size);
 }
 .avatar:hover {
-  background-image: url('/images/jp.jpg');
+  background-image: url('/images/jp.webp');
 }
 @media screen and (orientation: portrait) {
   .icon {
