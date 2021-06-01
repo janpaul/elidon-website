@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
 import { Layout, MetaHeader } from '../components'
-import Contact from '../contact.json'
+import Contact from '../contact'
 import styles from './index.module.css'
 
 const {

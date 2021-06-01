@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 
-import Config from '../config.json'
-import Contact from '../contact.json'
+import Config from '../config'
+import Contact from '../contact'
 import styles from './layout.module.css'
 
 const { address, phone, email, social } = Contact

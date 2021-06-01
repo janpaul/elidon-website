@@ -1,35 +1,31 @@
-interface AnalyticsType {
+declare interface AnalyticsType {
   enabled: boolean
   id: string
 }
-
-declare module 'config.json' {
-  const description: string
-  const title: string
-  const keywords: string[]
-  const image: string
-  const analytics: AnalyticsType
-  const avatarInterval: number
-}
-
-interface SocialType {
+declare interface SocialType {
   twitter: string
   github: string
   reddit: string
   instagram: string
 }
-interface AddressType {
+declare interface AddressType {
   street: string
   number: string
   zipcode: string
   place: string
   country: string
-  w3w?: string
 }
-declare module 'contact.json' {
-  const name: string
-  const email: string
-  const phone: string
-  const social: SocialType
-  const address: AddressType
+export declare interface ContactType {
+  name: string
+  email: string
+  phone: string
+  social: SocialType
+  address: AddressType
+}
+export declare interface ConfigurationType {
+  description: string
+  title: string
+  keywords: string[]
+  image: string
+  analytics: AnalyticsType
 }

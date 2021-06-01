@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Config from '../config.json'
+import Config from '../config'
 import React from 'react'
 
 const { title: pageTitle, description: pageDescription } = Config
