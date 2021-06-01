@@ -12,7 +12,7 @@ const contact: ContactType = {
   },
   address: {
     street: 'Keizersgracht',
-    number: '482',
+    number: 482,
     zipcode: '1017 EG',
     place: 'Amsterdam',
     country: 'The Netherlands',

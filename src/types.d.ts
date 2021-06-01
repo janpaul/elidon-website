@@ -10,7 +10,7 @@ declare interface SocialType {
 }
 declare interface AddressType {
   street: string
-  number: string
+  number: number
   zipcode: string
   place: string
   country: string
