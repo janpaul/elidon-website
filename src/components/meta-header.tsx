@@ -1,18 +1,17 @@
+import React from 'react'
 import Head from 'next/head'
 import Config from '../config'
-import React from 'react'
 
 const { title: pageTitle, description: pageDescription } = Config
 
-type OpenGraphType = 'website' | 'image'
-interface MetaHeaderType {
+interface Props {
   url: string
   title?: string
   description?: string
-  ogType?: OpenGraphType
+  ogType?: 'website' | 'image'
 }
 
-const MetaHeader = ({ title = pageTitle, description = pageDescription, url, ogType = 'website' }: MetaHeaderType) => (
+const MetaHeader = ({ title = pageTitle, description = pageDescription, url, ogType = 'website' }: Props) => (
   <Head>
     <title>{title}</title>
     <meta name="description" content={description} />

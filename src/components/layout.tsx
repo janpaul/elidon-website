@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 
@@ -9,7 +9,10 @@ import styles from './layout.module.css'
 const { address, phone, email, social } = Contact
 const { description, title, keywords, image, analytics } = Config
 
-const Layout = ({ children }) => {
+interface Props {
+  children: ReactNode
+}
+const Layout = ({ children }: Props) => {
   return (
     <>
       <Head>
