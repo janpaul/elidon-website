@@ -3,8 +3,8 @@
   --fgcolor: white;
   --bgcolor: black;
   --linkcolor: var(--bittersweet-d);
-  --content-bg: var(--sunflower-d);
-  --content-fg: black;
+  --content-bg: #111;
+  --content-fg: var(--light-gray);
   --avatar-size: 256px;
 }
 

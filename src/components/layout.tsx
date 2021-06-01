@@ -6,7 +6,7 @@ import Config from '../config.json'
 import Contact from '../contact.json'
 import styles from './layout.module.css'
 
-const { company, address, phone, email, social } = Contact
+const { address, phone, email, social } = Contact
 const { description, title, keywords, image, analytics } = Config
 
 const Layout = ({ children }) => {
