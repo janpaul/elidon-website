@@ -2,11 +2,13 @@ declare interface AnalyticsType {
   enabled: boolean
   id: string
 }
+/* these are the only valid options for my account name ;-) */
+export declare type AccountNameType = 'janpaul' | 'janpaul74'
 declare interface SocialType {
-  twitter: string
-  github: string
-  reddit: string
-  instagram: string
+  twitter: AccountNameType
+  github: AccountNameType
+  reddit: AccountNameType
+  instagram: AccountNameType
 }
 declare interface AddressType {
   street: string
