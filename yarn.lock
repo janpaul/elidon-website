@@ -103,10 +103,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@icons-pack/react-simple-icons@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-4.3.0.tgz#fff0f7a4f776042f801eacbf73ace846b0edc92c"
-  integrity sha512-GshOxzCtB9gYfeeHwn/bXHYzNtOgQjufz/hQ6UE5uO1A2EeWAIrXz3+Yl5vrx6dNbHFYhUowx3izohbxKoyAIQ==
+"@icons-pack/react-simple-icons@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-4.4.0.tgz#2bef639b843f981a467fa06e1bff2e811f33d102"
+  integrity sha512-LzGL9aeO/KgDkkvgt96fdel1z2KrUW0gC7F9frl9Pd9ocwi42d14nIWlN9buEAZHQplDmfyMBpixcje7xhs8bA==
   dependencies:
     prop-types "^15.7.2"
 
