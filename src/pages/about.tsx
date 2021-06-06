@@ -47,7 +47,7 @@ const AboutPage = () => (
           <NextDotJs /> Next
         </a>{' '}
         frameworks <em>please</em>. <div className={styles.break} />
-        I;'m also pretty fluent in{' '}
+        I'm also pretty fluent in{' '}
         <a href="https://en.wikipedia.org/wiki/C%2B%2B">
           <Cplusplus /> C++
         </a>{' '}
