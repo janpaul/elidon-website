@@ -5,13 +5,13 @@
 }
 .icon {
   margin: var(--padding);
-  color: var(--content-fg);
+  color: var(--fgcolor);
   width: 48px;
   height: 48px;
   box-sizing: border-box;
 }
 .icon:hover {
-  border-bottom: 4px solid var(--grapefruit);
+  border-bottom: 4px solid var(--nord11);
 }
 .avatar {
   margin-left: calc(50% - var(--avatar-size) / 2);
@@ -20,9 +20,9 @@
   background-position: center center;
   background-size: contain;
   margin-top: 2vw;
-  /*filter: grayscale(100%);*/
+  filter: grayscale(100%);
   border-radius: 50%;
-  border: 2px solid var(--content-fg);
+  border: 2px solid var(--fgcolor);
   width: var(--avatar-size);
   height: var(--avatar-size);
 }

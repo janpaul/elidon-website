@@ -1,16 +1,16 @@
 a {
   color: var(--linkcolor);
   text-decoration: underline;
-  text-decoration-color: var(--bittersweet-d);
+  text-decoration-color: var(--nord11);
 }
 em {
   font-style: italic;
   text-decoration: underline;
-  text-decoration-color: var(--bittersweet);
+  text-decoration-color: var(--nord11);
 }
 code {
   font-family: Monaco, monospace;
-  border-left: 4px solid var(--bittersweet);
+  border-left: 4px solid var(--nord10);
   padding: 1rem 0 1rem 1rem;
 }
 

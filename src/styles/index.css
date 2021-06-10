@@ -1,7 +1,6 @@
-@import 'palette.css';
+@import 'nord.css';
 @import 'variables.css';
 @import 'common.css';
-@import 'instagram.css';
 
 body {
   margin: 0;

@@ -15,7 +15,7 @@ const Home = () => (
   <Layout>
     <MetaHeader url="https://elidon.net/" />
     <section className="content centered">
-      <code>elidon.visit();</code>
+      <code>janpaul.visit();</code>
       <h3 className="title">
         Hi! My name is <em>Jan Paul</em> and I'm a <em>creative</em>, <em>smart</em> and <em>hyperactive</em> guy who
         writes amazing software.
@@ -41,15 +41,7 @@ const Home = () => (
         </a>
       </div>
       <div>
-        <div
-          className={classNames([
-            'animate__animated',
-            'animate__fadeIn',
-            'animate__slower',
-            styles.avatar,
-            'filter-ludwig',
-          ])}
-        />
+        <div className={classNames(['animate__animated', 'animate__fadeIn', 'animate__slower', styles.avatar])} />
       </div>
     </section>
   </Layout>
