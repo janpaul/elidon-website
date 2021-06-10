@@ -18,7 +18,7 @@ const Home = () => (
       <code>janpaul.visit();</code>
       <h3 className="title">
         Hi! My name is <em>Jan Paul</em> and I'm a <em>creative</em>, <em>smart</em> and <em>hyperactive</em> guy who
-        writes amazing software.
+        writes <em>amazing</em> software.
       </h3>
       <div className={styles.social}>
         <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
