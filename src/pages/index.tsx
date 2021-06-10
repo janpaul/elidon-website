@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import classNames from 'classnames'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
 import { Layout, MetaHeader } from '../components'
 import Contact from '../contact'
@@ -21,17 +21,17 @@ const Home = () => (
         writes amazing software.
       </h3>
       <div className={styles.social}>
+        <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
+          <Github className={styles.icon} />
+        </a>
+        <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
+          <Twitter className={styles.icon} />
+        </a>
         <a href={`mailto:${email}`}>
           <Hey className={styles.icon} />
         </a>
         <a href={`sgnl://${phone}`}>
           <Signal className={styles.icon} />
-        </a>
-        <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
-          <Twitter className={styles.icon} />
-        </a>
-        <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
-          <Github className={styles.icon} />
         </a>
         <a href={`https://reddit.com/u/${reddit}`} target="_blank" rel="noreferrer noopener">
           <Reddit className={styles.icon} />
@@ -41,7 +41,15 @@ const Home = () => (
         </a>
       </div>
       <div>
-        <div className={`animate__animated animate__fadeIn animate__slower ${styles.avatar} filter-ludwig`} />
+        <div
+          className={classNames([
+            'animate__animated',
+            'animate__fadeIn',
+            'animate__slower',
+            styles.avatar,
+            'filter-ludwig',
+          ])}
+        />
       </div>
     </section>
   </Layout>

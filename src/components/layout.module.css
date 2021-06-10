@@ -29,11 +29,16 @@
   flex-direction: column;
   text-align: right;
   font-size: 1rem;
-  color: var(--medium-gray-d);
+  color: var(--sunflower-d);
 }
 .main {
   flex-grow: 1;
   background-color: var(--content-bg);
+  /*background-image: url('/images/amsterdam.webp');*/
+  /*background-position: center center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-attachment: fixed;*/
+  /*background-size: cover;*/
   color: var(--content-fg);
 }
 .filler {

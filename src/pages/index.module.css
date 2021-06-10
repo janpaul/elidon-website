@@ -8,19 +8,11 @@
   color: var(--content-fg);
   width: 48px;
   height: 48px;
+  box-sizing: border-box;
 }
 .icon:hover {
-  animation: rotation ease-in-out 1s;
+  border-bottom: 4px solid var(--grapefruit);
 }
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 .avatar {
   margin-left: calc(50% - var(--avatar-size) / 2);
   margin-bottom: 1rem;
@@ -33,9 +25,6 @@
   border: 2px solid var(--content-fg);
   width: var(--avatar-size);
   height: var(--avatar-size);
-}
-.avatar:hover {
-  background-image: url('/images/jp.webp');
 }
 @media screen and (orientation: portrait) {
   .icon {
