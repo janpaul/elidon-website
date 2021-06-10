@@ -25,7 +25,7 @@ const AboutPage = () => (
         My name is Jan Paul. I live and work in <a href={`${urls.amsterdam}`}>Amsterdam</a>. I practice the martial art{' '}
         <a href={`${urls.taekwondo}`}>taekwondo</a> rather fanatically and I run 5km per day although I will never
         really do that just for fun. I’m trained as an <a href={`${urls.f16}`}>F-16</a> fighter pilot but at some point
-        I made the switch to my other hobby - writing software. I've been doing that since I was eight years old."
+        I made the switch to my other hobby - writing software. I've been doing that since I was eight years old.
       </p>
       <p className={styles.paragraph}>
         My main passion is on optimizing code and this is why most of my clients are in the web, gaming & media space -
