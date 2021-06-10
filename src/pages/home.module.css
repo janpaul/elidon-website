@@ -14,9 +14,7 @@
   border-bottom: 4px solid var(--nord11);
 }
 .avatar {
-  margin-left: calc(50% - var(--avatar-size) / 2);
   margin-bottom: 1rem;
-  background-image: url('/images/jp2.webp');
   background-position: center center;
   background-size: contain;
   margin-top: 2vw;

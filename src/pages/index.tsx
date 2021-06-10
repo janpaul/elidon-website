@@ -44,7 +44,7 @@ const Home = () => (
         </a>
       </div>
       <div>
-        <div className={classNames(['animate__animated', 'animate__fadeIn', 'animate__slower', styles.avatar])} />
+        <img src={'/images/jp2.webp'} alt="Jan Paul" className={styles.avatar} />
       </div>
     </section>
   </Layout>
