@@ -22,6 +22,11 @@ code {
   font-weight: normal;
   font-size: 3rem;
 }
+.icon {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
 @media screen and (orientation: portrait) {
   .content.centered {
     padding-top: 1rem;

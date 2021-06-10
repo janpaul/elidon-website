@@ -16,17 +16,8 @@ export const reportWebVitals = metric => {
   }
 }
 
-let baseStyles = [
-  'color: #bf616a',
-  'background-color: #2e3440',
-  'padding: 1rem 4px',
-  'border-radius: 2px',
-  'font-size: 18px',
-].join(';')
-
 console.log(
-  `%cHi there! Since you appear to be interested in the code of this website, why don't you go ahead and check out https://github.com/janpaul/elidon-website ? That saves you some time ;-)`,
-  baseStyles
+  `Hi there! Since you appear to be interested in the code of this website, why don't you go ahead and check out https://github.com/janpaul/elidon-website ? That saves you some time ;-)`
 )
 
 const MyApp = ({ Component, pageProps }) => <Component {...pageProps} />

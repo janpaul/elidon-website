@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0 var(--padding) 0 var(--padding);
   min-width: 140px;
-  background-color: darkred;
+  background-color: var(--nord3);
 }
 .nametag {
   display: flex;
@@ -60,6 +60,9 @@
 }
 @media screen and (prefers-color-scheme: light) {
   .header {
-    background-color: var(--nord10);
+    background-color: var(--nord4);
+  }
+  .nametag {
+    color: var(--nord0);
   }
 }

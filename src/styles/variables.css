@@ -1,15 +1,15 @@
 :root {
   --padding: 3px;
-  --fgcolor: var(--nord4);
-  --bgcolor: black;
+  --fgcolor: var(--nord6);
+  --bgcolor: var(--nord0);
   --linkcolor: var(--nord8);
   --avatar-size: 256px;
 }
 
 @media screen and (prefers-color-scheme: light) {
   :root {
-    --fgcolor: black;
-    --bgcolor: var(--nord4);
+    --fgcolor: var(--nord0);
+    --bgcolor: var(--nord6);
     --linkcolor: var(--nord8);
   }
 }
