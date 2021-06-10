@@ -18,7 +18,7 @@ const config: ConfigurationType = {
     'html',
     'css',
   ],
-  image: 'https://elidon.net/images/jp.jpg',
+  image: 'https://elidon.net/images/jp.webp',
   analytics: {
     enabled: true,
     id: 'G-461YCFNN4E',

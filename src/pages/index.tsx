@@ -13,7 +13,7 @@ const {
 
 const Home = () => (
   <Layout>
-    <MetaHeader url="https://elidon.net/" />
+    <MetaHeader url="https://elidon.net/" title="janpaul.home()" />
     <section className="content centered">
       <code>janpaul.visit();</code>
       <h3 className="title">
