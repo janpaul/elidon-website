@@ -17,8 +17,8 @@ const Home = () => (
     <section className="content centered">
       <code>elidon.visit();</code>
       <h3 className="title">
-        Hi! My name is Jan Paul and I'm a <em>creative</em>, <em>smart</em> and <em>hyperactive</em> guy who writes
-        amazing software.
+        Hi! My name is <em>Jan Paul</em> and I'm a <em>creative</em>, <em>smart</em> and <em>hyperactive</em> guy who
+        writes amazing software.
       </h3>
       <div className={styles.social}>
         <a href={`mailto:${email}`}>
@@ -27,23 +27,22 @@ const Home = () => (
         <a href={`sgnl://${phone}`}>
           <Signal className={styles.icon} />
         </a>
-        <a href={`https://twitter.com/${twitter}`}>
+        <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
           <Twitter className={styles.icon} />
         </a>
-        <a href={`https://github.com/${github}`}>
+        <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
           <Github className={styles.icon} />
         </a>
-        <a href={`https://reddit.com/u/${reddit}`}>
+        <a href={`https://reddit.com/u/${reddit}`} target="_blank" rel="noreferrer noopener">
           <Reddit className={styles.icon} />
         </a>
-        <a href={`https://instagram.com/${instagram}`}>
+        <a href={`https://instagram.com/${instagram}`} target="_blank" rel="noreferrer noopener">
           <Instagram className={styles.icon} />
         </a>
       </div>
       <div>
-        <div className={`animate__animated animate__fadeIn animate__slower ${styles.avatar}`} />
+        <div className={`animate__animated animate__fadeIn animate__slower ${styles.avatar} filter-ludwig`} />
       </div>
-      <Link href="/about">Read more &raquo;</Link>
     </section>
   </Layout>
 )

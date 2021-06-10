@@ -20,11 +20,15 @@ code {
   text-align: center;
   padding: 20vh 1rem 0 1rem;
 }
+.title {
+  font-weight: normal;
+  font-size: 3rem;
+}
 @media screen and (orientation: portrait) {
   .content.centered {
     padding-top: 1rem;
   }
-}
-.title {
-  font-weight: normal;
+  .title {
+    font-size: 2rem;
+  }
 }
