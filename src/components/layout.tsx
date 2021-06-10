@@ -89,6 +89,10 @@ const Layout = ({ children }: Props) => {
           <nav className={styles.navigation}>
             <Link href="/">.home()</Link>
             <Link href={'/about'}>.about()</Link>
+            <Link href={'/clients'}>.clients()</Link>
+            <a href={'/cv.pdf'} download="cv jan paul stegeman.pdf">
+              .cv()
+            </a>
           </nav>
           {children}
           <div className={styles.filler} />

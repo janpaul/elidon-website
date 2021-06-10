@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
 import { Layout, MetaHeader } from '../components'
 import Contact from '../contact'
-import styles from './index.module.css'
+import styles from './home.module.css'
 
 const {
   phone,
@@ -17,8 +17,11 @@ const Home = () => (
     <section className="content centered">
       <code>janpaul.home();</code>
       <h3 className="title">
-        Hi! My name is <em>Jan Paul</em> and I'm a <em>creative</em>, <em>smart</em> and <em>hyperactive</em> guy who
-        writes <em>amazing</em> software.
+        Hi! My name is <em title={`Given name: "Jan Paul", last name: "Stegeman".`}>Jan Paul</em> and I'm a{' '}
+        <em title={`Mostly because I'm always working on new things to do.`}>creative</em>,{' '}
+        <em title={`One can read this is "smart-ass".`}>smart</em> and{' '}
+        <em title={`Some people call this ADHD but I don't.`}>hyperactive</em> guy who writes{' '}
+        <em title={`Yes. Well. Almost always bug free ;-)`}>amazing</em> software.
       </h3>
       <div className={styles.social}>
         <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
