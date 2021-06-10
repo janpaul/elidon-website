@@ -1,0 +1,13 @@
+.paragraph {
+  text-align: left;
+  max-width: 90%;
+  margin-left: calc((100% - 90%) / 2);
+  /*font-weight: lighter;*/
+}
+@media screen and (orientation: portrait) {
+  .paragraph {
+    max-width: 100%;
+    margin-left: 0;
+    padding: var(--padding);
+  }
+}

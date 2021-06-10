@@ -15,7 +15,7 @@ const Home = () => (
   <Layout>
     <MetaHeader url="https://elidon.net/" title="janpaul.home()" />
     <section className="content centered">
-      <code>janpaul.visit();</code>
+      <code>janpaul.home();</code>
       <h3 className="title">
         Hi! My name is <em>Jan Paul</em> and I'm a <em>creative</em>, <em>smart</em> and <em>hyperactive</em> guy who
         writes <em>amazing</em> software.

@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import Config from '../config'
 import Contact from '../contact'
@@ -85,6 +86,10 @@ const Layout = ({ children }: Props) => {
           </div>
         </section>
         <main className={styles.main}>
+          <nav className={styles.navigation}>
+            <Link href="/">.home()</Link>
+            <Link href="/about">.about()</Link>
+          </nav>
           {children}
           <div className={styles.filler} />
         </main>
