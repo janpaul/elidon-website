@@ -88,7 +88,7 @@ const Layout = ({ children }: Props) => {
         <main className={styles.main}>
           <nav className={styles.navigation}>
             <Link href="/">.home()</Link>
-            <Link href="/about">.about()</Link>
+            <Link href={'/about'}>.about()</Link>
           </nav>
           {children}
           <div className={styles.filler} />
