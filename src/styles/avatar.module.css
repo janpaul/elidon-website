@@ -1,0 +1,10 @@
+.avatar {
+  margin-bottom: 1rem;
+  background-position: center center;
+  background-size: contain;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  border: 2px solid var(--fgcolor);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}

@@ -13,17 +13,6 @@
 .icon:hover {
   border-bottom: 4px solid var(--nord11);
 }
-.avatar {
-  margin-bottom: 1rem;
-  background-position: center center;
-  background-size: contain;
-  margin-top: 2vw;
-  filter: grayscale(100%);
-  border-radius: 50%;
-  border: 2px solid var(--fgcolor);
-  width: var(--avatar-size);
-  height: var(--avatar-size);
-}
 @media screen and (orientation: portrait) {
   .icon {
     width: 32px;

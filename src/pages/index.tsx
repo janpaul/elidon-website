@@ -1,7 +1,6 @@
 import React from 'react'
-import classNames from 'classnames'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
-import { Layout, MetaHeader } from '../components'
+import { Layout, MetaHeader, Avatar } from '../components'
 import Contact from '../contact'
 import styles from '../styles/home.module.css'
 
@@ -44,7 +43,7 @@ const Home = () => (
         </a>
       </div>
       <div>
-        <img src={'/images/jp2.webp'} alt="Jan Paul" className={styles.avatar} />
+        <Avatar />
       </div>
     </section>
   </Layout>
