@@ -4,7 +4,7 @@ import { DownloadCloud, Home, HelpCircle } from 'react-feather'
 import styles from '../styles/navigation.module.css'
 
 import Config from '../config'
-
+const iconSize = 16
 const {
   features: { clients, cv },
 } = Config
@@ -13,20 +13,20 @@ const Navigation = () => (
     <Link href="/">
       <a>
         .home(
-        <Home size={16} />)
+        <Home size={iconSize} />)
       </a>
     </Link>
     <Link href={'/about'}>
       <a>
         .about(
-        <HelpCircle size={16} />)
+        <HelpCircle size={iconSize} />)
       </a>
     </Link>
     {clients && <Link href={'/clients'}>.clients()</Link>}
     {cv && (
       <a href={'/cv.pdf'} download="cv jan paul stegeman.pdf">
         .cv(
-        <DownloadCloud size={16} />)
+        <DownloadCloud size={iconSize} />)
       </a>
     )}
   </nav>
