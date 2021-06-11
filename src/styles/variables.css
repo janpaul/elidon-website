@@ -2,7 +2,7 @@
   --padding: 3px;
   --fgcolor: var(--nord6);
   --bgcolor: var(--nord0);
-  --linkcolor: var(--nord8);
+  --linkcolor: var(--nord11);
   --avatar-size: 256px;
 }
 
@@ -10,7 +10,7 @@
   :root {
     --fgcolor: var(--nord0);
     --bgcolor: var(--nord6);
-    --linkcolor: var(--nord8);
+    --linkcolor: var(--nord7);
   }
 }
 @media screen and (orientation: portrait) {

@@ -23,6 +23,10 @@ const config: ConfigurationType = {
     enabled: true,
     id: 'G-461YCFNN4E',
   },
+  features: {
+    clients: false,
+    cv: true,
+  },
 }
 
 export default config

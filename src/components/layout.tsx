@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import Link from 'next/link'
 
+import { Navigation } from '.'
 import Config from '../config'
 import Contact from '../contact'
-import styles from './layout.module.css'
+import styles from '../styles/layout.module.css'
 
 const { address, phone, email, social } = Contact
 const { description, title, keywords, image, analytics } = Config
@@ -86,14 +86,7 @@ const Layout = ({ children }: Props) => {
           </div>
         </section>
         <main className={styles.main}>
-          <nav className={styles.navigation}>
-            <Link href="/">.home()</Link>
-            <Link href={'/about'}>.about()</Link>
-            <Link href={'/clients'}>.clients()</Link>
-            <a href={'/cv.pdf'} download="cv jan paul stegeman.pdf">
-              .cv()
-            </a>
-          </nav>
+          <Navigation />
           {children}
           <div className={styles.filler} />
         </main>

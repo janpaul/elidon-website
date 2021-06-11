@@ -24,10 +24,15 @@ export declare interface ContactType {
   social: SocialType
   address: AddressType
 }
+declare interface FeaturesType {
+  clients: boolean
+  cv: boolean
+}
 export declare interface ConfigurationType {
   description: string
   title: string
   keywords: string[]
   image: string
   analytics: AnalyticsType
+  features: FeaturesType
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './clients.module.css'
+import styles from '../../styles/clients.module.css'
 import { Layout, MetaHeader } from '../../components'
 
 type CompanyProps = {

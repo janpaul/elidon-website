@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
 import { Layout, MetaHeader } from '../components'
 import Contact from '../contact'
-import styles from './home.module.css'
+import styles from '../styles/home.module.css'
 
 const {
   phone,

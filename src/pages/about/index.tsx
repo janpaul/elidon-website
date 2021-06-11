@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout, MetaHeader } from '../../components'
-import styles from './about.module.css'
+import styles from '../../styles/about.module.css'
 
 const urls = {
   amsterdam: 'https://www.iamsterdam.com/en',

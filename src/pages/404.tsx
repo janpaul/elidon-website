@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout } from '../components'
-import styles from './404.module.css'
+import styles from '../styles/404.module.css'
 
 const FourOhForPage = () => {
   return (
