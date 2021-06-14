@@ -61,4 +61,7 @@
   .header {
     background-color: var(--blackLight);
   }
+  .nametag {
+    color: var(--black);
+  }
 }
