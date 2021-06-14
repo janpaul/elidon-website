@@ -1,16 +1,16 @@
 a {
   color: var(--linkcolor);
   text-decoration: underline;
-  text-decoration-color: var(--nord11);
+  text-decoration-color: var(--linkcolor);
 }
 em {
   font-style: italic;
   text-decoration: underline;
-  text-decoration-color: var(--nord11);
+  text-decoration-color: var(--linkcolor);
 }
 code {
   font-family: Monaco, monospace;
-  border-left: 4px solid var(--nord10);
+  border-left: 4px solid var(--pink);
   padding: 1rem 0 1rem 1rem;
 }
 
@@ -25,7 +25,7 @@ code {
 .icon {
   width: 32px;
   height: 32px;
-  color: white;
+  color: var(--white);
 }
 @media screen and (orientation: portrait) {
   .content.centered {

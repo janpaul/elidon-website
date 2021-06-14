@@ -1,7 +1,26 @@
-@import 'nord.css';
-@import 'variables.css';
+@import 'dracula.css';
 @import 'common.css';
 
+:root {
+  --padding: 3px;
+  --fgcolor: var(--white);
+  --bgcolor: var(--black);
+  --linkcolor: var(--red);
+  --avatar-size: 256px;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --fgcolor: var(--black);
+    --bgcolor: var(--white);
+    --linkcolor: var(--red);
+  }
+}
+@media screen and (orientation: portrait) {
+  :root {
+    --avatar-size: 40vw;
+  }
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',

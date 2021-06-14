@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 .icon:hover {
-  border-bottom: 4px solid var(--nord11);
+  border-bottom: 4px solid var(--linkcolor);
 }
 @media screen and (orientation: portrait) {
   .icon {
