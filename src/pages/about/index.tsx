@@ -1,5 +1,14 @@
 import React from 'react'
 import { Layout, MetaHeader } from '../../components'
+import {
+  ReactIcon,
+  SvelteIcon,
+  NextJsIcon,
+  CppIcon,
+  RustIcon,
+  JavascriptIcon,
+  TypescriptIcon,
+} from '../../components/icons'
 import styles from '../../styles/about.module.css'
 
 const urls = {
@@ -32,12 +41,15 @@ const AboutPage = () => (
         any company that's in need of highly performant software.
       </p>
       <p className={styles.paragraph}>
-        For the geeks among you, I prefer the programming languages <a href={`${urls.javascript}`}>JavaScript</a>,{' '}
-        <a href={`${urls.typescript}`}>Typescript</a> with the <a href={`${urls.react}`}>React</a>,{' '}
-        <a href={`${urls.svelte}`}>Svelte</a> and <a href={`${urls.nextjs}`}>NextJS</a> frameworks please. I'm also
-        pretty fluent in <a href={`${urls.cpp}`}>C++</a> and <a href={`${urls.rust}`}>Rust</a> and, out of sheer
-        programming pleasure, <a href={`${urls.arm}`}>ARM</a> and <a href={`${urls.motorola}`}>Motorola 680x0</a>{' '}
-        assembly.
+        For the geeks among you, I prefer the programming languages <JavascriptIcon />
+        <a href={`${urls.javascript}`}>JavaScript</a>, <TypescriptIcon />
+        <a href={`${urls.typescript}`}>Typescript</a> with the <ReactIcon />
+        <a href={`${urls.react}`}>React</a>, <SvelteIcon />
+        <a href={`${urls.svelte}`}>Svelte</a> and <NextJsIcon />
+        <a href={`${urls.nextjs}`}>NextJS</a> frameworks please. I'm also pretty fluent in <CppIcon />
+        <a href={`${urls.cpp}`}>C++</a> and <RustIcon />
+        <a href={`${urls.rust}`}>Rust</a> and, out of sheer programming pleasure, <a href={`${urls.arm}`}>ARM</a> and{' '}
+        <a href={`${urls.motorola}`}>Motorola 680x0</a> assembly.
       </p>
       <p className={styles.paragraph}>
         Apart from my software activities, I’m also responsible for the hiring process at companies within my comfort
