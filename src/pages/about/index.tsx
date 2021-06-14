@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { Layout, MetaHeader } from '../../components'
 import {
   ReactIcon,
@@ -55,6 +56,9 @@ const AboutPage = () => (
         Apart from my software activities, I’m also responsible for the hiring process at companies within my comfort
         zone (media and science, mostly), setting up development teams and making sure said teams are able to do their
         jobs, without too many distractions.
+      </p>
+      <p className={styles.paragraph}>
+        Check out some of my (former)<Link href={'/clients'}> clients</Link>!
       </p>
     </section>
   </Layout>

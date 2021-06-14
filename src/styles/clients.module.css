@@ -23,8 +23,10 @@
 }
 .logo {
   width: 128px;
-  height: auto;
+  height: 128px;
   margin-top: var(--padding);
+  filter: grayscale(100%);
+  background-color: white;
 }
 @media screen and (orientation: portrait) {
   .logo {
