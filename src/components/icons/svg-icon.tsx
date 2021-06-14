@@ -2,7 +2,7 @@ import { IconProps } from './types'
 
 type BaseProps = { children: any } & IconProps
 
-const BaseIcon = ({ children, ...props }: BaseProps) => {
+const SvgIcon = ({ children, ...props }: BaseProps) => {
   const { width = 16, height = 16, className } = props
   return (
     <svg
@@ -18,4 +18,4 @@ const BaseIcon = ({ children, ...props }: BaseProps) => {
     </svg>
   )
 }
-export default BaseIcon
+export default SvgIcon
