@@ -1,3 +1,6 @@
+/**
+ * All icons here are found on https://css.gg .
+ */
 const defaultProps = { width: 16, height: 16 }
 const BaseIcon = ({ children, ...props }) => {
   const myProps = { ...defaultProps, ...props }
