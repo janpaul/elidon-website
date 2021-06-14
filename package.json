@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write .",
-    "cypress": "cypress open",
-    "api": "vercel dev"
+    "cypress": "cypress open"
   },
   "dependencies": {
     "next": "10.2.3",
