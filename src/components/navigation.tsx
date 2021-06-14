@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/navigation.module.css'
 import Config from '../config'
-import { DownloadIcon, HomeIcon, BulbIcon } from './icons'
+import { DownloadIcon, HomeIcon, AboutIcon } from './icons'
 
 const {
   features: { clients, cv },
@@ -18,7 +18,7 @@ const Navigation = () => (
     <Link href={'/about'}>
       <a>
         .about(
-        <BulbIcon />)
+        <AboutIcon />)
       </a>
     </Link>
     {clients && <Link href={'/clients'}>.clients()</Link>}

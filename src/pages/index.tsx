@@ -1,6 +1,6 @@
 import React from 'react'
-import { Twitter, Github, Hey, Reddit, Instagram, Signal } from '@icons-pack/react-simple-icons'
 import { Layout, MetaHeader, Avatar } from '../components'
+import { TwitterIcon, GithubIcon, HeyIcon, SignalIcon, RedditIcon, InstagramIcon } from '../components/icons'
 import Contact from '../contact'
 import styles from '../styles/home.module.css'
 
@@ -24,22 +24,22 @@ const Home = () => (
       </h3>
       <div className={styles.social}>
         <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
-          <Github className={styles.icon} />
+          <GithubIcon width={48} height={48} className={styles.icon} />
         </a>
         <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
-          <Twitter className={styles.icon} />
+          <TwitterIcon width={48} height={48} className={styles.icon} />
         </a>
         <a href={`mailto:${email}`}>
-          <Hey className={styles.icon} />
+          <HeyIcon width={48} height={48} className={styles.icon} />
         </a>
         <a href={`sgnl://${phone}`}>
-          <Signal className={styles.icon} />
+          <SignalIcon width={48} height={48} className={styles.icon} />
         </a>
         <a href={`https://reddit.com/u/${reddit}`} target="_blank" rel="noreferrer noopener">
-          <Reddit className={styles.icon} />
+          <RedditIcon width={48} height={48} className={styles.icon} />
         </a>
         <a href={`https://instagram.com/${instagram}`} target="_blank" rel="noreferrer noopener">
-          <Instagram className={styles.icon} />
+          <InstagramIcon width={48} height={48} className={styles.icon} />
         </a>
       </div>
       <div>
