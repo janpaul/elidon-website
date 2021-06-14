@@ -1,5 +1,5 @@
 /**
- * All icons here are found on https://css.gg and https://simpleicons.org/ .
+ * All icons here are found on https://primer.style/octicons and https://simpleicons.org/ .
  */
 
 // generic icons
