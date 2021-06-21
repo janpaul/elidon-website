@@ -23,6 +23,10 @@ const config: ConfigurationType = {
     clients: false,
     cv: true,
   },
+  analytics: {
+    enabled: true,
+    id: 'G-461YCFNN4E',
+  },
 }
 
 export default config

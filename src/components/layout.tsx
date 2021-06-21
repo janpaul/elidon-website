@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 
 import { Navigation } from '.'
-import Config from '../config'
-import Contact from '../contact'
+import config from '../config'
+import contact from '../contact'
 import styles from '../styles/layout.module.css'
 
-const { address, phone, email, social } = Contact
-const { description, title, keywords, image } = Config
+const { address, phone, email, social } = contact
+const { description, title, keywords, image, analytics } = config
 
 interface Props {
   children: ReactNode
@@ -42,6 +42,26 @@ const Layout = ({ children }: Props) => {
         <meta property="og:image:height" content="400" />
         <meta name="og:locale" content="en_EN" />
         {/* end OpenGraph */}
+        {/* start Google Analytics */}
+        {analytics.enabled && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${analytics.id}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', '${analytics.id}', {
+                      page_path: window.location.pathname,
+                    });
+                  `,
+              }}
+            />
+          </>
+        )}
+        {/* end Google Analytics */}
       </Head>
       <section className={styles.wrapper}>
         <section className={styles.header}>
