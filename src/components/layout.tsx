@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
+import Script from 'next/script'
 
 import { Navigation } from '.'
 import config from '../config'
@@ -43,26 +44,23 @@ const Layout = ({ children }: Props) => {
         <meta name="og:locale" content="en_EN" />
         {/* end OpenGraph */}
         {/* start Google Analytics */}
-        {analytics.enabled && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${analytics.id}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', '${analytics.id}', {
-                      page_path: window.location.pathname,
-                    });
-                  `,
-              }}
-            />
-          </>
-        )}
-        {/* end Google Analytics */}
       </Head>
+      {analytics.enabled && (
+        <>
+          <Script async src={`https://www.googletagmanager.com/gtag/js?id=${analytics.id}`} />
+          <Script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${analytics.id}', {
+                page_path: window.location.pathname,
+              });
+            `}
+          </Script>
+        </>
+      )}
+      {/* end Google Analytics */}
       <section className={styles.wrapper}>
         <section className={styles.header}>
           <div className={styles.nametag}>
