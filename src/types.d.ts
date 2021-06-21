@@ -1,7 +1,3 @@
-declare interface AnalyticsType {
-  enabled: boolean
-  id: string
-}
 /* these are the only valid options for my account name ;-) */
 export declare type AccountNameType = 'janpaul' | 'janpaul74'
 declare interface SocialType {
@@ -33,6 +29,5 @@ export declare interface ConfigurationType {
   title: string
   keywords: string[]
   image: string
-  analytics: AnalyticsType
   features: FeaturesType
 }
