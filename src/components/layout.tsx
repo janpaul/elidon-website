@@ -47,8 +47,12 @@ const Layout = ({ children }: Props) => {
       {/* start Google Analytics */}
       {analytics.enabled && (
         <>
-          <Script async src={`https://www.googletagmanager.com/gtag/js?id=${analytics.id}`} />
-          <Script>
+          <Script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${analytics.id}`}
+            strategy="afterInteractive"
+          />
+          <Script strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
