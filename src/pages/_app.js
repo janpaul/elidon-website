@@ -1,6 +1,5 @@
 import 'normalize.css/normalize.css'
 import '../styles/index.css'
-import '../lib/firebase'
 
 export const reportWebVitals = metric => {
   if (!!window.dataLayer) {
