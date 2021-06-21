@@ -1,7 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/analytics'
 import 'firebase/firestore'
-import format from 'date-fns/format'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBelJSnzNSMWlrHDkugLw_9uZfRABnVp9M',
@@ -15,20 +14,4 @@ const firebaseConfig = {
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig)
   firebase.analytics()
-}
-
-export const logHit = (win: Window) => {
-  const db = firebase.firestore()
-  const { navigator } = window
-  const { language, platform, geolocation } = navigator
-  geolocation.getCurrentPosition((position: GeolocationPosition) => {
-    db.collection('hits')
-      .add({ timestamp: format(Date.now(), 'yyyyMMdd-HH:mm:ssX'), language, platform, position })
-      .then(docRef => {
-        // console.log('Document written with ID: ', docRef.id)
-      })
-      .catch(error => {
-        console.error('Error adding document: ', error)
-      })
-  })
 }
