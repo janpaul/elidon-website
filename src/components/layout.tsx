@@ -43,8 +43,8 @@ const Layout = ({ children }: Props) => {
         <meta property="og:image:height" content="400" />
         <meta name="og:locale" content="en_EN" />
         {/* end OpenGraph */}
-        {/* start Google Analytics */}
       </Head>
+      {/* start Google Analytics */}
       {analytics.enabled && (
         <>
           <Script async src={`https://www.googletagmanager.com/gtag/js?id=${analytics.id}`} />
