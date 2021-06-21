@@ -4,13 +4,13 @@ import config from '../config'
 
 const { analytics } = config
 
-export const reportWebVitals = metric => {
+export const reportWebVitals = ({ name, value, id }) => {
   if (analytics.enabled && !!window.dataLayer) {
     window.dataLayer.push({
       event: 'Vital Reported',
-      'vital.name': metric.name,
-      'vital.value': metric.value,
-      'vital.id': metric.id,
+      'vital.name': name,
+      'vital.value': value,
+      'vital.id': id,
     })
   }
 }
