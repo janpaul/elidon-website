@@ -20,7 +20,6 @@ if (firebase.apps.length === 0) {
 export const logHit = (win: Window) => {
   const db = firebase.firestore()
   const { navigator } = window
-  console.log({ window })
   const { language, platform, geolocation } = navigator
   geolocation.getCurrentPosition((position: GeolocationPosition) => {
     db.collection('hits')

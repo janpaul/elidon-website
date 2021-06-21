@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write .",
-    "cypress": "cypress open",
     "lint": "next lint"
   },
   "dependencies": {
@@ -25,7 +24,6 @@
     "@types/react": "17.0.11",
     "@types/react-dom": "17.0.7",
     "@vercel/node": "1.11.1",
-    "cypress": "7.5.0",
     "eslint": "7.28.0",
     "eslint-config-next": "11.0.0",
     "prettier": "2.3.1",
