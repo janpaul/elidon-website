@@ -20,7 +20,8 @@ const config: ConfigurationType = {
   ],
   image: 'https://elidon.net/images/jp.webp',
   features: {
-    clients: false,
+    clients: true,
+    gpg: true,
     cv: true,
   },
   analytics: {

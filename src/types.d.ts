@@ -26,6 +26,7 @@ export declare interface ContactType {
 }
 declare interface FeaturesType {
   clients: boolean
+  gpg: boolean
   cv: boolean
 }
 export declare interface ConfigurationType {
