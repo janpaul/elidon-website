@@ -13,6 +13,18 @@
 .icon:hover {
   border-bottom: 4px solid var(--linkcolor);
 }
+.disclaimer {
+  font-family: Monaco, monospace;
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  display: block;
+}
+.disclaimer:before {
+  content: '(';
+}
+.disclaimer:after {
+  content: ')';
+}
 @media screen and (orientation: portrait) {
   .icon {
     width: 32px;

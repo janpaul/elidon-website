@@ -42,6 +42,7 @@ const Home = () => (
           <InstagramIcon width={48} height={48} className={styles.icon} />
         </a>
       </div>
+      <small className={styles.disclaimer}>There are many ways to reach me. But please don't call me.</small>
       <div>
         <Avatar />
       </div>
