@@ -18,13 +18,13 @@
     "swr": "0.5.6"
   },
   "devDependencies": {
-    "@types/react": "17.0.11",
+    "@types/react": "17.0.13",
     "@types/react-dom": "17.0.8",
     "@vercel/node": "1.11.1",
-    "eslint": "7.29.0",
+    "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
     "prettier": "2.3.2",
-    "typescript": "4.3.4",
+    "typescript": "4.3.5",
     "vercel": "23.0.1"
   },
   "repository": {
