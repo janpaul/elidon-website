@@ -10,7 +10,7 @@ em {
 }
 code {
   font-family: Monaco, monospace;
-  border-left: 4px solid var(--pink);
+  border-left: 4px solid var(--linkcolor);
   padding: 1rem 0 1rem 1rem;
 }
 
@@ -25,7 +25,9 @@ code {
 .icon {
   width: 32px;
   height: 32px;
-  color: var(--white);
+}
+.hidden-mobile {
+  display: inherit;
 }
 @media screen and (orientation: portrait) {
   .content.centered {

@@ -1,19 +1,21 @@
-@import 'dracula.css';
 @import 'common.css';
 
 :root {
+  /* colors */
+  --fgcolor: #eee;
+  --bgcolor: #000;
+  --linkcolor: #f00;
+  --bgemphasize: #111;
   --padding: 3px;
-  --fgcolor: var(--white);
-  --bgcolor: var(--black);
-  --linkcolor: var(--red);
   --avatar-size: 256px;
 }
 
 @media screen and (prefers-color-scheme: light) {
   :root {
-    --fgcolor: var(--black);
-    --bgcolor: var(--white);
-    --linkcolor: var(--red);
+    --fgcolor: #000;
+    --bgcolor: #eee;
+    --linkcolor: red;
+    --bgemphasize: #ddd;
   }
 }
 @media screen and (orientation: portrait) {
@@ -32,4 +34,5 @@ body {
   color: var(--fgcolor);
   background-color: var(--bgcolor);
   font-size: 1.5rem;
+  /*font-weight: lighter;*/
 }
