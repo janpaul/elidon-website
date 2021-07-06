@@ -13,11 +13,11 @@ const {
 const Home = () => {
   useEffect(() => {
     const _touch = async () => {
-      const response = await fetch('http://elidon.net.transurl.nl/touch.php')
+      const response = await fetch('/api/touch')
       return await response.json()
     }
     _touch()
-      .then(data => {}) // don't do anything (yet) with this data
+      .then(data => console.log({ data })) // don't do anything (yet) with this data
       .catch(() => {}) // totally ignore when failed
   }, [])
   return (
