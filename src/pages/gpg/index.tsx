@@ -59,20 +59,28 @@ vfUtqW+/l2GjEfYeJ1JmNYm5+2P5EXkDWjbs9NEZn57cz4xrjMVNkKsqNbL8QkmE
 `
 
 const GpgPage = () => {
-  const [hasClipboard, setHasClipboard] = useState(false)
+  const [hasClipboard, setHasClipboard] = useState<boolean>(false)
+  const [gpgUrl, setGpgUrl] = useState<string>()
   useEffect(() => {
     setHasClipboard(!!navigator.clipboard)
+  }, [])
+  useEffect(() => {
+    const buffer = new Blob([publicKey])
+    const url = URL.createObjectURL(buffer)
+    setGpgUrl(url)
   }, [])
   return (
     <Layout>
       <MetaHeader url="https://elidon.net/gpg" title="janpaul.gpg()" />
       <section className="content centered">
         <code>janpaul.gpg();</code>
-        <p>
-          <a href={'public.pgp'} download="janpaul@hey.com-public.pgp">
-            Download <GpgIcon width={32} height={32} />
-          </a>
-        </p>
+        {gpgUrl && (
+          <p>
+            <a href={gpgUrl} download="janpaul@hey.com-public.pgp">
+              Download <GpgIcon width={32} height={32} />
+            </a>
+          </p>
+        )}
         {hasClipboard && (
           <Button
             onClick={() => {
