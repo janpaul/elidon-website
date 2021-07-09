@@ -23,7 +23,7 @@ const config: ConfigurationType = {
     clients: false,
     gpg: true,
     cv: true,
-    authentication: true
+    authentication: false
   },
   analytics: {
     enabled: true,
