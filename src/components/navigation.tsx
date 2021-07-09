@@ -75,12 +75,12 @@ const Navigation = () => {
       {authentication && (
         <>
           {session ? (
-            <Button onClick={() => signOut()}>
+            <Button onClick={() => signOut()} title={`Click to log out as ${session.user.name}`}>
               <span>{session.user.name}</span>
               <LogoutIcon width={maybeMobile ? 24 : 16} height={maybeMobile ? 24 : 16} />
             </Button>
           ) : (
-            <Button onClick={() => signIn()}>
+            <Button onClick={() => signIn()} title={`Click to log in`}>
               <LoginIcon width={maybeMobile ? 24 : 16} height={maybeMobile ? 24 : 16} />
             </Button>
           )}
