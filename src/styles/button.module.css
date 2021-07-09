@@ -3,4 +3,6 @@
   color: var(--fgcolor);
   border: none;
   cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--linkcolor);
 }

@@ -8,6 +8,7 @@ export { default as HomeIcon } from './home'
 export { default as AboutIcon } from './about'
 export { default as LoginIcon } from './login'
 export { default as LogoutIcon } from './logout'
+export { default as CopyIcon } from './copy'
 // social icons
 export { default as TwitterIcon } from './twitter'
 export { default as GithubIcon } from './github'
