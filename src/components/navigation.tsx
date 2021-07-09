@@ -8,7 +8,7 @@ import { Button } from '.'
 import { useIsMaybeMobile } from '../hooks'
 
 const {
-  features: { clients, cv, gpg },
+  features: { clients, cv, gpg, authentication },
 } = Config
 const Navigation = () => {
   const maybeMobile = useIsMaybeMobile()
@@ -72,14 +72,18 @@ const Navigation = () => {
           </a>
         </Link>
       )}
-      {session ? (
-        <Button onClick={() => signOut()}>
-          <LogoutIcon />
-        </Button>
-      ) : (
-        <Button onClick={() => signIn()}>
-          <LoginIcon />
-        </Button>
+      {authentication && (
+        <>
+          {session ? (
+            <Button onClick={() => signOut()}>
+              <LogoutIcon />
+            </Button>
+          ) : (
+            <Button onClick={() => signIn()}>
+              <LoginIcon />
+            </Button>
+          )}
+        </>
       )}
     </nav>
   )
