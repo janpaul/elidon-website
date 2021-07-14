@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './maze.module.css'
 import { setup, shutdown } from '../../lib/maze/maze'
-import { MetaHeader } from '../../components'
+import { Layout } from '../../components'
 
 const MazePage = () => {
   const canvasRef = useRef()
@@ -11,12 +11,11 @@ const MazePage = () => {
   }, [])
 
   return (
-    <>
-      <MetaHeader url="https://elidon.net/maze" title="Maze generator" />
+    <Layout url="https://elidon.net/maze" title="Maze generator">
       <section className={styles.wrapper}>
         <canvas id="canvas" ref={canvasRef} height={800} width={800} className={styles.maze} />
       </section>
-    </>
+    </Layout>
   )
 }
 

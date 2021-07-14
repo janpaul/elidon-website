@@ -1,10 +1,9 @@
 import React from 'react'
-import { Layout, MetaHeader } from '../../components'
+import { Layout } from '../../components'
 import { DownloadIcon } from '../../components/icons'
 
 const CvPage = () => (
-  <Layout>
-    <MetaHeader url="https://elidon.net/cv" title="janpaul.cv()" />
+  <Layout url="https://elidon.net/cv" title="janpaul.cv()">
     <section className="content centered">
       <code>janpaul.cv();</code>
       <p>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/clients.module.css'
-import { Layout, MetaHeader } from '../../components'
+import { Layout } from '../../components'
 
 type CompanyProps = {
   name: string
@@ -15,8 +15,7 @@ const CompanyItem = ({ name, logo, width = 128, height = 128 }: CompanyProps) =>
   </div>
 )
 const ClientsPage = () => (
-  <Layout>
-    <MetaHeader url="https://elidon.net/clients" title="janpaul.clients()" />
+  <Layout url="https://elidon.net/clients" title="janpaul.clients()">
     <section className="content centered">
       <code>janpaul.clients();</code>
       <div className={styles.list}>

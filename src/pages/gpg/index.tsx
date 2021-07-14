@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Layout, MetaHeader, Button } from '../../components'
+import { Layout, Button } from '../../components'
 import { GpgIcon } from '../../components/icons'
 
 // make sure this *always* matches /public/public.pgp
@@ -70,8 +70,7 @@ const GpgPage = () => {
     setGpgUrl(url)
   }, [])
   return (
-    <Layout>
-      <MetaHeader url="https://elidon.net/gpg" title="janpaul.gpg()" />
+    <Layout url="https://elidon.net/gpg" title="janpaul.gpg()">
       <section className="content centered">
         <code>janpaul.gpg();</code>
         {gpgUrl && (

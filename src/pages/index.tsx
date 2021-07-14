@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Layout, MetaHeader, Avatar } from '../components'
+import React from 'react'
+import { Layout, Avatar } from '../components'
 import {
   TwitterIcon,
   GithubIcon,
@@ -9,28 +9,28 @@ import {
   InstagramIcon,
   WhatsappIcon,
 } from '../components/icons'
-import Contact from '../contact'
+import contact from '../contact'
+import config from '../config'
 import styles from '../styles/home.module.css'
+import { whatsappLink, signalLink, emailLink } from '../lib/social'
 
+const { prefersSignal } = config
 const {
-  phone,
-  email,
   social: { twitter, github, instagram, reddit },
-} = Contact
+} = contact
 const size = 48
+
 const Home = () => {
-  useEffect(() => {
-    const _touch = async () => {
-      const response = await fetch('/api/touch')
-      return await response.json()
-    }
-    _touch()
-      .then(data => console.log({ data })) // don't do anything (yet) with this data
-      .catch(() => {}) // totally ignore when failed
-  }, [])
+  const socialApps = [
+    <a href={signalLink()} key="signal">
+      <SignalIcon width={size} height={size} className={styles.icon} />
+    </a>,
+    <a href={whatsappLink()} key="whatsapp">
+      <WhatsappIcon width={size} height={size} className={styles.icon} />
+    </a>,
+  ]
   return (
-    <Layout>
-      <MetaHeader url="https://elidon.net/" title="janpaul.home()" />
+    <Layout url="https://elidon.net/" title="janpaul.home()">
       <section className="content centered">
         <code>janpaul.home();</code>
         <h3 className="title">
@@ -41,19 +41,14 @@ const Home = () => {
           <em title={`Yes. Well. Almost always bug free ;-)`}>amazing</em> software.
         </h3>
         <div className={styles.social}>
-          <a href={`https://wa.me/${phone.replace('+', '')}`}>
-            <WhatsappIcon width={size} height={size} className={styles.icon} />
-          </a>
-          <a href={`sgnl://${phone}`}>
-            <SignalIcon width={size} height={size} className={styles.icon} />
-          </a>
+          {prefersSignal ? socialApps : socialApps.reverse()}
           <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
             <GithubIcon width={size} height={size} className={styles.icon} />
           </a>
           <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
             <TwitterIcon width={size} height={size} className={styles.icon} />
           </a>
-          <a href={`mailto:${email}`}>
+          <a href={emailLink()}>
             <HeyIcon width={size} height={size} className={styles.icon} />
           </a>
           <a href={`https://reddit.com/u/${reddit}`} target="_blank" rel="noreferrer noopener">

@@ -6,7 +6,7 @@ import panda from '../../public/images/panda.webp'
 
 const FourOhForPage = () => {
   return (
-    <Layout>
+    <Layout url="https://elidon.net/404" title="Four Oh Four">
       <section className="content centered">
         <h1 className="title">404 - Page Not Found</h1>
         <Image src={panda} className={styles.panda} alt="a stupid panda" placeholder="blur" />

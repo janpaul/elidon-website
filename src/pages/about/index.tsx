@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Layout, MetaHeader } from '../../components'
+import { Layout } from '../../components'
 import {
   ReactIcon,
   SvelteIcon,
@@ -27,8 +27,7 @@ const urls = {
   motorola: 'https://en.wikipedia.org/wiki/Motorola_68000_series',
 }
 const AboutPage = () => (
-  <Layout>
-    <MetaHeader url="https://elidon.net/about" title="janpaul.about()" />
+  <Layout url="https://elidon.net/about" title="janpaul.about()">
     <section className="content centered">
       <code>janpaul.about();</code>
       <p className={styles.paragraph}>

@@ -37,5 +37,5 @@ export declare interface ConfigurationType {
   image: string
   analytics: AnalyticsType
   features: FeaturesType
-
+  prefersSignal: boolean
 }
