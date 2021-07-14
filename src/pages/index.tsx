@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react'
 import { Layout, MetaHeader, Avatar } from '../components'
-import { TwitterIcon, GithubIcon, HeyIcon, SignalIcon, RedditIcon, InstagramIcon } from '../components/icons'
+import {
+  TwitterIcon,
+  GithubIcon,
+  HeyIcon,
+  SignalIcon,
+  RedditIcon,
+  InstagramIcon,
+  WhatsappIcon,
+} from '../components/icons'
 import Contact from '../contact'
 import styles from '../styles/home.module.css'
 
@@ -9,7 +17,7 @@ const {
   email,
   social: { twitter, github, instagram, reddit },
 } = Contact
-
+const size = 48
 const Home = () => {
   useEffect(() => {
     const _touch = async () => {
@@ -33,23 +41,26 @@ const Home = () => {
           <em title={`Yes. Well. Almost always bug free ;-)`}>amazing</em> software.
         </h3>
         <div className={styles.social}>
-          <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
-            <GithubIcon width={48} height={48} className={styles.icon} />
-          </a>
-          <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
-            <TwitterIcon width={48} height={48} className={styles.icon} />
-          </a>
-          <a href={`mailto:${email}`}>
-            <HeyIcon width={48} height={48} className={styles.icon} />
+          <a href={`https://wa.me/${phone.replace('+', '')}`}>
+            <WhatsappIcon width={size} height={size} className={styles.icon} />
           </a>
           <a href={`sgnl://${phone}`}>
-            <SignalIcon width={48} height={48} className={styles.icon} />
+            <SignalIcon width={size} height={size} className={styles.icon} />
+          </a>
+          <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
+            <GithubIcon width={size} height={size} className={styles.icon} />
+          </a>
+          <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
+            <TwitterIcon width={size} height={size} className={styles.icon} />
+          </a>
+          <a href={`mailto:${email}`}>
+            <HeyIcon width={size} height={size} className={styles.icon} />
           </a>
           <a href={`https://reddit.com/u/${reddit}`} target="_blank" rel="noreferrer noopener">
-            <RedditIcon width={48} height={48} className={styles.icon} />
+            <RedditIcon width={size} height={size} className={styles.icon} />
           </a>
           <a href={`https://instagram.com/${instagram}`} target="_blank" rel="noreferrer noopener">
-            <InstagramIcon width={48} height={48} className={styles.icon} />
+            <InstagramIcon width={size} height={size} className={styles.icon} />
           </a>
         </div>
         <small className={styles.disclaimer}>There are many ways to reach me. But please don&apos;t call me.</small>
