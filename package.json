@@ -19,7 +19,7 @@
     "swr": "0.5.6"
   },
   "devDependencies": {
-    "@types/react": "17.0.14",
+    "@types/react": "17.0.15",
     "@types/react-dom": "17.0.9",
     "@vercel/node": "1.11.1",
     "eslint": "7.31.0",
