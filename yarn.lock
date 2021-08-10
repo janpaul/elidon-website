@@ -298,20 +298,20 @@
     "@typescript-eslint/types" "4.27.0"
     eslint-visitor-keys "^2.0.0"
 
-"@vercel/build-utils@2.12.0":
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-2.12.0.tgz#87dad2082d536f4dd60b53a65f75b5190d905719"
-  integrity sha512-4deQnPiXkWGQNzSYqHFxbi8m5pS0yoAPZuDTWsBdYlbgrRZV6LnBOrmL6urdQxSlGmMbXq5hz4KISVtpqTZ5ig==
+"@vercel/build-utils@2.12.2":
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-2.12.2.tgz#285a3bb0b78864fb6f44478257bd275c57aa8651"
+  integrity sha512-KbSgG2ZCVXhUsdbnpv6gC7buygd31jaKiKhrd4Lzv1NwjnoeDZAXlm4hzvSPYHVtCY2jirKJWP2rFtMW8iAh9g==
 
 "@vercel/go@1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@vercel/go/-/go-1.2.3.tgz#6f2bdba5681f9d64ee17060c5d63589e2d45e2d8"
   integrity sha512-BZCHRz43Qfr0DwZlZQCcofR+3cr+H+HK72/ZPkZy1Uq0NYjJMlmZ3ahuMgvJxT9lfC1RA6eOEUlUsZ+gqKcMCg==
 
-"@vercel/node@1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-1.12.0.tgz#e863777c8624b1306f1aca83e9fbdda074c951a0"
-  integrity sha512-McwhEg6KI0y7R875IG87Ry3HrFvws+60/yKk1KqJxbOud/n/Mj9eEZTI5mxxMFj8tT7KhmFaRdl8pJz8ISR1Cg==
+"@vercel/node@1.12.1":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-1.12.1.tgz#15f42f64690f904f8a52a387123ce0958657060f"
+  integrity sha512-NcawIY05BvVkWlsowaxF2hl/hJg475U8JvT2FnGykFPMx31q1/FtqyTw/awSrKfOSRXR0InrbEIDIelmS9NzPA==
   dependencies:
     "@types/node" "*"
     ts-node "8.9.1"
@@ -2607,7 +2607,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-auth@^3.27.3:
+next-auth@3.27.3:
   version "3.27.3"
   resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.27.3.tgz#b155cfe07675378d35fd0018a8cef16aee68ff0a"
   integrity sha512-U7LRrSc3ZBUKQcOpqJfVui80jPpx0MQAmtCPI7dJ9DjDg8AfxRBzk59oNCE5MLlbMDb83gEtOu+Mr5hi28qmCg==
@@ -4135,14 +4135,14 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vercel@23.1.0:
-  version "23.1.0"
-  resolved "https://registry.yarnpkg.com/vercel/-/vercel-23.1.0.tgz#ea55afcb927005af185bd4b489e5ea4f86adc478"
-  integrity sha512-zsGGx/a3QvB7VEbJumXakoZlaK3SbkJrrLAG8LMH0BYqZDwUHMvrD9TsiMPNWggs9bLBOgl0pTB/zxHEHeA6gA==
+vercel@23.1.2:
+  version "23.1.2"
+  resolved "https://registry.yarnpkg.com/vercel/-/vercel-23.1.2.tgz#7f36772970c7c56f10de89983f03b3c0c72d294e"
+  integrity sha512-uS1k7wuXI6hbxiW+kn9vdAWL0bBi4jjVxc7Jwp8NhJjcRuzlydtt3gUEnhnC9AOIKQ4LxoAgmg50lSyYkrC8Hg==
   dependencies:
-    "@vercel/build-utils" "2.12.0"
+    "@vercel/build-utils" "2.12.2"
     "@vercel/go" "1.2.3"
-    "@vercel/node" "1.12.0"
+    "@vercel/node" "1.12.1"
     "@vercel/python" "2.0.5"
     "@vercel/ruby" "1.2.7"
     update-notifier "4.1.0"
