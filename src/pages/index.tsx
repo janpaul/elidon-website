@@ -36,7 +36,7 @@ const Home = () => {
         <h3 className="title">
           Hi! My name is <em title={`Given name: "Jan Paul", last name: "Stegeman".`}>Jan Paul</em> and I&apos;m a{' '}
           <em title={`Mostly because I'm always working on new things to do.`}>creative</em>,{' '}
-          <em title={`One can read this is "smart-ass".`}>smart</em> and{' '}
+          <em title={`One can read this as "smart-ass".`}>smart</em> and{' '}
           <em title={`Some people call this ADHD but I don't.`}>hyperactive</em> guy who writes{' '}
           <em title={`Yes. Well. Almost always bug free ;-)`}>amazing</em> software.
         </h3>
