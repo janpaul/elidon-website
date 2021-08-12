@@ -1,3 +1,4 @@
 import differenceInYears from 'date-fns/differenceInYears'
 
-export const getAge = (): number => differenceInYears(new Date(), new Date(1974, 5, 11))
+const june = 5 // 0-indexed :-(
+export const getAge = (): number => differenceInYears(new Date(), new Date(1974, june, 11))
