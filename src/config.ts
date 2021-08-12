@@ -22,7 +22,7 @@ const config: ConfigurationType = {
   features: {
     clients: false,
     gpg: true,
-    cv: true,
+    cv: false,
     authentication: false,
     prefersSignal: false,
   },
