@@ -37,7 +37,7 @@ const urls = {
 const AboutPage = () => (
   <Layout url="https://elidon.net/about" title="janpaul.about()">
     <section className="content centered">
-      <code>janpaul.about();</code>
+      <code>janpaul.about()</code>
       <p className={styles.paragraph}>
         My name is Jan Paul. I&apos;m a {getAge()} year young guy who lives and works in <AppleIcon />
         <a href={`${urls.amsterdam}`}>Amsterdam</a>. I practice the martial art{' '}

@@ -17,7 +17,7 @@ const CompanyItem = ({ name, logo, width = 128, height = 128 }: CompanyProps) =>
 const ClientsPage = () => (
   <Layout url="https://elidon.net/clients" title="janpaul.clients()">
     <section className="content centered">
-      <code>janpaul.clients();</code>
+      <code>janpaul.clients()</code>
       <div className={styles.list}>
         <CompanyItem name="DHL Parcel" logo={`/logos/dhl.webp`} height={28} />
         <CompanyItem name="Elsevier" logo={`/logos/elsevier.webp`} height={141} />

@@ -72,7 +72,7 @@ const GpgPage = () => {
   return (
     <Layout url="https://elidon.net/gpg" title="janpaul.gpg()">
       <section className="content centered">
-        <code>janpaul.gpg();</code>
+        <code>janpaul.gpg()</code>
         {gpgUrl && (
           <p>
             <a href={gpgUrl} download="janpaul@hey.com-public.pgp">

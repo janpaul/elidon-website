@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <Layout url="https://elidon.net/" title="janpaul.home()">
       <section className="content centered">
-        <code>janpaul.home();</code>
+        <code>janpaul.home()</code>
         <h3 className="title">
           Hi! My name is <em title={`Given name: "Jan Paul", last name: "Stegeman".`}>Jan Paul</em> and I&apos;m a{' '}
           <em title={`Mostly because I'm always working on new things to do.`}>creative</em>,{' '}
