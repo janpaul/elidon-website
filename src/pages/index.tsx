@@ -14,19 +14,21 @@ import config from '../config'
 import styles from '../styles/home.module.css'
 import { whatsappLink, signalLink, emailLink } from '../lib/social'
 
-const { prefersSignal } = config
+const {
+  features: { prefersSignal },
+} = config
 const {
   social: { twitter, github, instagram, reddit },
 } = contact
-const size = 48
+const iconSize = 48
 
 const Home = () => {
   const socialApps = [
     <a href={signalLink()} key="signal">
-      <SignalIcon width={size} height={size} className={styles.icon} />
+      <SignalIcon width={iconSize} height={iconSize} className={styles.icon} />
     </a>,
     <a href={whatsappLink()} key="whatsapp">
-      <WhatsappIcon width={size} height={size} className={styles.icon} />
+      <WhatsappIcon width={iconSize} height={iconSize} className={styles.icon} />
     </a>,
   ]
   return (
@@ -43,19 +45,19 @@ const Home = () => {
         <div className={styles.social}>
           {prefersSignal ? socialApps : socialApps.reverse()}
           <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer noopener">
-            <GithubIcon width={size} height={size} className={styles.icon} />
+            <GithubIcon width={iconSize} height={iconSize} className={styles.icon} />
           </a>
           <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noreferrer noopener">
-            <TwitterIcon width={size} height={size} className={styles.icon} />
+            <TwitterIcon width={iconSize} height={iconSize} className={styles.icon} />
           </a>
           <a href={emailLink()}>
-            <HeyIcon width={size} height={size} className={styles.icon} />
+            <HeyIcon width={iconSize} height={iconSize} className={styles.icon} />
           </a>
           <a href={`https://reddit.com/u/${reddit}`} target="_blank" rel="noreferrer noopener">
-            <RedditIcon width={size} height={size} className={styles.icon} />
+            <RedditIcon width={iconSize} height={iconSize} className={styles.icon} />
           </a>
           <a href={`https://instagram.com/${instagram}`} target="_blank" rel="noreferrer noopener">
-            <InstagramIcon width={size} height={size} className={styles.icon} />
+            <InstagramIcon width={iconSize} height={iconSize} className={styles.icon} />
           </a>
         </div>
         <small className={styles.disclaimer}>There are many ways to reach me. But please don&apos;t call me.</small>

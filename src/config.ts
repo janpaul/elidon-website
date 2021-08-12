@@ -24,12 +24,12 @@ const config: ConfigurationType = {
     gpg: true,
     cv: true,
     authentication: false,
+    prefersSignal: false,
   },
   analytics: {
     enabled: true,
     id: 'G-461YCFNN4E',
   },
-  prefersSignal: false,
 }
 
 export default config

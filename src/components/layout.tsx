@@ -9,7 +9,14 @@ import contact from '../contact'
 import styles from '../styles/layout.module.css'
 
 const { address, phone, email, social } = contact
-const { description: defaultDescription, title: defaultTitle, keywords, image, analytics, prefersSignal } = config
+const {
+  description: defaultDescription,
+  title: defaultTitle,
+  keywords,
+  image,
+  analytics,
+  features: { prefersSignal },
+} = config
 import { whatsappLink, signalLink, emailLink } from '../lib/social'
 
 interface Props {

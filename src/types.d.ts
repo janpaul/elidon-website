@@ -29,6 +29,7 @@ declare interface FeaturesType {
   gpg: boolean
   cv: boolean
   authentication: boolean
+  prefersSignal: boolean
 }
 export declare interface ConfigurationType {
   description: string
@@ -37,5 +38,4 @@ export declare interface ConfigurationType {
   image: string
   analytics: AnalyticsType
   features: FeaturesType
-  prefersSignal: boolean
 }
