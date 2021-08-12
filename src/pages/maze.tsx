@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
-import styles from './maze.module.css'
-import { setup, shutdown } from '../../lib/maze/maze'
-import { Layout } from '../../components'
+import styles from '../styles/maze.module.css'
+import { setup, shutdown } from '../lib/maze/maze'
+import { Layout } from '../components'
 
 const MazePage = () => {
   const canvasRef = useRef()

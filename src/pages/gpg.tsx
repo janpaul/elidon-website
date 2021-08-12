@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Layout, Button } from '../../components'
-import { GpgIcon } from '../../components/icons'
+import { Layout, Button } from '../components'
+import { GpgIcon } from '../components/icons'
 
 // make sure this *always* matches /public/public.pgp
 const publicKey = `

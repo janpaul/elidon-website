@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import styles from '../../styles/clients.module.css'
-import { Layout } from '../../components'
+import styles from '../styles/clients.module.css'
+import { Layout } from '../components'
 
 type CompanyProps = {
   name: string

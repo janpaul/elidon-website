@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout } from '../../components'
-import { DownloadIcon } from '../../components/icons'
+import { Layout } from '../components'
+import { DownloadIcon } from '../components/icons'
 
 const CvPage = () => (
   <Layout url="https://elidon.net/cv" title="janpaul.cv()">

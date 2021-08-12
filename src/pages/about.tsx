@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Layout } from '../../components'
+import { Layout, Avatar } from '../components'
 import {
   ReactIcon,
   SvelteIcon,
@@ -9,8 +9,9 @@ import {
   RustIcon,
   JavascriptIcon,
   TypescriptIcon,
-} from '../../components/icons'
-import styles from '../../styles/about.module.css'
+} from '../components/icons'
+import styles from '../styles/about.module.css'
+import { getAge } from '../lib/helpers'
 
 const urls = {
   amsterdam: 'https://www.iamsterdam.com/en',
@@ -31,10 +32,12 @@ const AboutPage = () => (
     <section className="content centered">
       <code>janpaul.about();</code>
       <p className={styles.paragraph}>
-        My name is Jan Paul. I live and work in <a href={`${urls.amsterdam}`}>Amsterdam</a>. I practice the martial art{' '}
-        <a href={`${urls.taekwondo}`}>taekwondo</a> rather fanatically and I run 5km per day although I will never
+        My name is Jan Paul. I&apos;m a {getAge()} year young guy who lives and works in{' '}
+        <a href={`${urls.amsterdam}`}>Amsterdam</a>. I practice the martial art{' '}
+        <a href={`${urls.taekwondo}`}>taekwondo</a> rather fanatically and I run 5km per week although I will never
         really do that just for fun. I’m trained as an <a href={`${urls.f16}`}>F-16</a> fighter pilot but at some point
-        I made the switch to my other hobby - writing software. I&apos;ve been doing that since I was eight years old.
+        I (reluctantly) made the switch to my other hobby - writing software. I&apos;ve been doing that since I was
+        eight years old.
       </p>
       <p className={styles.paragraph}>
         My main passion is on optimizing code and this is why most of my clients are in the web, gaming & media space -
@@ -59,6 +62,9 @@ const AboutPage = () => (
       <p className={styles.paragraph}>
         Check out some of my (former)<Link href={'/clients'}> clients</Link>!
       </p>
+      <div>
+        <Avatar />
+      </div>
     </section>
   </Layout>
 )
