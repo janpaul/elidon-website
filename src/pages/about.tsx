@@ -9,12 +9,19 @@ import {
   RustIcon,
   JavascriptIcon,
   TypescriptIcon,
+  AppleIcon,
+  FighterIcon,
 } from '../components/icons'
 import styles from '../styles/about.module.css'
 import { getAge } from '../lib/helpers'
+import contact from '../contact'
 
+const {
+  address: { street, number, place },
+} = contact
+const addressLine = `${street} ${number} ${place}`
 const urls = {
-  amsterdam: 'https://www.iamsterdam.com/en',
+  amsterdam: `https://maps.apple.com/?t=m&q=Amsterdam+NL&address=${addressLine}&daddr=${addressLine}`,
   taekwondo: 'https://www.worldtaekwondo.org/index.html',
   f16: 'https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon',
   javascript: 'https://javascript.info',
@@ -32,12 +39,12 @@ const AboutPage = () => (
     <section className="content centered">
       <code>janpaul.about();</code>
       <p className={styles.paragraph}>
-        My name is Jan Paul. I&apos;m a {getAge()} year young guy who lives and works in{' '}
+        My name is Jan Paul. I&apos;m a {getAge()} year young guy who lives and works in <AppleIcon />
         <a href={`${urls.amsterdam}`}>Amsterdam</a>. I practice the martial art{' '}
         <a href={`${urls.taekwondo}`}>taekwondo</a> rather fanatically and I run 5km per week although I will never
-        really do that just for fun. I’m trained as an <a href={`${urls.f16}`}>F-16</a> fighter pilot but at some point
-        I (reluctantly) made the switch to my other hobby - writing software. I&apos;ve been doing that since I was
-        eight years old.
+        really do that just for fun. I’m trained as an <FighterIcon />
+        <a href={`${urls.f16}`}>F-16</a> fighter pilot but at some point I (reluctantly) made the switch to my other
+        hobby - writing software. I&apos;ve been doing that since I was eight years old.
       </p>
       <p className={styles.paragraph}>
         My main passion is on optimizing code and this is why most of my clients are in the web, gaming & media space -
@@ -60,7 +67,7 @@ const AboutPage = () => (
         jobs, without too many distractions.
       </p>
       <p className={styles.paragraph}>
-        Check out some of my (former)<Link href={'/clients'}> clients</Link>!
+        Check out some of my (former) <Link href={'/clients'}>clients</Link>!
       </p>
       <div>
         <Avatar />
