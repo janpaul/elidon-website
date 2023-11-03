@@ -18,7 +18,7 @@ const Home = () => (
   <div>
     <Title>Hi! My name is Jan Paul</Title>
     <Paragraph>
-      I am a software engineer who creates and develop experiences that make
+      I am a software engineer who creates and develops experiences that make
       people&apos;s lives simple and awesome. I am an aspiring Hugo Boss model
       and (try to be) a Club DJ.
     </Paragraph>
