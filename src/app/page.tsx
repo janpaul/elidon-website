@@ -1,9 +1,16 @@
 import NextImage from "next/image";
+import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
 import {
-  DevicePhoneMobileIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline";
-import { Title, Paragraph, Block, Link, Stats, Joke } from "@/components";
+  Title,
+  Paragraph,
+  Block,
+  Link,
+  Stats,
+  Joke,
+  HeyIcon,
+  GithubIcon,
+  InstagramIcon,
+} from "@/components";
 import { contact } from "@/data/contact";
 import me from "@/media/jp.jpg";
 
@@ -24,15 +31,24 @@ const Home = () => (
     <Block className="text-sm italic my-4 border-l-2 pl-2 lg:pl-8 border-red-500 dark:border-blue-500">
       <Joke />
     </Block>
+
     <Block className="mx-auto md:mx-0">
-      <div className="flex flex-row gap-2 md:gap-4">
+      <div className="flex flex-row gap-2 md:gap-4 flex-wrap">
         <div className="flex flex-row gap-1 items-center">
-          <DevicePhoneMobileIcon className="w-5 h-5" />
+          <HeyIcon />
           <Link href={`mailto:${contact.email}`}>{contact.email}</Link>
         </div>
         <div className="flex flex-row gap-1 items-center">
-          <EnvelopeIcon className="w-5 h-5" />
+          <DevicePhoneMobileIcon className="w-5 h-5" />
           <Link href={`tel:${contact.phone}`}>{contact.phone}</Link>
+        </div>
+        <div className="flex flex-row gap-1 items-center">
+          <GithubIcon />
+          <Link href={`//${contact.github}`}>{contact.github}</Link>
+        </div>
+        <div className="flex flex-row gap-1 items-center">
+          <InstagramIcon />
+          <Link href={`//${contact.instagram}`}>{contact.instagram}</Link>
         </div>
       </div>
     </Block>

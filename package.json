@@ -12,7 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1",
     "@heroicons/react": "^2",
-    "date-fns": "^2.30.0",
+    "date-fns": "^2",
     "geist": "^1",
     "next": "14.0.1",
     "react": "^18",
