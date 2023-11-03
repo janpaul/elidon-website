@@ -16,7 +16,7 @@ export const Paragraph = ({ children }: Props) => (
 type LinkProps = Props & { href: string };
 export const Link = ({ children, href }: LinkProps) => (
   <a
-    className="text-blue-500 underline underline-offset-2 hover:no-underline transition-all duration-300"
+    className="text-red-500 dark:text-blue-500 underline underline-offset-2 hover:no-underline transition-all duration-300"
     href={href}
   >
     {children}
