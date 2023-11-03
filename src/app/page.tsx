@@ -26,7 +26,7 @@ const Home = () => (
       src={me}
       alt="JP"
       width={256}
-      className="grayscale aspect-auto rounded-xl hover:grayscale-0 transition-all duration-300 my-2 ring-4 ring-offset-1 mx-auto md:mx-0"
+      className="grayscale-0 aspect-auto rounded-xl hover:grayscale transition-all duration-300 my-2 ring-4 ring-offset-1 mx-auto md:mx-0"
     />
     <Block className="text-sm italic my-4 border-l-2 pl-2 lg:pl-8 border-red-500 dark:border-blue-500">
       <Joke />
