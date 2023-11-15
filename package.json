@@ -14,7 +14,7 @@
     "@heroicons/react": "^2",
     "date-fns": "latest",
     "geist": "latest",
-    "next": "14.0.2",
+    "next": "^14",
     "react": "^18",
     "react-dom": "^18",
     "swr": "^2"
@@ -25,7 +25,7 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
     "eslint": "^8",
-    "eslint-config-next": "14.0.2",
+    "eslint-config-next": "^14",
     "postcss": "^8",
     "prettier": "^3.1.0",
     "tailwindcss": "^3",
