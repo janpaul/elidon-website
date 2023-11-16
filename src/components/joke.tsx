@@ -9,11 +9,14 @@ export const Joke = () => {
     refreshInterval: revalidate * 1000,
   });
   const loadJoke = async () => mutate(`/api/joke`).then(() => {});
-  return joke ?
-      <div className="flex flex-col cursor-pointer" onClick={loadJoke}>
-        {joke.split(`\n`).map((line, index) => (
-          <div key={index}>{line}</div>
-        ))}
-      </div>
-    : null;
+  return joke ? (
+    <div
+      className="flex flex-col cursor-pointer text-xl lg:text-2xl"
+      onClick={loadJoke}
+    >
+      {joke.split(`\n`).map((line, index) => (
+        <div key={index}>{line}</div>
+      ))}
+    </div>
+  ) : null;
 };
