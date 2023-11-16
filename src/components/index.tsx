@@ -3,7 +3,7 @@ import { classNames } from "@/lib";
 
 export { Stats } from "./stats";
 export { Joke } from "./joke";
-export * from "./icons";
+export { Social } from "./social";
 
 type Props = {
   children: ReactNode;

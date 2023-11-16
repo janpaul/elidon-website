@@ -7,7 +7,7 @@ const SvgIcon = ({ children, title }: SvgIconProps) => (
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 fill-black dark:fill-white"
+    className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 fill-black dark:fill-white"
   >
     <title>{title}</title>
     {children}
