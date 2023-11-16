@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write --experimental-ternaries ."
   },
   "dependencies": {
     "@headlessui/react": "^1",

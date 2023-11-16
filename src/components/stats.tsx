@@ -27,9 +27,9 @@ export const Stats = () => (
               <span className="text-4xl font-semibold tracking-tight text-gray-800 dark:text-gray-400">
                 {stat.value}
               </span>
-              {stat.unit ? (
+              {stat.unit ?
                 <span className="text-sm text-gray-400">{stat.unit}</span>
-              ) : null}
+              : null}
             </p>
           </div>
         ))}
