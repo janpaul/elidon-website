@@ -1,19 +1,15 @@
 "use client";
-import useSWR, { mutate } from "swr";
+import useSWR from "swr";
 import { fetcher } from "@/lib";
 
-export const revalidate = 60;
+export const revalidate = 30;
 
 export const Joke = () => {
   const { data: joke } = useSWR<string>(`/api/joke`, fetcher, {
     refreshInterval: revalidate * 1000,
   });
-  const loadJoke = async () => mutate(`/api/joke`).then(() => {});
   return joke ? (
-    <div
-      className="flex flex-col cursor-pointer text-xl lg:text-2xl"
-      onClick={loadJoke}
-    >
+    <div className="flex flex-col text-xl lg:text-2xl">
       {joke.split(`\n`).map((line, index) => (
         <div key={index}>{line}</div>
       ))}
