@@ -1203,4 +1203,20 @@ export const jokes: (string | string[])[] = [
     `(Jesus (risen))`,
     `Not much, w--`,
   ],
+  [
+    `My therapist told me to write letters to everyone who's hurt me then burn them`,
+    `I did that and I feel great but do I keep the letters?`,
+  ],
+  [
+    `I visited my friend at his new house.`,
+    `He told me to make myself at home`,
+    `So I threw him out. I hate having visitors.`,
+  ],
+  [
+    `My wife says that I wasted money ordering a 3-meter wide frame for our wedding photo.`,
+    `I think she should look at the bigger picture.`,
+  ],
+  [
+    `"It's Raining Men" and "Let The Bodies Hit The Floor" are the same song from different points of view."`,
+  ],
 ];
