@@ -1219,4 +1219,11 @@ export const jokes: (string | string[])[] = [
   [
     `"It's Raining Men" and "Let The Bodies Hit The Floor" are the same song from different points of view."`,
   ],
+  [
+    `Melatonin: You want some help falling asleep?`,
+    `Me: Yes please.`,
+    `Melatonin: And you want your nightmares more vivid and real?`,
+    `Me: What? No.`,
+    `Ceiling lady: YOU HEARD HIM.`,
+  ],
 ];

@@ -8,11 +8,11 @@ export const Joke = () => {
   const { data: joke } = useSWR<string>(`/api/joke`, fetcher, {
     refreshInterval: revalidate * 1000,
   });
-  return joke ? (
-    <div className="flex flex-col text-xl lg:text-2xl">
-      {joke.split(`\n`).map((line, index) => (
-        <div key={index}>{line}</div>
-      ))}
-    </div>
-  ) : null;
+  return joke ?
+      <div className="flex flex-col text-xl lg:text-2xl">
+        {joke.split(`\n`).map((line, index) => (
+          <div key={index}>{line}</div>
+        ))}
+      </div>
+    : null;
 };
