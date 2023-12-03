@@ -1194,14 +1194,10 @@ export const jokes: (string | string[])[] = [
     `drowns in a tidal wave of dogs`,
   ],
   [
-    `(Mary)`,
-    `They've taken Jesus from his tomb`,
-    `(Simon)`,
-    `Maybe they gave him Upjesus`,
-    `(Mary)`,
-    `What's Upjesus`,
-    `(Jesus (risen))`,
-    `Not much, w--`,
+    `[Mary] They've taken Jesus from his tomb`,
+    `[Simon] Maybe they gave him Upjesus`,
+    `[Mary] What's Upjesus`,
+    `[Jesus (risen)] Not much, w--`,
   ],
   [
     `My therapist told me to write letters to everyone who's hurt me then burn them`,
