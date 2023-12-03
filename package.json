@@ -13,7 +13,7 @@
     "@headlessui/react": "^1",
     "@heroicons/react": "^2",
     "date-fns": "latest",
-    "geist": "latest",
+    "geist": "^1.2.0",
     "next": "^14",
     "react": "^18",
     "react-dom": "^18",
