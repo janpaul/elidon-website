@@ -1,5 +1,10 @@
 import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
-import { GithubIcon, HeyIcon, InstagramIcon } from "@/components/icons";
+import {
+  GithubIcon,
+  HeyIcon,
+  InstagramIcon,
+  BunqIcon,
+} from "@/components/icons";
 import { Link } from "@/components";
 import { contact } from "@/data/contact";
 
@@ -16,13 +21,18 @@ export const Social = () => (
       </Link>
     </div>
     <div className="flex flex-row gap-1 items-center">
-      <Link href={`//${contact.github}`}>
+      <Link href={`//github.com/${contact.github}`}>
         <GithubIcon />
       </Link>
     </div>
     <div className="flex flex-row gap-1 items-center">
-      <Link href={`//${contact.instagram}`}>
+      <Link href={`//instagram.com/${contact.instagram}`}>
         <InstagramIcon />
+      </Link>
+    </div>
+    <div className="flex flex-row gap-1 items-center">
+      <Link href={`//bunq.me/${contact.bunq}`}>
+        <BunqIcon />
       </Link>
     </div>
   </div>

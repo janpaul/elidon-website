@@ -3,6 +3,7 @@ type Contact = {
   phone: string;
   github: string;
   instagram: string;
+  bunq: string;
 };
 
 export const contact: Contact = {
@@ -10,4 +11,5 @@ export const contact: Contact = {
   phone: `+31 6 2926 7339`,
   github: `janpaul`,
   instagram: `janpaul`,
+  bunq: `jpstegeman`,
 };
