@@ -4,6 +4,7 @@ type Contact = {
   github: string;
   instagram: string;
   bunq: string;
+  reddit: string;
 };
 
 export const contact: Contact = {
@@ -12,4 +13,5 @@ export const contact: Contact = {
   github: `janpaul`,
   instagram: `janpaul`,
   bunq: `jpstegeman`,
+  reddit: `janpaul74`,
 };

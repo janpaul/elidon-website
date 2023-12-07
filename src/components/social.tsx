@@ -4,6 +4,7 @@ import {
   HeyIcon,
   InstagramIcon,
   BunqIcon,
+  RedditIcon,
 } from "@/components/icons";
 import { Link } from "@/components";
 import { contact } from "@/data/contact";
@@ -33,6 +34,11 @@ export const Social = () => (
     <div className="flex flex-row gap-1 items-center">
       <Link href={`//bunq.me/${contact.bunq}`}>
         <BunqIcon />
+      </Link>
+    </div>
+    <div className="flex flex-row gap-1 items-center">
+      <Link href={`//reddit.com/u/${contact.reddit}`}>
+        <RedditIcon />
       </Link>
     </div>
   </div>
