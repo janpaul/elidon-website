@@ -8,7 +8,7 @@ type Contact = {
 };
 
 export const contact: Contact = {
-  email: `janpaul@hey.com`,
+  email: `elidon@icloud.com`,
   phone: `+31 6 2926 7339`,
   github: `janpaul`,
   instagram: `janpaul`,

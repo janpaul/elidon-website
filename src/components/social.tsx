@@ -5,6 +5,7 @@ import {
   InstagramIcon,
   BunqIcon,
   RedditIcon,
+  AppleIcon,
 } from "@/components/icons";
 import { Link } from "@/components";
 import { contact } from "@/data/contact";
@@ -13,7 +14,7 @@ export const Social = () => (
   <div className="flex flex-row gap-2 md:gap-4 flex-wrap">
     <div className="flex flex-row gap-1 items-center">
       <Link href={`mailto:${contact.email}`}>
-        <HeyIcon />
+        <AppleIcon />
       </Link>
     </div>
     <div className="flex flex-row gap-1 items-center">
