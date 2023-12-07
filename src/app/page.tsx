@@ -2,6 +2,8 @@ import NextImage from "next/image";
 import { Title, Paragraph, Block, Stats, Joke, Social } from "@/components";
 import me from "@/media/jp.jpg";
 
+export const revalidate = 86_400;
+
 const Home = () => (
   <div>
     <Title>Hi! My name is Jan Paul</Title>
