@@ -1222,4 +1222,11 @@ export const jokes: (string | string[])[] = [
     `Me: What? No.`,
     `Ceiling lady: YOU HEARD HIM.`,
   ],
+  `We are best friends. Always remember that if you fall, I will pick you up... after I finish laughing.`,
+  `If you're not happy single, you won't be happy taken. Happiness comes from food, not relationships.`,
+  [
+    `Being kissed in your sleep is the purest form of love.`,
+    `Unless you're home alone.`,
+  ],
+  `The no-smoking with kids in the car law is ridiculous. Just look at them standing outside in the rain.`,
 ];
