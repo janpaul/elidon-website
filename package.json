@@ -28,7 +28,7 @@
     "eslint-config-next": "^14",
     "postcss": "^8",
     "prettier": "^3.1.0",
-    "prettier-plugin-tailwindcss": "latest",
+    "prettier-plugin-tailwindcss": "^0.5.10",
     "tailwindcss": "^3",
     "typescript": "^5"
   }
