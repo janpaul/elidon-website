@@ -17,7 +17,7 @@ const baseHue = 1;
 let hueValue = baseHue;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight - 10);
   colorMode(HSB, 360, 255, 255);
   cols = floor(width / sand);
   rows = floor(height / sand);
