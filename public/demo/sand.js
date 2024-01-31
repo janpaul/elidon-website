@@ -18,11 +18,9 @@ let hueValue = baseHue;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  console.log({ windowWidth, windowHeight });
   colorMode(HSB, 360, 255, 255);
   cols = floor(width / sand);
   rows = floor(height / sand);
-  console.log({ cols, rows });
   grid = make2DArray(cols, rows);
 }
 
