@@ -13,6 +13,5 @@ jobs:
           ls ${{ github.workspace }}
       - name: Install packages
         run: |
-          nvm use 
           yarn install
       - run: echo "🍏 This job's status is ${{ job.status }}."
