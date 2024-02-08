@@ -2,7 +2,7 @@ name: Build elidon-website
 run-name: ${{ github.actor }} builds the website 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build-The-Website:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event @ ${{ github.repository }}."
