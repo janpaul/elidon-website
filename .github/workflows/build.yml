@@ -1,0 +1,18 @@
+name: Build elidon-website
+run-name: ${{ github.actor }} builds the website 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event @ ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Install packages
+        run: |
+          nvm use 
+          yarn install
+      - run: echo "🍏 This job's status is ${{ job.status }}."

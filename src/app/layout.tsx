@@ -9,13 +9,15 @@ export const metadata: Metadata = {
   description: "The website of Elidon Consultancy",
 };
 
-const RootLayout = ({ children }: { children: ReactNode }) => (
-  <html lang="en" className={`dark ${GeistSans.variable}`}>
-    <body className="transform-gpu">
-      <Providers>
-        <main className="mx-1 md:mx-8">{children}</main>
-      </Providers>
-    </body>
-  </html>
-);
+const RootLayout = ({ children }: { children: ReactNode }) => {
+  return (
+    <html lang="en" className={`dark ${GeistSans.variable}`}>
+      <body className="transform-gpu">
+        <Providers>
+          <main className="mx-1 md:mx-8">{children}</main>
+        </Providers>
+      </body>
+    </html>
+  );
+};
 export default RootLayout;
