@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { getAgeInDays, getAgeInYears } from "@/lib";
+import { getAge } from "@/lib";
 
 type StatType = {
   name: string;
@@ -7,8 +7,8 @@ type StatType = {
   unit?: string;
 };
 const _stats: StatType[] = [
-  { name: `Age`, value: getAgeInYears(), unit: `years` },
-  { name: `Age`, value: getAgeInDays(), unit: `days` },
+  { name: `Age`, value: getAge("years"), unit: `years` },
+  { name: `Age`, value: getAge("days"), unit: `days` },
   { name: `Ex-wives`, value: 2, unit: `(sorry)` },
   { name: `Kids`, value: 3, unit: `(at least)` },
   { name: `Success rate`, value: `43.5`, unit: `%` },
@@ -27,9 +27,9 @@ export const Stats = () => (
               <span className="text-4xl font-semibold tracking-tight text-gray-800 dark:text-gray-400">
                 {stat.value}
               </span>
-              {stat.unit ?
+              {stat.unit ? (
                 <span className="text-sm text-gray-400">{stat.unit}</span>
-              : null}
+              ) : null}
             </p>
           </div>
         ))}

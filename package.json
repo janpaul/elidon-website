@@ -13,7 +13,7 @@
     "@headlessui/react": "^1",
     "@heroicons/react": "^2",
     "@nextui-org/react": "^2",
-    "date-fns": "^3",
+    "dayjs": "^1",
     "framer-motion": "^11",
     "geist": "^1",
     "next": "^14",
