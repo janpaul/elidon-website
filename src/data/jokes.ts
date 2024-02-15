@@ -306,6 +306,18 @@ export const jokes: (string | string[])[] = [
   `There was once a king who was only 12 inches tall!\nTerrible king, but made a great ruler.`,
   `My wife tells me I have 2 major faults,\nI don't listen - and something else.`,
   `I was wondering if I should go to work today, and then I saw some guys putting up a giant rectangle along the highway.\nIt was a sign.`,
+  [
+    `I called up my landlord and said, "Hey, I gotta leak in my sink."`,
+    `He sid, "Go ahead, I'm not judging you."`,
+  ],
+  [
+    `It ook my new girlfriend out on our first date to the ice rink, and entry was half price."`,
+    `She called me a cheap skate.`,
+  ],
+  [
+    `We argued all day about what to call a medieval solderier`,
+    `But it was getting late so we called it a knight`,
+  ],
   `My daughter asked me 'What is a unit of power?'\nI replied 'correct'.`,
   `My daughter told me she saw a deer on the way to school.\nMe: 'How do you know it was going to school?'`,
   `Did you know Stephen King has a son named Joe?\nI’m not joking, but he is.`,
@@ -412,7 +424,9 @@ export const jokes: (string | string[])[] = [
   `I asked an electrician to fix an electrical issue at my house\nHe refused.`,
   `I was browsing in a liquor store when an employee asked me 'Do you need help?”\nI said, 'Yes, but I’m here to get whiskey instead.”`,
   `Why don’t some couples go to the gym?\nBecause some relationships don’t work out.`,
+  `As suspected, someone has been adding soil to my garden. The plot thickens.`,
   `My therapist says I have a preoccupation with vengeance.\nWe’ll see about that.`,
+  `Every single morning I get hit by the same bike. It's a vicious cycle.`,
   `A policeman spotted an elderly lady driving while knitting.\n"Pullover!" he said.\n"No it's a scarf!" she replied`,
   `If you rearrange the letters of MAILMEN they get really upset.`,
   `How many mexicans does it take to change a lightbuld?\nJust Juan.`,
@@ -689,6 +703,7 @@ export const jokes: (string | string[])[] = [
     `His wife asked: 'What makes you say that?'`,
     `'Rudolph the Red knows rain, dear.'`,
   ],
+  [`What happens when frogs park illegally?`, `They get toad away.`],
   [
     `I scared the mailman today by coming to the door naked.`,
     `I don't know what scared him most, the fact that I was naked or that I knew where he lived.`,
@@ -1219,6 +1234,11 @@ export const jokes: (string | string[])[] = [
   ],
   [
     `"It's Raining Men" and "Let The Bodies Hit The Floor" are the same song from different points of view."`,
+  ],
+  `I was in the supermarket the other day when this guy threw a block of Cheddar at me. Outraged I shouted "Well, that's not very mature, is it?!"`,
+  [
+    `I hate it when my wife keeps telling me that "I don't get it."`,
+    `I mean, what does it even mean?`,
   ],
   [
     `Melatonin: You want some help falling asleep?`,
