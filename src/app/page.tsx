@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import { Image, Divider } from "@nextui-org/react";
+import { Image, Divider, Snippet } from "@nextui-org/react";
 import { Title, Paragraph, Block, Stats, Joke, Social } from "@/components";
 import me from "@/media/jp.jpg";
 
@@ -24,8 +24,10 @@ const Home = () => (
       className="grayscale-0 aspect-auto rounded-xl hover:grayscale transition-all duration-300 my-2 ring-4 ring-offset-1 mx-auto md:mx-0"
     />
     <Divider />
-    <Block className="text-sm italic my-4 border-l-2 pl-2 lg:pl-8 border-red-500 dark:border-blue-500">
-      <Joke />
+    <Block className="text-sm italic my-4">
+      <Snippet color="secondary" size="sm">
+        <Joke />
+      </Snippet>
     </Block>
     <Divider className="my-5" />
     <Block className="mx-auto md:mx-0">
