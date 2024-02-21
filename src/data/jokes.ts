@@ -331,7 +331,7 @@ export const jokes: (string | string[])[] = [
   `I got fired from my job at the calendar factory.\nAll I did was take a day off.`,
   `My doctor told me I'm going deaf.\nThe news was hard for me to hear.`,
   `Two giant windmills are out on a hilltop. One turns to the other and asks, 'What kind of music do you like? '\nThe other one says, 'I'm a really big metal fan.'`,
-  `A man walks in to a bar with a piece of asphalt.\nThe man says to the bartender '1 for me, and 1 for the road'.`,
+  `A man walks in to a bar with a piece of asphalt.\nThe man says to the bartender 'One for me, and one for the road'.`,
   `I have a photograph of me and the lead singer of REM ....\nThat's me in the corner and that's him in the spotlight.`,
   `Just sold my homing pigeon on eBay for the 22nd time.`,
   `Having a dog named 'Shark' at the beach was a bad idea.`,
@@ -1110,7 +1110,7 @@ export const jokes: (string | string[])[] = [
     `Miner`,
     `Mine`,
   ],
-  [`John Lennon`, `🎶Imagine all the people🎶`, `introverts`, `Thank god`],
+  [`John Lennon:`, `🎶Imagine all the people🎶`, `introverts:`, `Thank god`],
   [
     `Me: can i play a violin in the street`,
     `Cop: no`,
