@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Spacer } from "@nextui-org/react";
 import { classNames } from "@/lib";
 
 export { Stats } from "./stats";
@@ -10,11 +11,20 @@ type Props = {
   className?: string;
 };
 export const Title = ({ children, className }: Props) => (
-  <h1 className={classNames(`text-3xl my-4`, className)}>{children}</h1>
+  <>
+    <h1 className={classNames(`text-3xl`, className)}>{children}</h1>
+    <Spacer x={4} />
+  </>
 );
 export const Block = ({ children, className }: Props) => (
-  <div className={classNames(`my-2`, className)}>{children}</div>
+  <>
+    <div className={className}>{children}</div>
+    <Spacer x={4} />
+  </>
 );
 export const Paragraph = ({ children, className }: Props) => (
-  <p className={classNames(`my-2`, className)}>{children}</p>
+  <>
+    <p className={className}>{children}</p>
+    <Spacer x={4} />
+  </>
 );

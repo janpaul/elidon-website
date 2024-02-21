@@ -10,7 +10,6 @@ type Text = Record<
     diss: string;
     reach: string;
     or: string;
-    expand: string;
   }
 >;
 
@@ -23,7 +22,6 @@ export const text: Text = {
     diss: `Old geezer`,
     reach: `You can reach me at `,
     or: `or`,
-    expand: `Press to expand`,
   },
   nl: {
     greeting: "Hoi!",
@@ -33,6 +31,5 @@ export const text: Text = {
     diss: `Ouwe lul`,
     reach: `Je kunt me bereiken op `,
     or: `of`,
-    expand: `Press to expand`,
   },
 };

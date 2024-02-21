@@ -11,14 +11,11 @@ import {
   Link,
   Tooltip,
   Divider,
-  Accordion,
-  AccordionItem,
-  Snippet,
+  Spacer,
 } from "@nextui-org/react";
 import me from "@/media/jp.jpg";
 import { Paragraph, Title, Joke } from "@/components";
 import { text, type Language } from "./text";
-import { Timeline } from "./timeline";
 import "flag-icons/css/flag-icons.min.css";
 import wa from "@/icons/whatsapp-color.svg";
 import hey from "@/icons/hey-color.svg";
@@ -28,7 +25,7 @@ const FiftyPage = () => {
   const activeText = text[language];
   return (
     <>
-      <Breadcrumbs className="mb-4">
+      <Breadcrumbs>
         <BreadcrumbItem>
           <NextLink href="/">Home</NextLink>
         </BreadcrumbItem>
@@ -38,7 +35,8 @@ const FiftyPage = () => {
           </NextLink>
         </BreadcrumbItem>
       </Breadcrumbs>
-      <ButtonGroup className="mb-4" size="sm">
+      <Spacer x={4} />
+      <ButtonGroup size="sm">
         <Button onClick={() => setLanguage(`nl`)}>
           <span className="fi fi-nl"></span>
         </Button>
@@ -46,6 +44,7 @@ const FiftyPage = () => {
           <span className="fi fi-gb"></span>
         </Button>
       </ButtonGroup>
+      <Spacer x={4} />
       <Divider />
       <Title>{activeText.greeting}</Title>
       <Paragraph className="mb-4">
@@ -70,29 +69,16 @@ const FiftyPage = () => {
         </Tooltip>
         .
       </Paragraph>
+      <Spacer x={8} />
       <User
         name="Jan Paul"
         description={activeText.diss}
         avatarProps={{
           src: me.src,
         }}
-        className="mt-8"
       />
-      <div className="my-4">
-        <Snippet color="secondary" size="sm">
-          <Joke />
-        </Snippet>
-      </div>
-      <Divider />
-      <Accordion className="mt-2">
-        <AccordionItem
-          key={1}
-          title="Story of my life"
-          subtitle={activeText.expand}
-        >
-          <Timeline />
-        </AccordionItem>
-      </Accordion>
+      <Spacer x={4} />
+      <Joke />
     </>
   );
 };

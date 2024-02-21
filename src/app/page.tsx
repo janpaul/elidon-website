@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import { Image, Divider, Snippet } from "@nextui-org/react";
+import { Divider, Avatar } from "@nextui-org/react";
 import { Title, Paragraph, Block, Stats, Joke, Social } from "@/components";
 import me from "@/media/jp.jpg";
 
@@ -14,20 +14,15 @@ const Home = () => (
       and (try to be) a Club DJ.
     </Paragraph>
     <Divider className="my-5" />
-    <Image
-      as={NextImage}
-      isBlurred
+    <Avatar
       src={me.src}
-      alt="JP"
-      width={me.width / 10}
-      height={me.height / 10}
-      className="grayscale-0 aspect-auto rounded-xl hover:grayscale transition-all duration-300 my-2 ring-4 ring-offset-1 mx-auto md:mx-0"
+      size="lg"
+      isBordered
+      className="w-64 h-64 text-large"
     />
     <Divider />
     <Block className="text-sm italic my-4">
-      <Snippet color="secondary" size="sm">
-        <Joke />
-      </Snippet>
+      <Joke />
     </Block>
     <Divider className="my-5" />
     <Block className="mx-auto md:mx-0">
