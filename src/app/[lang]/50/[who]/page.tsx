@@ -13,7 +13,7 @@ import {
   HandThumbUpIcon,
   QuestionMarkCircleIcon,
 } from "@heroicons/react/16/solid";
-import { Joke, Paragraph, Title, Spacer } from "@/components";
+import { Joke, Paragraph, Title, Spacer, Breadcrumbs } from "@/components";
 import { capitalize, translate, type Language } from "@/lib";
 import wa from "@/icons/whatsapp-color.svg";
 import hey from "@/icons/hey-color.svg";
@@ -31,6 +31,12 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
   const t = await translate(lang as Language);
   return (
     <>
+      <Breadcrumbs
+        path={[
+          { title: `home`, href: `/${lang}` },
+          { title: `50`, href: `/${lang}/50/${who}` },
+        ]}
+      />
       <Spacer />
       <div className="flex flex-row gap-4">
         <NextLink href={`/nl/50/${who}`}>

@@ -1,3 +1,4 @@
+export * from "./breadcrumbs";
 export * from "./joke";
 export * from "./social";
 export * from "./typography";
