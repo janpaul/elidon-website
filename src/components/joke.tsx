@@ -1,7 +1,7 @@
 "use client";
 import useSWR from "swr";
-import { Snippet } from "@nextui-org/react";
 import { fetcher } from "@/lib";
+import { Snippet } from "@/components";
 
 export const revalidate = 30;
 
@@ -10,7 +10,7 @@ export const Joke = () => {
     refreshInterval: revalidate * 1000,
   });
   return joke ? (
-    <Snippet symbol=" " color="secondary" size="md">
+    <Snippet copyText={joke}>
       {joke.split(`\n`).map((line, index) => (
         <div key={index}>{line}</div>
       ))}

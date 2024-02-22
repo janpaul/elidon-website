@@ -1,6 +1,4 @@
-import { text, type Language } from "./text";
 import {
-  Spacer,
   Divider,
   Link,
   Tooltip,
@@ -15,8 +13,8 @@ import {
   HandThumbUpIcon,
   QuestionMarkCircleIcon,
 } from "@heroicons/react/16/solid";
-import { Joke, Paragraph, Title } from "@/components";
-import { capitalize } from "@/lib";
+import { Joke, Paragraph, Title, Spacer } from "@/components";
+import { capitalize, translate, type Language } from "@/lib";
 import wa from "@/icons/whatsapp-color.svg";
 import hey from "@/icons/hey-color.svg";
 import signal from "@/icons/signal-color.svg";
@@ -28,11 +26,11 @@ type Props = {
   params: { lang: string; who: string };
 };
 
-const FiftyLangPage = ({ params: { lang, who = defaultWho } }: Props) => {
-  const activeText = text[lang as Language];
+const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
+  const t = await translate(lang as Language);
   return (
     <>
-      <Spacer x={4} />
+      <Spacer />
       <div className="flex flex-row gap-4">
         <NextLink href={`/50/nl/${who}`}>
           <span className="fi fi-nl rounded-sm"></span>
@@ -45,12 +43,13 @@ const FiftyLangPage = ({ params: { lang, who = defaultWho } }: Props) => {
         </NextLink>
       </div>
       <Divider />
-      <Spacer x={8} />
+      <Spacer />
       <Title size="md">
-        {activeText.greeting} {who === defaultWho ? "" : capitalize(who)}!
+        {t(`50.greeting`)} {who === defaultWho ? "" : capitalize(who)}!
       </Title>
+      <Spacer />
       <Paragraph className="mb-4" size="lg">
-        {activeText.p1}{" "}
+        {t(`50.p1`)}{" "}
         <Link
           href="//maps.apple.com/?t=h&address=Oudezijds%20Achterburgwal%2028%20Amsterdam&daddr=Oudezijds%20Achterburgwal%2028%20Amsterdam&dirflg=d"
           className="text-2xl"
@@ -58,10 +57,10 @@ const FiftyLangPage = ({ params: { lang, who = defaultWho } }: Props) => {
         >
           Café De Zeevaart
         </Link>{" "}
-        {activeText.p2}
+        {t(`50.p2`)}
       </Paragraph>
       <Paragraph size="lg">
-        {activeText.rsvp}. {activeText.reach}{" "}
+        {t(`50.rsvp`)}. {t(`50.reach`)}{" "}
         <Tooltip content="Whatsapp">
           <Link href="//wa.me/31629267339" isExternal>
             <NextImage src={wa.src} width={16} height={16} alt="Whatsapp" />
@@ -73,7 +72,7 @@ const FiftyLangPage = ({ params: { lang, who = defaultWho } }: Props) => {
             <NextImage src={hey.src} width={16} height={16} alt="Hey email" />
           </Link>
         </Tooltip>{" "}
-        {activeText.or}{" "}
+        {t(`common.or`)}{" "}
         <Tooltip content="Signal">
           <Link href="https://signal.me/#p/+31629267339" isExternal>
             <NextImage src={signal.src} width={16} height={16} alt="Signal" />
@@ -81,50 +80,50 @@ const FiftyLangPage = ({ params: { lang, who = defaultWho } }: Props) => {
         </Tooltip>{" "}
         .
       </Paragraph>
-      <Spacer x={16} />
+      <Spacer />
       <section className="flex flex-col lg:flex-row gap-1 lg:gap-4 my-8">
         <Card>
           <CardBody>
             <Link
-              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${activeText.coming.yes}`}
+              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${t(`50.coming.yes`)}`}
               className="flex flex-row items-center gap-2 text-lg"
             >
               <HandThumbUpIcon className="w-8 h-8 text-green-500" />
-              {activeText.coming.yes}
+              {t(`50.coming.yes`)}
             </Link>
           </CardBody>
         </Card>
         <Card>
           <CardBody>
             <Link
-              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${activeText.coming.maybe}`}
+              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${t(`50.coming.maybe`)}`}
               className="flex flex-row items-center gap-2 text-lg"
             >
               <QuestionMarkCircleIcon className="w-8 h-8 text-yellow-500" />
-              {activeText.coming.maybe}
+              {t(`50.coming.maybe`)}
             </Link>
           </CardBody>
         </Card>
         <Card>
           <CardBody>
             <Link
-              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${activeText.coming.no}`}
+              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${t(`50.coming.no`)}`}
               className="flex flex-row items-center gap-2 text-lg"
             >
               <HandThumbDownIcon className="w-8 h-8 text-red-500" />
-              {activeText.coming.no}
+              {t(`50.coming.no`)}
             </Link>
           </CardBody>
         </Card>
       </section>
       <User
         name="Jan Paul"
-        description={activeText.diss}
+        description={t(`common.diss`)}
         avatarProps={{
           src: me.src,
         }}
       />
-      <Spacer x={4} />
+      <Spacer />
       <Joke />
     </>
   );

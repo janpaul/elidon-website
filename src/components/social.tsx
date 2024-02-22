@@ -11,7 +11,7 @@ import bunq from "@/icons/bunq-color.svg";
 import reddit from "@/icons/reddit-color.svg";
 
 export const Social = () => (
-  <div className="flex flex-row gap-2 md:gap-4 flex-wrap">
+  <div className="flex flex-row gap-2 md:gap-4 flex-wrap bg-white p-2 rounded-md w-fit bg-opacity-10">
     <div className="flex flex-row gap-1 items-center">
       <Link href={`//wa.me/31629267339`} isExternal>
         <NextImage src={wa.src} width={32} height={32} alt="Whatsapp" />
