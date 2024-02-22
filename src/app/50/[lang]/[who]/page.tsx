@@ -68,17 +68,17 @@ const FiftyLangPage = ({ params: { lang, who = defaultWho } }: Props) => {
           </Link>
         </Tooltip>
         ,{" "}
+        <Tooltip content="Hey email">
+          <Link href="mailto:janpaul@hey.com" isExternal>
+            <NextImage src={hey.src} width={16} height={16} alt="Hey email" />
+          </Link>
+        </Tooltip>{" "}
+        {activeText.or}{" "}
         <Tooltip content="Signal">
           <Link href="https://signal.me/#p/+31629267339" isExternal>
             <NextImage src={signal.src} width={16} height={16} alt="Signal" />
           </Link>
         </Tooltip>{" "}
-        {activeText.or}{" "}
-        <Tooltip content="Hey email">
-          <Link href="mailto:janpaul@hey.com" isExternal>
-            <NextImage src={hey.src} width={16} height={16} alt="Hey email" />
-          </Link>
-        </Tooltip>
         .
       </Paragraph>
       <Spacer x={16} />
