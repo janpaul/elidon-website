@@ -18,3 +18,6 @@ export const getAge = (unit: UnitType): number => {
 };
 
 export const getYear = (): number => new Date().getFullYear();
+
+export const capitalize = (str: string): string =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
