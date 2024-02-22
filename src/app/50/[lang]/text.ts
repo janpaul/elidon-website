@@ -1,4 +1,4 @@
-export type Language = `nl` | `en`;
+export type Language = `nl` | `en` | `se`;
 
 type Text = Record<
   Language,
@@ -31,5 +31,14 @@ export const text: Text = {
     diss: `Ouwe lul`,
     reach: `Je kunt me bereiken op `,
     or: `of`,
+  },
+  se: {
+    greeting: "Hej hej!",
+    p1: `Den 11 juni 2024 fyller jag 50 år - en ganska stor sak för mig. Jag brukar inte ha födelsedagskalas, men den här gången vill jag inte låta det passera. Så vad sägs om att på tisdagen den 11 juni från kl. 19.00 till sent `,
+    p2: `att umgås? Det skulle vara super om du kunde vara där.`,
+    rsvp: `Kan du meddela mig om du kommer? Det skulle vara fantastiskt!`,
+    diss: `Gammal kuk`,
+    reach: `Du kan nå mig på`,
+    or: `eller`,
   },
 };
