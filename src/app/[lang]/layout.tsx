@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import { Background } from "@/app/[lang]/background";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -14,7 +13,6 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" className={`dark ${GeistSans.variable}`}>
       <body className="transform-gpu">
-        <Background />
         <Providers>
           <main className="mx-1 md:mx-8">{children}</main>
         </Providers>
