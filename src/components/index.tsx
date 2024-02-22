@@ -1,4 +1,3 @@
-export * from "./stats";
 export * from "./joke";
 export * from "./social";
 export * from "./typography";

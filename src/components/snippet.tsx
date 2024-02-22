@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Spacer } from "@nextui-org/react";
 import { ClipboardDocumentIcon } from "@heroicons/react/16/solid";
 import { classNames } from "@/lib";
 

@@ -1,20 +1,20 @@
 import { Divider, Avatar } from "@nextui-org/react";
-import { Title, Paragraph, Block, Stats, Joke, Social } from "@/components";
+import { Title, Paragraph, Block, Joke, Social } from "@/components";
 import me from "@/media/jp.jpg";
-import { translate } from "@/lib";
+import { type Language, translate } from "@/lib";
+import { Stats } from "./stats";
+import type { LangProps } from "@/app/[lang]/types";
 
 export const revalidate = 86_400;
 
-const Home = async () => {
-  const t = await translate("en");
+type Props = LangProps & {};
+
+const Home = async ({ params: { lang } }: Props) => {
+  const t = await translate(lang as Language);
   return (
     <div>
-      <Title>Hi! My name is Jan Paul</Title>
-      <Paragraph>
-        I am a software engineer who creates and develops experiences that make
-        people&apos;s lives simple and awesome. I am an aspiring Hugo Boss model
-        and (try to be) a Club DJ.
-      </Paragraph>
+      <Title>{t(`home.title`)}</Title>
+      <Paragraph size="lg">{t(`home.p`)}</Paragraph>
       <Divider className="my-5" />
       <Avatar
         src={me.src}
@@ -32,7 +32,7 @@ const Home = async () => {
       </Block>
       <Divider className="my-5" />
       <Block>
-        <Stats />
+        <Stats t={t} />
       </Block>
     </div>
   );

@@ -1,7 +1,15 @@
 {
   "common": {
+    "at_least": "(Ten minste)",
+    "days": "dagen",
     "diss": "Ouwe lul",
-    "or": "of"
+    "or": "of",
+    "sorry": "Sorry",
+    "years": "jaar"
+  },
+  "home": {
+    "title": "Hoi! Ik ben Jan Paul",
+    "p": "Ik ben een software engineer die ervaringen creëert die het leven van mensen eenvoudig en geweldig maken. Ik ben een aspirant Hugo Boss model en (probeer) een Club DJ te zijn."
   },
   "50": {
     "greeting": "Hoi",

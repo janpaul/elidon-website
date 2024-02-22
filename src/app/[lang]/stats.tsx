@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { getAge } from "@/lib";
+import type { TranslateFn } from "@/lib";
 
 type StatType = {
   name: string;
@@ -9,12 +10,16 @@ type StatType = {
 const _stats: StatType[] = [
   { name: `Age`, value: getAge("years"), unit: `years` },
   { name: `Age`, value: getAge("days"), unit: `days` },
-  { name: `Ex-wives`, value: 2, unit: `(sorry)` },
-  { name: `Kids`, value: 3, unit: `(at least)` },
-  { name: `Success rate`, value: `43.5`, unit: `%` },
+  { name: `Ex-wives`, value: 2, unit: `sorry` },
+  { name: `Kids`, value: 3, unit: `at_least` },
+  { name: `Success rate`, value: `43.5%` },
 ];
 
-export const Stats = () => (
+type Props = {
+  t: TranslateFn;
+};
+
+export const Stats = ({ t }: Props) => (
   <div className="bg-transparent">
     <div className="max-w-7xl">
       <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-4">
@@ -28,7 +33,9 @@ export const Stats = () => (
                 {stat.value}
               </span>
               {stat.unit ? (
-                <span className="text-sm text-gray-400">{stat.unit}</span>
+                <span className="text-sm text-gray-400">
+                  {t(`common.${stat.unit}`)}
+                </span>
               ) : null}
             </p>
           </div>

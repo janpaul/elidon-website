@@ -1,9 +1,16 @@
 {
   "common": {
+    "at_least": "At least",
+    "days": "days",
     "diss": "Old geezer",
-    "or": "or"
+    "or": "or",
+    "sorry": "Sorry",
+    "years": "years"
   },
-  "home": {},
+  "home": {
+    "title": "Hi! My name is Jan Paul",
+    "p": "I am a software engineer who creates and develops experiences that make people's lives simple and awesome. I am an aspiring Hugo Boss model and (try to be) a Club DJ."
+  },
   "50": {
     "greeting": "Hey",
     "p1": "On June 11, 2024, I'm hitting the big 5-0 – kind of a big deal for me. I usually don't do birthday parties, but this time I don't want to let it pass by unnoticed. So, how about hanging out at",

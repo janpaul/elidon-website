@@ -20,10 +20,11 @@ import hey from "@/icons/hey-color.svg";
 import signal from "@/icons/signal-color.svg";
 import me from "@/media/jp.jpg";
 import "flag-icons/css/flag-icons.min.css";
+import type { LangProps } from "@/app/[lang]/types";
 
 const defaultWho = `unknown`;
-type Props = {
-  params: { lang: string; who: string };
+type Props = LangProps & {
+  params: { who: string };
 };
 
 const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
@@ -32,13 +33,13 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
     <>
       <Spacer />
       <div className="flex flex-row gap-4">
-        <NextLink href={`/50/nl/${who}`}>
+        <NextLink href={`/nl/50/${who}`}>
           <span className="fi fi-nl rounded-sm"></span>
         </NextLink>
-        <NextLink href={`/50/en/${who}`}>
+        <NextLink href={`/en/50/${who}`}>
           <span className="fi fi-gb rounded-sm"></span>
         </NextLink>
-        <NextLink href={`/50/se/${who}`}>
+        <NextLink href={`/se/50/${who}`}>
           <span className="fi fi-se rounded-sm"></span>
         </NextLink>
       </div>

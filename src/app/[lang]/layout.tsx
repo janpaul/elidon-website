@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import { Background } from "@/app/background";
+import { Background } from "@/app/[lang]/background";
 import { Providers } from "./providers";
 import "./globals.css";
 

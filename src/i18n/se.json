@@ -1,7 +1,15 @@
 {
   "common": {
+    "at_least": "Minst",
+    "days": "dagar",
     "diss": "Gammal kuk",
-    "or": "eller"
+    "or": "eller",
+    "sorry": "Förlåt",
+    "years": "år"
+  },
+  "home": {
+    "title": "Hoi! Ik ben Jan Paul",
+    "p": "Jag är en mjukvaruingenjör som skapar och utvecklar upplevelser som gör människors liv enkla och fantastiska. Jag är en blivande Hugo Boss-modell och (försöker vara) en klubb-DJ."
   },
   "50": {
     "greeting": "Hej hej",
