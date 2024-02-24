@@ -308,6 +308,7 @@ export const jokes: (string | string[])[] = [
     `I called up my landlord and said, "Hey, I gotta leak in my sink."`,
     `He sid, "Go ahead, I'm not judging you."`,
   ],
+  `I told my wife I wanted to be cremated.\nShe made me an appointment for Tuesday.`,
   [
     `It ook my new girlfriend out on our first date to the ice rink, and entry was half price."`,
     `She called me a cheap skate.`,
