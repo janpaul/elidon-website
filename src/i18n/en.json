@@ -14,11 +14,10 @@
   "50": {
     "greeting": "Hey",
     "p1": "On June 11, 2024, I'm hitting the big 5-0 – kind of a big deal for me. I usually don't do birthday parties, but this time I don't want to let it pass by unnoticed. So, how about hanging out at",
-    "p2": "from 7 PM till late on Tuesday the 11th? It would be awesome if you could make it.",
+    "p2": "from 7 PM till late on Tuesday on june 11th? It would be awesome if you could make it.",
     "rsvp": "Can you let me know if you're coming? That would be great!",
-
     "reach": "For questions, you can reach me at ",
-
+    "calendar": "Save the date!",
     "coming": {
       "yes": "I'm coming for sure",
       "no": "I can't make it",

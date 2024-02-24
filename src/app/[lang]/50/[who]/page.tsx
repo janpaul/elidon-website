@@ -12,6 +12,7 @@ import {
   HandThumbDownIcon,
   HandThumbUpIcon,
   QuestionMarkCircleIcon,
+  CalendarDaysIcon,
 } from "@heroicons/react/16/solid";
 import { Joke, Paragraph, Title, Spacer, Breadcrumbs } from "@/components";
 import { capitalize, translate, type Language } from "@/lib";
@@ -21,6 +22,7 @@ import signal from "@/icons/signal-color.svg";
 import me from "@/media/jp.jpg";
 import "flag-icons/css/flag-icons.min.css";
 import type { LangProps } from "@/app/[lang]/types";
+import { contact } from "@/data/contact";
 
 const defaultWho = `unknown`;
 type Props = LangProps & {
@@ -75,7 +77,7 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         </Tooltip>
         ,{" "}
         <Tooltip content="Hey email">
-          <Link href="mailto:janpaul@hey.com" isExternal>
+          <Link href={`mailto:${contact.email}`} isExternal>
             <NextImage src={hey.src} width={16} height={16} alt="Hey email" />
           </Link>
         </Tooltip>{" "}
@@ -87,6 +89,12 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         </Tooltip>{" "}
         .
       </Paragraph>
+      <Card className="w-fit my-4">
+        <Link href="/api/50/ical">
+          <CalendarDaysIcon className="h-5 w-5" />
+          {t("50.calendar")}
+        </Link>
+      </Card>
       <Spacer />
       <section className="flex flex-col lg:flex-row gap-1 lg:gap-4 my-8">
         <Card>
