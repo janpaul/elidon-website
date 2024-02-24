@@ -313,7 +313,7 @@ export const jokes: (string | string[])[] = [
     `She called me a cheap skate.`,
   ],
   [
-    `We argued all day about what to call a medieval solderier`,
+    `We argued all day about what to call a medieval soldier`,
     `But it was getting late so we called it a knight`,
   ],
   `My daughter asked me 'What is a unit of power?'\nI replied 'correct'.`,
