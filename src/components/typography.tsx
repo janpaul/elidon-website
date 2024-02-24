@@ -48,7 +48,9 @@ export const Block = ({ children, className }: Props) => (
 );
 export const Paragraph = ({ children, className, size = `md` }: Props) => (
   <>
-    <p className={classNames(paragraphSizeToClassname(size), className)}>
+    <p
+      className={classNames("mb-2", paragraphSizeToClassname(size), className)}
+    >
       {children}
     </p>
     <Spacer x={4} />

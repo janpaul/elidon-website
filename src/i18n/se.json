@@ -9,7 +9,10 @@
   },
   "home": {
     "title": "Hoi! Ik ben Jan Paul",
-    "p": "Jag är en mjukvaruingenjör som skapar och utvecklar upplevelser som gör människors liv enkla och fantastiska. Jag är en blivande Hugo Boss-modell och (försöker vara) en klubb-DJ."
+    "p1": "Jag är en mjukvaruingenjör som skapar och utvecklar upplevelser som gör människors liv enkla och fantastiska. Jag är en blivande Hugo Boss-modell och (försöker vara) en klubb-DJ.",
+    "p2": "Jag bor i vackra Amsterdam Jordaan, ett område som sjuder av kultur och historia, där varje gathörn berättar sin egen historia. Min passion för resor har tagit mig till avlägsna platser, men jag älskar alltid att återvända till myset i min egen stad. Förutom mina äventyr runt om i världen älskar jag att göra ställningen osäker på min fasta växel. Känslan av frihet när jag sicksackar genom de smala gatorna med vinden i håret är ojämförlig.",
+    "p3": "Jag tränar också taekwondo, en disciplin som inte bara utmanar mig fysiskt utan också ger mig mental motståndskraft och självdisciplin. Det är den perfekta avkopplingen efter en lång dag vid datorn och hjälper mig att hålla balansen.",
+    "p4": "Mitt liv är en blandning av att utforska nya kulturer, njuta av de små sakerna och alltid leta efter nästa äventyr. Oavsett om det är en resa långt bort, ett nytt spel som jag utvecklar, den perfekta driften i en snabb bil eller en ny teknik i taekwondo."
   },
   "50": {
     "greeting": "Hej hej",

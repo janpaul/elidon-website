@@ -14,7 +14,10 @@ const Home = async ({ params: { lang } }: Props) => {
   return (
     <div>
       <Title>{t(`home.title`)}</Title>
-      <Paragraph size="lg">{t(`home.p`)}</Paragraph>
+      <Paragraph size="md">{t(`home.p1`)}</Paragraph>
+      <Paragraph size="md">{t(`home.p2`)}</Paragraph>
+      <Paragraph size="md">{t(`home.p3`)}</Paragraph>
+      <Paragraph size="md">{t(`home.p4`)}</Paragraph>
       <Divider className="my-5" />
       <Avatar
         src={me.src}

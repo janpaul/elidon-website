@@ -9,7 +9,10 @@
   },
   "home": {
     "title": "Hi! My name is Jan Paul",
-    "p": "I am a software engineer who creates and develops experiences that make people's lives simple and awesome. I am an aspiring Hugo Boss model and (try to be) a Club DJ."
+    "p1": "I am a software engineer with way too much energy, who creates and develops experiences that make people's lives simple and awesome. I am an aspiring Hugo Boss model and (try to be) a Club DJ.",
+    "p2": "I live in the beautiful Amsterdam Jordaan, a neighborhood bustling with culture and history, where every street corner tells its own story. My passion for travel has led me to faraway places, but I always love returning to the coziness of my own city. In addition to my adventures around the world, I love making the stand unsafe on my fixed gear. The feeling of freedom as I zigzag through the narrow streets, the wind in my hair, is incomparable.",
+    "p3": "I also practice taekwondo, a discipline that not only challenges me physically, but also instills mental resilience and self-discipline. It is the perfect outlet after a long day at the computer and helps me stay balanced.",
+    "p4": "My life is a mix of exploring new cultures, enjoying the little things, and always looking for the next adventure. Whether that's a faraway trip, a new game I'm developing, the perfect drift in a fast car, or a new technique in taekwondo."
   },
   "50": {
     "greeting": "Hey",
