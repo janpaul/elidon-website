@@ -19,7 +19,7 @@ const Home = async ({ params: { lang } }: Props) => {
         src={me.src}
         size="lg"
         isBordered
-        className="w-64 h-64 text-large"
+        className="h-32 w-32 lg:w-64 lg:h-64 text-large"
       />
       <Paragraph size="md">{t(`home.p1`)}</Paragraph>
       <Paragraph size="md">{t(`home.p2`)}</Paragraph>
