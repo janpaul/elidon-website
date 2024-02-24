@@ -70,7 +70,7 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         {t(`50.p2`)}
       </Paragraph>
       <Paragraph size="lg">
-        {t(`50.rsvp`)}. {t(`50.reach`)}{" "}
+        {t(`50.rsvp`)} {t(`50.reach`)}{" "}
         <Tooltip content="Whatsapp">
           <Link href={`//wa.me/${phoneFlat}`} isExternal>
             <NextImage src={wa.src} width={16} height={16} alt="Whatsapp" />
@@ -90,11 +90,13 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         </Tooltip>{" "}
         .
       </Paragraph>
-      <Card className="w-fit my-4">
-        <Link href="/api/50/ical">
-          <CalendarDaysIcon className="h-5 w-5" />
-          {t("50.calendar")}
-        </Link>
+      <Card className="w-fit my-4" isPressable radius="md" isHoverable>
+        <CardBody>
+          <Link href="/api/50/ical">
+            <CalendarDaysIcon className="h-5 w-5" />
+            {t("50.calendar")}
+          </Link>
+        </CardBody>
       </Card>
       <Spacer />
       <section className="flex flex-col lg:flex-row gap-1 lg:gap-4 my-8">
