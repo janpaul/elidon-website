@@ -24,6 +24,7 @@ import "flag-icons/css/flag-icons.min.css";
 import type { LangProps } from "@/app/[lang]/types";
 import { contact } from "@/data/contact";
 
+const { email, phoneFlat } = contact;
 const defaultWho = `unknown`;
 type Props = LangProps & {
   params: { who: string };
@@ -71,19 +72,19 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
       <Paragraph size="lg">
         {t(`50.rsvp`)}. {t(`50.reach`)}{" "}
         <Tooltip content="Whatsapp">
-          <Link href="//wa.me/31629267339" isExternal>
+          <Link href={`//wa.me/${phoneFlat}`} isExternal>
             <NextImage src={wa.src} width={16} height={16} alt="Whatsapp" />
           </Link>
         </Tooltip>
         ,{" "}
         <Tooltip content="Hey email">
-          <Link href={`mailto:${contact.email}`} isExternal>
+          <Link href={`mailto:${email}`} isExternal>
             <NextImage src={hey.src} width={16} height={16} alt="Hey email" />
           </Link>
         </Tooltip>{" "}
         {t(`common.or`)}{" "}
         <Tooltip content="Signal">
-          <Link href="https://signal.me/#p/+31629267339" isExternal>
+          <Link href={`https://signal.me/#p/+${phoneFlat}`} isExternal>
             <NextImage src={signal.src} width={16} height={16} alt="Signal" />
           </Link>
         </Tooltip>{" "}
@@ -100,8 +101,9 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         <Card>
           <CardBody>
             <Link
-              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${t(`50.coming.yes`)}`}
+              href={`//wa.me/${phoneFlat}?text=(${capitalize(who)}) %20${t(`50.coming.yes`)}`}
               className="flex flex-row items-center gap-2 text-lg"
+              isExternal
             >
               <HandThumbUpIcon className="w-8 h-8 text-green-500" />
               {t(`50.coming.yes`)}
@@ -111,8 +113,9 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         <Card>
           <CardBody>
             <Link
-              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${t(`50.coming.maybe`)}`}
+              href={`//wa.me/${phoneFlat}?text=(${capitalize(who)})%20${t(`50.coming.maybe`)}`}
               className="flex flex-row items-center gap-2 text-lg"
+              isExternal
             >
               <QuestionMarkCircleIcon className="w-8 h-8 text-yellow-500" />
               {t(`50.coming.maybe`)}
@@ -122,8 +125,9 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         <Card>
           <CardBody>
             <Link
-              href={`mailto:janpaul@hey.com?subject=${capitalize(who)}:%20${t(`50.coming.no`)}`}
+              href={`//wa.me/${phoneFlat}?text=(${capitalize(who)})%20${t(`50.coming.no`)}`}
               className="flex flex-row items-center gap-2 text-lg"
+              isExternal
             >
               <HandThumbDownIcon className="w-8 h-8 text-red-500" />
               {t(`50.coming.no`)}
