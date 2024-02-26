@@ -23,6 +23,7 @@ import me from "@/media/jp.jpg";
 import "flag-icons/css/flag-icons.min.css";
 import type { LangProps } from "@/app/[lang]/types";
 import { contact } from "@/data/contact";
+import { BirthdayName } from "@/app/[lang]/50/[who]/birthday-name";
 
 const { email, phoneFlat } = contact;
 const defaultWho = `unknown`;
@@ -55,7 +56,7 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
       <Divider />
       <Spacer />
       <Title size="md">
-        {t(`50.greeting`)} {who === defaultWho ? "" : capitalize(who)}!
+        {t(`50.greeting`)} <BirthdayName uuid={who} />!
       </Title>
       <Spacer />
       <Paragraph className="mb-4" size="lg">
