@@ -184,21 +184,21 @@ const birthdays: Birthday[] = [
     id: "gossiping-plants-whisper",
     name: "Martijn",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: `Martijn Clarenbeek, DHL`,
   },
   {
     id: "mystery-potato-vanishes",
     name: "Daniel",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: `DHL`,
   },
   {
     id: "disco-yeti-grooves",
     name: "Jesse",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: `DHL`,
   },
   {
@@ -375,11 +375,23 @@ const birthdays: Birthday[] = [
     coming: "unknown",
     comment: "Broeze",
   },
+  {
+    id: "dizzy-dragon-doodles",
+    name: "Youri",
+    lang: "nl",
+    coming: "unknown",
+    comment: "DHL",
+  },
+  {
+    id: "prancing-penguin-panics",
+    name: "Soraya",
+    lang: "nl",
+    coming: "unknown",
+    comment: "DHL",
+  },
 ];
 
 [
-  "glittery-goose-gambles",
-  "prancing-penguin-panics",
   "cackling-crow-codes",
   "wobbly-wombat-wanders",
   "zany-zebra-zooms",
