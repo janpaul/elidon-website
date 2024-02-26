@@ -127,7 +127,7 @@ const birthdays: Birthday[] = [
     id: "surfing-cow-moos",
     name: "Sidney",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     extra: 1,
     invited: true,
   },
@@ -159,7 +159,7 @@ const birthdays: Birthday[] = [
     id: "photobombing-ghost-appears",
     name: "Jip",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     invited: true,
   },
   {
