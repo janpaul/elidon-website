@@ -82,7 +82,7 @@ const birthdays: Birthday[] = [
   },
   {
     id: "roller-skating-baguette",
-    name: "Roos & Wilfred",
+    name: "Roos",
     lang: "nl",
     coming: "unknown",
     extra: 1,
@@ -348,7 +348,7 @@ const birthdays: Birthday[] = [
     id: "bubbly-bear-burps",
     name: "Eva Luna",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
   },
   {
     id: "quirky-quokka-queries",
@@ -360,7 +360,7 @@ const birthdays: Birthday[] = [
     id: "ninja-narwhal-navigates",
     name: "Alexander",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
   },
   {
     id: "fluffy-fox-frolics",
