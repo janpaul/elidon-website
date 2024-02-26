@@ -65,7 +65,7 @@ const birthdays: Birthday[] = [
     id: "burping-flower-blooms",
     name: "Fabienne",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     invited: true,
   },
   {
@@ -88,6 +88,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
+    invited: true,
   },
   {
     id: "sleepwalking-pillow-fights",
@@ -111,6 +112,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
+    invited: true,
   },
   {
     id: "cartwheeling-walrus-flops",
@@ -285,6 +287,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
+    invited: true,
   },
   { id: "hungry-book-eats", name: "Katja", lang: "nl", coming: "unknown" },
   {
@@ -361,6 +364,14 @@ const birthdays: Birthday[] = [
     name: "Mignon",
     lang: "nl",
     coming: "unknown",
+  },
+  {
+    id: "glittery-goose-gambles",
+    name: "Jan",
+    lang: "nl",
+    coming: "unknown",
+    comment: "Broeze",
+    invited: true,
   },
 ];
 
