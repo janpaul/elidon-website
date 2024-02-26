@@ -153,7 +153,7 @@ const birthdays: Birthday[] = [
     id: "blushing-lobster-crawls",
     name: "Siem",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
     comment: "(Maartje)",
   },
   {
@@ -395,11 +395,17 @@ const birthdays: Birthday[] = [
     coming: "coming",
     comment: "DHL",
   },
+  {
+    id: "wobbly-wombat-wanders",
+    name: "Ilayda",
+    lang: "nl",
+    coming: "coming",
+    comment: "van Eva Luna",
+  },
 ];
 
 [
   "cackling-crow-codes",
-  "wobbly-wombat-wanders",
   "zany-zebra-zooms",
   "quirky-quail-quizzes",
   "gargling-giraffe-giggles",
