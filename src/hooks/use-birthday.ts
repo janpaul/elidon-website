@@ -6,6 +6,7 @@ export type Birthday = {
   name: string;
   lang: Language;
   coming: Coming;
+  invited?: boolean;
   comment?: string;
 };
 
@@ -15,12 +16,14 @@ const birthdays: Birthday[] = [
     name: "Jan Paul",
     lang: "nl",
     coming: "coming",
+    invited: true,
   },
   {
     id: "trampoline-jumping-cactus",
     name: "Stephanie",
     lang: "nl",
     coming: "coming",
+    invited: true,
   },
   {
     id: "marshmallow-weightlifting-champ",
@@ -307,6 +310,7 @@ const birthdays: Birthday[] = [
     name: "Alexander",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "fluffy-fox-frolics",
