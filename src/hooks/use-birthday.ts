@@ -6,6 +6,7 @@ export type Birthday = {
   name: string;
   lang: Language;
   coming: Coming;
+  extra?: number;
   invited?: boolean;
   comment?: string;
 };
@@ -54,6 +55,7 @@ const birthdays: Birthday[] = [
     name: "Nevil & Ans",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "burping-flower-blooms",
@@ -66,6 +68,7 @@ const birthdays: Birthday[] = [
     name: "Patricia & Rens",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "jumping-cake-escapes",
@@ -78,18 +81,28 @@ const birthdays: Birthday[] = [
     name: "Roos & Wilfred",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "sleepwalking-pillow-fights",
-    name: "Liam & Anna",
+    name: "Liam",
     lang: "nl",
     coming: "unknown",
+    comment: "van Anna",
+  },
+  {
+    id: "marching-mole-marvels",
+    name: "Anna",
+    lang: "nl",
+    coming: "unknown",
+    comment: "van Liam",
   },
   {
     id: "moon-cheese-melts",
     name: "Floor & Ralph",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "cartwheeling-walrus-flops",
@@ -100,15 +113,24 @@ const birthdays: Birthday[] = [
   { id: "surfing-cow-moos", name: "Sidney", lang: "nl", coming: "unknown" },
   {
     id: "whistling-teapot-dances",
-    name: "Anouk & Ivo",
+    name: "Anouk",
     lang: "nl",
     coming: "unknown",
+    comment: "van Ivo",
+  },
+  {
+    id: "giggly-goat-gallops",
+    name: "Ivo",
+    lang: "nl",
+    coming: "unknown",
+    comment: "van Anouk",
   },
   {
     id: "yodeling-pickle-echoes",
     name: "Maartje & Jasper",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "photobombing-ghost-appears",
@@ -128,6 +150,7 @@ const birthdays: Birthday[] = [
     name: "Nathalie",
     lang: "se",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "bungee-jumping-turtle",
@@ -224,6 +247,7 @@ const birthdays: Birthday[] = [
     name: "Rens & Imane",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "dancing-robot-malfunctions",
@@ -242,12 +266,14 @@ const birthdays: Birthday[] = [
     name: "Remco & Sim",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "ninja-cat-bathes",
     name: "Bas & Monique",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   { id: "hungry-book-eats", name: "Katja", lang: "nl", coming: "unknown" },
   {
@@ -262,6 +288,7 @@ const birthdays: Birthday[] = [
     name: "Pietro & Raffaella",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "flirty-mirror-winks",
@@ -274,24 +301,28 @@ const birthdays: Birthday[] = [
     name: "Marc & Christien",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "sneaky-fridge-raids",
     name: "Emre & Meryem",
     lang: "en",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "napping-dragon-drools",
     name: "Patricia",
     lang: "en",
     coming: "unknown",
-  }, // Sawamura
+    comment: "Sawamura",
+  },
   {
     id: "exploding-pizza-sauce",
     name: "Cindy & Anita",
     lang: "nl",
     coming: "unknown",
+    extra: 1,
   },
   {
     id: "bubbly-bear-burps",
@@ -332,7 +363,6 @@ const birthdays: Birthday[] = [
   "dizzy-dragon-doodles",
   "elegant-eagle-eats",
   "fancy-frog-fashions",
-  "giggly-goat-gallops",
   "hopping-hedgehog-hiccups",
   "itchy-iguana-iceskates",
   "jazzy-jellyfish-jumps",
@@ -364,7 +394,6 @@ const birthdays: Birthday[] = [
   "jumping-jaguar-jokes",
   "karaoke-koala-kayaks",
   "lounging-lemur-lectures",
-  "marching-mole-marvels",
   "napping-newt-notices",
   "orbiting-ostrich-objects",
 ];

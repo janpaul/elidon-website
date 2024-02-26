@@ -20,10 +20,12 @@ import {
 import "flag-icons/css/flag-icons.min.css";
 import { useAllBirthdays, useClipboard, type Birthday } from "@/hooks";
 import { classNames } from "@/lib";
-import { Spacer, Title } from "@/components";
+import { Title } from "@/components";
 
 const birthdayLink = ({ lang, id }: Birthday): string =>
   `https://elidon.net/${lang}/50/${id}`;
+const countPeople = (bs: Birthday[]): number =>
+  bs.reduce((acc, b) => (b.extra ? acc + 1 + b.extra : acc + 1), 0);
 const birthdaySorter = (a: Birthday, b: Birthday) =>
   a.name.localeCompare(b.name);
 const BirthdayListPage = () => {
@@ -34,6 +36,7 @@ const BirthdayListPage = () => {
       <Title>Birthday list</Title>
       <Table>
         <TableHeader>
+          <TableColumn>Total:</TableColumn>
           <TableColumn>Coming:</TableColumn>
           <TableColumn>Not coming:</TableColumn>
           <TableColumn>Maybe:</TableColumn>
@@ -41,17 +44,18 @@ const BirthdayListPage = () => {
         </TableHeader>
         <TableBody className="mt-4">
           <TableRow>
+            <TableCell>{countPeople(birthdays)}</TableCell>
             <TableCell>
-              {birthdays.filter((b) => b.coming === "coming").length}
+              {countPeople(birthdays.filter((b) => b.coming === "coming"))}
             </TableCell>
             <TableCell>
-              {birthdays.filter((b) => b.coming === "not-coming").length}
+              {countPeople(birthdays.filter((b) => b.coming === "not-coming"))}
             </TableCell>
             <TableCell>
-              {birthdays.filter((b) => b.coming === "maybe").length}
+              {countPeople(birthdays.filter((b) => b.coming === "maybe"))}
             </TableCell>
             <TableCell>
-              {birthdays.filter((b) => b.coming === "unknown").length}
+              {countPeople(birthdays.filter((b) => b.coming === "unknown"))}
             </TableCell>
           </TableRow>
         </TableBody>
