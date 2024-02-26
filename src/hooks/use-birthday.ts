@@ -31,24 +31,28 @@ const birthdays: Birthday[] = [
     name: "Vera",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "hula-hooping-cactus",
     name: "Martin",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "skydiving-sheep-baaas",
     name: "Nina",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "tightrope-walking-elephant",
     name: "Mick",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "sunbathing-owl-tans",
@@ -62,6 +66,7 @@ const birthdays: Birthday[] = [
     name: "Fabienne",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "invisible-dog-barks",
@@ -90,6 +95,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "van Anna",
+    invited: true,
   },
   {
     id: "marching-mole-marvels",
@@ -97,6 +103,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "van Liam",
+    invited: true,
   },
   {
     id: "moon-cheese-melts",
@@ -110,6 +117,7 @@ const birthdays: Birthday[] = [
     name: "Charita",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   { id: "surfing-cow-moos", name: "Sidney", lang: "nl", coming: "unknown" },
   {
@@ -118,6 +126,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "van Ivo",
+    invited: true,
   },
   {
     id: "giggly-goat-gallops",
@@ -125,6 +134,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "van Anouk",
+    invited: true,
   },
   {
     id: "yodeling-pickle-echoes",
