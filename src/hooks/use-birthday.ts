@@ -348,6 +348,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
+    invited: true,
   },
   {
     id: "sneaky-fridge-raids",
