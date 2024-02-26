@@ -48,6 +48,13 @@ const birthdays: Birthday[] = [
     coming: "unknown",
   },
   {
+    id: `hovering-hamster-hums`,
+    name: "Henk & Ank",
+    lang: "nl",
+    coming: "not-coming",
+    extra: 1,
+  },
+  {
     id: "sunbathing-owl-tans",
     name: "Nevil & Ans",
     lang: "nl",
