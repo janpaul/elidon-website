@@ -147,18 +147,21 @@ const birthdays: Birthday[] = [
     name: "Jip",
     lang: "nl",
     coming: "coming",
+    comment: "(Maartje)",
   },
   {
     id: "blushing-lobster-crawls",
     name: "Siem",
     lang: "nl",
     coming: "unknown",
+    comment: "(Maartje)",
   },
   {
     id: "giggling-toast-jump",
     name: "Tim",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
+    comment: "(Maartje)",
   },
   {
     id: "spy-penguin-disguises",
@@ -205,7 +208,7 @@ const birthdays: Birthday[] = [
     id: "karate-kitten-chops",
     name: "Serge",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: `DHL`,
   },
   {
@@ -263,6 +266,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "maybe",
     extra: 1,
+    comment: "oude buren IJburg",
   },
   {
     id: "dancing-robot-malfunctions",
@@ -302,6 +306,7 @@ const birthdays: Birthday[] = [
     name: "Fabio",
     lang: "en",
     coming: "unknown",
+    comment: "oude buren Reguliersgracht",
   },
   {
     id: "pirate-duck-quacks",
@@ -309,6 +314,7 @@ const birthdays: Birthday[] = [
     lang: "en",
     coming: "unknown",
     extra: 1,
+    comment: "oude buren Reguliersgracht",
   },
   {
     id: "flirty-mirror-winks",
