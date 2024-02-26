@@ -6,6 +6,7 @@ export type Birthday = {
   name: string;
   lang: Language;
   coming: Coming;
+  comment?: string;
 };
 
 const birthdays: Birthday[] = [
@@ -136,53 +137,85 @@ const birthdays: Birthday[] = [
     name: "Martijn",
     lang: "nl",
     coming: "unknown",
-  }, // Groenewegen
+    comment: `Martijn Groenewegen, DHL`,
+  },
   {
     id: "gossiping-plants-whisper",
     name: "Martijn",
     lang: "nl",
     coming: "unknown",
-  }, // Clarenbeek
+    comment: `Martijn Clarenbeek, DHL`,
+  },
   {
     id: "mystery-potato-vanishes",
     name: "Daniel",
     lang: "nl",
     coming: "unknown",
+    comment: `DHL`,
   },
-  { id: "disco-yeti-grooves", name: "Jesse", lang: "nl", coming: "unknown" },
+  {
+    id: "disco-yeti-grooves",
+    name: "Jesse",
+    lang: "nl",
+    coming: "unknown",
+    comment: `DHL`,
+  },
   {
     id: "karate-kitten-chops",
     name: "Serge",
     lang: "nl",
     coming: "unknown",
+    comment: `DHL`,
   },
-  { id: "cheeky-moon-winks", name: "Anna", lang: "nl", coming: "unknown" },
+  {
+    id: "cheeky-moon-winks",
+    name: "Anna",
+    lang: "nl",
+    coming: "unknown",
+    comment: `DHL`,
+  },
   {
     id: "ticklish-sun-laughs",
     name: "Andre",
     lang: "nl",
     coming: "unknown",
+    comment: `DHL`,
   },
   {
     id: "alien-socks-dance",
     name: "Merlijn",
     lang: "nl",
     coming: "unknown",
+    comment: `DHL`,
   },
   {
     id: "singing-fish-giggles",
     name: "Thomas",
     lang: "nl",
     coming: "unknown",
+    comment: `DHL`,
   },
-  { id: "sassy-cloud-squirts", name: "Stef", lang: "nl", coming: "unknown" },
-  { id: "flying-pig-winks", name: "Linda", lang: "nl", coming: "unknown" }, // voetbal
+  {
+    id: "sassy-cloud-squirts",
+    name: "Stef",
+    lang: "nl",
+    coming: "unknown",
+    comment: `DHL`,
+  },
+  {
+    id: "flying-pig-winks",
+    name: "Linda",
+    lang: "nl",
+    coming: "unknown",
+    comment: `voetbal`,
+  }, // voetbal
   {
     id: "sneezing-cupcake-frosting",
     name: "Alessandra",
     lang: "nl",
     coming: "unknown",
-  }, // voetbal
+    comment: `voetbal`,
+  },
   {
     id: "breakdancing-banana-slips",
     name: "Rens & Imane",
@@ -257,13 +290,28 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
   },
+  {
+    id: "bubbly-bear-burps",
+    name: "Eva Luna",
+    lang: "nl",
+    coming: "unknown",
+  },
+  {
+    id: "quirky-quokka-queries",
+    name: "Anne Lieve",
+    lang: "nl",
+    coming: "unknown",
+  },
+  {
+    id: "ninja-narwhal-navigates",
+    name: "Alexander",
+    lang: "nl",
+    coming: "unknown",
+  },
 ];
 
 [
-  "quirky-quokka-queries",
-  "bubbly-bear-burps",
   "glittery-goose-gambles",
-  "ninja-narwhal-navigates",
   "prancing-penguin-panics",
   "cackling-crow-codes",
   "fluffy-fox-frolics",

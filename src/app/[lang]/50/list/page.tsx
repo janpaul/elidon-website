@@ -19,10 +19,12 @@ import {
 import "flag-icons/css/flag-icons.min.css";
 import { useAllBirthdays, useClipboard, type Birthday } from "@/hooks";
 import { classNames } from "@/lib";
-import { Title } from "@/components";
+import { Spacer, Title } from "@/components";
 
 const birthdayLink = ({ lang, id }: Birthday): string =>
   `https://elidon.net/${lang}/50/${id}`;
+const birthdaySorter = (a: Birthday, b: Birthday) =>
+  a.name.localeCompare(b.name);
 const BirthdayListPage = () => {
   const birthdays = useAllBirthdays();
   const [, copy] = useClipboard();
@@ -36,7 +38,7 @@ const BirthdayListPage = () => {
           <TableColumn>Maybe:</TableColumn>
           <TableColumn>Unknown:</TableColumn>
         </TableHeader>
-        <TableBody>
+        <TableBody className="mt-4">
           <TableRow>
             <TableCell>
               {birthdays.filter((b) => b.coming === "coming").length}
@@ -53,15 +55,16 @@ const BirthdayListPage = () => {
           </TableRow>
         </TableBody>
       </Table>
-      <Table aria-label="birthday party attendees">
+      <Table aria-label="birthday party attendees" isStriped>
         <TableHeader>
           <TableColumn>Name</TableColumn>
           <TableColumn>Language</TableColumn>
           <TableColumn>Coming</TableColumn>
           <TableColumn>Link</TableColumn>
+          <TableColumn>Comments</TableColumn>
         </TableHeader>
         <TableBody>
-          {birthdays.map((b) => {
+          {birthdays.sort(birthdaySorter).map((b) => {
             const link = birthdayLink(b);
             return (
               <TableRow key={b.name}>
@@ -104,6 +107,7 @@ const BirthdayListPage = () => {
                     </Button>
                   </div>
                 </TableCell>
+                <TableCell>{b.comment ?? ``}</TableCell>
               </TableRow>
             );
           })}
