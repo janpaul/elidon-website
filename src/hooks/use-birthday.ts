@@ -60,6 +60,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
+    invited: true,
   },
   {
     id: "burping-flower-blooms",
@@ -74,6 +75,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
+    invited: true,
   },
   {
     id: "jumping-cake-escapes",
@@ -102,7 +104,7 @@ const birthdays: Birthday[] = [
     id: "marching-mole-marvels",
     name: "Anna",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: "van Liam",
     invited: true,
   },
@@ -370,6 +372,7 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
+    invited: true,
   },
   {
     id: "bubbly-bear-burps",
