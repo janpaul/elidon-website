@@ -250,7 +250,7 @@ const birthdays: Birthday[] = [
     id: "flying-pig-winks",
     name: "Linda",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: `voetbal`,
   },
   {
