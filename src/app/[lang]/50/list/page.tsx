@@ -12,7 +12,6 @@ import {
 import {
   CheckIcon,
   HandThumbDownIcon,
-  HandThumbUpIcon,
   ClipboardIcon,
   QuestionMarkCircleIcon,
   MinusIcon,
@@ -64,7 +63,6 @@ const BirthdayListPage = () => {
         <TableHeader>
           <TableColumn>Name</TableColumn>
           <TableColumn>Language</TableColumn>
-          <TableColumn>Invited</TableColumn>
           <TableColumn>Coming</TableColumn>
           <TableColumn>Link</TableColumn>
           <TableColumn>Comments</TableColumn>
@@ -83,15 +81,6 @@ const BirthdayListPage = () => {
                       `rounded-sm`,
                     )}
                   ></span>
-                </TableCell>
-                <TableCell>
-                  <>
-                    {b.invited ? (
-                      <HandThumbUpIcon className="h-4 q-4 text-green-500" />
-                    ) : (
-                      <HandThumbDownIcon className="h-4 q-4 text-red-500" />
-                    )}
-                  </>
                 </TableCell>
                 <TableCell>
                   {b.coming === "coming" && (

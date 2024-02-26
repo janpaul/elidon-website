@@ -7,7 +7,6 @@ export type Birthday = {
   lang: Language;
   coming: Coming;
   extra?: number;
-  invited?: boolean;
   comment?: string;
 };
 
@@ -17,42 +16,36 @@ const birthdays: Birthday[] = [
     name: "Jan Paul",
     lang: "nl",
     coming: "coming",
-    invited: true,
   },
   {
     id: "trampoline-jumping-cactus",
     name: "Stephanie",
     lang: "nl",
     coming: "coming",
-    invited: true,
   },
   {
     id: "marshmallow-weightlifting-champ",
     name: "Vera",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "hula-hooping-cactus",
     name: "Martin",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "skydiving-sheep-baaas",
     name: "Nina",
     lang: "nl",
     coming: "maybe",
-    invited: true,
   },
   {
     id: "tightrope-walking-elephant",
     name: "Mick",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "sunbathing-owl-tans",
@@ -60,14 +53,12 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
-    invited: true,
   },
   {
     id: "burping-flower-blooms",
     name: "Fabienne",
     lang: "nl",
     coming: "coming",
-    invited: true,
   },
   {
     id: "invisible-dog-barks",
@@ -75,14 +66,12 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
-    invited: true,
   },
   {
     id: "jumping-cake-escapes",
     name: "Danielle",
     lang: "nl",
-    coming: "unknown",
-    invited: true,
+    coming: "coming",
   },
   {
     id: "roller-skating-baguette",
@@ -90,7 +79,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
-    invited: true,
   },
   {
     id: "sleepwalking-pillow-fights",
@@ -98,7 +86,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "van Anna",
-    invited: true,
   },
   {
     id: "marching-mole-marvels",
@@ -106,22 +93,19 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "coming",
     comment: "van Liam",
-    invited: true,
   },
   {
     id: "moon-cheese-melts",
     name: "Floor & Ralph",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
     extra: 1,
-    invited: true,
   },
   {
     id: "cartwheeling-walrus-flops",
     name: "Charita",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "surfing-cow-moos",
@@ -129,7 +113,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "coming",
     extra: 1,
-    invited: true,
   },
   {
     id: "whistling-teapot-dances",
@@ -137,7 +120,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "van Ivo",
-    invited: true,
   },
   {
     id: "giggly-goat-gallops",
@@ -145,7 +127,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "van Anouk",
-    invited: true,
   },
   {
     id: "yodeling-pickle-echoes",
@@ -153,43 +134,37 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
-    invited: true,
   },
   {
     id: "photobombing-ghost-appears",
     name: "Jip",
     lang: "nl",
     coming: "coming",
-    invited: true,
   },
   {
     id: "blushing-lobster-crawls",
     name: "Siem",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "giggling-toast-jump",
     name: "Tim",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "spy-penguin-disguises",
     name: "Nathalie",
     lang: "se",
-    coming: "unknown",
+    coming: "coming",
     extra: 1,
-    invited: true,
   },
   {
     id: "bungee-jumping-turtle",
     name: "Melanie",
     lang: "se",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "moonwalking-shoe-unties",
@@ -267,7 +242,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: `voetbal`,
-    invited: true,
   },
   {
     id: "sneezing-cupcake-frosting",
@@ -275,7 +249,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "coming",
     comment: `voetbal`,
-    invited: true,
   },
   {
     id: "breakdancing-banana-slips",
@@ -289,14 +262,12 @@ const birthdays: Birthday[] = [
     name: "Lita",
     lang: "nl",
     coming: "coming",
-    invited: true,
   },
   {
     id: "couch-potato-sprouts",
     name: "Mike",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "lazy-sofa-naps",
@@ -304,7 +275,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     extra: 1,
-    invited: true,
   },
   {
     id: "ninja-cat-bathes",
@@ -312,7 +282,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "coming",
     extra: 1,
-    invited: true,
   },
   { id: "hungry-book-eats", name: "Katja", lang: "nl", coming: "unknown" },
   {
@@ -320,14 +289,12 @@ const birthdays: Birthday[] = [
     name: "Jordy",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "wizard-hat-flies",
     name: "Fabio",
     lang: "en",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "pirate-duck-quacks",
@@ -335,22 +302,19 @@ const birthdays: Birthday[] = [
     lang: "en",
     coming: "unknown",
     extra: 1,
-    invited: true,
   },
   {
     id: "flirty-mirror-winks",
     name: "Marjolein",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "giant-snail-races",
     name: "Marc & Christien",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     extra: 1,
-    invited: true,
   },
   {
     id: "sneaky-fridge-raids",
@@ -370,30 +334,26 @@ const birthdays: Birthday[] = [
     id: "exploding-pizza-sauce",
     name: "Cindy & Anita",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
     extra: 1,
-    invited: true,
   },
   {
     id: "bubbly-bear-burps",
     name: "Eva Luna",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "quirky-quokka-queries",
     name: "Anne Lieve",
     lang: "nl",
     coming: "coming",
-    invited: true,
   },
   {
     id: "ninja-narwhal-navigates",
     name: "Alexander",
     lang: "nl",
     coming: "unknown",
-    invited: true,
   },
   {
     id: "fluffy-fox-frolics",
@@ -407,7 +367,6 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
     comment: "Broeze",
-    invited: true,
   },
 ];
 
