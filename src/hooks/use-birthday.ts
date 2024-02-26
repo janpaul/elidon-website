@@ -177,7 +177,7 @@ const birthdays: Birthday[] = [
     id: "moonwalking-shoe-unties",
     name: "Martijn",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
     comment: `Martijn Groenewegen, DHL`,
   },
   {
@@ -219,7 +219,7 @@ const birthdays: Birthday[] = [
     id: "ticklish-sun-laughs",
     name: "Andre",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: `DHL`,
   },
   {
@@ -386,7 +386,7 @@ const birthdays: Birthday[] = [
     id: "prancing-penguin-panics",
     name: "Soraya",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: "DHL",
   },
 ];
