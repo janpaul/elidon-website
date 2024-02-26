@@ -174,7 +174,7 @@ const birthdays: Birthday[] = [
     id: "bungee-jumping-turtle",
     name: "Melanie",
     lang: "se",
-    coming: "unknown",
+    coming: "coming",
   },
   {
     id: "moonwalking-shoe-unties",
