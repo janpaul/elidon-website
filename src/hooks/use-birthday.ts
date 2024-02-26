@@ -75,6 +75,7 @@ const birthdays: Birthday[] = [
     name: "Danielle",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "roller-skating-baguette",
@@ -329,12 +330,14 @@ const birthdays: Birthday[] = [
     name: "Eva Luna",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "quirky-quokka-queries",
     name: "Anne Lieve",
     lang: "nl",
     coming: "unknown",
+    invited: true,
   },
   {
     id: "ninja-narwhal-navigates",
