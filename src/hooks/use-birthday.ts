@@ -51,7 +51,7 @@ const birthdays: Birthday[] = [
     id: "sunbathing-owl-tans",
     name: "Nevil & Ans",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
     extra: 1,
   },
   {
@@ -254,7 +254,7 @@ const birthdays: Birthday[] = [
     id: "breakdancing-banana-slips",
     name: "Rens & Imane",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
     extra: 1,
   },
   {
