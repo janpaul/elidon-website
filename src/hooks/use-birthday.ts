@@ -308,13 +308,18 @@ const birthdays: Birthday[] = [
     lang: "nl",
     coming: "unknown",
   },
+  {
+    id: "fluffy-fox-frolics",
+    name: "Mignon",
+    lang: "nl",
+    coming: "unknown",
+  },
 ];
 
 [
   "glittery-goose-gambles",
   "prancing-penguin-panics",
   "cackling-crow-codes",
-  "fluffy-fox-frolics",
   "wobbly-wombat-wanders",
   "zany-zebra-zooms",
   "quirky-quail-quizzes",
