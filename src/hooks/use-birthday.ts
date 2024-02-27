@@ -402,13 +402,24 @@ const birthdays: Birthday[] = [
     coming: "coming",
     comment: "van Eva Luna",
   },
+  {
+    id: "quirky-quail-quizzes",
+    name: "Natalie & Tim",
+    lang: "nl",
+    coming: "unknown",
+    extra: 1,
+  },
+  {
+    id: "gargling-giraffe-giggles",
+    name: "Rik",
+    lang: "nl",
+    coming: "unknown",
+  },
 ];
 
 [
   "cackling-crow-codes",
   "zany-zebra-zooms",
-  "quirky-quail-quizzes",
-  "gargling-giraffe-giggles",
   "bouncing-badger-boxes",
   "dizzy-dragon-doodles",
   "elegant-eagle-eats",
