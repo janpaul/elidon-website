@@ -27,7 +27,7 @@ const birthdays: Birthday[] = [
     id: "marshmallow-weightlifting-champ",
     name: "Vera",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
   },
   {
     id: "hula-hooping-cactus",
@@ -284,7 +284,7 @@ const birthdays: Birthday[] = [
     id: "lazy-sofa-naps",
     name: "Remco & Sim",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     extra: 1,
   },
   {
@@ -320,7 +320,7 @@ const birthdays: Birthday[] = [
     id: "flirty-mirror-winks",
     name: "Marjolein",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
   },
   {
     id: "giant-snail-races",
@@ -406,7 +406,7 @@ const birthdays: Birthday[] = [
     id: "quirky-quail-quizzes",
     name: "Natalie & Tim",
     lang: "nl",
-    coming: "unknown",
+    coming: "maybe",
     extra: 1,
   },
   {
