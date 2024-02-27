@@ -112,7 +112,7 @@ const birthdays: Birthday[] = [
     id: "cartwheeling-walrus-flops",
     name: "Charita",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
   },
   {
     id: "surfing-cow-moos",
@@ -125,21 +125,21 @@ const birthdays: Birthday[] = [
     id: "whistling-teapot-dances",
     name: "Anouk",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: "van Ivo",
   },
   {
     id: "giggly-goat-gallops",
     name: "Ivo",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     comment: "van Anouk",
   },
   {
     id: "yodeling-pickle-echoes",
     name: "Maartje & Jasper",
     lang: "nl",
-    coming: "unknown",
+    coming: "coming",
     extra: 1,
   },
   {
