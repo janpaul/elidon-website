@@ -7,6 +7,5 @@ type Props = {
 };
 export const BirthdayName = ({ uuid }: Props) => {
   const birthday = useBirthday(uuid);
-  console.log({ birthday });
   return birthday ? <span>{birthday.name}</span> : null;
 };
