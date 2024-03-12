@@ -333,7 +333,7 @@ const birthdays: Birthday[] = [
     id: "sneaky-fridge-raids",
     name: "Emre & Meryem",
     lang: "en",
-    coming: "unknown",
+    coming: "coming",
     extra: 1,
   },
   {
