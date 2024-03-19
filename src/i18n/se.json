@@ -1,10 +1,10 @@
 {
   "common": {
-    "at_least": "Minst",
+    "at_least": "(minst)",
     "days": "dagar",
     "diss": "Gammal kuk",
     "or": "eller",
-    "sorry": "Förlåt",
+    "sorry": "(förlåt)",
     "years": "år"
   },
   "home": {

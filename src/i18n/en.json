@@ -1,10 +1,10 @@
 {
   "common": {
-    "at_least": "At least",
+    "at_least": "(at least)",
     "days": "days",
     "diss": "Old geezer",
     "or": "or",
-    "sorry": "Sorry",
+    "sorry": "(sorry)",
     "years": "years"
   },
   "home": {
