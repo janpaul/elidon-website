@@ -313,6 +313,7 @@ export const jokes: (string | string[])[] = [
     `It ook my new girlfriend out on our first date to the ice rink, and entry was half price."`,
     `She called me a cheap skate.`,
   ],
+  [`Waiter, my soup is cold!`, `It's gazpacho.`, `Gazpacho, my soup is cold.`],
   [
     `We argued all day about what to call a medieval soldier`,
     `But it was getting late so we called it a knight`,
