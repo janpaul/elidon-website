@@ -1,7 +1,7 @@
 "use client";
 import useSWR from "swr";
 import { fetcher } from "@/lib";
-import { Snippet } from "@/components";
+import { Snippet } from "@/components/index";
 
 export const revalidate = 30;
 

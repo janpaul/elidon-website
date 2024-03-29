@@ -26,5 +26,11 @@
       "no": "I can't make it to your party",
       "maybe": "I will let you know, while figuring out an excuse"
     }
+  },
+  "components": {
+    "collapse": {
+      "read_more": "Read more",
+      "read_less": "Less"
+    }
   }
 }

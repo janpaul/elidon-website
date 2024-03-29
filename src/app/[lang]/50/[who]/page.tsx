@@ -6,7 +6,6 @@ import {
   Card,
   CardBody,
 } from "@nextui-org/react";
-import NextLink from "next/link";
 import NextImage from "next/image";
 import {
   HandThumbDownIcon,
@@ -14,13 +13,19 @@ import {
   QuestionMarkCircleIcon,
   CalendarDaysIcon,
 } from "@heroicons/react/16/solid";
-import { Joke, Paragraph, Title, Spacer, Breadcrumbs } from "@/components";
+import {
+  Joke,
+  Paragraph,
+  Title,
+  Spacer,
+  Breadcrumbs,
+  LanguageSelect,
+} from "@/components";
 import { capitalize, translate, type Language } from "@/lib";
 import wa from "@/icons/whatsapp-color.svg";
 import hey from "@/icons/hey-color.svg";
 import signal from "@/icons/signal-color.svg";
 import me from "@/media/jp.jpg";
-import "flag-icons/css/flag-icons.min.css";
 import type { LangProps } from "@/app/[lang]/types";
 import { contact } from "@/data/contact";
 import { BirthdayName } from "@/app/[lang]/50/[who]/birthday-name";
@@ -42,17 +47,7 @@ const FiftyLangPage = async ({ params: { lang, who = defaultWho } }: Props) => {
         ]}
       />
       <Spacer />
-      <div className="flex flex-row gap-4">
-        <NextLink href={`/nl/50/${who}`}>
-          <span className="fi fi-nl rounded-sm"></span>
-        </NextLink>
-        <NextLink href={`/en/50/${who}`}>
-          <span className="fi fi-gb rounded-sm"></span>
-        </NextLink>
-        <NextLink href={`/se/50/${who}`}>
-          <span className="fi fi-se rounded-sm"></span>
-        </NextLink>
-      </div>
+      <LanguageSelect path={`/50/${who}`} />
       <Divider />
       <Spacer />
       <Title size="md">

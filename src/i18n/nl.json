@@ -26,5 +26,11 @@
       "no": "Ik red het niet om naar je verjaardag te komen",
       "maybe": "Ik zal het je laten weten, terwijl ik een excuus bedenk"
     }
+  },
+  "components": {
+    "collapse": {
+      "read_more": "Lees meer",
+      "read_less": "Minder"
+    }
   }
 }

@@ -1,5 +1,13 @@
 import { Divider, Avatar } from "@nextui-org/react";
-import { Title, Paragraph, Block, Joke, Social } from "@/components";
+import {
+  Title,
+  Paragraph,
+  Block,
+  Joke,
+  Social,
+  Collapse,
+  LanguageSelect,
+} from "@/components";
 import me from "@/media/jp.jpg";
 import { type Language, translate } from "@/lib";
 import { Stats } from "./stats";
@@ -13,6 +21,7 @@ const Home = async ({ params: { lang } }: Props) => {
   const t = await translate(lang as Language);
   return (
     <div>
+      <LanguageSelect />
       <Title>{t(`home.title`)}</Title>
       <Divider />
       <Avatar
@@ -21,10 +30,17 @@ const Home = async ({ params: { lang } }: Props) => {
         isBordered
         className="h-32 w-32 lg:w-64 lg:h-64 text-large"
       />
-      <Paragraph size="md">{t(`home.p1`)}</Paragraph>
-      <Paragraph size="md">{t(`home.p2`)}</Paragraph>
-      <Paragraph size="md">{t(`home.p3`)}</Paragraph>
-      <Paragraph size="md">{t(`home.p4`)}</Paragraph>
+      <Paragraph size="lg">{t(`home.p1`)}</Paragraph>
+      <Collapse
+        text={{
+          more: t(`components.collapse.read_more`),
+          less: t(`components.collapse.read_less`),
+        }}
+      >
+        <Paragraph size="lg">{t(`home.p2`)}</Paragraph>
+        <Paragraph size="lg">{t(`home.p3`)}</Paragraph>
+        <Paragraph size="lg">{t(`home.p4`)}</Paragraph>
+      </Collapse>
       <Divider className="my-5" />
       <Block className="text-sm italic my-4">
         <Joke />
