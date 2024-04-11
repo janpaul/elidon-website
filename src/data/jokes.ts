@@ -1,6 +1,7 @@
 import { getYear } from "@/lib";
 
 export const jokes: (string | string[])[] = [
+  [`Well, to be frank...`, `I'd have to change my name`],
   `People are usually shocked when they find out I’m not a good electrician.`,
   `To the guy who invented zero. Thanks for nothing.`,
   `I wonder what my parents did to fight boredom before the internet?\nI asked my 18 brothers and sisters and they don't know either.`,
