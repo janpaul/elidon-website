@@ -176,7 +176,6 @@ export const jokes: (string | string[])[] = [
   `I quit my job after my boss started paying me in vegetables.\n I could not live off that celery.`,
   `I haven't sold a single copy of my autobiography.\n That's the story of my life.`,
   `I asked my wife when her birthday was.\n She said March 1st.\n So I walked around the house and asked again.`,
-  `I have a fear of speed bumbs\n. But I'm slowly getting over it.`,
   `I go to the toilet for two reasons.\n Number one and number two.`,
   `I walked down the street dressed as a screwdriver.\n I turned a few heads.`,
   `There's a reason  why Daniel Craig has greying hair in the latest Bond movie.\n He had no time to dye.`,
