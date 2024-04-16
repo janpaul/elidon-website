@@ -180,7 +180,7 @@ const birthdays: Birthday[] = [
     id: `moonwalking-shoe-unties`,
     name: `Martijn`,
     lang: `nl`,
-    coming: `maybe`,
+    coming: `coming`,
     comment: `Martijn Groenewegen, DHL`,
   },
   {
