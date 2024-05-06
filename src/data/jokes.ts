@@ -391,7 +391,7 @@ export const jokes: (string | string[])[] = [
   `I asked my wife if I am the only one she has ever been with.\n She said yes, all the others were nines and tens.`,
   `I was reading a great book about an immortal cat the other day.\n It was impossible to put down.`,
   `I visited my new friend in his apartment.\nHe told me to make myself at home.\nSo I threw him out. I hate visitors.`,
-  `I’ve often heard that 'icy” is one of the easiest words to spell.\nLooking back at it now, I see why.`,
+  `I’ve often heard that 'icy' is one of the easiest words to spell.\nLooking back at it now, I see why.`,
   `If a Viking is reincarnated, Is he Bjorn again?`,
   `Waiter: Do you wanna box for your leftover food?\nDad: No thanks, but I'll wrestle you for them.`,
   `My wife told me: Sex is better on holiday.\n I wasn't expecting that on the postcard she sent from Greece.`,
