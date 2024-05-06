@@ -17,7 +17,7 @@ export const Snippet = ({ children, className, copyText }: SnippetProps) => (
       className,
     )}
   >
-    <p>{children}</p>
+    <div>{children}</div>
     {copyText && (
       <button
         onClick={async () => {

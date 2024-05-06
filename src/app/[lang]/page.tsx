@@ -6,9 +6,7 @@ import {
   Social,
   LanguageSelect,
   TextGenerateEffect,
-  SparklesCore,
   WavyBackground,
-  WobbleCard,
 } from "@/components";
 import me from "@/media/jp.jpg";
 import { type Language, translate } from "@/lib";
@@ -24,9 +22,9 @@ const Home = async ({ params: { lang } }: Props) => {
   return (
     <div className="">
       <WavyBackground className="max-w-4xl mx-auto pb-40">
-        <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+        <div className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
           <TextGenerateEffect words={t(`home.title`)} />
-        </p>
+        </div>
       </WavyBackground>
       <LanguageSelect />
       <Paragraph size="lg">
