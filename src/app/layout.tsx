@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   description: "The website of Elidon Consultancy",
 };
 
-const RootLayout = ({ children }: { children: ReactNode }) => {
+type Props = {
+  children: ReactNode;
+};
+
+const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en" className={`dark ${GeistSans.variable}`}>
       <body className="transform-gpu antialiased">
