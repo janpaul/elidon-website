@@ -1,12 +1,14 @@
 import { Divider, Avatar } from "@nextui-org/react";
 import {
-  Title,
   Paragraph,
   Block,
   Joke,
   Social,
-  Collapse,
   LanguageSelect,
+  TextGenerateEffect,
+  SparklesCore,
+  WavyBackground,
+  WobbleCard,
 } from "@/components";
 import me from "@/media/jp.jpg";
 import { type Language, translate } from "@/lib";
@@ -20,32 +22,29 @@ type Props = LangProps & {};
 const Home = async ({ params: { lang } }: Props) => {
   const t = await translate(lang as Language);
   return (
-    <div>
+    <div className="">
+      <WavyBackground className="max-w-4xl mx-auto pb-40">
+        <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+          <TextGenerateEffect words={t(`home.title`)} />
+        </p>
+      </WavyBackground>
       <LanguageSelect />
-      <Title>{t(`home.title`)}</Title>
-      <Divider />
+      <Paragraph size="lg">
+        <TextGenerateEffect words={t(`home.p1`)} />
+      </Paragraph>
       <Avatar
         src={me.src}
         size="lg"
         isBordered
-        className="h-32 w-32 lg:w-64 lg:h-64 text-large"
+        className="h-32 w-32 lg:w-64 lg:h-64"
       />
-      <Paragraph size="lg">{t(`home.p1`)}</Paragraph>
-      <Collapse
-        text={{
-          more: t(`components.collapse.read_more`),
-          less: t(`components.collapse.read_less`),
-        }}
-      >
-        <Paragraph size="lg">{t(`home.p2`)}</Paragraph>
-        <Paragraph size="lg">{t(`home.p3`)}</Paragraph>
-        <Paragraph size="lg">{t(`home.p4`)}</Paragraph>
-      </Collapse>
+      <Paragraph size="lg">{t(`home.p2`)}</Paragraph>
+      <Paragraph size="lg">{t(`home.p3`)}</Paragraph>
+      <Paragraph size="lg">{t(`home.p4`)}</Paragraph>
       <Divider className="my-5" />
-      <Block className="text-sm italic my-4">
+      <Block>
         <Joke />
       </Block>
-      <Divider className="my-5" />
       <Block className="mx-auto md:mx-0">
         <Social />
       </Block>

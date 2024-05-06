@@ -13,7 +13,7 @@ type SnippetProps = {
 export const Snippet = ({ children, className, copyText }: SnippetProps) => (
   <div
     className={classNames(
-      "flex flex-row rounded-md bg-purple-600 p-3 bg-opacity-30 dark:text-purple-400 w-fit font-mono text-sm items-start gap-4",
+      "flex flex-row rounded-md bg-purple-600 p-3 bg-opacity-30 dark:text-purple-400 w-fit font-mono items-start gap-4",
       className,
     )}
   >

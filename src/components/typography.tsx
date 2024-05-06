@@ -49,7 +49,11 @@ export const Block = ({ children, className }: Props) => (
 export const Paragraph = ({ children, className, size = `md` }: Props) => (
   <>
     <p
-      className={classNames("mb-2", paragraphSizeToClassname(size), className)}
+      className={classNames(
+        "mb-2 leading-snug tracking-wide",
+        paragraphSizeToClassname(size),
+        className,
+      )}
     >
       {children}
     </p>
