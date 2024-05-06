@@ -16,7 +16,7 @@ export const Joke = () => {
         color="secondary"
         symbol="&nbsp;"
         variant="bordered"
-        className="max-w-3xl"
+        className="text-xl max-w-3xl"
       >
         {joke.split(`\n`).map((line, index) => (
           <span key={index} className="text-wrap">

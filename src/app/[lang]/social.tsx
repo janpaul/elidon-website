@@ -9,10 +9,8 @@ import {
   IconMailShare,
 } from "@tabler/icons-react";
 import { contact } from "@/data/contact";
-import type { ReactNode } from "react";
 
 const { email, phoneFlat } = contact;
-const className = "h-12 w-12 lg:h-16 lg:w-16 text-gray-700 dark:text-gray-200";
 
 type SocialItemProps = {
   href: string;
@@ -23,7 +21,7 @@ const SocialItem = ({ title, href, icon: Icon }: SocialItemProps) => (
   <div className="flex flex-row gap-1 items-center">
     <Tooltip content={title} placement="bottom">
       <Link href={href} isExternal>
-        <Icon className="h-12 w-12 lg:h-16 lg:w-16 text-gray-700 dark:text-gray-200" />
+        <Icon className="h-12 w-12 lg:h-16 lg:w-16 text-gray-700 dark:text-gray-200 hover:rotate-6" />
       </Link>
     </Tooltip>
   </div>
