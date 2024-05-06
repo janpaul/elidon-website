@@ -26,10 +26,10 @@ const Home = async ({ params: { lang } }: Props) => {
           <TextGenerateEffect words={t(`home.title`)} />
         </div>
       </WavyBackground>
-      <LanguageSelect />
-      <Paragraph size="lg">
-        <TextGenerateEffect words={t(`home.p1`)} />
-      </Paragraph>
+      <div className="fixed top-0 left-0 ">
+        <LanguageSelect />
+      </div>
+      <Paragraph size="lg">{t(`home.p1`)}</Paragraph>
       <Avatar
         src={me.src}
         size="lg"

@@ -34,7 +34,13 @@ const paragraphSizeToClassname = (size: Size) => {
 
 export const Title = ({ children, className, size = `md` }: Props) => (
   <>
-    <h1 className={classNames(headingSizeToClassname(size), className)}>
+    <h1
+      className={classNames(
+        "leading-snug tracking-wide",
+        headingSizeToClassname(size),
+        className,
+      )}
+    >
       {children}
     </h1>
     <Spacer x={4} />
