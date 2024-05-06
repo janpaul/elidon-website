@@ -29,7 +29,7 @@ export const Stats = ({ t }: Props) => (
               {stat.name}
             </p>
             <p className="mt-2 flex items-baseline gap-x-2">
-              <span className="text-4xl font-semibold tracking-tight text-gray-800 dark:text-gray-400">
+              <span className="text-4xl font-semibold tracking-tight text-gray-700 dark:text-gray-200">
                 {stat.value}
               </span>
               {stat.unit ? (
