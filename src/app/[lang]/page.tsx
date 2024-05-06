@@ -3,18 +3,16 @@ import { Avatar } from "@nextui-org/avatar";
 import {
   Paragraph,
   Block,
-  Joke,
-  LanguageSelect,
   TextGenerateEffect,
   WavyBackground,
 } from "@/components";
 import me from "@/media/jp.jpg";
 import { translate, type Language } from "@/lib";
+import { LanguageSelect } from "./language-select";
 import { Stats } from "./stats";
 import { Social } from "./social";
+import { Joke } from "./joke";
 import type { LangProps } from "@/app/[lang]/types";
-
-export const revalidate = 86_400;
 
 const Home = async ({ params: { lang } }: LangProps) => {
   const t = await translate(lang as Language);

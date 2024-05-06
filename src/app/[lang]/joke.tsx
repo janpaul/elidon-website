@@ -1,7 +1,8 @@
 "use client";
 import useSWR from "swr";
 import { fetcher } from "@/lib";
-import { Snippet, TypewriterEffect } from "@/components";
+// import { Snippet } from "@/components";
+import { Snippet } from "@nextui-org/snippet";
 
 export const revalidate = 30;
 
@@ -11,9 +12,16 @@ export const Joke = () => {
   });
   return joke ? (
     <>
-      <Snippet copyText={joke}>
+      <Snippet
+        color="secondary"
+        symbol="&nbsp;"
+        variant="bordered"
+        className="max-w-3xl"
+      >
         {joke.split(`\n`).map((line, index) => (
-          <div key={index}>{line}</div>
+          <span key={index} className="text-wrap">
+            {line}
+          </span>
         ))}
       </Snippet>
     </>
