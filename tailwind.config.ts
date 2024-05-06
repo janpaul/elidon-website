@@ -1,4 +1,4 @@
-import { nextui } from "@nextui-org/react";
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 // @ts-ignore
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";

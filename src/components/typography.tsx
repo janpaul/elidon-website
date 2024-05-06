@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { classNames } from "@/lib";
-import { Spacer } from "@nextui-org/react";
 import type { Size } from "@/components/types";
 
 type Props = {
@@ -22,21 +21,19 @@ const paragraphSizeToClassname = (size: Size) => {
 
 export const Block = ({ children, className }: Props) => (
   <>
-    <div className={classNames(className)}>{children}</div>
-    <Spacer x={4} />
+    <div className={classNames("mb-1 lg:mb-2", className)}>{children}</div>
   </>
 );
 export const Paragraph = ({ children, className, size = `md` }: Props) => (
   <>
     <div
       className={classNames(
-        "mb-2 leading-snug tracking-wide",
+        "mb-1 lg:mb-2 leading-snug tracking-wide",
         paragraphSizeToClassname(size),
         className,
       )}
     >
       {children}
     </div>
-    <Spacer x={4} />
   </>
 );

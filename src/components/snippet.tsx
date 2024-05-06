@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { ClipboardDocumentIcon } from "@heroicons/react/16/solid";
+import { IconClipboardCopy } from "@tabler/icons-react";
 import { classNames } from "@/lib";
 
 type SnippetProps = {
@@ -25,7 +25,7 @@ export const Snippet = ({ children, className, copyText }: SnippetProps) => (
         }}
         className="text-purple-400"
       >
-        <ClipboardDocumentIcon className="h-4 w-4" />
+        <IconClipboardCopy className="h-4 w-4" />
       </button>
     )}
   </div>

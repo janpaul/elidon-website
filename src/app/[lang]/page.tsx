@@ -1,9 +1,9 @@
-import { Divider, Avatar } from "@nextui-org/react";
+import { Divider } from "@nextui-org/divider";
+import { Avatar } from "@nextui-org/avatar";
 import {
   Paragraph,
   Block,
   Joke,
-  Social,
   LanguageSelect,
   TextGenerateEffect,
   WavyBackground,
@@ -11,6 +11,7 @@ import {
 import me from "@/media/jp.jpg";
 import { translate, type Language } from "@/lib";
 import { Stats } from "./stats";
+import { Social } from "./social";
 import type { LangProps } from "@/app/[lang]/types";
 
 export const revalidate = 86_400;

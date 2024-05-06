@@ -1,4 +1,5 @@
-import { Link } from "@nextui-org/react";
+import { Link } from "@nextui-org/link";
+
 import {
   IconBrandGithub,
   IconBrandWhatsapp,
@@ -10,17 +11,18 @@ import {
 import { contact } from "@/data/contact";
 
 const { email, phoneFlat } = contact;
+const className = "h-12 w-12 lg:h-16 lg:w-16 text-gray-700 dark:text-gray-200";
 
 export const Social = () => (
   <div className="flex flex-row gap-2 md:gap-4 flex-wrap p-2 rounded-md w-fit">
     <div className="flex flex-row gap-1 items-center">
       <Link href={`//wa.me/${phoneFlat}`} isExternal>
-        <IconBrandWhatsapp className="h-8 w-8 text-gray-700 dark:text-gray-200" />
+        <IconBrandWhatsapp className={className} />
       </Link>
     </div>
     <div className="flex flex-row gap-1 items-center">
       <Link href={`mailto:${email}`} isExternal>
-        <IconMailShare className="h-8 w-8 text-gray-700 dark:text-gray-200" />
+        <IconMailShare className={className} />
       </Link>
     </div>
     {/*<div className="flex flex-row gap-1 items-center">*/}
@@ -30,22 +32,22 @@ export const Social = () => (
     {/*</div>*/}
     <div className="flex flex-row gap-1 items-center">
       <Link href="https://soundcloud.com/janpaul-418014217" isExternal>
-        <IconBrandSoundcloud className="h-8 w-8 text-gray-700 dark:text-gray-200" />
+        <IconBrandSoundcloud className={className} />
       </Link>
     </div>
     <div className="flex flex-row gap-1 items-center">
       <Link href={`//github.com/${contact.github}`} isExternal>
-        <IconBrandGithub className="h-8 w-8 text-gray-700 dark:text-gray-200" />
+        <IconBrandGithub className={className} />
       </Link>
     </div>
     <div className="flex flex-row gap-1 items-center">
       <Link href={`//instagram.com/${contact.instagram}`} isExternal>
-        <IconBrandInstagram className="h-8 w-8 text-gray-700 dark:text-gray-200" />
+        <IconBrandInstagram className={className} />
       </Link>
     </div>
     <div className="flex flex-row gap-1 items-center">
       <Link href={`//reddit.com/u/${contact.reddit}`} isExternal>
-        <IconBrandReddit className="h-8 w-8 text-gray-700 dark:text-gray-200" />
+        <IconBrandReddit className={className} />
       </Link>
     </div>
   </div>
