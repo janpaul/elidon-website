@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import "flag-icons/css/flag-icons.min.css";
+import NextImage from "next/image";
 
 type Props = {
   path?: string;
@@ -7,13 +7,28 @@ type Props = {
 export const LanguageSelect = ({ path = `` }: Props) => (
   <div className="flex flex-row gap-4">
     <NextLink href={`/nl/${path}`}>
-      <span className="fi fi-nl rounded-sm"></span>
+      <NextImage
+        src="https://flagcdn.com/w80/nl.png"
+        width="24"
+        height="20"
+        alt="Dutch"
+      />
     </NextLink>
-    <NextLink href={`/en${path}`}>
-      <span className="fi fi-gb rounded-sm"></span>
+    <NextLink href={`/en/${path}`}>
+      <NextImage
+        src="https://flagcdn.com/w80/gb.png"
+        width="24"
+        height="20"
+        alt="English"
+      />
     </NextLink>
-    <NextLink href={`/se${path}`}>
-      <span className="fi fi-se rounded-sm"></span>
+    <NextLink href={`/se/${path}`}>
+      <NextImage
+        src="https://flagcdn.com/w80/se.png"
+        width="24"
+        height="20"
+        alt="Swedish"
+      />
     </NextLink>
   </div>
 );

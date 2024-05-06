@@ -9,15 +9,13 @@ import {
   WavyBackground,
 } from "@/components";
 import me from "@/media/jp.jpg";
-import { type Language, translate } from "@/lib";
+import { translate, type Language } from "@/lib";
 import { Stats } from "./stats";
 import type { LangProps } from "@/app/[lang]/types";
 
 export const revalidate = 86_400;
 
-type Props = LangProps & {};
-
-const Home = async ({ params: { lang } }: Props) => {
+const Home = async ({ params: { lang } }: LangProps) => {
   const t = await translate(lang as Language);
   return (
     <div className="">

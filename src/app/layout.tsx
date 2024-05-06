@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import { Providers } from "@/app/[lang]/providers";
-import { Footer } from "@/app/[lang]/footer";
+import { Providers } from "@/app/providers";
+import { Footer } from "@/app/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
