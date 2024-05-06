@@ -10,22 +10,7 @@
   "home": {
     "title": "Hej hej! Jag heter Jan Paul",
     "p1": "Jag är en mjukvaruingenjör som skapar och utvecklar upplevelser som gör människors liv enkla och fantastiska. Jag är en blivande Hugo Boss-modell och (försöker vara) en klubb-DJ.",
-    "p2": "Jag bor i vackra Amsterdam Jordaan, ett område som sjuder av kultur och historia, där varje gathörn berättar sin egen historia. Min passion för resor har tagit mig till avlägsna platser, men jag älskar alltid att återvända till myset i min egen stad. Förutom mina äventyr runt om i världen älskar jag att göra ställningen osäker på min fasta växel. Känslan av frihet när jag sicksackar genom de smala gatorna med vinden i håret är ojämförlig.",
-    "p3": "Jag tränar också taekwondo, en disciplin som inte bara utmanar mig fysiskt utan också ger mig mental motståndskraft och självdisciplin. Det är den perfekta avkopplingen efter en lång dag vid datorn och hjälper mig att hålla balansen.",
-    "p4": "Mitt liv är en blandning av att utforska nya kulturer, njuta av de små sakerna och alltid leta efter nästa äventyr. Oavsett om det är en resa långt bort, ett nytt spel som jag utvecklar, den perfekta driften i en snabb bil eller en ny teknik i taekwondo."
-  },
-  "50": {
-    "greeting": "Hej hej",
-    "p1": "Den 11 juni 2024 fyller jag 50 år - en ganska stor sak för mig. Jag brukar inte ha födelsedagskalas, men den här gången vill jag inte låta det passera. Så vad sägs om att på tisdagen den 11 juni från kl. 19.00 till sent ",
-    "p2": "att umgås? Det skulle vara super om du kunde vara där.",
-    "rsvp": "Kan du meddela mig om du kommer?",
-    "reach": "Om du har några frågor kan du kontakta mig på",
-    "calendar": "Boka datumet",
-    "coming": {
-      "yes": "Jag kommer säkert til festen",
-      "no": "Jag kan inte göra det til festen",
-      "maybe": "Jag låter dig veta, medan jag funderar ut en ursäkt"
-    }
+    "p2": "Jag bor i vackra Amsterdam Jordaan, ett område som sjuder av kultur och historia, där varje gathörn berättar sin egen historia. Min passion för resor har tagit mig till avlägsna platser, men jag älskar alltid att återvända till myset i min egen stad. Förutom mina äventyr runt om i världen älskar jag att göra ställningen osäker på min fasta växel. Känslan av frihet när jag sicksackar genom de smala gatorna med vinden i håret är ojämförlig."
   },
   "components": {
     "collapse": {

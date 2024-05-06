@@ -10,22 +10,7 @@
   "home": {
     "title": "Hoi! Ik ben Jan Paul",
     "p1": "Ik ben een bijzonder energieke software engineer die ervaringen creëert die het leven van mensen eenvoudig en geweldig maken. Ik ben een aspirant Hugo Boss model en (probeer) een Club DJ te zijn.",
-    "p2": "Ik woon in de prachtige Amsterdamse Jordaan, een buurt die bruist van cultuur en geschiedenis, waar elke straathoek zijn eigen verhaal vertelt. Mijn passie voor reizen heeft me naar verre oorden geleid, maar ik vind het altijd heerlijk om terug te keren naar de gezelligheid van mijn eigen stad. Naast mijn avonturen over de wereld, hou ik ervan de stand onveilig te maken op mijn fixed gear. Het gevoel van vrijheid terwijl ik door de smalle straatjes zigzag, de wind in mijn haren, is onvergelijkbaar.",
-    "p3": "Daarnaast beoefen ik taekwondo, een discipline die mij niet alleen fysiek uitdaagt, maar ook mentale veerkracht en zelfdiscipline bijbrengt. Het is de perfecte uitlaatklep na een lange dag achter de computer en helpt mij om in balans te blijven.",
-    "p4": "Mijn leven is een mix van het verkennen van nieuwe culturen, het genieten van de kleine dingen, en altijd op zoek zijn naar het volgende avontuur. Of dat nu een verre reis is, een nieuwe game die ik ontwikkel, de perfecte drift in een snelle auto, of een nieuwe techniek in taekwondo."
-  },
-  "50": {
-    "greeting": "Hoi",
-    "p1": "Op 11 juni 2024 tik ik de 50 aan – best een big deal voor mij. Normaal doe ik niet aan verjaardagsfeestjes, maar deze keer wil ik het niet zomaar voorbij laten gaan. Dus, wat denk je ervan om op dinsdag de 11e juni vanaf 19.00 uur tot laat in ",
-    "p2": "te hangen? Het zou super zijn als je erbij kunt zijn.",
-    "rsvp": "Laat je me weten of je komt?",
-    "reach": "Voor vragen kan je me bereiken op ",
-    "calendar": "Save the date",
-    "coming": {
-      "yes": "Ik kom zeker weten naar je feestje!",
-      "no": "Ik red het niet om naar je verjaardag te komen",
-      "maybe": "Ik zal het je laten weten, terwijl ik een excuus bedenk"
-    }
+    "p2": "Ik woon in de prachtige Amsterdamse Jordaan, een buurt die bruist van cultuur en geschiedenis, waar elke straathoek zijn eigen verhaal vertelt. Mijn passie voor reizen heeft me naar verre oorden geleid, maar ik vind het altijd heerlijk om terug te keren naar de gezelligheid van mijn eigen stad. Naast mijn avonturen over de wereld, hou ik ervan de stand onveilig te maken op mijn fixed gear. Het gevoel van vrijheid terwijl ik door de smalle straatjes zigzag, de wind in mijn haren, is onvergelijkbaar."
   },
   "components": {
     "collapse": {

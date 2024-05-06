@@ -1,0 +1,21 @@
+{
+  "common": {
+    "at_least": "(almeno)",
+    "days": "giorni",
+    "diss": "Vecchio marpione",
+    "or": "o",
+    "sorry": "(scusate)",
+    "years": "anni"
+  },
+  "home": {
+    "title": "Ciao, mi chiamo Jan Paul",
+    "p1": "Sono un ingegnere informatico con troppa energia, che crea e sviluppa esperienze che rendono la vita delle persone semplice e fantastica. Sono un aspirante modello Hugo Boss e (cerco di) essere un DJ di club.",
+    "p2": "Vivo nel bellissimo Jordaan, un quartiere di Amsterdam ricco di cultura e storia, dove ogni angolo di strada racconta la sua storia. La mia passione per i viaggi mi ha portato in luoghi lontani, ma mi piace sempre tornare nell'intimità della mia città. Oltre alle mie avventure in giro per il mondo, mi piace fare i salti mortali con la mia bicicletta a scatto fisso. La sensazione di libertà che si prova zigzagando per le strade strette, con il vento tra i capelli, è incomparabile."
+  },
+  "components": {
+    "collapse": {
+      "read_more": "Per saperne di più",
+      "read_less": "Meno"
+    }
+  }
+}

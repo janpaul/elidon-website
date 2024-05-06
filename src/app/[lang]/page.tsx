@@ -24,7 +24,7 @@ const Home = async ({ params: { lang } }: LangProps) => {
           <TextGenerateEffect words={t(`home.title`)} />
         </div>
       </WavyBackground>
-      <div className="fixed top-0 left-0 ">
+      <div className="fixed top-0 left-0 m-1">
         <LanguageSelect />
       </div>
       <Paragraph size="lg">{t(`home.p1`)}</Paragraph>
@@ -35,8 +35,6 @@ const Home = async ({ params: { lang } }: LangProps) => {
         className="h-32 w-32 lg:w-64 lg:h-64"
       />
       <Paragraph size="lg">{t(`home.p2`)}</Paragraph>
-      <Paragraph size="lg">{t(`home.p3`)}</Paragraph>
-      <Paragraph size="lg">{t(`home.p4`)}</Paragraph>
       <Divider className="my-5" />
       <Block>
         <Joke />
