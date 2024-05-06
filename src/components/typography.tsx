@@ -8,18 +8,6 @@ type Props = {
   className?: string;
   size?: Size;
 };
-
-const headingSizeToClassname = (size: Size) => {
-  switch (size) {
-    case "sm":
-      return `text-xl`;
-    case "lg":
-      return `text-6xl`;
-    case "xl":
-      return `text-7xl`;
-  }
-  return `text-4xl`;
-};
 const paragraphSizeToClassname = (size: Size) => {
   switch (size) {
     case "sm":
@@ -32,20 +20,6 @@ const paragraphSizeToClassname = (size: Size) => {
   return undefined;
 };
 
-export const Title = ({ children, className, size = `md` }: Props) => (
-  <>
-    <h1
-      className={classNames(
-        "leading-snug tracking-wide",
-        headingSizeToClassname(size),
-        className,
-      )}
-    >
-      {children}
-    </h1>
-    <Spacer x={4} />
-  </>
-);
 export const Block = ({ children, className }: Props) => (
   <>
     <div className={classNames(className)}>{children}</div>

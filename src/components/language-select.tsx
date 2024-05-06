@@ -12,7 +12,7 @@ const LanguageLink = ({ language, flag = language }: LanguageLinkProps) => (
       src={`https://flagcdn.com/w80/${flag}.png`}
       width="24"
       height="20"
-      alt="Dutch"
+      alt={language.toUpperCase()}
     />
   </NextLink>
 );
