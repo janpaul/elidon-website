@@ -3,7 +3,7 @@ import { Snippet } from "@nextui-org/snippet";
 import useSWR from "swr";
 import { fetcher } from "@/lib";
 
-export const revalidate = 30;
+export const revalidate = 60;
 
 export const Joke = () => {
   const { data: joke } = useSWR<string>(`/api/joke`, fetcher, {

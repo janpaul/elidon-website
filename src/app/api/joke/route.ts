@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { jokes } from "@/data/jokes";
-export const revalidate = 30;
+export const revalidate = 60;
 
 export const GET = async (): Promise<NextResponse<string>> => {
   const joke = jokes[Math.floor(Math.random() * jokes.length)];
