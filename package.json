@@ -10,7 +10,6 @@
     "format": "prettier --write --experimental-ternaries ."
   },
   "dependencies": {
-    "@headlessui/react": "^1",
     "@nextui-org/avatar": "^2.0.27",
     "@nextui-org/divider": "^2.0.27",
     "@nextui-org/image": "^2.0.27",
