@@ -6,11 +6,13 @@ import {
   IconBrandInstagram,
   IconBrandSoundcloud,
   IconBrandReddit,
-  IconMailShare,
+  IconMailbox,
+  IconCoinEuro,
 } from "@tabler/icons-react";
 import { contact } from "@/data/contact";
 
-const { email, phoneFlat } = contact;
+const { email, github, instagram, reddit, phoneFlat, bunq, soundcloud } =
+  contact;
 
 type SocialItemProps = {
   href: string;
@@ -34,30 +36,27 @@ export const Social = () => (
       icon={IconBrandWhatsapp}
       href={`//wa.me/${phoneFlat}`}
     />
-    <SocialItem
-      title="Hey email"
-      icon={IconMailShare}
-      href={`mailto:${email}`}
-    />
+    <SocialItem title="Hey email" icon={IconMailbox} href={`mailto:${email}`} />
     <SocialItem
       title="Soundcloud"
       icon={IconBrandSoundcloud}
-      href="https://soundcloud.com/janpaul-418014217"
+      href={`https://soundcloud.com/${soundcloud}`}
     />
     <SocialItem
       title="Github"
       icon={IconBrandGithub}
-      href={`//github.com/${contact.github}`}
+      href={`//github.com/${github}`}
     />
     <SocialItem
       title="Instagram"
       icon={IconBrandInstagram}
-      href={`//instagram.com/${contact.instagram}`}
+      href={`//instagram.com/${instagram}`}
     />
     <SocialItem
       title="Reddit"
       icon={IconBrandReddit}
-      href={`//reddit.com/u/${contact.reddit}`}
+      href={`//reddit.com/u/${reddit}`}
     />
+    <SocialItem title="Bunq" icon={IconCoinEuro} href={`//bunq.me/${bunq}`} />
   </div>
 );

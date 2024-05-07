@@ -40,10 +40,10 @@ const Home = async () => (
     </Paragraph>
     <Divider className="my-5" />
     <Block>
-      <Joke />
+      <Social />
     </Block>
     <Block className="mx-auto md:mx-0">
-      <Social />
+      <Joke />
     </Block>
     <Divider className="my-5" />
     <Block>

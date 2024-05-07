@@ -8,6 +8,7 @@ type Contact = {
   instagram: string;
   bunq: string;
   reddit: string;
+  soundcloud: string;
 };
 
 const phone = `+31 6 2926 7339`;
@@ -20,4 +21,5 @@ export const contact: Contact = {
   instagram: `janpaul`,
   bunq: `jpstegeman`,
   reddit: `janpaul74`,
+  soundcloud: `janpaul-418014217`,
 };
