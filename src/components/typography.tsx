@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { classNames } from "@/lib";
-import type { Size } from "@/components/types";
+
+type Size = `sm` | `md` | `lg` | `xl`;
 
 type Props = {
   children: ReactNode;
