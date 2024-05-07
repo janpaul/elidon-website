@@ -1,7 +1,7 @@
 "use client";
+import { Snippet } from "@nextui-org/snippet";
 import useSWR from "swr";
 import { fetcher } from "@/lib";
-import { Snippet } from "@nextui-org/snippet";
 
 export const revalidate = 30;
 

@@ -7,9 +7,9 @@ import {
   WavyBackground,
 } from "@/components";
 import me from "@/media/jp.jpg";
-import { Stats } from "./stats";
-import { Social } from "./social";
-import { Joke } from "./joke";
+import { Stats } from "@/app/stats";
+import { Social } from "@/app/social";
+import { Joke } from "@/app/joke";
 
 const Home = async () => (
   <div className="">

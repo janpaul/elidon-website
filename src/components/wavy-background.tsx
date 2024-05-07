@@ -1,7 +1,7 @@
 "use client";
-import { cn } from "@/lib";
 import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
+import { cn } from "@/lib";
 
 export const WavyBackground = ({
   children,
@@ -24,7 +24,6 @@ export const WavyBackground = ({
   blur?: number;
   speed?: "slow" | "fast";
   waveOpacity?: number;
-  [key: string]: any;
 }) => {
   const noise = createNoise3D();
   let w: number,
@@ -75,7 +74,7 @@ export const WavyBackground = ({
       ctx.lineWidth = waveWidth || 50;
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
-        var y = noise(x / 800, 0.5 * i, nt) * 200;
+        const y = noise(x / 800, 0.5 * i, nt) * 200;
         ctx.lineTo(x, y + h * 0.5); // adjust for height, currently at 50% of the container
       }
       ctx.stroke();
@@ -97,6 +96,7 @@ export const WavyBackground = ({
     return () => {
       cancelAnimationFrame(animationId);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [isSafari, setIsSafari] = useState(false);

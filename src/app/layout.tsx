@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Jan Paul",
-  description: "The website of Elidon Consultancy",
+  description: "Jan Paul's personal website",
 };
 
 type Props = {
