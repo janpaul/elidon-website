@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { jokes } from "@/data/jokes";
+
 export const revalidate = 60;
 
 export const GET = async (): Promise<NextResponse<string>> => {
