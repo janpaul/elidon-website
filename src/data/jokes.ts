@@ -1251,4 +1251,24 @@ export const jokes: (string | string[])[] = [
     `Unless you're home alone.`,
   ],
   `The no-smoking with kids in the car law is ridiculous. Just look at them standing outside in the rain.`,
+  [
+    `Walked into a bar and someone yelled "Does anybody know CPR?"`,
+    `I said "I know the whole alphabet."`,
+    `Everyone laughed, except for that one guy.`,
+  ],
+  `I can't stand sitting down.`,
+  `My grandfather invented the cold air balloon. It never really took off.`,
+  [
+    `A cannibal once took my girlfriend out to see a Russell Crowe film.`,
+    `Gladiator?`,
+    `No, I really miss her.`,
+  ],
+  `A midwife helps people out.`,
+  `The most amazing display of cooperation is when 1000 islands came together and agreed on a single dressing.`,
+  [
+    `I'm addicted to buying old Beatles records.`,
+    `Sounds you need help?`,
+    `No I already have that one.`,
+  ],
+  `I bet when Cheetas race and one of them cheats, the other one goes "Man, you're such a Cheetah!" and they laugh and eat a zebra or whatever.`,
 ];
