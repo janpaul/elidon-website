@@ -3,14 +3,14 @@ import { Chip } from "@nextui-org/chip";
 import { TagIcon } from "@/app/bm/tag-icon";
 import type { Bookmark as TBookmark } from "@/data/bookmarks";
 import { tagSorter } from "@/app/bm/helpers";
-import { Favicon } from "@/app/bm/Favicon";
+import { FavIcon } from "@/app/bm/fav-icon";
 
 type Props = {
   bookmark: TBookmark;
 };
 export const Bookmark = ({ bookmark }: Props) => (
   <div className="flex flex-row gap-2 items-center">
-    <Favicon bookmark={bookmark} />
+    <FavIcon bookmark={bookmark} />
     <Link
       href={bookmark.url}
       color="primary"

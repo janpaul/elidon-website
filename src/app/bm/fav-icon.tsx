@@ -5,7 +5,7 @@ type Props = {
   bookmark: Bookmark;
 };
 
-export const Favicon = ({ bookmark }: Props) => {
+export const FavIcon = ({ bookmark }: Props) => {
   const urlObj = new URL(bookmark.url);
   const faviconUrl = `//www.google.com/s2/favicons?domain=${urlObj.hostname}`;
 
