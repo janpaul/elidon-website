@@ -1,17 +1,17 @@
-import type { ReactNode } from "react";
 import { getAge } from "@/lib";
 
 type StatType = {
   name: string;
-  value: ReactNode;
+  value: string | number;
   unit?: string;
 };
 const _stats: StatType[] = [
   { name: `Age`, value: getAge("years"), unit: `years` },
   { name: `Age`, value: getAge("days"), unit: `days` },
+  // { name: `Age`, value: getAge("minutes"), unit: `minutes` },
   { name: `Ex-wives`, value: 2, unit: `(sorry)` },
   { name: `Kids`, value: 3, unit: `(at least)` },
-  { name: `Success rate`, value: `43.5%` },
+  { name: `Success rate`, value: `${(Math.random() * 100).toFixed(1)}%` },
 ];
 
 export const Stats = () => (
