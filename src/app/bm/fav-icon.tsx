@@ -1,5 +1,5 @@
 import { Image } from "@nextui-org/image";
-import type { Bookmark } from "@/data/bookmarks";
+import type { Bookmark } from "@/app/bm/types";
 
 type Props = {
   bookmark: Bookmark;

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { bookmarks, type Bookmark } from "@/data/bookmarks";
+import { bookmarks } from "@/app/api/bookmarks/bookmarks";
+import type { Bookmark } from "@/app/bm/types";
 
 export const revalidate = 7_200;
 

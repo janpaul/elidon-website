@@ -12,7 +12,7 @@ import {
   IconSortDescendingLetters,
 } from "@tabler/icons-react";
 import { fetcher } from "@/lib";
-import type { Bookmark as TBookmark, Tag } from "@/data/bookmarks";
+import type { Bookmark as TBookmark, Tag } from "@/app/bm/types";
 import { Bookmark } from "@/app/bm/bookmark";
 import { TagIcon } from "@/app/bm/tag-icon";
 import {

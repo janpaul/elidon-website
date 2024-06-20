@@ -25,7 +25,7 @@ import {
   IconWomanFilled,
   IconClothesRack,
 } from "@tabler/icons-react";
-import type { Tag } from "@/data/bookmarks";
+import type { Tag } from "@/app/bm/types";
 
 const TagMapping: Record<Tag, any> = {
   all: IconGlobe,

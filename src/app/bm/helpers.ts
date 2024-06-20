@@ -1,4 +1,4 @@
-import type { Bookmark as TBookmark, Tag } from "@/data/bookmarks";
+import type { Bookmark as TBookmark, Tag } from "@/app/bm/types";
 
 export type SortDirection = "asc" | "desc";
 

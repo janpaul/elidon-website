@@ -1,8 +1,9 @@
 import { Link } from "@nextui-org/link";
 import { Chip } from "@nextui-org/chip";
 import { Tooltip } from "@nextui-org/tooltip";
+
 import { TagIcon } from "@/app/bm/tag-icon";
-import { Bookmark as TBookmark } from "@/data/bookmarks";
+import type { Bookmark as TBookmark } from "@/app/bm/types";
 import { tagSorter } from "@/app/bm/helpers";
 import { FavIcon } from "@/app/bm/fav-icon";
 
