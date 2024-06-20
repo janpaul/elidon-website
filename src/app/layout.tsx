@@ -20,9 +20,7 @@ const RootLayout = ({ children }: Props) => {
       <body className="transform-gpu antialiased">
         <Providers>
           <div className="flex flex-col h-screen justify-between">
-            <main className="mx-1 md:mx-32 lg:mx-64 xl:mx-96 grow">
-              {children}
-            </main>
+            <main className="mx-1 md:mx-32 grow">{children}</main>
             <footer className="lg:grow-0 px-1 lg:px-4 pb-1 lg:pb-2 ">
               <Footer />
             </footer>
