@@ -38,13 +38,15 @@ export const Bookmarks = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
   if (bookmarks) {
     const tags = tagsFromBookmarks(bookmarks);
-    console.log({ bookmarks, tags, selectedTag, grouping });
     const bookmarksFiltered = selectedTag
       ? bookmarks.filter((bookmark) => bookmark.tags?.includes(selectedTag))
       : bookmarks;
     return (
       <>
-        <section id="bookmarks-control" className="mb-2 flex flex-row gap-2">
+        <section
+          id="bookmarks-control"
+          className="mb-2 flex flex-col lg:flex-row gap-2 items-start"
+        >
           <ButtonGroup size="sm">
             <Button
               type="button"
@@ -61,8 +63,10 @@ export const Bookmarks = () => {
               By tag
             </Button>
           </ButtonGroup>
-          <ButtonGroup size="sm">
+          {/*<ButtonGroup size="sm" className="flex-wrap">*/}
+          <div className="flex flex-row gap-1 flex-wrap">
             <Button
+              size="sm"
               color={!selectedTag ? "primary" : "default"}
               onClick={() => setSelectedTag(undefined)}
             >
@@ -74,6 +78,7 @@ export const Bookmarks = () => {
               .map((tag) => (
                 <Button
                   key={tag}
+                  size="sm"
                   color={selectedTag === tag ? "primary" : "default"}
                   onClick={() => setSelectedTag(tag)}
                 >
@@ -81,7 +86,8 @@ export const Bookmarks = () => {
                   {tag}
                 </Button>
               ))}
-          </ButtonGroup>
+          </div>
+          {/*</ButtonGroup>*/}
         </section>
 
         {grouping === "title" && (
