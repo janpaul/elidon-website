@@ -17,8 +17,3 @@ export const tagsFromBookmarks = (bookmarks: TBookmark[]): Set<Tag> =>
     }
     return acc;
   }, new Set<Tag>());
-
-export const maybeGetFavicon = (url: string): string => {
-  const urlObj = new URL(url);
-  return `https://www.google.com/s2/favicons?domain=${urlObj.hostname}`;
-};

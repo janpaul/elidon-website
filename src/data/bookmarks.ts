@@ -22,7 +22,8 @@ export type Tag =
   | "swift"
   | "dhl"
   | "work"
-  | "nsfw";
+  | "nsfw"
+  | "fashion";
 export type Bookmark = {
   title: string;
   url: string;
@@ -203,5 +204,20 @@ export const bookmarks: Bookmark[] = [
     title: "Only Fans",
     url: "https://onlyfans.com",
     tags: ["nsfw"],
+  },
+  {
+    title: "Hugo Boss",
+    url: "https://hugoboss.com",
+    tags: ["fashion"],
+  },
+  {
+    title: "Zalando",
+    url: "https://zalando.nl",
+    tags: ["fashion"],
+  },
+  {
+    title: "Reddit",
+    url: "https://reddit.com/u/janpaul74",
+    tags: ["social"],
   },
 ];

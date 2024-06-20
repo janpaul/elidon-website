@@ -23,6 +23,7 @@ import {
   IconPackage,
   IconBuildingBank,
   IconWomanFilled,
+  IconClothesRack,
 } from "@tabler/icons-react";
 import type { Tag } from "@/data/bookmarks";
 
@@ -51,6 +52,7 @@ const TagMapping: Record<Tag, any> = {
   dhl: IconPackage,
   work: IconBuildingBank,
   nsfw: IconWomanFilled,
+  fashion: IconClothesRack,
 };
 type Props = {
   tag: Tag;
