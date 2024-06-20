@@ -4,6 +4,7 @@ import { useState } from "react";
 import useSWR from "swr";
 import { Button, ButtonGroup } from "@nextui-org/button";
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
+import { Tooltip } from "@nextui-org/tooltip";
 import { Divider } from "@nextui-org/divider";
 import { Input } from "@nextui-org/input";
 import {
@@ -61,38 +62,46 @@ export const Bookmarks = () => {
         >
           <div className="flex flex-col gap-2 grow min-w-[200px] justify-start">
             <ButtonGroup size="sm">
-              <Button
-                type="button"
-                color={grouping === "title" ? "primary" : "default"}
-                onClick={() => setGrouping("title")}
-              >
-                By title
-              </Button>
-              <Button
-                type="button"
-                color={grouping === "tag" ? "primary" : "default"}
-                onClick={() => setGrouping("tag")}
-              >
-                By tag
-              </Button>
+              <Tooltip content="Display by title" showArrow delay={500}>
+                <Button
+                  type="button"
+                  color={grouping === "title" ? "primary" : "default"}
+                  onClick={() => setGrouping("title")}
+                >
+                  By title
+                </Button>
+              </Tooltip>
+              <Tooltip content="Display grouped by tag" showArrow delay={500}>
+                <Button
+                  type="button"
+                  color={grouping === "tag" ? "primary" : "default"}
+                  onClick={() => setGrouping("tag")}
+                >
+                  By tag
+                </Button>
+              </Tooltip>
             </ButtonGroup>
             <ButtonGroup size="sm">
-              <Button
-                type="button"
-                color={sorting === "asc" ? "primary" : "default"}
-                onClick={() => setSorting("asc")}
-              >
-                <IconSortAscendingLetters size={16} />
-                asc
-              </Button>
-              <Button
-                type="button"
-                color={sorting === "desc" ? "primary" : "default"}
-                onClick={() => setSorting("desc")}
-              >
-                <IconSortDescendingLetters size={16} />
-                desc
-              </Button>
+              <Tooltip content="Sorting ascending" showArrow delay={500}>
+                <Button
+                  type="button"
+                  color={sorting === "asc" ? "primary" : "default"}
+                  onClick={() => setSorting("asc")}
+                >
+                  <IconSortAscendingLetters size={16} />
+                  asc
+                </Button>
+              </Tooltip>
+              <Tooltip content="Sorting descending" showArrow delay={500}>
+                <Button
+                  type="button"
+                  color={sorting === "desc" ? "primary" : "default"}
+                  onClick={() => setSorting("desc")}
+                >
+                  <IconSortDescendingLetters size={16} />
+                  desc
+                </Button>
+              </Tooltip>
             </ButtonGroup>
             <Input
               type="search"
@@ -106,28 +115,36 @@ export const Bookmarks = () => {
           </div>
 
           <div className="flex flex-row gap-1 flex-wrap grow-0">
-            <Button
-              size="sm"
-              color={selectedTag === "all" ? "primary" : "default"}
-              disabled={selectedTag === "all"}
-              onClick={() => setSelectedTag("all")}
-            >
-              <TagIcon tag="all" size={16} />
-              ALL
-            </Button>
+            <Tooltip content="Show all tags" showArrow delay={500}>
+              <Button
+                size="sm"
+                color={selectedTag === "all" ? "primary" : "default"}
+                disabled={selectedTag === "all"}
+                onClick={() => setSelectedTag("all")}
+              >
+                <TagIcon tag="all" size={16} />
+                ALL
+              </Button>
+            </Tooltip>
             {Array.from(tags)
               .sort(_tagSorter)
               .map((tag) => (
-                <Button
+                <Tooltip
                   key={tag}
-                  size="sm"
-                  color={selectedTag === tag ? "primary" : "default"}
-                  onClick={() => setSelectedTag(tag)}
-                  disabled={selectedTag === tag}
+                  content={`Show only "${tag}" bookmarks`}
+                  showArrow
+                  delay={500}
                 >
-                  <TagIcon tag={tag} size={16} />
-                  {tag}
-                </Button>
+                  <Button
+                    size="sm"
+                    color={selectedTag === tag ? "primary" : "default"}
+                    onClick={() => setSelectedTag(tag)}
+                    disabled={selectedTag === tag}
+                  >
+                    <TagIcon tag={tag} size={16} />
+                    {tag}
+                  </Button>
+                </Tooltip>
               ))}
           </div>
         </section>

@@ -28,6 +28,7 @@ export type Bookmark = {
   title: string;
   url: string;
   tags?: Tag[];
+  description?: string;
 };
 
 export const bookmarks: Bookmark[] = [
@@ -219,5 +220,15 @@ export const bookmarks: Bookmark[] = [
     title: "Reddit",
     url: "https://reddit.com/u/janpaul74",
     tags: ["social"],
+  },
+  {
+    title: "DHL Vacations",
+    url: "https://docs.google.com/spreadsheets/d/1VH92Ro3ySWBPmPWkRW8XYn1VbqWTK3_5rxrzKH_9WaU/edit?gid=0#gid=0",
+    tags: ["dhl"],
+  },
+  {
+    title: "Datadog DHL Dashboard",
+    url: "https://app.datadoghq.eu/dashboard/sev-qbe-gee?fromUser=false&refresh_mode=sliding&from_ts=1718882927134&to_ts=1718886527134&live=true",
+    tags: ["dhl", "development"],
   },
 ];
