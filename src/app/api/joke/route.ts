@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { jokes } from "@/app/api/joke/jokes";
+import { jokes } from "@/app/api/jokes/jokes";
 
 export const revalidate = 60;
 
