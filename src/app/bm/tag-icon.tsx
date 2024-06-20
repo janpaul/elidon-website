@@ -20,9 +20,13 @@ import {
   IconHtml,
   IconBrandCss3,
   IconBrandSwift,
+  IconPackage,
+  IconBuildingBank,
+  IconWomanFilled,
 } from "@tabler/icons-react";
+import type { Tag } from "@/data/bookmarks";
 
-const TagMapping: Record<string, any> = {
+const TagMapping: Record<Tag, any> = {
   all: IconGlobe,
   dj: IconVinyl,
   amsterdam: IconBuildingBridge2,
@@ -44,9 +48,12 @@ const TagMapping: Record<string, any> = {
   css: IconBrandCss3,
   mdn: IconHtml,
   swift: IconBrandSwift,
+  dhl: IconPackage,
+  work: IconBuildingBank,
+  nsfw: IconWomanFilled,
 };
 type Props = {
-  tag: string;
+  tag: Tag;
   size?: number;
 };
 export const TagIcon = ({ tag, size = 32 }: Props) => {
