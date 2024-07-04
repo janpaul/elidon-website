@@ -21,7 +21,7 @@ const Home = async () => (
     <Paragraph size="lg">
       I am a software engineer with way too much energy, who creates and
       develops experiences that make people&apos;s lives simple and awesome. I
-      am an aspiring Hugo Boss model and (try to be) a Club DJ.
+      am an aspiring Hugo Boss model.
     </Paragraph>
     <Avatar
       src={me.src}
