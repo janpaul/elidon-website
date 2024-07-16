@@ -30,7 +30,7 @@ const Home = async () => (
       className="h-32 w-32 lg:w-64 lg:h-64"
     />
     <Paragraph size="lg">
-      I live in the beautiful Jordaan, a neighborhood in Amsterdam bustling with
+      I live in the beautiful Jordaan neighborhood in Amsterdam, bustling with
       culture and history, where every street corner tells its own story. My
       passion for travel has led me to faraway places, but I always love
       returning to the coziness of my own city. In addition to my adventures
