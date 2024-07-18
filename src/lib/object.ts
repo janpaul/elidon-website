@@ -1,8 +1,8 @@
 export type AnyObject = { [key: string]: any };
 
 export function flattenObject(obj: AnyObject, prefix: string = ``): AnyObject {
-  return obj
-    ? Object.keys(obj).reduce((acc: AnyObject, key: string) => {
+  return obj ?
+      Object.keys(obj).reduce((acc: AnyObject, key: string) => {
         const pre = prefix.length ? prefix + `.` : ``;
         if (
           typeof obj[key] === `object` &&

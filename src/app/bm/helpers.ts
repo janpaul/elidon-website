@@ -6,9 +6,9 @@ export const tagSorter = (dir: SortDirection) => (a: string, b: string) =>
   dir === "asc" ? a.localeCompare(b) : b.localeCompare(a);
 export const bookmarksSorter =
   (dir: SortDirection) => (a: TBookmark, b: TBookmark) =>
-    dir === "asc"
-      ? a.title.localeCompare(b.title)
-      : b.title.localeCompare(a.title);
+    dir === "asc" ?
+      a.title.localeCompare(b.title)
+    : b.title.localeCompare(a.title);
 
 export const tagsFromBookmarks = (bookmarks: TBookmark[]): Set<Tag> =>
   bookmarks.reduce((acc: Set<Tag>, bookmark: TBookmark) => {

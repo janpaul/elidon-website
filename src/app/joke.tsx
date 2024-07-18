@@ -9,9 +9,9 @@ export const Joke = () => {
   const { data: joke } = useSWR<string>("/api/joke", fetcher, {
     refreshInterval: revalidate * 1000,
   });
-  return joke ? (
-    <>
-      <SingleJoke joke={joke} />
-    </>
-  ) : null;
+  return joke ?
+      <>
+        <SingleJoke joke={joke} />
+      </>
+    : null;
 };
