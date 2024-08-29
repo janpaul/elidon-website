@@ -6,17 +6,10 @@ import {
   IconMailbox,
 } from "@tabler/icons-react";
 import { flattenPhone } from "@/lib";
-
-const contact = {
-  email: "janpaul@hey.com",
-  phone: "+31629267339",
-  github: "janpaul",
-  reddit: "janpaul74",
-  instagram: "janpaul",
-};
+import { contact } from "@/data";
 
 export const Social = () => (
-  <div className="flex flex-row gap-2 mb-3">
+  <div className="flex flex-row gap-2">
     <a href={`mailto:${contact.email}`} className="text-blue-500">
       <IconMailbox className="w-8 h-8" />
     </a>
