@@ -16,7 +16,7 @@ type SocialItemProps = {
 };
 const SocialItem = ({ url, icon: Icon }: SocialItemProps) => (
   <Link href={url} className="text-blue-500" isExternal role="button">
-    <Icon className="w-8 h-8" />
+    <Icon className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
   </Link>
 );
 
