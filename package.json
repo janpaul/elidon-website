@@ -10,8 +10,17 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@nextui-org/avatar": "^2.0.32",
+    "@nextui-org/button": "^2.0.37",
+    "@nextui-org/link": "^2.0.34",
+    "@nextui-org/react": "^2.4.6",
+    "@nextui-org/snippet": "^2.0.41",
+    "@nextui-org/system": "^2.2.5",
+    "@nextui-org/theme": "^2.2.9",
     "@tabler/icons-react": "^3.14.0",
+    "framer-motion": "^11.3.31",
     "next": "14.2.7",
+    "nextui-cli": "^0.3.4",
     "react": "^18",
     "react-dom": "^18"
   },

@@ -5,28 +5,41 @@ import {
   IconBrandReddit,
   IconMailbox,
 } from "@tabler/icons-react";
+import { Link } from "@nextui-org/link";
+
 import { flattenPhone } from "@/lib";
 import { contact } from "@/data";
 
+type SocialItemProps = {
+  url: string;
+  icon: any;
+};
+const SocialItem = ({ url, icon: Icon }: SocialItemProps) => (
+  <Link href={url} className="text-blue-500" isExternal role="button">
+    <Icon className="w-8 h-8" />
+  </Link>
+);
+
 export const Social = () => (
-  <div className="flex flex-row gap-2">
-    <a href={`mailto:${contact.email}`} className="text-blue-500">
-      <IconMailbox className="w-8 h-8" />
-    </a>
-    <a
-      href={`//wa.me/${flattenPhone(contact.phone)}`}
-      className="text-blue-500"
-    >
-      <IconBrandWhatsapp className="w-8 h-8" />
-    </a>
-    <a href={`//github.com/${contact.github}`} className="text-blue-500">
-      <IconBrandGithub className="w-8 h-8" />
-    </a>
-    <a href={`//reddit.com/u/${contact.reddit}`} className="text-blue-500">
-      <IconBrandReddit className="w-8 h-8" />
-    </a>
-    <a href={`//instagram.com/${contact.instagram}`} className="text-blue-500">
-      <IconBrandInstagram className="w-8 h-8" />
-    </a>
-  </div>
+  <>
+    <div className="flex flex-row gap-2">
+      <SocialItem url={`mailto:${contact.email}`} icon={IconMailbox} />
+      <SocialItem
+        url={`//wa.me/${flattenPhone(contact.phone)}`}
+        icon={IconBrandWhatsapp}
+      />
+      <SocialItem
+        url={`//github.com/${contact.github}`}
+        icon={IconBrandGithub}
+      />
+      <SocialItem
+        url={`//reddit.com/u/${contact.reddit}`}
+        icon={IconBrandReddit}
+      />
+      <SocialItem
+        url={`//instagram.com/${contact.instagram}`}
+        icon={IconBrandInstagram}
+      />
+    </div>
+  </>
 );

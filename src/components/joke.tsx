@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Snippet } from "@nextui-org/snippet";
 
 const INTERVAL = 30_000;
 
@@ -22,12 +23,12 @@ export const Joke = () => {
   }, []);
 
   return joke ? (
-    <div className="flex flex-col">
+    <Snippet color="success" variant="flat" symbol="">
       {joke.split(`\n`).map((line, index) => (
         <div key={index} className="text-wrap">
           {line}
         </div>
       ))}
-    </div>
+    </Snippet>
   ) : null;
 };

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import { Providers } from "./providers";
 import "./style.css";
 
 export const metadata: Metadata = {
@@ -12,10 +13,12 @@ const RootLayout = ({
 }: Readonly<{
   children: ReactNode;
 }>) => (
-  <html lang="en">
-    <body className="min-w-screen scroll-smooth antialiased bg-white text-black dark:text-white dark:bg-black mx-2 md:mx-4 lg:mx-16">
-      {children}
-    </body>
+  <html lang="en" className="dark">
+    <Providers>
+      <body className="min-w-screen scroll-smooth antialiased transform-gpu bg-white text-black dark:text-white dark:bg-black mx-2 md:mx-4 lg:mx-16">
+        {children}
+      </body>
+    </Providers>
   </html>
 );
 
