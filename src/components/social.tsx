@@ -5,7 +5,7 @@ import {
   IconBrandReddit,
   IconMailbox,
 } from "@tabler/icons-react";
-import { Link } from "@nextui-org/link";
+import { Link } from "@nextui-org/react";
 
 import { flattenPhone } from "@/lib";
 import { contact } from "@/data";
