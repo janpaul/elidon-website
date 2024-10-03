@@ -1,7 +1,7 @@
 import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
 
-import { Joke } from "@/components";
+import { Joke, FlyingWords } from "@/components";
 import me from "./jp.jpg";
 import type { ReactNode } from "react";
 
@@ -26,6 +26,10 @@ const Home = () => (
       />
     </div>
     <Joke />
+    <FlyingWords
+      enabled
+      words={["TypeScript", "C++", "Rust", "JavaScript", "CSS"]}
+    />
   </>
 );
 

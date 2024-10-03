@@ -16,7 +16,7 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang="en" suppressHydrationWarning>
-    <body className="min-w-screen scroll-smooth antialiased transform-gpu">
+    <body className="min-w-screen h-screen scroll-smooth antialiased transform-gpu">
       <Providers>
         <NavigationBar />
         <main className="mt-2 mx-2 md:mx-4 lg:mx-16">{children}</main>
