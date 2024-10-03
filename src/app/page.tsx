@@ -11,23 +11,21 @@ const Highlight = ({ children }: { children: ReactNode }) => (
 
 const Home = () => (
   <>
-    <main className="min-w-full mt-2 mx-2 md:mx-4 lg:mx-16">
-      <h2 className="text-6xl mb-3">
-        I&apos;m a <Highlight>full-stack developer</Highlight> &{" "}
-        <Highlight>software engineer</Highlight>.
-      </h2>
-      <div className="mb-4">
-        <Image
-          as={NextImage}
-          src={me.src}
-          alt="Jan Paul"
-          isZoomed
-          width={me.width / 10}
-          height={me.height / 10}
-        />
-      </div>
-      <Joke />
-    </main>
+    <h2 className="text-6xl mb-3">
+      I&apos;m a <Highlight>full-stack developer</Highlight> &{" "}
+      <Highlight>software engineer</Highlight>.
+    </h2>
+    <div className="mb-4">
+      <Image
+        as={NextImage}
+        src={me.src}
+        alt="Jan Paul"
+        isZoomed
+        width={me.width / 10}
+        height={me.height / 10}
+      />
+    </div>
+    <Joke />
   </>
 );
 
