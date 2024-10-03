@@ -14,11 +14,9 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang="en" className="dark">
-    <Providers>
-      <body className="min-w-screen scroll-smooth antialiased transform-gpu bg-white text-black dark:text-white dark:bg-black mx-2 md:mx-4 lg:mx-16">
-        {children}
-      </body>
-    </Providers>
+    <body className="min-w-screen scroll-smooth antialiased transform-gpu bg-white text-black dark:text-white dark:bg-black mx-2 md:mx-4 lg:mx-16">
+      <Providers>{children}</Providers>
+    </body>
   </html>
 );
 
