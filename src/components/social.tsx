@@ -5,7 +5,7 @@ import {
   IconBrandReddit,
   IconMailbox,
 } from "@tabler/icons-react";
-import { Link, Button } from "@nextui-org/react";
+import { Link, Button, ButtonGroup } from "@nextui-org/react";
 
 import { flattenPhone } from "@/lib";
 import { contact } from "@/data";
@@ -15,22 +15,18 @@ type SocialItemProps = {
   icon: any;
 };
 const SocialItem = ({ url, icon: Icon }: SocialItemProps) => (
-  <Button
-    as={Link}
-    variant="light"
-    size="sm"
-    href={url}
-    className="text-black dark:text-white"
-    isExternal
-    isIconOnly
-    role="button"
-  >
+  <Button as={Link} href={url} isExternal role="button">
     <Icon className="w-6 h-6" />
   </Button>
 );
 
 export const Social = () => (
-  <div className="flex flex-row gap-0">
+  <ButtonGroup
+    variant="light"
+    size="sm"
+    isIconOnly
+    className="text-black dark:text-white"
+  >
     <SocialItem url={`mailto:${contact.email}`} icon={IconMailbox} />
     <SocialItem
       url={`//wa.me/${flattenPhone(contact.phone)}`}
@@ -45,5 +41,5 @@ export const Social = () => (
       url={`//instagram.com/${contact.instagram}`}
       icon={IconBrandInstagram}
     />
-  </div>
+  </ButtonGroup>
 );
