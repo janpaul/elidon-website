@@ -1,9 +1,9 @@
 import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
-import type { ReactNode } from "react";
 
 import { Joke } from "@/components";
 import me from "./jp.jpg";
+import type { ReactNode } from "react";
 
 const Highlight = ({ children }: { children: ReactNode }) => (
   <span className="uppercase text-4xl md:text-6xl lg:text-8xl">{children}</span>

@@ -20,6 +20,7 @@ import {
   IconMailbox,
 } from "@tabler/icons-react";
 import { flattenPhone } from "@/lib";
+import { ThemeSwitcher } from "@/components";
 
 type MenuItem = { label: string; href: string };
 const menuItems: MenuItem[] = [
@@ -37,7 +38,7 @@ const SocialItem = ({ url, icon: Icon }: SocialItemProps) => (
   </Button>
 );
 
-export const Navigation = () => (
+export const NavigationBar = () => (
   <Navbar isBordered>
     <NavbarContent justify="start">
       <NavbarMenuToggle aria-label="toggle menu" className="sm:hidden" />
@@ -89,6 +90,11 @@ export const Navigation = () => (
             icon={IconBrandInstagram}
           />
         </ButtonGroup>
+      </NavbarItem>
+    </NavbarContent>
+    <NavbarContent className="gap-4" justify="end">
+      <NavbarItem>
+        <ThemeSwitcher />
       </NavbarItem>
     </NavbarContent>
 
