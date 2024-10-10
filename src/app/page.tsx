@@ -2,7 +2,7 @@ import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
 
 import { Joke, FlyingWords } from "@/components";
-import me from "./jp.jpg";
+import me from "./jp-cartoon.webp";
 import type { ReactNode } from "react";
 
 const Highlight = ({ children }: { children: ReactNode }) => (
@@ -15,14 +15,15 @@ const Home = () => (
       I&apos;m a <Highlight>full-stack developer</Highlight> &{" "}
       <Highlight>software engineer</Highlight>.
     </h2>
-    <div className="mb-4">
+    <div className="mb-4 w-fit">
       <Image
         as={NextImage}
         src={me.src}
         alt="Jan Paul"
         isZoomed
-        width={me.width / 10}
-        height={me.height / 10}
+        width={me.width / 2}
+        height={me.height / 2}
+        loading="lazy"
       />
     </div>
     <Joke />
