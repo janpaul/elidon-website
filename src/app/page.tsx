@@ -28,7 +28,19 @@ const Home = () => (
     <Joke />
     <FlyingWords
       enabled
-      words={["TypeScript", "C++", "Rust", "JavaScript", "CSS"]}
+      words={[
+        "C",
+        "C++",
+        "CSS",
+        "JavaScript",
+        "HTML",
+        "HTMX",
+        "Rust",
+        "Reddis",
+        "Supabase",
+        "TSX",
+        "TypeScript",
+      ]}
     />
   </>
 );
