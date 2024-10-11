@@ -2,7 +2,7 @@ import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
 
 import { Joke, FlyingWords } from "@/components";
-import me from "./jp-cartoon.jpg";
+import me from "@/media/jp-cartoon.jpg";
 import type { ReactNode } from "react";
 
 const Highlight = ({ children }: { children: ReactNode }) => (
