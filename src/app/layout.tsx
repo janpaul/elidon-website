@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 
 import { Providers } from "./providers";
@@ -10,11 +10,9 @@ export const metadata: Metadata = {
   description: "Jan Paul's website",
 };
 
-const RootLayout = ({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) => (
+type Props = Readonly<PropsWithChildren>;
+
+const RootLayout = ({ children }: Props) => (
   <html lang="en" suppressHydrationWarning>
     <body className="min-w-screen h-screen scroll-smooth antialiased transform-gpu">
       <Providers>
