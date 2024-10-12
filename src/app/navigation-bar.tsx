@@ -43,9 +43,7 @@ export const NavigationBar = () => (
     <NavbarContent justify="start">
       <NavbarMenuToggle aria-label="toggle menu" className="sm:hidden" />
       <NavbarBrand>
-        <span className="hidden sm:flex ring-2 ring-blue-500 ring-offset-1 rounded-md p-2 uppercase">
-          Jan Paul
-        </span>
+        <span className="hidden sm:flex p-2 uppercase">Jan Paul</span>
         <Avatar
           name="JP"
           size="sm"

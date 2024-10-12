@@ -44,7 +44,7 @@ const WordBubble = ({ word }: { word: string }) => {
   }, []);
   return (
     <span
-      className="absolute top-80 left-80 ring-2 ring-offset-2 rounded-md p-2 z-50 opacity-20"
+      className="absolute top-80 left-80 ring-2 ring-offset-2 rounded-md p-2 -z-50 opacity-50"
       style={{
         top: bubble?.y ?? -1000,
         left: bubble?.x ?? -1000,
@@ -62,7 +62,7 @@ type Props = {
 };
 export const FlyingWords = ({ enabled = false, words }: Props) => {
   return enabled ? (
-    <div className="hidden lg:flex">
+    <div className="hidden lg:flex -z-50">
       {words.map((word) => (
         <WordBubble key={word} word={word} />
       ))}
