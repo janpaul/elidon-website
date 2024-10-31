@@ -2,7 +2,7 @@
 import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
 
-import { Joke, FlyingWords } from "@/components";
+import { Joke } from "@/components";
 import me from "@/media/jp-cartoon.jpg";
 import type { ReactNode } from "react";
 
@@ -28,22 +28,6 @@ const Home = () => (
       />
     </div>
     <Joke />
-    <FlyingWords
-      enabled
-      words={[
-        "C",
-        "C++",
-        "CSS",
-        "JavaScript",
-        "HTML",
-        "HTMX",
-        "Rust",
-        "Reddis",
-        "Supabase",
-        "TSX",
-        "TypeScript",
-      ]}
-    />
   </>
 );
 
