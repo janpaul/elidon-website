@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
 
 import { Joke } from "@/components";
-import me from "@/media/jp-cartoon.jpg";
+import me from "@/media/jp.jpg";
 import type { ReactNode } from "react";
 
 const Highlight = ({ children }: { children: ReactNode }) => (
@@ -22,8 +22,8 @@ const Home = () => (
         src={me.src}
         alt="Jan Paul"
         isZoomed
-        width={me.width / 2}
-        height={me.height / 2}
+        width={me.width / 7}
+        height={me.height / 3}
         loading="lazy"
       />
     </div>
