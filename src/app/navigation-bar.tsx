@@ -19,6 +19,7 @@ import {
   IconBrandReddit,
   IconBrandWhatsapp,
   IconMailbox,
+  IconBrandBluesky,
 } from "@tabler/icons-react";
 import { flattenPhone } from "@/lib";
 import { ThemeSwitcher } from "@/components";
@@ -75,6 +76,10 @@ export const NavigationBar = () => (
           <SocialItem
             url={`//wa.me/${flattenPhone(contact.phone)}`}
             icon={IconBrandWhatsapp}
+          />
+          <SocialItem
+            url={`//bsky.app/profile/${contact.bluesky}`}
+            icon={IconBrandBluesky}
           />
           <SocialItem
             url={`//github.com/${contact.github}`}
