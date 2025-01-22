@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { IconSun, IconMoon } from "@tabler/icons-react";
 
 export const ThemeSwitcher = () => {

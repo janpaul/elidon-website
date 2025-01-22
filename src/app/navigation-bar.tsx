@@ -1,17 +1,17 @@
 "use client";
 import {
   Avatar,
-  Link,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
   Button,
   ButtonGroup,
-} from "@nextui-org/react";
+  Link,
+  Navbar,
+  NavbarContent,
+  NavbarBrand,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from "@heroui/react";
 import { contact } from "@/data";
 import {
   IconBrandGithub,

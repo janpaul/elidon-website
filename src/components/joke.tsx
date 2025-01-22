@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Snippet } from "@nextui-org/react";
+import { Snippet } from "@heroui/react";
 
 const INTERVAL = 30_000;
 

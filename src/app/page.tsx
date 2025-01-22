@@ -1,10 +1,10 @@
 "use client";
-import { Image } from "@nextui-org/react";
+import type { ReactNode } from "react";
+import { Image } from "@heroui/react";
 import NextImage from "next/image";
 
 import { Joke } from "@/components";
 import me from "@/media/jp.jpg";
-import type { ReactNode } from "react";
 
 const Highlight = ({ children }: { children: ReactNode }) => (
   <span className="uppercase text-4xl md:text-6xl lg:text-8xl">{children}</span>
