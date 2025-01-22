@@ -64,6 +64,23 @@ const P2000Page = async ({
       <section>
         <P2000Table data={data} />
       </section>
+      <section className="w-full text-center">
+        <p className="text-xs">
+          All data grabbed from{" "}
+          <a
+            href={`//p2000mobiel.nl/${region}/${page}/index.html`}
+            target="_blank"
+            rel="noopener noreferer"
+          >
+            <span className="text-blue-500">P2000 Mobiel</span>
+          </a>
+          . Copyright &copy; 2025{" "}
+          <a href="//xironics.nl" target="_blank" rel="noopener noreferer">
+            <span className="text-blue-500">Xironics Internet Diensten</span>
+          </a>
+          .
+        </p>
+      </section>
     </>
   );
 };
