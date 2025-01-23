@@ -54,7 +54,6 @@ const P2000Page = async ({
   const data = await getData(region, Number(page));
   return (
     <>
-      <h2 className="text-6xl mb-3">P2000</h2>
       <section className="flex flex-row align-middle items-center justify-between w-full">
         <RegionSelect region={region} />
         <Link href={`/p2000/${region}/${page}`}>
