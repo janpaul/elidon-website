@@ -9,6 +9,6 @@ const config: Config = {
   ],
   theme: {},
   darkMode: "class",
-  plugins: [heroui(), require("@tailwindcss/typography"), heroui()],
+  plugins: [heroui(), require("@tailwindcss/typography")],
 };
 export default config;
