@@ -27,7 +27,9 @@ export const P2000Table = ({ data }: Props) => (
       {data.map((call: Call, index) => (
         <TableRow key={index}>
           <TableCell>
-            <Tooltip content={call.type}>{callType[call.type] ?? "?"}</Tooltip>
+            <Tooltip content={call.type}>
+              <span className="text-3xl">{callType[call.type] ?? "?"}</span>
+            </Tooltip>
           </TableCell>
           <TableCell>{call.date}</TableCell>
           <TableCell>{call.prio}</TableCell>
