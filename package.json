@@ -10,28 +10,28 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@heroui/react": "^2.2.9",
+    "@heroui/react": "^2.7.2",
     "@heroui/system": "^2.4.7",
     "@heroui/theme": "^2.4.6",
-    "@tabler/icons-react": "^3.22.0",
-    "framer-motion": "^12.0.1",
-    "heroui-cli": "^1.0",
-    "next": "^15.1",
-    "next-themes": "^0.4.3",
+    "@tabler/icons-react": "^3.30.0",
+    "framer-motion": "^12.4.7",
+    "heroui-cli": "^1.0.0",
+    "next": "^15.1.7",
+    "next-themes": "^0.4.4",
     "node-html-parser": "^7.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9.14.0",
-    "eslint-config-next": "^15.1",
-    "postcss": "^8.4.49",
-    "prettier": "^3.4",
-    "tailwindcss": "^3.4.15",
-    "typescript": "^5.6.3"
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "^15.1.7",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
   }
 }
