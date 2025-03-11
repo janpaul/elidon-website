@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import { Joke } from "@/app/joke";
+import { Joke } from "@/app/_components/joke";
 import {
   TypographyH1,
   TypographyP,
