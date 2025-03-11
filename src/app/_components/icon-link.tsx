@@ -19,6 +19,6 @@ export const IconLink = ({ href, title, icon }: Props) => (
       width={16}
       height={16}
     />
-    <span>{title}</span>
+    <span className="sm:hidden lg:inline-block">{title}</span>
   </a>
 );
