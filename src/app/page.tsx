@@ -30,8 +30,16 @@ export default function Home() {
       <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <h1 className="text-4xl">Jan Paul</h1>
         <p className="text-2xl">
-          aspiring Hugo Boss model and software engineer
+          Aspiring Hugo Boss model and software engineer
         </p>
+        <figure className="rounded-2xl overflow-hidden">
+          <NextImage
+            src="/jp.jpg"
+            alt="Jan Paul"
+            width={512 / 4}
+            height={910 / 4}
+          />
+        </figure>
         <div>
           <Joke />
         </div>
