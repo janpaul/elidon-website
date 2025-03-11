@@ -1,4 +1,4 @@
-import { getJoke } from "../actions";
+import { getJoke } from "@/actions";
 
 export const revalidate = 30;
 
