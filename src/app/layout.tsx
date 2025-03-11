@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeSwitcher } from "@/app/_components";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,25 +20,25 @@ export const metadata: Metadata = {
   description: "Jan Paul / Elidon",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+}>) => (
+  <html lang="en">
+    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main>{children}</main>
-        </ThemeProvider>
-      </body>
-    </html>
-  );
-}
+        <header className="fixed w-screen flex flex-row justify-end px-2 mx-1">
+          <ThemeSwitcher />
+        </header>
+        <main>{children}</main>
+      </ThemeProvider>
+    </body>
+  </html>
+);
+export default RootLayout;

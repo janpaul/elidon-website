@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import { Joke, IconLink } from "@/app/_components";
+import { Joke, Socials } from "@/app/_components";
 import {
   TypographyH1,
   TypographyH4,
@@ -27,26 +27,7 @@ export default function Home() {
         </TypographyInlineCode>
       </div>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <IconLink
-          href="mailto:janpaul@hey.com"
-          title="Hey"
-          icon="/icons/hey.svg"
-        />
-        <IconLink
-          href="//bsky.app/profile/janpaul.dev"
-          title="Bluesky"
-          icon="/icons/bluesky.svg"
-        />
-        <IconLink
-          href="//instagram.com/janpaul"
-          title="Instagram"
-          icon="/icons/instagram.svg"
-        />
-        <IconLink
-          href="//reddit.com/u/janpaul75"
-          title="Reddit"
-          icon="/icons/reddit.svg"
-        />
+        <Socials />
       </footer>
     </div>
   );
