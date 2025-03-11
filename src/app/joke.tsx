@@ -1,27 +1,10 @@
-"use client";
+import { getJoke } from "../actions";
 
-import { useState, useEffect } from "react";
+export const revalidate = 30;
 
-const INTERVAL = 30_000;
-
-export const Joke = () => {
-  const [joke, setJoke] = useState<string | null>(null);
-
-  useEffect(() => {
-    const _fetchJoke = async () => {
-      const response = await fetch("/api/joke");
-      const data = await response.json();
-      setJoke(data);
-    };
-    const _interval = setInterval(async () => {
-      await _fetchJoke();
-    }, INTERVAL);
-    _fetchJoke().then(() => {});
-    return () => clearInterval(_interval);
-  }, []);
-
-  return joke ? (
-    // <div color="success" variant="flat" symbol="">
+export const Joke = async () => {
+  const joke = await getJoke();
+  return (
     <div>
       {joke.split(`\n`).map((line, index) => (
         <div key={index} className="text-wrap">
@@ -29,5 +12,5 @@ export const Joke = () => {
         </div>
       ))}
     </div>
-  ) : null;
+  );
 };

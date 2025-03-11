@@ -22,16 +22,16 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.0",
+    "@tailwindcss/postcss": "^4.0.12",
+    "@types/node": "^20.17.24",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.22.0",
     "eslint-config-next": "15.2.2",
     "prettier": "^3.5.3",
     "shadcn": "^2.4.0-canary.12",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5.8.2"
   }
 }

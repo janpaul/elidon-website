@@ -32,7 +32,9 @@ export default function Home() {
         <p className="text-2xl">
           aspiring Hugo Boss model and software engineer
         </p>
-        <Joke />
+        <div>
+          <Joke />
+        </div>
       </div>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <IconLink
