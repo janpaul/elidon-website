@@ -1,5 +1,10 @@
 import NextImage from "next/image";
 import { Joke } from "@/app/joke";
+import {
+  TypographyH1,
+  TypographyP,
+  TypographyInlineCode,
+} from "@/components/typography";
 
 type IconLinkProps = {
   href: string;
@@ -28,10 +33,10 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className="text-4xl">Jan Paul</h1>
-        <p className="text-2xl">
+        <TypographyH1>Jan Paul</TypographyH1>
+        <TypographyP className="text-2xl">
           Aspiring Hugo Boss model and software engineer
-        </p>
+        </TypographyP>
         <figure className="rounded-2xl overflow-hidden">
           <NextImage
             src="/jp.jpg"
@@ -40,9 +45,9 @@ export default function Home() {
             height={910 / 4}
           />
         </figure>
-        <div>
+        <TypographyInlineCode>
           <Joke />
-        </div>
+        </TypographyInlineCode>
       </div>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <IconLink
