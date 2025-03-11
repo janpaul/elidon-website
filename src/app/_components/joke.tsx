@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const INTERVAL = 30_000;
 
@@ -13,21 +14,21 @@ export const Joke = () => {
       setJoke(data);
     };
     const _interval = setInterval(() => {
-      _fetchJoke().then((_joke) => {
-        console.log({ _joke });
-      });
+      _fetchJoke().then(() => {});
     }, INTERVAL);
     _fetchJoke().then(() => {});
     return () => clearInterval(_interval);
   }, []);
 
   return joke ? (
-    <div>
+    <div className="max-w-[400px]">
       {joke.split(`\n`).map((line, index) => (
         <div key={index} className="text-wrap">
           {line}
         </div>
       ))}
     </div>
-  ) : null;
+  ) : (
+    <Skeleton className="h-16 w-[400px] rounded-full" />
+  );
 };
