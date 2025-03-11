@@ -1,33 +1,10 @@
 import NextImage from "next/image";
-import { Joke } from "@/app/_components/joke";
+import { Joke, IconLink } from "@/app/_components";
 import {
   TypographyH1,
   TypographyP,
   TypographyInlineCode,
 } from "@/components/typography";
-
-type IconLinkProps = {
-  href: string;
-  title: string;
-  icon: string;
-};
-const IconLink = ({ href, title, icon }: IconLinkProps) => (
-  <a
-    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <NextImage
-      className="dark:invert"
-      src={icon}
-      alt={`${title} icon`}
-      width={16}
-      height={16}
-    />
-    <span>{title}</span>
-  </a>
-);
 
 export default function Home() {
   return (
