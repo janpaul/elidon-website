@@ -12,7 +12,8 @@ export default function Home() {
       <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <TypographyH1>Jan Paul</TypographyH1>
         <TypographyH4>
-          Aspiring Hugo Boss model, would-be MotoGP racer and software engineer
+          Aspiring Hugo Boss model, club DJ and since that didn&apos;t work out,
+          software engineer
         </TypographyH4>
         <figure className="rounded-2xl overflow-hidden">
           <NextImage
