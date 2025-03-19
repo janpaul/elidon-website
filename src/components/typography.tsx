@@ -48,7 +48,7 @@ export const TypographyInlineCode = ({ children }: Props) => (
 );
 
 export const TypographyLead = ({ children }: Props) => (
-  <p className="text-xl text-muted-foreground">{children}</p>
+  <span className="text-xl text-muted-foreground">{children}</span>
 );
 
 export const TypographyLarge = ({ children }: Props) => (

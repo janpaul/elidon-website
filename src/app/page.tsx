@@ -4,6 +4,7 @@ import {
   TypographyH1,
   TypographyH4,
   TypographyInlineCode,
+  TypographyLead,
 } from "@/components/typography";
 
 export default function Home() {
@@ -12,8 +13,10 @@ export default function Home() {
       <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <TypographyH1>Jan Paul</TypographyH1>
         <TypographyH4>
-          Aspiring Hugo Boss model, club DJ and since that didn&apos;t work out,
-          software engineer
+          Aspiring <TypographyLead>Hugo Boss</TypographyLead> model and{" "}
+          <TypographyLead>international club DJ</TypographyLead> but since that
+          didn&apos;t work out,{" "}
+          <TypographyLead>principal software engineer</TypographyLead>.
         </TypographyH4>
         <figure className="rounded-2xl overflow-hidden">
           <NextImage
