@@ -13,9 +13,10 @@ export default function Home() {
       <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <TypographyH1>Jan Paul</TypographyH1>
         <TypographyH4>
+          Funky &amp; Club DJ in <TypographyLead>Amsterdam</TypographyLead>.
           Aspiring <TypographyLead>Hugo Boss</TypographyLead> model and{" "}
-          <TypographyLead>international club DJ</TypographyLead> but since that
-          didn&apos;t work out,{" "}
+          <TypographyLead>international superstar DJ</TypographyLead> but since
+          that doesn&apos;t work out, also freelance{" "}
           <TypographyLead>principal software engineer</TypographyLead>.
         </TypographyH4>
         <figure className="rounded-2xl overflow-hidden">
