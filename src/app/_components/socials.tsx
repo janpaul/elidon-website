@@ -7,6 +7,16 @@ export const Socials = () => (
   <>
     <IconLink href={`mailto:${email}`} title="Hey" icon="/icons/hey.svg" />
     <IconLink
+      href="https://signal.me/#p/+31629267339"
+      title="Signal"
+      icon="/icons/signal.svg"
+    />
+    {/*<IconLink*/}
+    {/*  href="//wa.me/31629267339"*/}
+    {/*  title="Whatsapp"*/}
+    {/*  icon="/icons/whatsapp.svg"*/}
+    {/*/>*/}
+    <IconLink
       href={`//bsky.app/profile/${socials.bluesky}`}
       title="Bluesky"
       icon="/icons/bluesky.svg"
