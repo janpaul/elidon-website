@@ -17,7 +17,11 @@ export const Socials = () => (
       title="Whatsapp"
       icon="/icons/whatsapp.svg"
     />
-
+    <IconLink
+      href={`//www.youtube.com/channel/${socials.youtube}`}
+      title="YouTube"
+      icon="/icons/youtube.svg"
+    />
     <IconLink
       href={`//bsky.app/profile/${socials.bluesky}`}
       title="Bluesky"
@@ -33,12 +37,14 @@ export const Socials = () => (
       title="Reddit"
       icon="/icons/reddit.svg"
     />
+    <IconLink href="//bunq.me/jpstegeman" title="Bunq" icon="/icons/bunq.svg" />
     <span className="hidden md:inline-block ml-8 lg:ml-6 ">
       <span className="line-through">Phone</span>{" "}
-      <TypographySmall>(please dont call me)</TypographySmall>
+      <TypographySmall>(please don&apos;t call me)</TypographySmall>
     </span>
-    <span className="hidden md:inline-block ml-8 lg:ml-6 line-through">
-      LinkedIn
+    <span className="hidden md:inline-block ml-8 lg:ml-6">
+      <span className="line-through">LinkedIn</span>{" "}
+      <TypographySmall>(never had, never will)</TypographySmall>
     </span>
   </div>
 );
