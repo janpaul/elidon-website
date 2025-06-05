@@ -13,7 +13,7 @@ export default function Home() {
       <GlowingBorder position="left">
         <TypographyH2>Jan Paul</TypographyH2>
         <TypographyP>
-          Tech House &amp; House DJ in{" "}
+          Tech House &amp; Jackin&apos; DJ in{" "}
           <TypographyLead>Amsterdam</TypographyLead>. Aspiring{" "}
           <TypographyLead>Hugo Boss</TypographyLead> model and{" "}
           <TypographyLead>international superstar DJ</TypographyLead> but since
