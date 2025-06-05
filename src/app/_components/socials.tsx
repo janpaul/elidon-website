@@ -1,5 +1,6 @@
 import { IconLink } from "@/app/_components";
 import { config } from "@/data/config";
+import { TypographySmall } from "@/components";
 
 const { email, socials } = config;
 
@@ -16,6 +17,7 @@ export const Socials = () => (
       title="Whatsapp"
       icon="/icons/whatsapp.svg"
     />
+
     <IconLink
       href={`//bsky.app/profile/${socials.bluesky}`}
       title="Bluesky"
@@ -31,6 +33,10 @@ export const Socials = () => (
       title="Reddit"
       icon="/icons/reddit.svg"
     />
+    <span className="hidden md:inline-block ml-8 lg:ml-6 ">
+      <span className="line-through">Phone</span>{" "}
+      <TypographySmall>(please dont call me)</TypographySmall>
+    </span>
     <span className="hidden md:inline-block ml-8 lg:ml-6 line-through">
       LinkedIn
     </span>
