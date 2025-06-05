@@ -1,4 +1,3 @@
-import NextImage from "next/image";
 import { Joke, Socials } from "@/app/_components";
 import { TypographyLead } from "@/components/typography";
 
@@ -17,17 +16,6 @@ export default function Home() {
           <TypographyLead>principal software engineer</TypographyLead>.
         </p>
       </GlowingBorder>
-
-      {/*<GlowingBorder position="right">*/}
-      {/*  <figure className="rounded-2xl overflow-hidden">*/}
-      {/*    <NextImage*/}
-      {/*      src="/jp.jpg"*/}
-      {/*      alt="Jan Paul"*/}
-      {/*      width={512 / 4}*/}
-      {/*      height={910 / 4}*/}
-      {/*    />*/}
-      {/*  </figure>*/}
-      {/*</GlowingBorder>*/}
 
       <GlowingBorder position="right">
         <TypographyLead className="text-sm">
