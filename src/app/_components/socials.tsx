@@ -31,5 +31,8 @@ export const Socials = () => (
       title="Reddit"
       icon="/icons/reddit.svg"
     />
+    <span className="hidden md:inline-block ml-8 lg:ml-6 line-through">
+      LinkedIn
+    </span>
   </div>
 );

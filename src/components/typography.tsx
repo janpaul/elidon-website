@@ -82,9 +82,7 @@ export const TypographyInlineCode = ({ children, className }: Props) => (
 );
 
 export const TypographyLead = ({ children, className }: Props) => (
-  <span className={cn("text-inherit text-muted-foreground", className)}>
-    {children}
-  </span>
+  <span className={cn("text-muted-foreground", className)}>{children}</span>
 );
 
 export const TypographyLarge = ({ children, className }: Props) => (
