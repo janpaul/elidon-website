@@ -13,7 +13,7 @@ export const IconLink = ({ href, title, icon }: Props) => (
     rel="noopener noreferrer"
   >
     <NextImage
-      className="dark:invert hover:opacity-90"
+      className="dark:invert hover:opacity-90 w-8 h-8 md:w-6 md:h-6 lg:w-4 lg:h-4"
       src={icon}
       alt={`${title} icon`}
       width={16}

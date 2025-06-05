@@ -5,7 +5,7 @@ const { email, socials } = config;
 
 export const Socials = () => (
   <div className="flex flex-row md:flex-col gap-6 md:gap-1">
-    <IconLink href={`mailto:${email}`} title="Hey" icon="/icons/hey.svg" />
+    <IconLink href={`mailto:${email}`} title={email} icon="/icons/hey.svg" />
     <IconLink
       href="https://signal.me/#p/+31629267339"
       title="Signal"

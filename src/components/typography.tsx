@@ -20,7 +20,7 @@ export const TypographyH1 = ({ children, className }: Props) => (
 export const TypographyH2 = ({ children, className }: Props) => (
   <h1
     className={cn(
-      "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+      "scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0",
       className,
     )}
   >
