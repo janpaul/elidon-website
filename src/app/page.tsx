@@ -13,8 +13,9 @@ export default function Home() {
       <GlowingBorder position="left">
         <TypographyH2>Jan Paul</TypographyH2>
         <TypographyP>
-          Funky &amp; Club DJ in <TypographyLead>Amsterdam</TypographyLead>.
-          Aspiring <TypographyLead>Hugo Boss</TypographyLead> model and{" "}
+          Tech House &amp; House DJ in{" "}
+          <TypographyLead>Amsterdam</TypographyLead>. Aspiring{" "}
+          <TypographyLead>Hugo Boss</TypographyLead> model and{" "}
           <TypographyLead>international superstar DJ</TypographyLead> but since
           that doesn&apos;t work out, also freelance{" "}
           <TypographyLead>principal software engineer</TypographyLead>.
