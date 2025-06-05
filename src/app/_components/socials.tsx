@@ -2,7 +2,10 @@ import { IconLink } from "@/app/_components";
 import { config } from "@/data/config";
 import { TypographySmall } from "@/components";
 
-const { email, socials } = config;
+const {
+  email,
+  socials: { youtube, bluesky, instagram, reddit },
+} = config;
 
 export const Socials = () => (
   <div className="flex flex-row md:flex-col gap-6 md:gap-1">
@@ -18,22 +21,22 @@ export const Socials = () => (
       icon="/icons/whatsapp.svg"
     />
     <IconLink
-      href={`//www.youtube.com/channel/${socials.youtube}`}
+      href={`//www.youtube.com/channel/${youtube}`}
       title="YouTube"
       icon="/icons/youtube.svg"
     />
     <IconLink
-      href={`//bsky.app/profile/${socials.bluesky}`}
+      href={`//bsky.app/profile/${bluesky}`}
       title="Bluesky"
       icon="/icons/bluesky.svg"
     />
     <IconLink
-      href={`//instagram.com/${socials.instagram}`}
+      href={`//instagram.com/${instagram}`}
       title="Instagram"
       icon="/icons/instagram.svg"
     />
     <IconLink
-      href={`//reddit.com/u/${socials.reddit}`}
+      href={`//reddit.com/u/${reddit}`}
       title="Reddit"
       icon="/icons/reddit.svg"
     />
