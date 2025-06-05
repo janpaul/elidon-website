@@ -1,29 +1,3 @@
-@property --clr-1 {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: red;
-}
-@property --clr-2 {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: yellow;
-}
-@property --clr-3 {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: green;
-}
-@property --clr-4 {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: blue;
-}
-@property --clr-5 {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: purple;
-}
-
 @property --glow-deg {
   syntax: "<angle>";
   inherits: true;
@@ -31,9 +5,8 @@
 }
 
 .--glowing-border {
-  --gradient-glow:
-    var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5),
-    var(--clr-1);
+  --gradient-glow: red, yellow, green, blue, purple, red;
+
   --glow-size: 1rem;
   --glow-intensity: 0.125;
   --glow-border-width: 3px;

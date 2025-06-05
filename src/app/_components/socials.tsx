@@ -39,6 +39,7 @@ export const Socials = () => (
       href={`//reddit.com/u/${reddit}`}
       title="Reddit"
       icon="/icons/reddit.svg"
+      hiddenOnMobile
     />
     <IconLink href="//bunq.me/jpstegeman" title="Bunq" icon="/icons/bunq.svg" />
     <span className="hidden md:inline-block ml-8 lg:ml-6 ">
