@@ -21,13 +21,13 @@ export default function Home() {
         </TypographyP>
       </GlowingBorder>
 
-      <GlowingBorder position="right">
+      <GlowingBorder position="right" animationDuration="8s">
         <TypographyLead className="text-sm">
           <Joke />
         </TypographyLead>
       </GlowingBorder>
 
-      <GlowingBorder position="left">
+      <GlowingBorder position="left" animationDuration="17s">
         <Socials />
       </GlowingBorder>
     </>

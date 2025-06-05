@@ -85,6 +85,7 @@
   border-radius: 100vw 0 0 100vw;
   border: var(--glow-border-width, 3px) solid transparent;
   border-right: 0;
+  animation-direction: reverse;
 
   &::before {
     transform-origin: left;

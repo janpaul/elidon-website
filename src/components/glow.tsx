@@ -4,9 +4,14 @@ import "@/components/glow.css";
 
 type Props = PropsWithChildren & {
   position?: "left" | "right";
+  animationDuration?: string;
 };
 
-export const GlowingBorder = ({ position = "left", children }: Props) => (
+export const GlowingBorder = ({
+  position = "left",
+  animationDuration = "10s",
+  children,
+}: Props) => (
   <div
     className={cn(
       "mb-2",
@@ -15,6 +20,7 @@ export const GlowingBorder = ({ position = "left", children }: Props) => (
       "--glowing-border",
       position === "left" ? "--glowing-border-left" : "--glowing-border-right",
     )}
+    style={{ animationDuration }}
   >
     {children}
   </div>

@@ -39,13 +39,13 @@ const RootLayout = ({
           <ThemeSwitcher />
         </header>
         <main>{children}</main>
-        <div className="fixed bottom-0 -right-4 -z-20">
+        <div className="fixed bottom-0 -right-2 -z-20">
           <NextImage
             src="/jp.jpg"
             alt="Jan Paul"
             width={512 / 4}
             height={910 / 4}
-            className="rounded-tl-4xl grayscale"
+            className="rounded-tl-4xl grayscale hover:grayscale-0"
           />
         </div>
       </ThemeProvider>
