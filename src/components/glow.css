@@ -1,0 +1,98 @@
+@property --clr-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: red;
+}
+@property --clr-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: yellow;
+}
+@property --clr-3 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: green;
+}
+@property --clr-4 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: blue;
+}
+@property --clr-5 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: purple;
+}
+
+@property --glow-deg {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: -90deg;
+}
+
+.--glowing-border {
+  --gradient-glow:
+    var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5),
+    var(--clr-1);
+  --glow-size: 1rem;
+  --glow-intensity: 0.125;
+  --glow-border-width: 3px;
+
+  margin-block: 3rem;
+  padding: 4rem 2rem;
+  /*max-width: 30vw;*/
+  border: var(--glow-border-width, 3px) solid transparent;
+  border-radius: 0 100vw 100vw 0;
+  border-left: 0;
+  background:
+    linear-gradient(canvas 0 0) padding-box,
+    conic-gradient(from var(--glow-deg), var(--gradient-glow)) border-box;
+  position: relative;
+  isolation: isolate;
+  animation: glowing 10s infinite linear;
+}
+
+.--glowing-border::before,
+.--glowing-border::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+.--glowing-border::before {
+  z-index: -1;
+  background: canvas;
+  inset: 0.5rem;
+  scale: 1.2 1;
+  transform-origin: right;
+  filter: blur(var(--glow-size, 1rem));
+}
+
+.--glowing-border::after {
+  z-index: -2;
+  background: conic-gradient(from var(--glow-deg), var(--gradient-glow))
+    border-box;
+  inset: -1.5rem;
+  filter: blur(var(--glow-size, 1rem));
+  opacity: var(--glow-intensity, 0.125);
+}
+
+.--glowing-border.--glowing-border-left {
+  /* is the default */
+}
+.--glowing-border.--glowing-border-right {
+  margin-inline-start: auto;
+  border-radius: 100vw 0 0 100vw;
+  border: var(--glow-border-width, 3px) solid transparent;
+  border-right: 0;
+
+  &::before {
+    transform-origin: left;
+  }
+}
+
+@keyframes glowing {
+  100% {
+    --glow-deg: 270deg;
+  }
+}

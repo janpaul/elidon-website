@@ -7,7 +7,7 @@ type Props = {
 };
 export const IconLink = ({ href, title, icon }: Props) => (
   <a
-    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+    className="flex flex-row items-center gap-2 hover:underline hover:underline-offset-4"
     href={href}
     target="_blank"
     rel="noopener noreferrer"
