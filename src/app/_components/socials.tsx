@@ -11,11 +11,11 @@ export const Socials = () => (
       title="Signal"
       icon="/icons/signal.svg"
     />
-    {/*<IconLink*/}
-    {/*  href="//wa.me/31629267339"*/}
-    {/*  title="Whatsapp"*/}
-    {/*  icon="/icons/whatsapp.svg"*/}
-    {/*/>*/}
+    <IconLink
+      href="//wa.me/31629267339"
+      title="Whatsapp"
+      icon="/icons/whatsapp.svg"
+    />
     <IconLink
       href={`//bsky.app/profile/${socials.bluesky}`}
       title="Bluesky"
