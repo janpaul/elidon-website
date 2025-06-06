@@ -6,14 +6,12 @@
 
 .--glowing-border {
   --gradient-glow: red, yellow, green, blue, purple, red;
-
   --glow-size: 1rem;
   --glow-intensity: 0.125;
   --glow-border-width: 3px;
 
   margin-block: 3rem;
   padding: 4rem 2rem;
-  /*max-width: 30vw;*/
   border: var(--glow-border-width, 3px) solid transparent;
   border-radius: 0 100vw 100vw 0;
   border-left: 0;

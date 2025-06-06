@@ -4,7 +4,7 @@ import "@/components/glow.css";
 
 type Props = PropsWithChildren & {
   position?: "left" | "right";
-  animationDuration?: string;
+  animationDuration?: string; // e.g., "10s" for 10 seconds. This is directly passed to the CSS animation `animation-duration` property.
 };
 
 export const GlowingBorder = ({
@@ -14,8 +14,6 @@ export const GlowingBorder = ({
 }: Props) => (
   <div
     className={cn(
-      "mb-2",
-      "min-h-1/4",
       "w-11/12 md:w-9/12 lg:w-3/5 xl:w-2/5",
       "--glowing-border",
       position === "left" ? "--glowing-border-left" : "--glowing-border-right",
