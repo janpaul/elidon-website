@@ -1,13 +1,29 @@
 import { getYear } from "@/lib";
 
 export const jokes: (string | string[])[] = [
+  [
+    `I'm looking for a man with one eye.`,
+    `You'd find him quicker if you used both eyes.`,
+  ],
+  [
+    `I realised I've got a road rage problem when my five-year-old daughter shouted...`,
+    `"Pick a lane, dickhead!" while sitting in my shopping trolley.`,
+  ],
   [`Well, to be frank...`, `I'd have to change my name`],
+  [
+    `I went into a pet shop and said "Can I buy a goldfish?"`,
+    `The guy said, "Do you want an aquarium?"`,
+    `I said, "I don't care what star sign it is."`,
+  ],
+  `"Do not touch" must be one of the scariest things to read in braille.`,
+  `If you ever think English is not a weird language just remember that read and lead rhyme and read and lead rhyme. But read and lead don't rhyme, and neither do read and lead.`,
   `People are usually shocked when they find out I’m not a good electrician.`,
+  `Amal and Juan are identical twins. Their mom only carries one baby photo in her wallet.\nWhen people ask why, she says, "Because if you've seen one Juan, you've seen Amal."`,
   `To the guy who invented zero. Thanks for nothing.`,
+  `I was upset when my neighbor put a fence around his swimming pool. But then I got over it.`,
   `I wonder what my parents did to fight boredom before the internet?\nI asked my 18 brothers and sisters and they don't know either.`,
   `I ordered a chicken and an egg on Amazon. I’ll let you know.`,
   `People are usually shocked when they find out I’m not a good electrician.`,
-  `To the guy who invented zero. Thanks for nothing.`,
   `I ordered a chicken and an egg on Amazon. I’ll let you know.`,
   `My new stair lift is just driving me up the wall.`,
   `My friend was explaining electricity and I was like watt?`,
