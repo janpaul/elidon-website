@@ -1,5 +1,5 @@
 export const config = {
-  email: "janpaul@hey.com",
+  email: "janpaul@elidon.net",
   socials: {
     bluesky: "janpaul.dev",
     instagram: "janpaul",
