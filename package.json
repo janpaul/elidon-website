@@ -8,31 +8,32 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "shadcn:update": "npx shadcn diff"
+    "shadcn:update": "npx shadcn diff",
+    "update": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.2.2",
+    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.514.0",
+    "lucide-react": "^0.515.0",
     "next": "15.3.3",
     "next-themes": "^0.4.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwind-merge": "^3.2.0",
+    "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.1.5",
-    "@types/node": "^22",
-    "@types/react": "^19.1.3",
-    "@types/react-dom": "^19.1.3",
-    "eslint": "^9.26.0",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/node": "^24",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.28.0",
     "eslint-config-next": "15.3.3",
     "prettier": "^3.5.3",
-    "shadcn": "^2.5.0",
-    "tailwindcss": "^4.0.14",
+    "shadcn": "^2.6.3",
+    "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
   }
 }
