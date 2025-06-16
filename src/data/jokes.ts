@@ -1,6 +1,14 @@
 import { getYear } from "@/lib";
 
 export const jokes: (string | string[])[] = [
+  `I like getting cute morning texts like "Your other has been shipped."`,
+  `I go to work, I make my coworkers wonder what's wrong with me, I go home, I make my family wonder what's wrong with me, and then I go to bed wondering what's wrong with me.`,
+  `My level of sarcasm has gotten to a point where I don't even know if I'm joking or not.`,
+  `I think it's extremely important, especially in the morning, to be quiet`,
+  `Men have nice skin because they stress out everyone but themselves.`,
+  `"Do you prefer texting or calling?"\nI like "Do not disturb" mode.`,
+  `Everytime the universe gives me a sign, I'm like ok but I wait for a signier sign.`,
+  `"Your bill is ready to view"\nWell ok but I'm not ready to view it.`,
   [
     `I'm looking for a man with one eye.`,
     `You'd find him quicker if you used both eyes.`,
