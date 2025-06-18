@@ -4,7 +4,7 @@ import {
   TypographyH2,
   TypographyP,
 } from "@/components/typography";
-
+import { getAge } from "@/lib";
 import { GlowingBorder } from "@/components";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <GlowingBorder position="left">
         <TypographyH2>Jan Paul</TypographyH2>
         <TypographyP>
-          Tech House &amp; Jackin&apos; DJ in{" "}
+          {getAge()} year young guy living in{" "}
           <TypographyLead>Amsterdam</TypographyLead>. Aspiring{" "}
           <TypographyLead>Hugo Boss</TypographyLead> model and{" "}
           <TypographyLead>international superstar DJ</TypographyLead> but since
