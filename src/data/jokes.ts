@@ -762,7 +762,7 @@ export const jokes: (string | string[])[] = [
   ],
   [
     `My wife blocked me on Facebook because I post too many bird puns.`,
-    `Well, toucan play at that game.`,
+    `Well, toucan play that game.`,
   ],
   [`Guess who I bumped into on my way to get my glasses fixed?`, `Everybody.`],
   [
