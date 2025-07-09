@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "shadcn:update": "npx shadcn diff",
-    "modules:update": "npx npm-check-updates -u"
+    "modules:update": "npx npm-check-updates -u && npm install"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -33,7 +33,7 @@
     "eslint": "^9.30.1",
     "eslint-config-next": "15.3.5",
     "prettier": "^3.6.2",
-    "shadcn": "^2.7.0",
+    "shadcn": "^2.8.0",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3"
   }
