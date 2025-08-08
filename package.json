@@ -16,11 +16,11 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
-    "lucide-react": "^0.528.0",
-    "next": "15.4.4",
+    "lucide-react": "^0.539.0",
+    "next": "15.4.6",
     "next-themes": "^0.4.6",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -28,13 +28,13 @@
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^24",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
     "eslint": "^9.32.0",
-    "eslint-config-next": "15.4.4",
+    "eslint-config-next": "15.4.6",
     "prettier": "^3.6.2",
-    "shadcn": "^2.9.3",
+    "shadcn": "^2.10.0",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   }
 }
