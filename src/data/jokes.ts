@@ -1,6 +1,83 @@
 import { getYear } from "@/lib";
 
 export const jokes: (string | string[])[] = [
+  [
+    "friend: I really just hate dogs",
+    "me:but I thought him a lot of tricks",
+    "friend: dogs are stupid what could u have possibly taught-",
+    "*my dog jumps up and kicks him in the face*",
+    "me: karate",
+  ],
+  [
+    "[after date]",
+    "her: let's go back to my place and watch a movie",
+    "[at her place]",
+    "her waiting for me to make a move;",
+    "me: *pointing* that rat is actually really good at cooking just wait",
+  ],
+  [
+    "[taking date back to my room]",
+    `me: are u thinking what i'm thinking`,
+    "her: *bites lip* yeah",
+    "[both of us at the same time]",
+    "her: take off my bra-",
+    "me: we should build a fort",
+  ],
+  [
+    "moses: *parts the red sea*",
+    "fish: ok wtf",
+    "[later]",
+    `fish's boss: why were u late`,
+    "fish: ur not gonna believe this",
+  ],
+  [
+    "interviewer: what did you bring to the table",
+    "me: in my last job i brought a lot of enthusia-",
+    "interviewer: no what did you just put on my desk",
+    "me: u mean my toad",
+  ],
+  [
+    `her: my hips don't lie`,
+    "me: nice lol",
+    "her hips: you will never find a girlfriend",
+    "me: wait no",
+  ],
+  [
+    "witch: *turns me into a frog* now SUFFER",
+    "me: *chilling on a leaf*",
+    "witch: wait",
+    "me: *experiencing happiness for the first time in my life*",
+    "witch: wait no",
+  ],
+  [
+    `king: you're going to the dungeon, guards take him away`,
+    "*the guards start breakdancing*",
+    "king: no guys I said take him away not take it away",
+  ],
+  [
+    "doctor: your wife is going to dye-",
+    "me: oh my god",
+    "doctor: her hair",
+    "me: oh haha i thought u meant-",
+    "doctor: for her funeral",
+  ],
+  [
+    `Applebee's waiter: what would u like to order`,
+    `me: I'll have the apple`,
+    `waiter: we don't actually sell apples`,
+    `me, visibly afraid: ok then [gulps] I'll have the bees`,
+  ],
+  [
+    "*I get down on one knee*",
+    "me: will u marry me",
+    `her: where's the ring`,
+    "me: oh oops lol [reaching in my pocket and pulling out an entire handful of spaghetti] ok wrong pocket wait",
+  ],
+  [
+    `girlfriend: he's too immature i'm dumping him`,
+    "her friend: ya remember when he got excited that he could drink 2 capri suns at once?",
+    `[I walk in holding 3 capri suns] babe you're note gonna believe this`,
+  ],
   `I like getting cute morning texts like "Your other has been shipped."`,
   `I go to work, I make my coworkers wonder what's wrong with me, I go home, I make my family wonder what's wrong with me, and then I go to bed wondering what's wrong with me.`,
   `My level of sarcasm has gotten to a point where I don't even know if I'm joking or not.`,
