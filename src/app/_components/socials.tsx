@@ -4,12 +4,17 @@ import { TypographySmall } from "@/components";
 
 const {
   email,
-  socials: { youtube, bluesky, instagram, reddit },
+  socials: { youtube, bluesky, instagram, reddit, mixcloud },
 } = config;
 
 export const Socials = () => (
-  <div className="flex flex-row md:flex-col gap-6 md:gap-1">
+  <div className="flex flex-row md:flex-col gap-2">
     <IconLink href={`mailto:${email}`} title={email} icon="/icons/apple.svg" />
+    <IconLink
+      href={`//mixcloud.com/${mixcloud}`}
+      title="Mixcloud"
+      icon="/icons/mixcloud.svg"
+    />
     <IconLink
       href="https://signal.me/#p/+31629267339"
       title="Signal"
@@ -41,7 +46,8 @@ export const Socials = () => (
       icon="/icons/reddit.svg"
       hiddenOnMobile
     />
-    <IconLink href="//bunq.me/jpstegeman" title="Bunq" icon="/icons/bunq.svg" />
+
+    {/*<IconLink href="//bunq.me/jpstegeman" title="Bunq" icon="/icons/bunq.svg" />*/}
     <span className="hidden md:inline-block ml-8 lg:ml-6 ">
       <span className="line-through">Phone</span>{" "}
       <TypographySmall>(please don&apos;t call me)</TypographySmall>

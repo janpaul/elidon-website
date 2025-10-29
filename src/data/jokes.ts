@@ -1192,11 +1192,9 @@ export const jokes: (string | string[])[] = [
     `said what`,
   ],
   [
-    `Luke`,
-    `should we try to sneak past the sentry?`,
-    `Yoda`,
-    `do or do not. there is no try`,
-    `should we do or do not to sneak past the sentdo or do not?`,
+    `Luke: should we try to sneak past the sentry?`,
+    `Yoda: do or do not. there is no try`,
+    `Luke: should we do or do not to sneak past the sentdo or do not?`,
   ],
   [
     `One whiskey and ....... one coke.`,

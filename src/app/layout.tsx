@@ -35,21 +35,13 @@ const RootLayout = ({
         enableSystem
         disableTransitionOnChange
       >
-        <header className="fixed w-screen flex flex-row justify-end px-2 mx-1">
+        <header className="hidden w-screen md:flex flex-row justify-start">
           <ThemeSwitcher />
         </header>
-        <main>{children}</main>
-        <div className="fixed bottom-0 -right-2 -z-20">
-          <NextImage
-            src="/jp.jpg"
-            alt="Jan Paul"
-            width={512 / 4}
-            height={910 / 4}
-            className="rounded-tl-4xl grayscale hover:grayscale-0"
-          />
-        </div>
+        <main className="m-0 md:m-1 lg:m-2 pt-0">{children}</main>
       </ThemeProvider>
     </body>
   </html>
 );
+
 export default RootLayout;
