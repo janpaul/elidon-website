@@ -1,4 +1,3 @@
-import NextImage from "next/image";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
