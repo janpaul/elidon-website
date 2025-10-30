@@ -9,7 +9,7 @@ import { getAge } from "@/lib";
 
 const Home = () => (
   <>
-    <div className="fixed top-0 right-0 -z-20">
+    <div className="fixed top-0 right-0 z-20">
       <NextImage
         src="/jp.jpg"
         alt="Jan Paul"
