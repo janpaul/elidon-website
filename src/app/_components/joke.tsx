@@ -6,7 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 const INTERVAL = 30_000;
 
 export const Joke = () => {
-  const [joke, setJoke] = useState<string | null>(null);
+  const [joke, setJoke] = useState<string[] | null>(null);
   useEffect(() => {
     const _fetchJoke = async () => {
       const response = await fetch("/api/joke");
@@ -22,7 +22,7 @@ export const Joke = () => {
 
   return joke ? (
     <div className="max-w-[400px]">
-      {joke.split(`\n`).map((line, index) => (
+      {joke.map((line, index) => (
         <div key={index} className="text-wrap">
           {line}
         </div>
