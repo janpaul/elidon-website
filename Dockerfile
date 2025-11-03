@@ -8,7 +8,7 @@ COPY . .
 RUN npm run build
 
 # 3. Production image
-FROM node:20-alpine
+FROM node:24-alpine
 WORKDIR /app
 COPY --from=builder /app ./
 EXPOSE 3000
