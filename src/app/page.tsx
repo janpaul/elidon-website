@@ -6,12 +6,13 @@ import {
   TypographyP,
 } from "@/components/typography";
 import { getAge } from "@/lib";
+import jp from "@/media/jp.jpg";
 
 const Home = () => (
   <>
     <div className="fixed top-0 right-0 z-20">
       <NextImage
-        src="/jp.jpg"
+        src={jp}
         alt="Jan Paul"
         width={512 / 4}
         height={910 / 4}
