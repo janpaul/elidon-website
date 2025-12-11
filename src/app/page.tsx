@@ -20,7 +20,7 @@ const Home = () => (
       />
     </div>
 
-    <div className="fixed bottom-1 left-0 lg:right-0 border-t-2 border-r-2 lg:border-r-0 lg:border-l-2 rounded-tr-xl lg:rounded-tl-xl lg:rounded-tr-none backdrop-blur-md z-10 p-1 lg:p-2 text-left lg:text-right">
+    <div className="fixed bottom-1 left-0 lg:left-auto lg:right-0 text-left lg:text-right border-t-2 border-r-2 lg:border-r-0 lg:border-l-2 rounded-tr-xl lg:rounded-tl-xl lg:rounded-tr-none backdrop-blur-md z-10 p-1 lg:p-2">
       <TypographyLead className="">
         <Joke />
       </TypographyLead>
