@@ -46,15 +46,13 @@ export const Socials = () => (
       icon="/icons/reddit.svg"
       hiddenOnMobile
     />
-
-    {/*<IconLink href="//bunq.me/jpstegeman" title="Bunq" icon="/icons/bunq.svg" />*/}
-    <span className="hidden md:inline-block ml-8 lg:ml-6 ">
-      <span className="line-through">Phone</span>{" "}
-      <TypographySmall>(please don&apos;t call me)</TypographySmall>
-    </span>
-    <span className="hidden md:inline-block ml-8 lg:ml-6">
-      <span className="line-through">LinkedIn</span>{" "}
-      <TypographySmall>(never had, never will)</TypographySmall>
-    </span>
+    {/*<span className="hidden md:inline-block ml-8 lg:ml-6 ">*/}
+    {/*  <span className="line-through">Phone</span>{" "}*/}
+    {/*  <TypographySmall>(please don&apos;t call me)</TypographySmall>*/}
+    {/*</span>*/}
+    {/*<span className="hidden md:inline-block ml-8 lg:ml-6">*/}
+    {/*  <span className="line-through">LinkedIn</span>{" "}*/}
+    {/*  <TypographySmall>(never had, never will)</TypographySmall>*/}
+    {/*</span>*/}
   </div>
 );
