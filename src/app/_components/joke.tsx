@@ -22,7 +22,7 @@ export const Joke = () => {
   }, []);
 
   return joke ? (
-    <div className="max-w-[400px]">
+    <div className="">
       {joke.map((line, index) => (
         <div
           key={index}
