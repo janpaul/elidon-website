@@ -6,7 +6,7 @@ import {
   TypographyP,
 } from "@/components/typography";
 import { getAge } from "@/lib";
-import jp from "@/media/jp.jpg";
+import jp from "../media/jp.jpg";
 
 const Home = () => (
   <>
@@ -18,12 +18,6 @@ const Home = () => (
         height={910 / 4}
         className="rounded-bl-2xl grayscale hover:grayscale-0"
       />
-    </div>
-
-    <div className="fixed bottom-1 left-0 lg:left-auto lg:right-0 text-left lg:text-right border-t-2 border-r-2 lg:border-r-0 lg:border-l-2 rounded-tr-xl lg:rounded-tl-xl lg:rounded-tr-none backdrop-blur-md z-10 p-1 lg:p-2">
-      <TypographyLead className="">
-        <Joke />
-      </TypographyLead>
     </div>
 
     <div className="min-h-screen flex flex-col gap-4 lg:gap-6 xl:gap-8">
@@ -43,6 +37,10 @@ const Home = () => (
       <div>
         <Socials />
       </div>
+
+      <TypographyLead className="">
+        <Joke />
+      </TypographyLead>
     </div>
   </>
 );
