@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans, ui-sans-serif, sans-serif);
+  --font-mono: var(--font-geist-mono, ui-monospace, monospace);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -119,8 +119,8 @@
 
 @layer base {
   :root {
-    --font-sans: 'Geist', sans-serif;
-    --font-mono: var(--font-geist-mono);
+    --font-sans: var(--font-geist-sans, ui-sans-serif, sans-serif);
+    --font-mono: var(--font-geist-mono, ui-monospace, monospace);
   }
   * {
     @apply border-border outline-ring/50;
