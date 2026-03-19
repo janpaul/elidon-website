@@ -17,7 +17,7 @@ const Home = () => (
           Jan Paul Stegeman
         </h1>
         <p className="text-sm text-muted-foreground">
-          Senior Software Engineer · Amsterdam
+          Senior Software Engineer · Amsterdam 🇳🇱
         </p>
       </div>
     </div>
