@@ -38,7 +38,9 @@ const RootLayout = ({ children }: Props) => (
         enableSystem
         disableTransitionOnChange
       >
-        <main>{children}</main>
+        <main className="min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center">
+          <div className="w-full max-w-2xl px-2 md:px-4">{children}</div>
+        </main>
       </ThemeProvider>
     </body>
   </html>

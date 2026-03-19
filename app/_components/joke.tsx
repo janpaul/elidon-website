@@ -1,7 +1,10 @@
 import jokes from "@/app/_components/data/jokes.json";
 
+export const revalidate = 3600;
+
 const getJoke = (): string[] => {
-  const joke = jokes[(Math.random() * jokes.length) | 0];
+  const joke =
+    jokes[Math.floor((Date.now() / revalidate) * 1_000) % jokes.length];
   return Array.isArray(joke) ? joke : [joke];
 };
 

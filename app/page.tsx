@@ -11,7 +11,7 @@ const Home = () => (
         <MyAvatar />
       </div>
       <div>
-        <h1 className="text-2xl font-medium tracking-tight text-foreground">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-foreground">
           Jan Paul Stegeman
         </h1>
         <p className="text-sm text-muted-foreground">
