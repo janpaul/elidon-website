@@ -32,7 +32,7 @@ const RootLayout = ({ children }: Props) => (
     className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     suppressHydrationWarning
   >
-    <body className="min-h-full flex flex-col">
+    <body className="min-h-full flex flex-col m-2">
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
