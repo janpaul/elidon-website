@@ -6,14 +6,14 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import { FileQuestion } from "lucide-react";
+import { BotOff } from "lucide-react";
 
 const NotFound = () => (
   <main className="min-h-screen flex flex-col items-center justify-center">
     <Empty>
       <EmptyHeader>
-        <EmptyMedia variant="icon">
-          <FileQuestion size={24} />
+        <EmptyMedia>
+          <BotOff size={24} />
         </EmptyMedia>
         <EmptyTitle>Page Not Found</EmptyTitle>
         <EmptyDescription>
