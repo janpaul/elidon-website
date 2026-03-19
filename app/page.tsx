@@ -21,10 +21,10 @@ const Home = () => (
     </div>
 
     <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
-      Full-stack engineer met een frontend hart. Building software by day.
-      Aspiring Hugo Boss model and superstar DJ. Current Jordaan resident.
-      You&apos;ll find me debugging TypeScript, C++ and Rust, tending bar at a
-      brown café, or cornering hard on my MT-09 SP.
+      Full-stack engineer with a frontend heart. Building software by day.
+      Aspiring Hugo Boss model and superstar DJ by night. Current Jordaan
+      resident. You&apos;ll find me debugging TypeScript, C++ and Rust, tending
+      bar at a brown café, or cornering hard on my MT-09 SP.
     </p>
 
     <Socials />
