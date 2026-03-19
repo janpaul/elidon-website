@@ -1,6 +1,5 @@
 import jokes from "@/app/_components/data/jokes.json";
-
-export const revalidate = 3600;
+import { revalidate } from "@/app/page";
 
 const getJoke = (): string[] => {
   const joke =

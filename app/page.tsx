@@ -4,6 +4,8 @@ import { MyAvatar } from "@/app/_components/my-avatar";
 import { Socials } from "@/app/_components/socials";
 import { Joke } from "@/app/_components/joke";
 
+export const revalidate = 3600;
+
 const Home = () => (
   <div className="py-8 max-w-2xl">
     <div className="flex items-center gap-6 mb-6">
