@@ -1,18 +1,15 @@
-"use client";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { MyAvatar } from "@/app/_components/my-avatar";
+import { Socials } from "@/app/_components/socials";
+import { Joke } from "@/app/_components/joke";
 
 const Home = () => (
   <div className="py-8 max-w-2xl">
     <div className="flex items-center gap-6 mb-6">
       <div className="relative shrink-0">
-        <Avatar className="h-18 w-18">
-          <AvatarImage src="//github.com/janpaul.png" alt="Jan Paul Stegeman" />
-          <AvatarFallback className="text-lg font-medium">JP</AvatarFallback>
-        </Avatar>
-        {/* online dot — weglaten als je 't niet wil */}
-        <span className="absolute bottom-0.5 right-0.5 h-3.5 w-3.5 rounded-full bg-green-500 ring-2 ring-background" />
+        <MyAvatar />
       </div>
-
       <div>
         <h1 className="text-2xl font-medium tracking-tight text-foreground">
           Jan Paul Stegeman
@@ -29,6 +26,17 @@ const Home = () => (
       You&apos;ll find me debugging TypeScript, C++ and Rust, tending bar at a
       brown café, or cornering hard on my MT-09 SP.
     </p>
+
+    <Socials />
+
+    <Separator className="my-6" />
+
+    <Card className="max-w-xl">
+      <CardContent>
+        <Joke />
+      </CardContent>
+    </Card>
   </div>
 );
+
 export default Home;
