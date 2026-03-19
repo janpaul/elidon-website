@@ -1,5 +1,9 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import { ThemeProvider } from "@/components/theme-provider";
+import { ModeToggle } from "@/components/mode-toggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,19 +22,27 @@ export const metadata: Metadata = {
     "The website of Jan Paul, a software engineer, aspiring super star DJ and barkeeper for the fun of it all.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+type Props = Readonly<{
+  children: ReactNode;
+}>;
+
+const RootLayout = ({ children }: Props) => (
+  <html
+    lang="en"
+    className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    suppressHydrationWarning
+  >
+    <body className="min-h-full flex flex-col">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         <main>{children}</main>
-      </body>
-    </html>
-  );
-}
+      </ThemeProvider>
+    </body>
+  </html>
+);
+
+export default RootLayout;

@@ -117,6 +117,10 @@
 }
 
 @layer base {
+  :root {
+    --font-sans: 'Geist', sans-serif;
+    --font-mono: var(--font-geist-mono);
+  }
   * {
     @apply border-border outline-ring/50;
   }

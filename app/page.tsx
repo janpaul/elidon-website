@@ -1,9 +1,10 @@
-import { Button } from "@/components/ui/button";
+"use client";
+import { TypographyH1 } from "@/components/typography";
 
-export default function Home() {
-  return (
-    <div>
-      <Button>Click me</Button>
-    </div>
-  );
-}
+const Home = () => (
+  <article className="">
+    <TypographyH1>Jan Paul Stegeman</TypographyH1>
+    <p>sdfkjhdkdf</p>
+  </article>
+);
+export default Home;
