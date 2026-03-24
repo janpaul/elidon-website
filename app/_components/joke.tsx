@@ -12,7 +12,7 @@ export const Joke = () => {
   return (
     <>
       <p className="text-muted-foreground text-sm">joke of the day</p>
-      <p className="mt-2 text-base">
+      <div className="mt-2 text-base">
         {joke.map((line, index) => (
           <p
             key={index}
@@ -25,7 +25,7 @@ export const Joke = () => {
             {line}
           </p>
         ))}
-      </p>
+      </div>
     </>
   );
 };
