@@ -1,5 +1,32 @@
-type SocialName = "mail" | "github" | "instagram" | "reddit" | "mixcloud";
-type Social = { name: SocialName; url: string; icon: string; title?: string };
+import {
+  FaGithub,
+  FaInstagram,
+  FaReddit,
+  FaApple,
+  FaMixcloud,
+} from "react-icons/fa";
+import type { IconType } from "react-icons";
+
+export type SocialName =
+  | "mail"
+  | "github"
+  | "instagram"
+  | "reddit"
+  | "mixcloud";
+export type Social = {
+  name: SocialName;
+  url: string;
+  icon: string;
+  title?: string;
+};
+
+export const socialIconsMap: Record<string, IconType> = {
+  apple: FaApple,
+  github: FaGithub,
+  instagram: FaInstagram,
+  reddit: FaReddit,
+  mixcloud: FaMixcloud,
+};
 
 export const socials: Social[] = [
   {
@@ -33,6 +60,3 @@ export const socials: Social[] = [
     title: "DJ Jean Paul @ Mixcloud",
   },
 ];
-
-export const getSocialByName = (name: SocialName) =>
-  socials.find((social) => social.name === name);

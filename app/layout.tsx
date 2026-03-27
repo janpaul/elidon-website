@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/app/_components/theme-provider";
 import "./globals.css";
 
@@ -38,9 +39,11 @@ const RootLayout = ({ children }: Props) => (
         enableSystem
         disableTransitionOnChange
       >
-        <main className="min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center">
-          <div className="w-full max-w-2xl px-2 md:px-4">{children}</div>
-        </main>
+        <TooltipProvider>
+          <main className="min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center">
+            <div className="w-full max-w-2xl px-2 md:px-4">{children}</div>
+          </main>
+        </TooltipProvider>
       </ThemeProvider>
     </body>
   </html>

@@ -1,9 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { MyAvatar } from "@/app/_components/my-avatar";
-import { Socials } from "@/app/_components/socials";
+import { Socials, getSocialByName } from "@/app/_components/socials";
 import { Joke } from "@/app/_components/joke";
-import { getSocialByName } from "@/app/_components/data/socials";
 
 export const revalidate = 3600;
 

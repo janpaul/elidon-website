@@ -1,41 +1,31 @@
-import {
-  FaGithub,
-  FaInstagram,
-  FaReddit,
-  FaApple,
-  FaMixcloud,
-} from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { socials } from "@/app/_components/data/socials";
+import {
+  socials,
+  socialIconsMap,
+  type Social,
+  type SocialName,
+} from "@/app/_components/data/socials";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const iconsMap: Record<string, any> = {
-  apple: FaApple,
-  github: FaGithub,
-  instagram: FaInstagram,
-  reddit: FaReddit,
-  mixcloud: FaMixcloud,
+const Social = ({ name, url, icon, title = name }: Social) => {
+  const Icon = socialIconsMap[icon];
+  return (
+    <Button variant="ghost" size="icon" asChild title={title} key={name}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <Icon className="h-6 w-6" />
+      </a>
+    </Button>
+  );
 };
+
+export const getSocialByName = (name: SocialName) =>
+  socials.find((social) => social.name === name);
 
 export const Socials = () => (
   <>
     <div className="flex gap-2 mt-4">
-      {socials.map((social) => {
-        const Icon = iconsMap[social.icon];
-        return (
-          <Button
-            variant="ghost"
-            size="icon"
-            asChild
-            title={social.title ?? social.name}
-            key={social.name}
-          >
-            <a href={social.url} target="_blank" rel="noopener noreferrer">
-              <Icon className="h-6 w-6" />
-            </a>
-          </Button>
-        );
-      })}
+      {socials.map((social) => (
+        <Social key={social.name} {...social} />
+      ))}
     </div>
 
     <p className="text-sm text-muted-foreground">
