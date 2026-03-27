@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import { MyAvatar } from "@/app/_components/my-avatar";
 import { Socials } from "@/app/_components/socials";
 import { Joke } from "@/app/_components/joke";
+import { getSocialByName } from "@/app/_components/data/socials";
 
 export const revalidate = 3600;
 
@@ -24,10 +25,19 @@ const Home = () => (
 
     <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
       Full-stack engineer with a frontend heart. Building software by day.
-      Aspiring Hugo Boss model and superstar DJ by night. Current Jordaan
-      resident. You&apos;ll find me debugging TypeScript, C++ and Rust, tending
-      bar at a brown café in the red light district, or cornering hard on my
-      MT-09 SP.
+      Aspiring Hugo Boss model and{" "}
+      <a
+        href={getSocialByName("mixcloud")!.url}
+        className="text-blue-400 hover:underline"
+      >
+        Superstar Tech House DJ
+      </a>{" "}
+      by night. Current Jordaan resident. You&apos;ll find me debugging
+      TypeScript, C++ and Rust, tending bar at a{" "}
+      <a href="//cafedezeevaart.com" className="text-blue-400 hover:underline">
+        brown café
+      </a>{" "}
+      in the red light district, or cornering hard on my MT-09 SP.
     </p>
 
     <Socials />
