@@ -11,7 +11,7 @@ const Social = ({ name, url, icon, title = name }: Social) => {
   return (
     <Button variant="ghost" size="icon" asChild title={title} key={name}>
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <Icon className="h-6 w-6" />
+        <Icon className="h-6 w-6" size={48} />
       </a>
     </Button>
   );
