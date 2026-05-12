@@ -1,9 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+
 import {
   socials,
   socialIconsMap,
@@ -11,21 +7,14 @@ import {
   type SocialName,
 } from "@/app/_components/data/socials";
 
-const Social = ({ name, url, icon, title = name }: Social) => {
+const Social = ({ name, url, icon }: Social) => {
   const Icon = socialIconsMap[icon];
   return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <Button variant="ghost" size="icon" asChild key={name}>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            <Icon className="h-6 w-6" size={48} />
-          </a>
-        </Button>
-      </TooltipTrigger>
-      <TooltipContent>
-        <p>{title}</p>
-      </TooltipContent>
-    </Tooltip>
+    <Button variant="ghost" size="icon" asChild key={name}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <Icon className="h-6 w-6" size={48} />
+      </a>
+    </Button>
   );
 };
 
