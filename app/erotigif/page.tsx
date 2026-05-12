@@ -1,10 +1,10 @@
 import { getErotigifs } from "@/app/erotigif/helpers";
-import { ErotigifContent } from "@/app/erotigif/_components";
+import { Slideshow } from "@/app/erotigif/_components";
 
 const ErotigifPage = async () => {
   const images = await getErotigifs();
 
-  return <ErotigifContent images={images} />;
+  return <Slideshow images={images} interval={10_000} />;
 };
 
 export default ErotigifPage;
