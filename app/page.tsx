@@ -1,8 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { MyAvatar } from "@/app/_components/my-avatar";
-import { Socials, getSocialByName } from "@/app/_components/socials";
-import { Joke } from "@/app/_components/joke";
+import {
+  Joke,
+  Socials,
+  getSocialByName,
+  MyAvatar,
+  ExternalLink,
+} from "@/app/_components";
 
 export const revalidate = 3600;
 
@@ -26,22 +30,27 @@ const Home = () => (
 
         <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
           Full-stack engineer with a frontend heart. Building software by day.
-          Aspiring Hugo Boss model and{" "}
-          <a
-            href={getSocialByName("mixcloud")!.url}
-            className="text-blue-400 hover:underline"
-          >
-            Superstar Tech House DJ
-          </a>{" "}
-          by night. Current Jordaan resident. You&apos;ll find me debugging
-          TypeScript, C++ and Rust, tending bar at a{" "}
-          <a
-            href="//cafedezeevaart.com"
-            className="text-blue-400 hover:underline"
-          >
-            brown café
-          </a>{" "}
-          in the red light district, or cornering hard on my MT-09 SP.
+          Aspiring <ExternalLink href="//hugoboss.nl">Hugo Boss</ExternalLink>{" "}
+          model and{" "}
+          <ExternalLink href={getSocialByName("mixcloud")!.url}>
+            Superstar DJ
+          </ExternalLink>{" "}
+          by night. You&apos;ll find me debugging{" "}
+          <ExternalLink href="//typescriptlang.org">TypeScript</ExternalLink>,{" "}
+          <ExternalLink href="//learncpp.com">C++</ExternalLink> and{" "}
+          <ExternalLink href="//rust-lang.org">Rust</ExternalLink>, or cornering
+          hard on my{" "}
+          <ExternalLink href="//www.yamahamotorsports.com/models/mt-09-sp">
+            MT-09 SP
+          </ExternalLink>
+          . Current{" "}
+          <ExternalLink href="//en.wikipedia.org/wiki/Jordaan">
+            Jordaan
+          </ExternalLink>{" "}
+          resident. Moonlighting as a bartender at a{" "}
+          <ExternalLink href="//cafedezeevaart.com">brown café</ExternalLink> in
+          the Red Light District, where the tourists are confused and the beer
+          is cold.
         </p>
 
         <Socials />

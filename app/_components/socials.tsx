@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-
 import {
   socials,
   socialIconsMap,
@@ -7,10 +6,10 @@ import {
   type SocialName,
 } from "@/app/_components/data/socials";
 
-const Social = ({ name, url, icon }: Social) => {
+const Social = ({ name, url, icon, title = name }: Social) => {
   const Icon = socialIconsMap[icon];
   return (
-    <Button variant="ghost" size="icon" asChild key={name}>
+    <Button variant="ghost" size="icon" asChild key={name} title={title}>
       <a href={url} target="_blank" rel="noopener noreferrer">
         <Icon className="h-6 w-6" size={48} />
       </a>
