@@ -1,6 +1,8 @@
 import { getXxxVideos, type XxxType } from "@/app/xxx/[type]/helpers";
 import { Slideshow } from "@/app/xxx/[type]/_components";
 
+export const revalidate = 86400; // 60 * 60 * 24 = 24h
+
 const XxxPage = async ({ params }: { params: { type: XxxType } }) => {
   const { type } = await params;
   const images = await getXxxVideos(type);

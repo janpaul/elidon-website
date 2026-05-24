@@ -10,18 +10,19 @@ type Props = {
 };
 
 export const Slideshow = ({ images, type }: Props) => {
-  const [selected, setSelected] = useState<string | undefined>();
+  const [cursor, setCursor] = useState<number>(0);
   const [isPaused, setIsPaused] = useState(false);
+  const selectedVideoId = images[cursor];
   const interval = 10_000;
 
   const handleNext = () => {
     if (isPaused) return;
-    setSelected(images[Math.floor(Math.random() * images.length)]);
+    setCursor((c) => (c + 1) % images.length);
   };
 
-  useEffect(() => {
-    setSelected(images[Math.floor(Math.random() * images.length)]);
-  }, [images]);
+  const handlePrevious = () => {
+    setCursor((c) => (c - 1 + images.length) % images.length);
+  };
 
   useEffect(() => {
     const toggle = () => setIsPaused((p) => !p);
@@ -32,9 +33,17 @@ export const Slideshow = ({ images, type }: Props) => {
           toggle();
           break;
         }
+        case "k":
+        case "K":
         case "Enter":
         case "ArrowRight": {
           handleNext();
+          break;
+        }
+        case "j":
+        case "J":
+        case "ArrowLeft": {
+          handlePrevious();
           break;
         }
         case "Escape": {
@@ -51,7 +60,7 @@ export const Slideshow = ({ images, type }: Props) => {
     };
   }, []);
 
-  return selected ? (
+  return selectedVideoId ? (
     <div className="fixed inset-0 z-0">
       {isPaused && (
         <div
@@ -68,7 +77,7 @@ export const Slideshow = ({ images, type }: Props) => {
         </div>
       )}
       <MyVideo
-        id={selected}
+        id={selectedVideoId}
         type={type}
         handleNextAction={handleNext}
         minDurationMs={interval}
