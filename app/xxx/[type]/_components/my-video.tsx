@@ -7,6 +7,7 @@ type Props = {
   type: XxxType;
   handleNextAction: () => void;
   minDurationMs: number;
+  isPaused?: boolean;
 };
 
 export const MyVideo = ({
@@ -14,6 +15,7 @@ export const MyVideo = ({
   type,
   handleNextAction,
   minDurationMs,
+  isPaused = false,
 }: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const minReached = useRef(false);
@@ -28,7 +30,19 @@ export const MyVideo = ({
     return () => clearTimeout(t);
   }, [id, minDurationMs, hasTimeout]);
 
+  const rewind = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
+  };
+
   const onEnded = () => {
+    if (isPaused) {
+      rewind();
+      return;
+    }
     if (!hasTimeout) {
       handleNextAction();
       return;
@@ -36,11 +50,7 @@ export const MyVideo = ({
     if (minReached.current) {
       handleNextAction();
     } else {
-      const video = videoRef.current;
-      if (video) {
-        video.currentTime = 0;
-        video.play().catch(() => {});
-      }
+      rewind();
     }
   };
 

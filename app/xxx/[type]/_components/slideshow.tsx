@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { MyVideo } from "@/app/xxx/[type]/_components/index";
 import type { XxxType } from "@/app/xxx/[type]/helpers";
+import { FaPauseCircle } from "react-icons/fa";
 
 type Props = {
   images: string[];
@@ -10,36 +11,51 @@ type Props = {
 
 export const Slideshow = ({ images, type }: Props) => {
   const [selected, setSelected] = useState<string | undefined>();
-  const _randomImage = () => images[Math.floor(Math.random() * images.length)];
+  const [isPaused, setIsPaused] = useState(false);
   const interval = 10_000;
 
   const handleNext = () => {
-    setSelected(_randomImage());
+    if (isPaused) return;
+    setSelected(images[Math.floor(Math.random() * images.length)]);
   };
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let refresher: any;
-
-    const _start = async () => {
-      if (images?.length > 0) {
-        setSelected(_randomImage());
-        refresher = setInterval(() => {
-          setSelected(_randomImage());
-        }, interval);
-      }
-    };
-    _start().then(() => {});
-
-    return () => clearInterval(refresher);
+    setSelected(images[Math.floor(Math.random() * images.length)]);
   }, [images]);
 
+  useEffect(() => {
+    const toggle = () => setIsPaused((p) => !p);
+    window.addEventListener("keydown", toggle);
+    window.addEventListener("pointerdown", toggle);
+    return () => {
+      window.removeEventListener("keydown", toggle);
+      window.removeEventListener("pointerdown", toggle);
+    };
+  }, []);
+
   return selected ? (
-    <MyVideo
-      id={selected}
-      type={type}
-      handleNextAction={handleNext}
-      minDurationMs={interval}
-    />
+    <div className="fixed inset-0 z-0">
+      {isPaused && (
+        <div
+          style={{
+            position: "fixed",
+            top: "1rem",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 50,
+            pointerEvents: "none",
+          }}
+        >
+          <FaPauseCircle style={{ fontSize: "6rem", color: "white" }} />
+        </div>
+      )}
+      <MyVideo
+        id={selected}
+        type={type}
+        handleNextAction={handleNext}
+        minDurationMs={interval}
+        isPaused={isPaused}
+      />
+    </div>
   ) : null;
 };
