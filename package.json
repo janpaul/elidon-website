@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
-    "erotigif": "node --env-file=.env.local scripts/upload-erotigifs.mts"
+    "erotigif": "node --env-file=.env.local scripts/upload-erotigifs.mts",
+    "xvideos": "node --env-file=.env.local scripts/upload-xvideos.mts"
   },
   "dependencies": {
     "@tailwindcss/typography": "0.5.19",

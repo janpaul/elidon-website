@@ -1,15 +1,21 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ErotigifImage } from "@/app/erotigif/_components";
+import { MyVideo } from "@/app/xxx/[type]/_components/index";
+import type { XxxType } from "@/app/xxx/[type]/helpers";
 
 type Props = {
   images: string[];
-  interval: number;
+  type: XxxType;
 };
 
-export const Slideshow = ({ images, interval }: Props) => {
+export const Slideshow = ({ images, type }: Props) => {
   const [selected, setSelected] = useState<string | undefined>();
   const _randomImage = () => images[Math.floor(Math.random() * images.length)];
+  const interval = 10_000;
+
+  const handleNext = () => {
+    setSelected(_randomImage());
+  };
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -26,7 +32,14 @@ export const Slideshow = ({ images, interval }: Props) => {
     _start().then(() => {});
 
     return () => clearInterval(refresher);
-  }, [images, interval]);
+  }, [images]);
 
-  return selected ? <ErotigifImage id={selected} /> : null;
+  return selected ? (
+    <MyVideo
+      id={selected}
+      type={type}
+      handleNextAction={handleNext}
+      minDurationMs={interval}
+    />
+  ) : null;
 };
