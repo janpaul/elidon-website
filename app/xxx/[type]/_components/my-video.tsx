@@ -68,6 +68,7 @@ export const MyVideo = ({
             transform: "translateX(-50%)",
             zIndex: 50,
             pointerEvents: "none",
+            fontSize: "0.5rem",
           }}
         >
           {duration.toFixed(1)}s
