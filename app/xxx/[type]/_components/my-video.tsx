@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { xxxImageUri, type XxxType } from "@/app/xxx/[type]/helpers";
 
 type Props = {
@@ -20,6 +20,7 @@ export const MyVideo = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const minReached = useRef(false);
   const hasTimeout = type === "erotigif";
+  const [duration, setDuration] = useState<number | null>(null);
 
   useEffect(() => {
     if (!hasTimeout) return;
@@ -50,21 +51,40 @@ export const MyVideo = ({
     if (minReached.current) {
       handleNextAction();
     } else {
-      rewind();
+      if (duration && duration < minDurationMs / 1000) {
+        rewind();
+      }
     }
   };
 
   return (
-    <video
-      ref={videoRef}
-      src={xxxImageUri(type)(id)}
-      autoPlay
-      muted
-      playsInline
-      preload="metadata"
-      className="w-screen h-screen object-contain"
-      onEnded={onEnded}
-      onError={handleNextAction}
-    />
+    <>
+      {duration && (
+        <div
+          style={{
+            position: "fixed",
+            bottom: "1rem",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 50,
+            pointerEvents: "none",
+          }}
+        >
+          {duration.toFixed(1)}s
+        </div>
+      )}
+      <video
+        ref={videoRef}
+        src={xxxImageUri(type)(id)}
+        autoPlay
+        muted
+        playsInline
+        preload="metadata"
+        className="w-screen h-screen object-contain"
+        onEnded={onEnded}
+        onError={handleNextAction}
+        onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+      />
+    </>
   );
 };
