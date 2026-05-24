@@ -32,6 +32,11 @@ export const Slideshow = ({ images, type }: Props) => {
           toggle();
           break;
         }
+        case "Enter":
+        case "ArrowRight": {
+          handleNext();
+          break;
+        }
         case "Escape": {
           window.location.href = "/";
           break;
