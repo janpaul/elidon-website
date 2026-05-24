@@ -25,10 +25,23 @@ export const Slideshow = ({ images, type }: Props) => {
 
   useEffect(() => {
     const toggle = () => setIsPaused((p) => !p);
-    window.addEventListener("keydown", toggle);
+    const onKeyDown = (event: KeyboardEvent) => {
+      switch (event.key) {
+        case " ":
+        case "Spacebar": {
+          toggle();
+          break;
+        }
+        case "Escape": {
+          window.location.href = "/";
+          break;
+        }
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
     window.addEventListener("pointerdown", toggle);
     return () => {
-      window.removeEventListener("keydown", toggle);
+      window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("pointerdown", toggle);
     };
   }, []);
