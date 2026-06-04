@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/zsh
+#!/bin/bash
 
 dir="$HOME/Downloads/gif"
 
