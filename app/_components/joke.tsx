@@ -1,15 +1,9 @@
-import jokes from "@/app/_components/data/jokes.json";
-import { revalidate } from "@/app/page";
-
-const getJoke = (): string[] => {
-  const joke =
-    jokes[Math.floor((Date.now() / revalidate) * 1_000) % jokes.length];
-  return Array.isArray(joke) ? joke : [joke];
-};
+"use client";
+import { useJoke } from "@/hooks";
 
 export const Joke = () => {
-  const joke = getJoke();
-  return (
+  const joke = useJoke();
+  return joke ? (
     <>
       <p className="text-muted-foreground text-sm">joke of the day</p>
       <div className="mt-2 text-base">
@@ -27,5 +21,5 @@ export const Joke = () => {
         ))}
       </div>
     </>
-  );
+  ) : null;
 };
