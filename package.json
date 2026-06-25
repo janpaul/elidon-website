@@ -11,7 +11,7 @@
     "videos": "scripts/rename-videos.sh && scripts/filter-erotigif.sh && node --env-file=.env.local scripts/upload-erotigifs.mts && node --env-file=.env.local scripts/upload-xvideos.mts"
   },
   "dependencies": {
-    "@vercel/blob": "^2.4.0",
+    "@vercel/blob": "2.4.1",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "lucide-react": "1.21.0",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.1",
     "@tailwindcss/typography": "0.5.20",
-    "@types/node": "^25.9.3",
+    "@types/node": "^25.9.4",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.4",
