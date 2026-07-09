@@ -8,11 +8,7 @@ import {
 import type { IconType } from "react-icons";
 
 export type SocialName =
-  | "mail"
-  | "github"
-  | "instagram"
-  | "reddit"
-  | "mixcloud";
+  "mail" | "github" | "instagram" | "reddit" | "mixcloud";
 export type Social = {
   name: SocialName;
   url: string;
