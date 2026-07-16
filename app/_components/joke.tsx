@@ -3,7 +3,8 @@ import { revalidate } from "@/app/page";
 
 const getJoke = (): string[] => {
   const joke =
-    jokes[Math.floor((Date.now() / revalidate) * 1_000) % jokes.length];
+    jokes[Math.floor(Date.now() / (revalidate * 1000)) % jokes.length];
+
   return Array.isArray(joke) ? joke : [joke];
 };
 

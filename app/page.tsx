@@ -8,7 +8,7 @@ import {
   ExternalLink,
 } from "@/app/_components";
 
-export const revalidate = 3600;
+export const revalidate = 300;
 
 const Home = () => (
   <div className="min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center">
