@@ -44,8 +44,8 @@ const Home = () => (
             MT-09 SP
           </ExternalLink>
           . Current{" "}
-          <ExternalLink href="//en.wikipedia.org/wiki/Jordaan">
-            Jordaan
+          <ExternalLink href="//en.wikipedia.org/wiki/Haarlemmerbuurt">
+            Haarlemmerbuurt
           </ExternalLink>{" "}
           resident. Moonlighting as a bartender at a{" "}
           <ExternalLink href="//cafedezeevaart.com">brown café</ExternalLink> in
