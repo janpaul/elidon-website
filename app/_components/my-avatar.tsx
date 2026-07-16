@@ -2,13 +2,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 
 const amISleeping = () => {
-  const hour = parseInt(
-    new Intl.DateTimeFormat("nl-NL", {
-      timeZone: "Europe/Amsterdam",
-      hour: "numeric",
-      hour12: false,
-    }).format(new Date()),
-  );
+  const hour =
+    parseInt(
+      new Intl.DateTimeFormat("nl-NL", {
+        timeZone: "Europe/Amsterdam",
+        hour: "numeric",
+        hour12: false,
+      }).format(new Date()),
+    ) % 24; // edge case: in some versions midnight == 24, so we mod it to 0-23
   return hour >= 23 || hour < 7;
 };
 
