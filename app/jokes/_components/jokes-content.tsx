@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { toast } from "sonner";
+import { CopyIcon } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -12,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/sonner";
 import { SingleJoke } from "@/components/single-joke";
 import { useClipboard } from "@/hooks/use-clipboard";
-import { CopyIcon } from "lucide-react";
 
 type Props = {
   jokes: Array<string | string[]>;
