@@ -3,14 +3,14 @@ type Props = {
 };
 
 export const SingleJoke = ({ joke }: Props) => {
-  const ajoke = Array.isArray(joke) ? joke : [joke];
+  const aJoke = Array.isArray(joke) ? joke : [joke];
   return (
     <div className="mt-2 text-base">
-      {ajoke.map((line, index) => (
+      {aJoke.map((line, index) => (
         <p
           key={index}
           className={
-            ajoke.length === 2 && index === 0
+            aJoke.length === 2 && index === 0
               ? "text-muted-foreground"
               : "font-medium"
           }
