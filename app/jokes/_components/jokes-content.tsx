@@ -43,9 +43,9 @@ export const JokesContent = ({ jokes: allJokes }: Props) => {
             placeholder="Search..."
           />
         </section>
-        <section>
+        <section className="overflow-y-auto">
           {jokes.map((joke, index) => (
-            <Card key={index} className="mb-2">
+            <Card size="sm" key={index} className="mb-2">
               {hasClipboard && (
                 <CardHeader>
                   <CardAction>
