@@ -1,12 +1,9 @@
-import jokes from "@/app/_components/data/jokes.json";
+import jokes from "@/app/data/jokes.json";
 import { revalidate } from "@/app/page";
+import { SingleJoke } from "@/components/single-joke";
 
-const getJoke = (): string[] => {
-  const joke =
-    jokes[Math.floor(Date.now() / (revalidate * 1000)) % jokes.length];
-
-  return Array.isArray(joke) ? joke : [joke];
-};
+const getJoke = (): string[] | string =>
+  jokes[Math.floor(Date.now() / (revalidate * 1000)) % jokes.length];
 
 export const Joke = () => {
   const joke = getJoke();
@@ -14,18 +11,7 @@ export const Joke = () => {
     <>
       <p className="text-muted-foreground text-sm">joke of the day</p>
       <div className="mt-2 text-base">
-        {joke.map((line, index) => (
-          <p
-            key={index}
-            className={
-              joke.length === 2 && index === 0
-                ? "text-muted-foreground"
-                : "font-medium"
-            }
-          >
-            {line}
-          </p>
-        ))}
+        <SingleJoke joke={joke} />
       </div>
     </>
   );
