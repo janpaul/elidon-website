@@ -2,7 +2,7 @@ import { list } from "@vercel/blob";
 
 const postfix = ".mp4";
 
-export type XxxType = "erotigif" | "xvideos";
+export type XxxType = "erotigif";
 
 const getPrefix = (type: XxxType) => `${type}/`;
 
