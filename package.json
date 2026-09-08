@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
-    "videos": "scripts/rename-videos.sh && scripts/filter-erotigif.sh && node --env-file=.env.local scripts/upload-erotigifs.mts"
+    "videos": "scripts/rename-videos.sh && scripts/filter-erotigif.sh && node --env-file=.env.local scripts/upload-erotigifs.mts",
+    "mixes": "node --env-file=.env.local scripts/upload-mixes.mts"
   },
   "dependencies": {
     "@vercel/blob": "2.8.0",
