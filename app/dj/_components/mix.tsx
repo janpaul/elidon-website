@@ -1,13 +1,13 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { Play, Pause } from "lucide-react";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import type { MixType } from "@/app/dj/types";
 
-type Props = { mix: string };
+type Props = { mix: MixType };
 
-export const Mix = ({ mix }: Props) => {
-  const mixUri = `https://rvalfhikxfvgaxsh.public.blob.vercel-storage.com/dj/${mix}.m4a`;
+export const Mix = ({ mix: { file } }: Props) => {
+  const mixUri = `https://rvalfhikxfvgaxsh.public.blob.vercel-storage.com/dj/${file}.m4a`;
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
@@ -43,31 +43,28 @@ export const Mix = ({ mix }: Props) => {
   };
 
   return (
-    <Card className="mb-2">
-      <CardTitle>{mix}</CardTitle>
-      <CardContent>
-        <audio ref={audioRef} src={mixUri} preload="metadata" />
-        <div className="flex flex-col md:flex-row gap-2 md:gap-4 align-middle">
-          <div className="grow-0 shrink-0">
-            <Button onClick={togglePlay}>
-              {isPlaying ? <Pause size={18} /> : <Play size={18} />}
-            </Button>
-          </div>
-          <div className="grow min-w-0">
-            <input
-              type="range"
-              min={0}
-              max={duration || 0}
-              value={progress}
-              onChange={handleSeek}
-              className="w-full accent-orange-500"
-            />
-          </div>
-          <div className="text-xs tabular-nums grow-0 shrink-0">
-            {Math.floor(progress)}s / {Math.floor(duration)}s
-          </div>
+    <>
+      <audio ref={audioRef} src={mixUri} preload="metadata" />
+      <div className="flex flex-col md:flex-row gap-2 md:gap-4 align-middle">
+        <div className="grow-0 shrink-0">
+          <Button onClick={togglePlay}>
+            {isPlaying ? <Pause size={18} /> : <Play size={18} />}
+          </Button>
         </div>
-      </CardContent>
-    </Card>
+        <div className="grow min-w-0">
+          <input
+            type="range"
+            min={0}
+            max={duration || 0}
+            value={progress}
+            onChange={handleSeek}
+            className="w-full accent-orange-500"
+          />
+        </div>
+        <div className="text-xs tabular-nums grow-0 shrink-0">
+          {Math.floor(progress)}s / {Math.floor(duration)}s
+        </div>
+      </div>
+    </>
   );
 };

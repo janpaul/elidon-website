@@ -1,17 +1,36 @@
 import { Mix } from "@/app/dj/_components";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Joke, Socials, MyAvatar } from "@/app/_components";
+import type { MixType } from "@/app/dj/types";
 
-const mixes: string[] = [
-  "REC013 - 25-03-2026",
-  "REC014 - 10-04-2026",
-  "REC015 - 20-08-2026",
-  "REC016 - 05-09-2026",
+export const revalidate = 300;
+
+const mixes: MixType[] = [
+  { file: "REC013 - 25-03-2026", name: "25-03-2026" },
+  { file: "REC014 - 10-04-2026", name: "10-04-2026" },
+  { file: "REC015 - 20-08-2026", name: "20-08-2026" },
+  { file: "REC016 - 05-09-2026", name: "05-09-2026" },
 ];
 
 const DJPage = () => (
-  <div>
+  <div className="flex flex-col gap-2 md:gap-3 lg:gap-4">
+    <div>
+      <MyAvatar />
+    </div>
+    <div>
+      <Socials />
+    </div>
     {mixes.reverse().map((mix) => (
-      <Mix key={mix} mix={mix} />
+      <Card key={mix.file}>
+        <CardContent>
+          <CardTitle>{mix.name}</CardTitle>
+          <Mix mix={mix} />
+        </CardContent>
+      </Card>
     ))}
+    <div>
+      <Joke />
+    </div>
   </div>
 );
 

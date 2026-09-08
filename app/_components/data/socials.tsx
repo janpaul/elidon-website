@@ -2,8 +2,8 @@ import {
   FaGithub,
   FaInstagram,
   FaReddit,
-  FaApple,
   FaMixcloud,
+  FaEnvelope,
 } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
@@ -17,7 +17,7 @@ export type Social = {
 };
 
 export const socialIconsMap: Record<string, IconType> = {
-  apple: FaApple,
+  mail: FaEnvelope,
   github: FaGithub,
   instagram: FaInstagram,
   reddit: FaReddit,
@@ -27,8 +27,8 @@ export const socialIconsMap: Record<string, IconType> = {
 export const socials: Social[] = [
   {
     name: "mail",
-    url: "mailto:janpaul@elidon.net",
-    icon: "apple",
+    url: "mailto:janpaul@hey.com",
+    icon: "mail",
     title: "Send me an email",
   },
   {
