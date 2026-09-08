@@ -9,7 +9,7 @@ const mixes: string[] = [
 
 const DJPage = () => (
   <div>
-    {mixes.map((mix) => (
+    {mixes.reverse().map((mix) => (
       <Mix key={mix} mix={mix} />
     ))}
   </div>
