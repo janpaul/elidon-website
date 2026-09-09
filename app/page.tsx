@@ -31,11 +31,8 @@ const Home = () => (
         <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
           Full-stack engineer with a frontend heart. Building software by day.
           Aspiring <ExternalLink href="//hugoboss.nl">Hugo Boss</ExternalLink>{" "}
-          model and{" "}
-          <ExternalLink href={getSocialByName("mixcloud")!.url}>
-            Superstar DJ
-          </ExternalLink>{" "}
-          by night. You&apos;ll find me debugging{" "}
+          model and <ExternalLink href="/dj">Superstar DJ</ExternalLink> by
+          night. You&apos;ll find me debugging{" "}
           <ExternalLink href="//typescriptlang.org">TypeScript</ExternalLink>,{" "}
           <ExternalLink href="//learncpp.com">C++</ExternalLink> and{" "}
           <ExternalLink href="//rust-lang.org">Rust</ExternalLink>, or cornering
