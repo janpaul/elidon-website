@@ -42,13 +42,23 @@ export const Mix = ({ mix: { file } }: Props) => {
     setProgress(Number(e.target.value));
   };
 
+  const secondsToHoursMinutesSeconds = (seconds: number) => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${hours > 0 ? hours + "h " : ""}${minutes}m ${remainingSeconds}s`;
+  };
+
   return (
     <>
       <audio ref={audioRef} src={mixUri} preload="metadata" />
-      <div className="flex flex-col md:flex-row gap-2 md:gap-4 align-middle">
+      <div className="flex flex-row gap-2 md:gap-4 align-middle items-start w-full">
         <div className="grow-0 shrink-0">
-          <Button onClick={togglePlay}>
-            {isPlaying ? <Pause size={18} /> : <Play size={18} />}
+          <Button
+            onClick={togglePlay}
+            className="w-20 h-20 md:w-16 md:h-16 lg:w-12 lg:h-12 p-0 rounded-full bg-orange-500 hover:bg-orange-600"
+          >
+            {isPlaying ? <Pause size={24} /> : <Play size={24} />}
           </Button>
         </div>
         <div className="grow min-w-0">
@@ -60,9 +70,10 @@ export const Mix = ({ mix: { file } }: Props) => {
             onChange={handleSeek}
             className="w-full accent-orange-500"
           />
-        </div>
-        <div className="text-xs tabular-nums grow-0 shrink-0">
-          {Math.floor(progress)}s / {Math.floor(duration)}s
+          <span className="text-xs tabular-nums grow-0 shrink-0">
+            {secondsToHoursMinutesSeconds(progress)} /{" "}
+            {secondsToHoursMinutesSeconds(duration)}
+          </span>
         </div>
       </div>
     </>

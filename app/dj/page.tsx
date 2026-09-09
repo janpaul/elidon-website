@@ -14,8 +14,11 @@ const mixes: MixType[] = [
 
 const DJPage = () => (
   <div className="flex flex-col gap-2 md:gap-3 lg:gap-4">
-    <div>
+    <div className="flex flex-row gap-2 md:gap-4 align-middle items-start w-full">
       <MyAvatar />
+      <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
+        DJ Jean Paul
+      </h1>
     </div>
     <div>
       <Socials />
