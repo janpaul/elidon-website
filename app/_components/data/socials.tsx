@@ -1,10 +1,10 @@
 import {
-  FaGithub,
-  FaInstagram,
-  FaReddit,
-  FaMixcloud,
-  FaEnvelope,
-} from "react-icons/fa";
+  SiHey,
+  SiGithub,
+  SiInstagram,
+  SiReddit,
+  SiMixcloud,
+} from "react-icons/si";
 import type { IconType } from "react-icons";
 
 export type SocialName =
@@ -17,11 +17,11 @@ export type Social = {
 };
 
 export const socialIconsMap: Record<string, IconType> = {
-  mail: FaEnvelope,
-  github: FaGithub,
-  instagram: FaInstagram,
-  reddit: FaReddit,
-  mixcloud: FaMixcloud,
+  mail: SiHey,
+  github: SiGithub,
+  instagram: SiInstagram,
+  reddit: SiReddit,
+  mixcloud: SiMixcloud,
 };
 
 export const socials: Social[] = [
