@@ -6,10 +6,10 @@ export type Social = {
   name: SocialName;
   url: string;
   icon: string;
-  title?: string;
+  title: string;
 };
 
-export const socialIconsMap: Record<string, IconType> = {
+export const socialIconsMap: Record<SocialName, IconType> = {
   mail: SiHey,
   github: SiGithub,
   instagram: SiInstagram,
