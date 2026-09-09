@@ -7,7 +7,7 @@ import {
 } from "@/app/_components/data/socials";
 
 const Social = ({ name, url, icon, title = name }: Social) => {
-  const Icon = socialIconsMap[icon];
+  const Icon = socialIconsMap[icon as SocialName];
   return (
     <Button variant="ghost" size="icon" asChild key={name} title={title}>
       <a href={url} target="_blank" rel="noopener noreferrer">
