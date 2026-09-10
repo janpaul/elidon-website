@@ -1,6 +1,6 @@
 import jokes from "@/app/_components/data/jokes.json";
 import { revalidate } from "@/app/page";
-import { SingleJoke } from "@/components/single-joke";
+import { SingleJoke } from "@/app/_components/single-joke";
 
 const getJoke = (): string[] | string =>
   jokes[Math.floor(Date.now() / (revalidate * 1000)) % jokes.length];

@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/sonner";
-import { SingleJoke } from "@/components/single-joke";
+import { SingleJoke } from "@/app/_components/single-joke";
 import { useClipboard } from "@/hooks/use-clipboard";
 
 type Props = {
