@@ -1,4 +1,4 @@
-import jokes from "@/app/data/jokes.json";
+import jokes from "@/app/_components/data/jokes.json";
 import { JokesContent } from "@/app/jokes/_components/jokes-content";
 
 const JokesPage = () => {

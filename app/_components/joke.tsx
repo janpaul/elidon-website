@@ -1,4 +1,4 @@
-import jokes from "@/app/data/jokes.json";
+import jokes from "@/app/_components/data/jokes.json";
 import { revalidate } from "@/app/page";
 import { SingleJoke } from "@/components/single-joke";
 
