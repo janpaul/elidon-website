@@ -19,7 +19,9 @@ const DJPage = () => (
     {mixes.reverse().map((mix) => (
       <Card key={mix.file}>
         <CardContent>
-          <CardTitle>{mix.name}</CardTitle>
+          <CardTitle>
+            {mix.name} <small className="text-xs">({mix.file})</small>
+          </CardTitle>
           <Mix mix={mix} />
         </CardContent>
       </Card>
