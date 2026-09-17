@@ -25,6 +25,4 @@ export const mixes: MixType[] = [
     name: "05-09-2026",
     duration: _hms(1, 42, 50),
   },
-  { file: "REC0017.WAV", name: "09-09-2026", duration: _hms(1, 45, 3) },
-  { file: "REC0018.WAV", name: "11-09-2026", duration: _hms(1, 16, 23) },
 ];
