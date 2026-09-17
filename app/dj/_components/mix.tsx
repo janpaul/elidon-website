@@ -1,17 +1,18 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, type ChangeEvent } from "react";
 import { Play, Pause } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { MixType } from "@/app/dj/types";
 
 type Props = { mix: MixType };
 
-export const Mix = ({ mix: { file } }: Props) => {
+export const Mix = ({ mix: { file, duration: initialDuration } }: Props) => {
   const mixUri = `https://rvalfhikxfvgaxsh.public.blob.vercel-storage.com/dj/${file}.m4a`;
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
-  const [duration, setDuration] = useState<number>(0);
+  const [duration, setDuration] = useState<number>(initialDuration);
+  const loadedRef = useRef(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -28,15 +29,25 @@ export const Mix = ({ mix: { file } }: Props) => {
   }, []);
 
   const togglePlay = async () => {
-    if (!audioRef.current) return;
-    if (isPlaying) audioRef.current.pause();
-    else {
-      await audioRef.current.play();
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+      setIsPlaying(false);
+      return;
     }
-    setIsPlaying(!isPlaying);
+
+    if (!loadedRef.current) {
+      audio.src = mixUri; // pas nu wordt er iets opgehaald
+      loadedRef.current = true;
+    }
+
+    await audio.play();
+    setIsPlaying(true);
   };
 
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSeek = (e: ChangeEvent<HTMLInputElement>) => {
     if (!audioRef.current) return;
     audioRef.current.currentTime = Number(e.target.value);
     setProgress(Number(e.target.value));
@@ -51,7 +62,7 @@ export const Mix = ({ mix: { file } }: Props) => {
 
   return (
     <>
-      <audio ref={audioRef} src={mixUri} preload="metadata" />
+      <audio ref={audioRef} preload="none" />
       <div className="flex flex-row gap-2 md:gap-4 align-middle items-start w-full">
         <div className="grow-0 shrink-0">
           <Button
