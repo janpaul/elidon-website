@@ -1,10 +1,9 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
-import { xxxImageUri, type XxxType } from "@/app/xxx/[type]/helpers";
+import { xxxImageUri } from "../helpers";
 
 type Props = {
   id: string;
-  type: XxxType;
   handleNextAction: () => void;
   minDurationMs: number;
   isPaused?: boolean;
@@ -12,14 +11,13 @@ type Props = {
 
 export const MyVideo = ({
   id,
-  type,
   handleNextAction,
   minDurationMs,
   isPaused = false,
 }: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const minReached = useRef(false);
-  const hasTimeout = type === "erotigif";
+  const hasTimeout = true;
   const [duration, setDuration] = useState<number | null>(null);
 
   useEffect(() => {
@@ -76,7 +74,7 @@ export const MyVideo = ({
       )}
       <video
         ref={videoRef}
-        src={xxxImageUri(type)(id)}
+        src={xxxImageUri(id)}
         autoPlay
         muted
         playsInline

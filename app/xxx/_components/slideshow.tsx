@@ -1,15 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
-import { MyVideo } from "@/app/xxx/[type]/_components/index";
-import type { XxxType } from "@/app/xxx/[type]/helpers";
+import { MyVideo } from "./index";
 import { FaPauseCircle } from "react-icons/fa";
 
 type Props = {
   images: string[];
-  type: XxxType;
 };
 
-export const Slideshow = ({ images, type }: Props) => {
+export const Slideshow = ({ images }: Props) => {
   const [cursor, setCursor] = useState<number>(0);
   const [isPaused, setIsPaused] = useState(false);
   const selectedVideoId = images[cursor];
@@ -78,7 +76,6 @@ export const Slideshow = ({ images, type }: Props) => {
       )}
       <MyVideo
         id={selectedVideoId}
-        type={type}
         handleNextAction={handleNext}
         minDurationMs={interval}
         isPaused={isPaused}
