@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
-import { xxxImageUri } from "../helpers";
+
+const xxxImageUri = (id: string) => `https://cdn.elidon.net/erotigif/${id}`;
 
 type Props = {
   id: string;
