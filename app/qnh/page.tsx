@@ -20,9 +20,9 @@ const QnhPage = () => (
         </TableRow>
       </TableHeader>
       <TableBody>
-        {Array(40)
+        {Array(50)
           .fill(0)
-          .map((_, index) => index + 990)
+          .map((_, index) => index + 985)
           .map((value) => (
             <TableRow key={value}>
               <TableCell>{value}</TableCell>
