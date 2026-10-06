@@ -7,7 +7,7 @@ import type { MixType } from "@/app/dj/types";
 type Props = { mix: MixType };
 
 export const Mix = ({ mix: { file, duration: initialDuration } }: Props) => {
-  const mixUri = `https://rvalfhikxfvgaxsh.public.blob.vercel-storage.com/dj/${file}.m4a`;
+  const mixUri = `https://cdn.elidon.net/mixes/${file}.m4a`;
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
