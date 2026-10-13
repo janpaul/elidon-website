@@ -132,3 +132,10 @@
     @apply font-sans;
   }
 }
+
+html:has([data-hide-scrollbar]) {
+  scrollbar-width: none;
+}
+html:has([data-hide-scrollbar])::-webkit-scrollbar {
+  display: none;
+}

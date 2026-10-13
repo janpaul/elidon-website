@@ -29,7 +29,7 @@ type Props = Readonly<{
 const RootLayout = ({ children }: Props) => (
   <html
     lang="en"
-    className={`${geistSans.variable} ${geistMono.variable} h-full antialiased transform-gpu`}
+    className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     suppressHydrationWarning
   >
     <body className="min-h-full flex flex-col m-2">
