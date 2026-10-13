@@ -1,5 +1,6 @@
 import { QnhTable } from "./qnh-table";
 import { QnhCalc } from "./qnh-calc";
+import { QnhChart } from "./qnh-chart";
 import { minMbar, maxMbar } from "@/app/qnh/helpers";
 
 const QnhPage = () => (
@@ -7,8 +8,13 @@ const QnhPage = () => (
     <section>
       <QnhCalc />
     </section>
+
     <section>
       <QnhTable min={minMbar} max={maxMbar} />
+    </section>
+
+    <section>
+      <QnhChart min={minMbar} max={maxMbar} />
     </section>
   </div>
 );
