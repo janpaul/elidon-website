@@ -1,13 +1,14 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
-
-const xxxImageUri = (id: string) => `https://cdn.elidon.net/erotigif/${id}`;
+import type { SlideshowLoader } from "@/components/slideshow";
+import { loaders } from "@/lib/xvideos";
 
 type Props = {
   id: string;
   handleNextAction: () => void;
   minDurationMs: number;
   isPaused?: boolean;
+  loader: SlideshowLoader;
 };
 
 export const MyVideo = ({
@@ -15,6 +16,7 @@ export const MyVideo = ({
   handleNextAction,
   minDurationMs,
   isPaused = false,
+  loader,
 }: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const minReached = useRef(false);
@@ -75,7 +77,7 @@ export const MyVideo = ({
       )}
       <video
         ref={videoRef}
-        src={xxxImageUri(id)}
+        src={loaders[loader](id)}
         autoPlay
         muted
         playsInline

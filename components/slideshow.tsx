@@ -1,13 +1,16 @@
 "use client";
 import { useState, useEffect } from "react";
-import { MyVideo } from "./index";
 import { FaPauseCircle } from "react-icons/fa";
+import { MyVideo } from "@/components/my-video";
+
+export type SlideshowLoader = "xvideos" | "erotigif";
 
 type Props = {
   images: string[];
+  loader: SlideshowLoader;
 };
 
-export const Slideshow = ({ images }: Props) => {
+export const Slideshow = ({ images, loader }: Props) => {
   const [cursor, setCursor] = useState<number>(0);
   const [isPaused, setIsPaused] = useState(false);
   const selectedVideoId = images[cursor];
@@ -79,6 +82,7 @@ export const Slideshow = ({ images }: Props) => {
         handleNextAction={handleNext}
         minDurationMs={interval}
         isPaused={isPaused}
+        loader={loader}
       />
     </div>
   ) : null;
