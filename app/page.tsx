@@ -33,8 +33,8 @@ const Home = () => (
           by night. You&apos;ll find me debugging{" "}
           <ExternalLink href="//typescriptlang.org">TypeScript</ExternalLink>,{" "}
           <ExternalLink href="//learncpp.com">C++</ExternalLink> and{" "}
-          <ExternalLink href="//rust-lang.org">Rust</ExternalLink>, or cornering
-          hard on my{" "}
+          <ExternalLink href="//rust-lang.org">Rust</ExternalLink>, or riding
+          fast on my{" "}
           <ExternalLink href="//www.yamahamotorsports.com/models/mt-09-sp">
             MT-09 SP
           </ExternalLink>
