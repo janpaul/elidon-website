@@ -66,7 +66,7 @@ export const Gallery = ({ videos }: Props) => {
         ref={dialog}
         onClose={() => setCurrent(null)}
         onClick={(e) => e.target === e.currentTarget && dialog.current?.close()}
-        className="m-auto bg-transparent p-0 backdrop:backdrop-blur-sm"
+        className="m-auto bg-transparent p-0 backdrop:backdrop-blur-sm rounded-2xl"
       >
         {current && (
           <video
@@ -75,7 +75,7 @@ export const Gallery = ({ videos }: Props) => {
             controls
             autoPlay
             playsInline
-            className="max-h-[90vh] max-w-[90vw] rounded-xl"
+            className="h-[90vh] w-[90vw] object-contain rounded-xl"
             muted
           />
         )}
