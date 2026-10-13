@@ -2,11 +2,11 @@
 
 2018 iMac running Fedora 44, behind the Fritz!Box. Caddy serves two things:
 
-| Domain | What | How |
-|---|---|---|
-| `elidon.net` | Next.js site (standalone) | Caddy → `reverse_proxy 127.0.0.1:3000` → `node server.js` |
-| `www.elidon.net` | redirect | 301 to `https://elidon.net` |
-| `cdn.elidon.net` | static files | Caddy `file_server` from `/var/www/cdn` |
+| Domain           | What                      | How                                                       |
+| ---------------- | ------------------------- | --------------------------------------------------------- |
+| `elidon.net`     | Next.js site (standalone) | Caddy → `reverse_proxy 127.0.0.1:3000` → `node server.js` |
+| `www.elidon.net` | redirect                  | 301 to `https://elidon.net`                               |
+| `cdn.elidon.net` | static files              | Caddy `file_server` from `/var/www/cdn`                   |
 
 Caddy handles HTTPS certificates automatically (Let's Encrypt).
 
@@ -30,28 +30,29 @@ The script runs as user `elidon` and does the following:
 1. `git fetch` in `/srv/elidon/repo`. If `origin/main` matches `/srv/elidon/app/REVISION`, it exits right away.
 2. `git reset --hard` to the new commit, then `npm ci` and `npm run build`.
 3. Three rsyncs into `/srv/elidon/app`:
-    - `.next/standalone/` (the server itself)
-    - `.next/static/`
-    - `public/`
+   - `.next/standalone/` (the server itself)
+   - `.next/static/`
+   - `public/`
 
    The last two are copied separately because standalone output doesn't include them.
+
 4. Update `REVISION` and run `sudo systemctl restart elidon`.
 
 ## Files
 
-| Path | What |
-|---|---|
-| `/etc/systemd/system/elidon-deploy.timer` | check every 15 minutes |
-| `/etc/systemd/system/elidon-deploy.service` | oneshot that runs the script |
-| `/usr/local/bin/elidon-deploy` | the deploy script |
-| `/etc/systemd/system/elidon.service` | Node server (`node server.js`, port 3000, localhost only) |
-| `/srv/elidon/repo` | git checkout + build |
-| `/srv/elidon/app` | live version + `REVISION` |
-| `/srv/elidon/env` | optional env vars for the site |
-| `/etc/caddy/Caddyfile` | only imports `Caddyfile.d/*.caddyfile` |
-| `/etc/caddy/Caddyfile.d/elidon.net.caddyfile` | site + www redirect |
-| `/etc/caddy/Caddyfile.d/cdn.elidon.net.caddyfile` | CDN (CORS `*`, 1-day cache, noindex) |
-| sudoers rule | `elidon` may run `systemctl restart elidon` (check with `sudo -l -U elidon`) |
+| Path                                              | What                                                                         |
+| ------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `/etc/systemd/system/elidon-deploy.timer`         | check every 15 minutes                                                       |
+| `/etc/systemd/system/elidon-deploy.service`       | oneshot that runs the script                                                 |
+| `/usr/local/bin/elidon-deploy`                    | the deploy script                                                            |
+| `/etc/systemd/system/elidon.service`              | Node server (`node server.js`, port 3000, localhost only)                    |
+| `/srv/elidon/repo`                                | git checkout + build                                                         |
+| `/srv/elidon/app`                                 | live version + `REVISION`                                                    |
+| `/srv/elidon/env`                                 | optional env vars for the site                                               |
+| `/etc/caddy/Caddyfile`                            | only imports `Caddyfile.d/*.caddyfile`                                       |
+| `/etc/caddy/Caddyfile.d/elidon.net.caddyfile`     | site + www redirect                                                          |
+| `/etc/caddy/Caddyfile.d/cdn.elidon.net.caddyfile` | CDN (CORS `*`, 1-day cache, noindex)                                         |
+| sudoers rule                                      | `elidon` may run `systemctl restart elidon` (check with `sudo -l -U elidon`) |
 
 ## Handy commands
 
