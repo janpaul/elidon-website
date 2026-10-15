@@ -1,7 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 
-import jp from "@/media/jp.jpg";
+import jp from "@/app/media/jp.jpg";
 
 const amISleeping = () => {
   const hour =
