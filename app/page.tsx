@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Joke, Socials, MyAvatar, ExternalLink } from "@/app/_components";
 
+export const revalidate = 300;
+
 const Home = () => (
   <div className="min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center">
     <div className="w-full max-w-2xl px-2 md:px-4">
