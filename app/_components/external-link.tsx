@@ -9,7 +9,7 @@ export const ExternalLink = ({ href, children }: Props) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-blue-700 hover:underline"
+    className="text-blue-500 hover:underline"
   >
     {children}
   </a>

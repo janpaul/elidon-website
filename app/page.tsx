@@ -1,11 +1,10 @@
-import NextLink from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Joke, Socials, MyAvatar, ExternalLink } from "@/app/_components";
+import { Joke, Socials, MyAvatar, MyMarkdown } from "@/app/_components";
 
 export const revalidate = 300;
 
-const Home = () => (
+const HomePage = () => (
   <div className="min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center">
     <div className="w-full max-w-2xl px-2 md:px-4">
       <div className="py-8 max-w-2xl">
@@ -23,30 +22,20 @@ const Home = () => (
           </div>
         </div>
 
-        <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
-          Full-stack engineer with a frontend heart. Building software by day.
-          Aspiring <ExternalLink href="//hugoboss.nl">Hugo Boss</ExternalLink>{" "}
-          model and{" "}
-          <NextLink href="/dj" className="text-blue-500 hover:underline">
-            international Superstar DJ
-          </NextLink>{" "}
-          by night. You&apos;ll find me debugging{" "}
-          <ExternalLink href="//typescriptlang.org">TypeScript</ExternalLink>,{" "}
-          <ExternalLink href="//learncpp.com">C++</ExternalLink> and{" "}
-          <ExternalLink href="//rust-lang.org">Rust</ExternalLink>, or riding
-          fast on my{" "}
-          <ExternalLink href="//www.yamahamotorsports.com/models/mt-09-sp">
-            MT-09 SP
-          </ExternalLink>
-          . Current{" "}
-          <ExternalLink href="//en.wikipedia.org/wiki/Haarlemmerbuurt">
-            Haarlemmerbuurt
-          </ExternalLink>{" "}
-          resident. Moonlighting as a bartender at a{" "}
-          <ExternalLink href="//cafedezeevaart.com">brown café</ExternalLink> in
-          the Red Light District, where the tourists are confused and the beer
-          is cold.
-        </p>
+        <div className="text-base leading-relaxed text-muted-foreground max-w-xl">
+          <MyMarkdown>
+            Full-stack engineer with a frontend heart. Building software by day.
+            Aspiring [Hugo Boss](//hugoboss.nl) model and [international
+            Superstar DJ](/dj) by night. You'll find me debugging
+            [TypeScript](//typescriptlang.org), [C++](//learncpp.com) and
+            [Rust](//rust-lang.org), or riding fast on my [MT-09
+            SP](//www.yamahamotorsports.com/models/mt-09-sp). Current
+            [Haarlemmerbuurt](//en.wikipedia.org/wiki/Haarlemmerbuurt) resident.
+            Moonlighting as a bartender at a [brown café](//cafedezeevaart.com)
+            in the Red Light District, where the tourists are confused and the
+            beer is cold.
+          </MyMarkdown>
+        </div>
 
         <Socials />
 
@@ -62,4 +51,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default HomePage;
