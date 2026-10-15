@@ -28,7 +28,7 @@ const Home = () => (
           Aspiring <ExternalLink href="//hugoboss.nl">Hugo Boss</ExternalLink>{" "}
           model and{" "}
           <NextLink href="/dj" className="text-blue-500 hover:underline">
-            Superstar DJ
+            international Superstar DJ
           </NextLink>{" "}
           by night. You&apos;ll find me debugging{" "}
           <ExternalLink href="//typescriptlang.org">TypeScript</ExternalLink>,{" "}
