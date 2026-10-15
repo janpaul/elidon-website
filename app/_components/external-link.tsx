@@ -1,9 +1,8 @@
-import type { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 
-type Props = {
+type Props = PropsWithChildren<{
   href: string;
-  children: ReactNode;
-};
+}>;
 
 export const ExternalLink = ({ href, children }: Props) => (
   <a
