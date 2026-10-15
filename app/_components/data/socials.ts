@@ -1,4 +1,4 @@
-import { SiHey, SiGithub, SiInstagram, SiReddit } from "react-icons/si";
+import { SiGithub, SiInstagram, SiReddit, SiApple } from "react-icons/si";
 import type { IconType } from "react-icons";
 
 export type SocialName = "mail" | "github" | "instagram" | "reddit";
@@ -10,7 +10,7 @@ export type Social = {
 };
 
 export const socialIconsMap: Record<SocialName, IconType> = {
-  mail: SiHey,
+  mail: SiApple,
   github: SiGithub,
   instagram: SiInstagram,
   reddit: SiReddit,
@@ -19,7 +19,7 @@ export const socialIconsMap: Record<SocialName, IconType> = {
 export const socials: Social[] = [
   {
     name: "mail",
-    url: "mailto:janpaul@hey.com",
+    url: "mailto:janpaul@elidon.net",
     icon: "mail",
     title: "Send me an email",
   },
