@@ -6,8 +6,8 @@ export const revalidate = 300;
 
 const HomePage = () => (
   <div className="min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center">
-    <div className="w-full max-w-2xl px-2 md:px-4">
-      <div className="py-8 max-w-2xl">
+    <div className="w-full max-w-4xl px-2 md:px-4">
+      <div className="py-8 max-w-4xl">
         <div className="flex items-center gap-6 mb-6">
           <div className="relative shrink-0">
             <MyAvatar />
@@ -21,7 +21,7 @@ Senior Software Engineer · Bartender · Amsterdam 🇳🇱
           </MyMarkdown>
         </div>
 
-        <div className="text-base leading-relaxed text-muted-foreground max-w-xl">
+        <div className="text-base leading-relaxed text-muted-foreground max-w-3xl">
           <MyMarkdown>
             {`
 Full-stack engineer with a frontend heart. Building software by day.
