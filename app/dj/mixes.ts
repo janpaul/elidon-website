@@ -31,8 +31,8 @@ export const mixes: MixType[] = [
     duration: _hms(1, 42, 50),
   },
   {
-    file: "REC018",
-    name: "05-10-2026 Funky Techno",
+    file: "REC019",
+    name: "22-10-2026 Uptempo Funky House",
     duration: _hms(1, 1, 36),
   },
 ];
