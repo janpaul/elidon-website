@@ -33,6 +33,11 @@ export const mixes: MixType[] = [
   {
     file: "REC019",
     name: "22-10-2026 Uptempo Funky House",
-    duration: _hms(1, 1, 36),
+    duration: _hms(1, 40, 32),
+  },
+  {
+    file: "REC020",
+    name: "28-10-2026 Uptempo High Energy Funky House",
+    duration: _hms(1, 20, 34),
   },
 ];
