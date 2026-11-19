@@ -45,6 +45,8 @@ export const price = (n: number, lang: Language) =>
   new Intl.NumberFormat(speechLang[lang], {
     style: "currency",
     currency: "EUR",
+    trailingZeroDisplay: "stripIfInteger",
+    minimumFractionDigits: Number.isInteger(n) ? 0 : 2,
   }).format(n);
 
 export const speak = (text: string, language: Language) => {

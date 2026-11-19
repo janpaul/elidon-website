@@ -20,23 +20,26 @@ export const CountingTable = ({ language }: Props) => (
               <span>{items.join(" ")}</span>
             ) : (
               <div className="text-inherit flex flex-row gap-2">
-                {items.map((item) => (
-                  <div key={item}>
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      onClick={() => {
-                        if (Number.isInteger(parseInt(item))) {
-                          speak(price(parseInt(item), language), language);
-                        } else {
-                          speak(item, language);
-                        }
-                      }}
-                    >
-                      {item}
-                    </Button>
-                  </div>
-                ))}
+                {items.map((item) => {
+                  const isNumber = Number.isInteger(parseInt(item));
+                  return (
+                    <div key={item}>
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        onClick={() => {
+                          if (isNumber) {
+                            speak(price(parseInt(item), language), language);
+                          } else {
+                            speak(item, language);
+                          }
+                        }}
+                      >
+                        {isNumber ? price(parseInt(item), language) : item}
+                      </Button>
+                    </div>
+                  );
+                })}
               </div>
             )}
           </TableCell>
