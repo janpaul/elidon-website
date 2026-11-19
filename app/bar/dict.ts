@@ -15,7 +15,7 @@ export const languages = [
 ] as const;
 
 export type Language = (typeof languages)[number];
-type Entry = Record<Language, string>;
+export type Entry = Record<Language, string>;
 
 export const dictionary: Entry[] = [
   {
