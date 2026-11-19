@@ -84,7 +84,7 @@ export const counting: Record<Language, CountingEntry> = {
     examples: "16,200,7619",
   },
   tr: {
-    "0-10": "sıfır bir iki üç dört beş altı yedi sekiz dokuz on",
+    "0-10": "sıfır, bir, iki, üç, dört, beş, altı, yedi, sekiz, dokuz, on",
     "11-20":
       "on bir, on iki, on üç, on dört, on beş, on altı, on yedi, on sekiz, on dokuz, yirmi",
     "30-90": "otuz, kırk, elli, altmış, yetmiş, seksen, doksan",
