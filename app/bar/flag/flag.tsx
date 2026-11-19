@@ -1,4 +1,4 @@
-import type { Language } from "@/app/bar/dict";
+import type { Language } from "@/app/bar/types";
 
 import nl from "@/app/bar/flag/nl.svg";
 import gb from "@/app/bar/flag/gb.svg";
