@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/table";
 import { dictionary, type Language } from "@/app/bar/dict";
 import { LangTableHeader } from "@/app/bar/lang-table-header";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { CountingTable } from "@/app/bar/counting-table";
 
 type Props = {
