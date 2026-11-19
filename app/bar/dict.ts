@@ -142,7 +142,7 @@ export const dictionary: Entry[] = [
     nl: "Veel plezier",
     en: "Have fun",
     de: "Viel Spaß",
-    fr: "Profite bien",
+    fr: "👤Profite bien 👥 Profitez bien",
     es: "👤¡Pásalo bien! 👥 ¡Pasadlo bien!",
     it: "👤Divertiti! 👥 Divertitevi!",
     pt: "👤Divirta-se! 👥 Divirtam-se!",
