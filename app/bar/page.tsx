@@ -4,6 +4,7 @@ import { DictionaryTable } from "@/app/bar/dict-table";
 import { languages, type Language } from "@/app/bar/dict";
 import { languageName } from "@/app/bar/utils";
 import { Button } from "@/components/ui/button";
+import { Flag } from "@/app/bar/flag/flag";
 
 const defaultLanguage: Language = "fr";
 
@@ -22,7 +23,7 @@ const BarPage = () => {
             aria-pressed={lang === selectedLanguage}
             className="text-2xl md:text-xl lg:text-base"
           >
-            {languageName(lang)}
+            <Flag language={lang} /> {languageName(lang)}
           </Button>
         ))}
       </div>

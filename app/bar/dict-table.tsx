@@ -16,25 +16,22 @@ type Props = {
 };
 
 export const DictionaryTable = ({ language }: Props) => {
-  const languages: Language[] = ["nl", language];
+  const languages: Language[] = [language];
+
   return (
     <>
       <Table className="text-2xl">
         <TableCaption>Dictionary</TableCaption>
-        <TableHeader>
-          <TableRow>
-            {languages.map((lang) => (
-              <TableHead key={lang} className="w-px">
-                {languageName(lang)}
-              </TableHead>
-            ))}
-          </TableRow>
-        </TableHeader>
         <TableBody>
           {dictionary.map((entry, index) => (
             <TableRow key={index}>
               {languages.map((lang) => (
-                <TableCell key={lang}>{entry[lang]}</TableCell>
+                <TableCell key={lang} className="">
+                  <div className="text-xs text-muted-foreground">
+                    {entry.nl}
+                  </div>
+                  <div className="text-inherit">{entry[lang]}</div>
+                </TableCell>
               ))}
             </TableRow>
           ))}

@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { TableRow, TableCell } from "@/components/ui/table";
 import type { Language } from "@/app/bar/dict";
 import { counting, countingColumns } from "@/app/bar/counting";
@@ -12,10 +11,10 @@ export const CountingTable = ({ language }: Props) => {
     <>
       {countingColumns.map((column) => (
         <TableRow key={column}>
-          <TableCell>{column}</TableCell>
-          <Fragment key={language}>
-            <TableCell>{counting[language][column]}</TableCell>
-          </Fragment>
+          <TableCell>
+            <div className="text-xs text-muted-foreground">{column}</div>
+            <div className="text-inherit">{counting[language][column]}</div>
+          </TableCell>
         </TableRow>
       ))}
     </>
