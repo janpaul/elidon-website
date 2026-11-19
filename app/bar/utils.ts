@@ -1,4 +1,20 @@
-import type { Language } from "@/app/bar/dict";
+import type { Language } from "@/app/bar/types";
+
+export const languages = [
+  "nl",
+  "en",
+  "de",
+  "fr",
+  "es",
+  "it",
+  "pt",
+  "tr",
+  "pl",
+  "da",
+  "sv",
+  "nb",
+  "fi",
+] as const;
 
 const countryNameMap: Record<Language, string> = {
   nl: "Nederlands",

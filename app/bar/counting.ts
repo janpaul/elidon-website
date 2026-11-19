@@ -1,4 +1,4 @@
-import { Language } from "@/app/bar/dict";
+import type { Language } from "@/app/bar/types";
 
 export const countingColumns = [
   "0-10",
@@ -6,6 +6,7 @@ export const countingColumns = [
   "30-90",
   "100/1000",
   "21special",
+  "examples",
 ] as const;
 type CountingEntry = Record<(typeof countingColumns)[number], string>;
 
@@ -17,6 +18,7 @@ export const counting: Record<Language, CountingEntry> = {
     "30-90": "dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig",
     "100/1000": "honderd, duizend",
     "21special": "eenentwintig",
+    examples: "21,1100,7619",
   },
   en: {
     "0-10": "zero, one, two, three, four, five, six, seven, eight, nine, ten",
@@ -26,6 +28,7 @@ export const counting: Record<Language, CountingEntry> = {
     "100/1000": "hundred, thousand",
     "21special":
       "twenty-one (tiental eerst). Let op: thirty/forty/fifty zijn onregelmatig",
+    examples: "13,30,15,50,7619",
   },
   de: {
     "0-10":
@@ -35,6 +38,7 @@ export const counting: Record<Language, CountingEntry> = {
     "30-90": "dreißig, vierzig, fünfzig, sechzig, siebzig, achtzig, neunzig",
     "100/1000": "hundert, tausend",
     "21special": "einundzwanzig",
+    examples: "21,97,7619",
   },
   fr: {
     "0-10": "zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix",
@@ -45,6 +49,7 @@ export const counting: Record<Language, CountingEntry> = {
     "100/1000": "cent, mille",
     "21special":
       "vingt et un (21), vingt-deux (22). Let op: 70 = 60+10, 80 = 4×20, 90 = 4×20+10, Wallonisch / Zwitsers: septante, nonante",
+    examples: "71,80,91,99,7619",
   },
   es: {
     "0-10":
@@ -54,6 +59,7 @@ export const counting: Record<Language, CountingEntry> = {
     "30-90": "treinta, cuarenta, cincuenta, sesenta, setenta, ochenta, noventa",
     "100/1000": "cien, mil",
     "21special": 'veintiuno (21, aan elkaar), treinta y uno (31, met "y")',
+    examples: "15,16,101,500,7619",
   },
   it: {
     "0-10":
@@ -65,6 +71,7 @@ export const counting: Record<Language, CountingEntry> = {
     "100/1000": "cento, mille",
     "21special":
       "ventuno (21), ventidue (22), trentuno (31). Alles aan elkaar, de laatste klinker van het tiental valt weg bij 1 en 8",
+    examples: "21,28,7619",
   },
   pt: {
     "0-10":
@@ -74,6 +81,7 @@ export const counting: Record<Language, CountingEntry> = {
     "30-90": "trinta, quarenta, cinquenta, sessenta, setenta, oitenta, noventa",
     "100/1000": "cem, mil",
     "21special": 'vinte e um (tiental + "e" + eenheid)',
+    examples: "16,200,7619",
   },
   tr: {
     "0-10": "sıfır bir iki üç dört beş altı yedi sekiz dokuz on",
@@ -83,6 +91,7 @@ export const counting: Record<Language, CountingEntry> = {
     "100/1000": "yüz, bin",
     "21special":
       "yirmi bir (tiental + eenheid, los van elkaar). Heel regelmatig",
+    examples: "40,50,7619",
   },
   pl: {
     "0-10":
@@ -93,6 +102,7 @@ export const counting: Record<Language, CountingEntry> = {
       "trzydzieści, czterdzieści, pięćdziesiąt, sześćdziesiąt, siedemdziesiąt, osiemdziesiąt, dziewięćdziesiąt",
     "100/1000": "sto, tysiąc",
     "21special": "dwadzieścia jeden (21), dwadzieścia dwa (22)",
+    examples: "2,5,12,22,7619",
   },
   da: {
     "0-10": "nul, en, to, tre, fire, fem, seks, syv, otte, ni, ti",
@@ -102,6 +112,7 @@ export const counting: Record<Language, CountingEntry> = {
     "100/1000": "hundrede, tusind",
     "21special":
       "enogtyve (één-en-twintig). Let op: 50 t/m 90 zijn halve twintigtallen: halvtreds = 2,5×20, halvfjerds = 3,5×20, firs = 4×20, halvfems = 4,5×20, tres (60 = 3×20)",
+    examples: "5,70,95,7619",
   },
   sv: {
     "0-10": "noll, ett, två, tre, fyra, fem, sex, sju, åtta, nio, tio",
@@ -110,6 +121,7 @@ export const counting: Record<Language, CountingEntry> = {
     "30-90": "trettio, fyrtio, femtio, sextio, sjuttio, åttio, nittio",
     "100/1000": "hundra, tusen",
     "21special": "tjugoett (tiental + eenheid, aan elkaar). Heel regelmatig",
+    examples: "7,17,7619",
   },
   nb: {
     "0-10": "null en to tre fire fem seks sju åtte ni ti",
@@ -118,6 +130,7 @@ export const counting: Record<Language, CountingEntry> = {
     "30-90": "tretti, førti, femti, seksti, sytti, åtti, nitti",
     "100/1000": "hundre, tusen",
     "21special": "tjueen (tiental + eenheid, aan elkaar). Regelmatig",
+    examples: "7,17,7619",
   },
   fi: {
     "0-10":
@@ -129,5 +142,6 @@ export const counting: Record<Language, CountingEntry> = {
     "100/1000": "sata, tuhat",
     "21special":
       'kaksikymmentäyksi (twee-tien-een). Handig: 11 t/m 19 = eenheid + "toista", tientallen = eenheid + "kymmentä"',
+    examples: "11,22,7619",
   },
 };
