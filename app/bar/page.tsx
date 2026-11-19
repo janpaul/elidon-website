@@ -4,8 +4,9 @@ import { Field, FieldGroup } from "@/components/ui/field";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { DictionaryTable } from "@/app/bar/dict-table";
-import { Flag } from "@/app/bar/flag";
 import { languages, type Language } from "@/app/bar/dict";
+import { languageName } from "@/app/bar/utils";
+import { cn } from "@/lib/utils";
 
 const defaultLanguage: Language = "fr";
 
@@ -15,7 +16,7 @@ const BarPage = () => {
 
   return (
     <>
-      <FieldGroup className="mb-4 flex flex-row gap-1">
+      <FieldGroup className="mb-4 flex flex-col lg:flex-row gap-0 md:gap-1">
         {languages.map((lang) => (
           <Field key={lang} orientation="horizontal">
             <Checkbox
@@ -29,8 +30,13 @@ const BarPage = () => {
                 }
               }}
             />
-            <Label htmlFor={`checkbox-${lang}`}>
-              <Flag lang={lang} />
+            <Label
+              htmlFor={`checkbox-${lang}`}
+              className={cn("text-2xl lg:text-base", {
+                underline: selectedLanguage === lang,
+              })}
+            >
+              {languageName(lang)}
             </Label>
           </Field>
         ))}

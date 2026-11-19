@@ -19,7 +19,7 @@ export const DictionaryTable = ({ language }: Props) => {
   return (
     <>
       <Table>
-        <TableCaption>Dictionary Table</TableCaption>
+        <TableCaption>Dictionary</TableCaption>
         <LangTableHeader languages={languages} />
         <TableBody>
           {dictionary.map((entry, index) => (
