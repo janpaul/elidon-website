@@ -3,21 +3,14 @@ import type { Language } from "@/app/bar/dict";
 
 type Props = {
   languages: Language[];
-  addFirstColumn?: boolean;
 };
 
-export const LangTableHeader = ({
-  languages: selectedLanguages,
-  addFirstColumn = false,
-}: Props) => (
+export const LangTableHeader = ({ languages: selectedLanguages }: Props) => (
   <TableHeader>
     <TableRow>
-      {addFirstColumn && <TableHead />}
-      {selectedLanguages
-        .filter((lang) => lang != "nl")
-        .map((lang) => (
-          <TableHead key={lang}>{lang.toUpperCase()}</TableHead>
-        ))}
+      {selectedLanguages.map((lang) => (
+        <TableHead key={lang}>{lang.toUpperCase()}</TableHead>
+      ))}
     </TableRow>
   </TableHeader>
 );

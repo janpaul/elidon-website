@@ -4,34 +4,28 @@ import { Field, FieldGroup } from "@/components/ui/field";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { DictionaryTable } from "@/app/bar/dict-table";
-import { CountingTable } from "@/app/bar/counting-table";
 import { Flag } from "@/app/bar/flag";
 import { languages, type Language } from "@/app/bar/dict";
 
-const defaultLanguages: Language[] = ["nl", "fr"];
+const defaultLanguage: Language = "fr";
 
 const BarPage = () => {
-  const [selected, setSelected] = useState<Language[]>(defaultLanguages);
-  const selectedAndSortedLanguages = languages.filter((l) =>
-    selected.includes(l),
-  );
+  const [selectedLanguage, setSelectedLanguage] =
+    useState<Language>(defaultLanguage);
 
   return (
     <>
       <FieldGroup className="mb-4 flex flex-row gap-1">
         {languages.map((lang) => (
-          <Field key={lang} orientation="responsive">
+          <Field key={lang} orientation="horizontal">
             <Checkbox
               id={`checkbox-${lang}`}
-              checked={selected.includes(lang)}
+              checked={selectedLanguage === lang}
               onCheckedChange={(checked) => {
                 if (checked) {
-                  setSelected([...selected, lang]);
+                  setSelectedLanguage(lang);
                 } else {
-                  const _newSelected = selected.filter((l) => l !== lang);
-                  setSelected(
-                    _newSelected.length > 0 ? _newSelected : defaultLanguages,
-                  );
+                  setSelectedLanguage(defaultLanguage);
                 }
               }}
             />
@@ -41,8 +35,7 @@ const BarPage = () => {
           </Field>
         ))}
       </FieldGroup>
-      <DictionaryTable languages={selectedAndSortedLanguages} />
-      <CountingTable languages={selectedAndSortedLanguages} />
+      <DictionaryTable language={selectedLanguage} />
     </>
   );
 };

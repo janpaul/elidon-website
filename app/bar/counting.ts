@@ -44,7 +44,7 @@ export const counting: Record<Language, CountingEntry> = {
       "trente, quarante, cinquante, soixante, soixante-dix, quatre-vingt, quatre-vingt-dix",
     "100/1000": "cent, mille",
     "21special":
-      "vingt et un (21), vingt-deux (22). Let op: 70 = 60+10, 80 = 4×20, 90 = 4×20+10",
+      "vingt et un (21), vingt-deux (22). Let op: 70 = 60+10, 80 = 4×20, 90 = 4×20+10, Wallonisch / Zwitsers: septante, nonante",
   },
   es: {
     "0-10":
@@ -67,9 +67,10 @@ export const counting: Record<Language, CountingEntry> = {
       "ventuno (21), ventidue (22), trentuno (31). Alles aan elkaar, de laatste klinker van het tiental valt weg bij 1 en 8",
   },
   pt: {
-    "0-10": "zero, um, dois, três, quatro, cinco, seis, sete, oito, nove, dez",
+    "0-10":
+      "zero, um / uma, dois / duas, três, quatro, cinco, seis, sete, oito, nove, dez",
     "11-20":
-      "onze, doze, treze, quatorze, quinze, dezesseis, dezessete, dezoito, dezenove, vinte",
+      "onze, doze, treze, catorze, dezasseis, dezassete, dezanove, vinte",
     "30-90": "trinta, quarenta, cinquenta, sessenta, setenta, oitenta, noventa",
     "100/1000": "cem, mil",
     "21special": 'vinte e um (tiental + "e" + eenheid)',
@@ -91,19 +92,18 @@ export const counting: Record<Language, CountingEntry> = {
     "30-90":
       "trzydzieści, czterdzieści, pięćdziesiąt, sześćdziesiąt, siedemdziesiąt, osiemdziesiąt, dziewięćdziesiąt",
     "100/1000": "sto, tysiąc",
-    "21special":
-      "dwadzieścia jeden (21), dwadzieścia dwa (22). Let op: 70 = 60+10, 80 = 4×20, 90 = 4×20+10",
+    "21special": "dwadzieścia jeden (21), dwadzieścia dwa (22)",
   },
-  dk: {
+  da: {
     "0-10": "nul, en, to, tre, fire, fem, seks, syv, otte, ni, ti",
     "11-20":
       "elleve, tolv, tretten, fjorten, femten, seksten, sytten, atten, nitten, tyve",
     "30-90": "tredive, fyrre, halvtreds, tres, halvfjerds, firs, halvfems",
     "100/1000": "hundrede, tusind",
     "21special":
-      "enogtyve (één-en-twintig). Let op: 50 t/m 90 zijn halve twintigtallen: halvtreds = 2,5×20, halvfjerds = 3,5×20, firs = 4×20, halvfems = 4,5×20",
+      "enogtyve (één-en-twintig). Let op: 50 t/m 90 zijn halve twintigtallen: halvtreds = 2,5×20, halvfjerds = 3,5×20, firs = 4×20, halvfems = 4,5×20, tres (60 = 3×20)",
   },
-  se: {
+  sv: {
     "0-10": "noll, ett, två, tre, fyra, fem, sex, sju, åtta, nio, tio",
     "11-20":
       "elva, tolv, tretton, fjorton, femton, sexton, sjutton, arton, nitton, tjugo",
@@ -111,7 +111,7 @@ export const counting: Record<Language, CountingEntry> = {
     "100/1000": "hundra, tusen",
     "21special": "tjugoett (tiental + eenheid, aan elkaar). Heel regelmatig",
   },
-  no: {
+  nb: {
     "0-10": "null en to tre fire fem seks sju åtte ni ti",
     "11-20":
       "elleve, tolv, tretten, fjorten, femten, seksten, sytten, atten, nitten, tjue",
@@ -121,7 +121,7 @@ export const counting: Record<Language, CountingEntry> = {
   },
   fi: {
     "0-10":
-      "nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän kymmenen",
+      "nolla, yks, kaks, kolme, neljä, viisi, kuusi, seitsemän, kahdeksan, yhdeksän, kymmenen",
     "11-20":
       "yksitoista, kaksitoista, kolmetoista, neljätoista, viisitoista, kuusitoista, seitsemäntoista, kahdeksantoista, yhdeksäntoista, kaksikymmentä",
     "30-90":
