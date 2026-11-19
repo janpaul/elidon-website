@@ -20,6 +20,7 @@ const BarPage = () => {
             onClick={() => setSelectedLanguage(lang)}
             variant={selectedLanguage === lang ? "outline" : "ghost"}
             aria-pressed={lang === selectedLanguage}
+            className="text-2xl md:text-xl lg:text-base"
           >
             {languageName(lang)}
           </Button>

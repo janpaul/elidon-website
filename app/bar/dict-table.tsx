@@ -1,13 +1,15 @@
 import {
   Table,
   TableBody,
-  TableRow,
   TableCell,
   TableCaption,
+  TableHead,
+  TableRow,
+  TableHeader,
 } from "@/components/ui/table";
 import { dictionary, type Language } from "@/app/bar/dict";
-import { LangTableHeader } from "@/app/bar/lang-table-header";
 import { CountingTable } from "@/app/bar/counting-table";
+import { languageName } from "@/app/bar/utils";
 
 type Props = {
   language: Language;
@@ -17,9 +19,17 @@ export const DictionaryTable = ({ language }: Props) => {
   const languages: Language[] = ["nl", language];
   return (
     <>
-      <Table>
+      <Table className="text-2xl">
         <TableCaption>Dictionary</TableCaption>
-        <LangTableHeader languages={languages} />
+        <TableHeader>
+          <TableRow>
+            {languages.map((lang) => (
+              <TableHead key={lang} className="w-px">
+                {languageName(lang)}
+              </TableHead>
+            ))}
+          </TableRow>
+        </TableHeader>
         <TableBody>
           {dictionary.map((entry, index) => (
             <TableRow key={index}>
