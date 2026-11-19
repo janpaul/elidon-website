@@ -1,12 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Field, FieldGroup } from "@/components/ui/field";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import { DictionaryTable } from "@/app/bar/dict-table";
 import { languages, type Language } from "@/app/bar/dict";
 import { languageName } from "@/app/bar/utils";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 const defaultLanguage: Language = "fr";
 
@@ -16,31 +13,18 @@ const BarPage = () => {
 
   return (
     <>
-      <FieldGroup className="mb-4 flex flex-col lg:flex-row gap-0 md:gap-1">
+      <div className="mb-4 flex flex-row gap-3 md:gap-2 lg:gap-1 flex-wrap justify-center">
         {languages.map((lang) => (
-          <Field key={lang} orientation="horizontal">
-            <Checkbox
-              id={`checkbox-${lang}`}
-              checked={selectedLanguage === lang}
-              onCheckedChange={(checked) => {
-                if (checked) {
-                  setSelectedLanguage(lang);
-                } else {
-                  setSelectedLanguage(defaultLanguage);
-                }
-              }}
-            />
-            <Label
-              htmlFor={`checkbox-${lang}`}
-              className={cn("text-2xl lg:text-base", {
-                underline: selectedLanguage === lang,
-              })}
-            >
-              {languageName(lang)}
-            </Label>
-          </Field>
+          <Button
+            key={lang}
+            onClick={() => setSelectedLanguage(lang)}
+            variant={selectedLanguage === lang ? "outline" : "ghost"}
+            aria-pressed={lang === selectedLanguage}
+          >
+            {languageName(lang)}
+          </Button>
         ))}
-      </FieldGroup>
+      </div>
       <DictionaryTable language={selectedLanguage} />
     </>
   );
