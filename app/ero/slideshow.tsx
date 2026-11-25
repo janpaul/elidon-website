@@ -78,7 +78,10 @@ export const Slideshow = ({ images }: Props) => {
   }, [images.length, onHandleNext]);
 
   return (
-    <div ref={stageRef} className="relative  bg-black touch-pan-y select-none">
+    <div
+      ref={stageRef}
+      className="relative  bg-black touch-pan-y select-none w-full h-full"
+    >
       {paused && (
         <div className="fixed inset-0 z-50 flex items-center p-4 justify-center">
           <PauseCircleIcon className="w-12 h-12 text-white" />

@@ -1,4 +1,4 @@
-import { useEffect, useRef, type RefObject } from "react";
+import { useEffect, useEffectEvent, type RefObject } from "react";
 
 type SwipeHandlers = { onLeft?: () => void; onRight?: () => void };
 
@@ -7,9 +7,10 @@ export function useSwipe<T extends HTMLElement>(
   handlers: SwipeHandlers,
   threshold = 50,
 ) {
-  // handlers in een ref, zodat we niet elke render opnieuw subscriben
-  const h = useRef(handlers);
-  h.current = handlers;
+  const onSwipe = useEffectEvent((dir: "left" | "right") => {
+    if (dir === "left") handlers.onLeft?.();
+    else handlers.onRight?.();
+  });
 
   useEffect(() => {
     const el = ref.current;
@@ -21,7 +22,7 @@ export function useSwipe<T extends HTMLElement>(
       tracking = false;
 
     const down = (e: PointerEvent) => {
-      if (e.pointerType === "mouse") return; // muis heeft al keyboard/klik
+      if (e.pointerType === "mouse") return;
       tracking = true;
       x0 = e.clientX;
       y0 = e.clientY;
@@ -33,11 +34,10 @@ export function useSwipe<T extends HTMLElement>(
       tracking = false;
       const dx = e.clientX - x0;
       const dy = e.clientY - y0;
-      if (Math.abs(dx) < threshold) return; // te kort
-      if (Math.abs(dx) < Math.abs(dy) * 1.5) return; // te schuin, eerder scrollen
-      if (e.timeStamp - t0 > 600) return; // te traag, eerder slepen
-      if (dx < 0) h.current.onLeft?.();
-      else h.current.onRight?.();
+      if (Math.abs(dx) < threshold) return;
+      if (Math.abs(dx) < Math.abs(dy) * 1.5) return;
+      if (e.timeStamp - t0 > 600) return;
+      onSwipe(dx < 0 ? "left" : "right");
     };
 
     const cancel = () => {
