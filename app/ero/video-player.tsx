@@ -22,6 +22,8 @@ export const VideoPlayer = ({
   const [durationMs, setDurationMs] = useState<number | null>(null);
   const [currentMs, setCurrentMs] = useState<number>(0);
 
+  // console.log({ id });
+
   const progressPercent = durationMs
     ? Math.round((currentMs / durationMs) * 100)
     : 0;
