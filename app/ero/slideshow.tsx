@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState, useRef } from "react";
 import { PauseCircleIcon } from "lucide-react";
 import { VideoPlayer } from "@/app/ero/video-player";
 import { useSwipe } from "@/app/ero/hooks/useSwipe";
+import { shuffle } from "@/lib/utils";
 
 const interval = 10_000; // show a clip for minimum 10 seconds before switching to the next one
 
@@ -15,20 +16,26 @@ export const Slideshow = ({ images }: Props) => {
   const [cursor, setCursor] = useState<number>(0);
   const [paused, setPaused] = useState<boolean>(false);
   const stageRef = useRef<HTMLDivElement>(null);
-  const selectedVideoId = images[cursor];
+  const [order, setOrder] = useState<readonly string[]>([]);
+  const selectedVideoId = order[cursor];
 
   useSwipe(stageRef, {
     onLeft: () => onHandleNext(),
     onRight: () => onHandleNext(-1),
   });
 
+  useEffect(() => {
+    const shuffleImages = () => setOrder(shuffle(images));
+    shuffleImages();
+  }, [images]);
+
   const onHandleNext = useCallback(
     (delta: number = 1) => {
       setCursor(
-        (prevCursor) => (prevCursor + delta + images.length) % images.length,
+        (prevCursor) => (prevCursor + delta + order.length) % order.length,
       );
     },
-    [images.length],
+    [order.length],
   );
 
   useEffect(() => {
