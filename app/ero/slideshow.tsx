@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import { PauseCircleIcon } from "lucide-react";
 import { VideoPlayer } from "@/app/ero/video-player";
+import { useSwipe } from "@/app/ero/hooks/useSwipe";
 
 const interval = 10_000; // show a clip for minimum 10 seconds before switching to the next one
 
@@ -13,13 +14,22 @@ type Props = {
 export const Slideshow = ({ images }: Props) => {
   const [cursor, setCursor] = useState<number>(0);
   const [paused, setPaused] = useState<boolean>(false);
+  const stageRef = useRef<HTMLDivElement>(null);
   const selectedVideoId = images[cursor];
 
-  const onHandleNext = (delta: number = 1) => {
-    setCursor(
-      (prevCursor) => (prevCursor + delta + images.length) % images.length,
-    );
-  };
+  useSwipe(stageRef, {
+    onLeft: () => onHandleNext(),
+    onRight: () => onHandleNext(-1),
+  });
+
+  const onHandleNext = useCallback(
+    (delta: number = 1) => {
+      setCursor(
+        (prevCursor) => (prevCursor + delta + images.length) % images.length,
+      );
+    },
+    [images.length],
+  );
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -53,25 +63,21 @@ export const Slideshow = ({ images }: Props) => {
         }
       }
     };
-    const handlePointerDown = (_: PointerEvent) => {
-      setPaused((prevPaused) => !prevPaused);
-    };
 
     window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("pointerdown", handlePointerDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("pointerdown", handlePointerDown);
     };
-  }, [images.length]);
+  }, [images.length, onHandleNext]);
 
   return (
-    <div>
+    <div ref={stageRef} className="relative  bg-black touch-pan-y select-none">
       {paused && (
-        <div className="fixed inset-0 z-50 flex items-start p-4 justify-center">
+        <div className="fixed inset-0 z-50 flex items-center p-4 justify-center">
           <PauseCircleIcon className="w-12 h-12 text-white" />
         </div>
       )}
+
       <VideoPlayer
         id={selectedVideoId}
         minDurationMs={interval}
