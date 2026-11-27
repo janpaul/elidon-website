@@ -16,3 +16,8 @@ export const shuffle = <T>(arr: readonly T[]): T[] => {
   }
   return a;
 };
+
+export const getUriBase = () =>
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://elidon.net";

@@ -1,10 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useState, useRef } from "react";
-import { PauseCircleIcon } from "lucide-react";
+import { PauseCircleIcon, ClipboardEditIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useClipboard } from "@/hooks";
 import { VideoPlayer } from "@/app/ero/video-player";
 import { useSwipe } from "@/app/ero/hooks/useSwipe";
-import { shuffle } from "@/lib/utils";
+import { shuffle, getUriBase } from "@/lib/utils";
 
 const interval = 10_000; // show a clip for minimum 10 seconds before switching to the next one
 
@@ -18,6 +20,7 @@ export const Slideshow = ({ images }: Props) => {
   const stageRef = useRef<HTMLDivElement>(null);
   const [order, setOrder] = useState<readonly string[]>([]);
   const selectedVideoId = order[cursor];
+  const [, copyToClipboard] = useClipboard();
 
   useSwipe(stageRef, {
     onLeft: () => onHandleNext(),
@@ -82,12 +85,22 @@ export const Slideshow = ({ images }: Props) => {
       ref={stageRef}
       className="relative  bg-black touch-pan-y select-none w-full h-full"
     >
+      <div className="flex flex-row justify-end pl-2">
+        <Button
+          size="icon"
+          onClick={() =>
+            copyToClipboard(`${getUriBase()}/ero/${selectedVideoId}`)
+          }
+        >
+          <ClipboardEditIcon className="w-4 h-4" />
+        </Button>
+      </div>
+      v
       {paused && (
         <div className="fixed inset-0 z-50 flex items-center p-4 justify-center">
           <PauseCircleIcon className="w-12 h-12 text-white" />
         </div>
       )}
-
       <VideoPlayer
         id={selectedVideoId}
         minDurationMs={interval}
