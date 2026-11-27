@@ -12,3 +12,5 @@ export const getEroticImageIds = async (
 };
 
 export const getImageUrl = (id: string) => `${CDN}/${EROTIGIF_BASE}/${id}.mp4`;
+export const getImageThumbnailUrl = (id: string) =>
+  `${CDN}/${EROTIGIF_BASE}/thumbs/${id}.jpg`;

@@ -1,19 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useState, useRef } from "react";
-import {
-  PauseCircleIcon,
-  ClipboardCopyIcon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  PlayCircleIcon,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ButtonGroup } from "@/components/ui/button-group";
-import { useClipboard } from "@/hooks";
+import { PauseCircleIcon } from "lucide-react";
 import { VideoPlayer } from "@/app/ero/video-player";
 import { useSwipe } from "@/app/ero/hooks/useSwipe";
-import { shuffle, getUriBase } from "@/lib/utils";
+import { shuffle } from "@/lib/utils";
+import { SlideshowControls } from "@/app/ero/slideshow-controls";
 
 const interval = 10_000; // show a clip for minimum 10 seconds before switching to the next one
 
@@ -27,7 +19,7 @@ export const Slideshow = ({ images }: Props) => {
   const stageRef = useRef<HTMLDivElement>(null);
   const [order, setOrder] = useState<readonly string[]>([]);
   const selectedVideoId = order[cursor];
-  const [hasClipboard, copyToClipboard] = useClipboard();
+
   useSwipe(stageRef, {
     onLeft: () => onHandleNext(),
     onRight: () => onHandleNext(-1),
@@ -88,35 +80,12 @@ export const Slideshow = ({ images }: Props) => {
 
   return (
     <>
-      <ButtonGroup className="">
-        <Button size="icon" onClick={() => onHandleNext(-1)}>
-          <ArrowLeftIcon className="w-4 h-4" />
-        </Button>
-        <Button size="icon" onClick={() => onHandleNext(1)}>
-          <ArrowRightIcon className="w-4 h-4" />
-        </Button>
-        <Button
-          size="icon"
-          onClick={() => setPaused((prevPaused) => !prevPaused)}
-        >
-          {paused ? (
-            <PlayCircleIcon className="w-4 h-4" />
-          ) : (
-            <PauseCircleIcon className="w-4 h-4" />
-          )}
-        </Button>
-        {hasClipboard && (
-          <Button
-            size="icon"
-            onClick={() =>
-              copyToClipboard(`${getUriBase()}/ero/${selectedVideoId}`)
-            }
-          >
-            <ClipboardCopyIcon className="w-4 h-4" />
-          </Button>
-        )}
-      </ButtonGroup>
-
+      <SlideshowControls
+        onHandleNextAction={onHandleNext}
+        paused={paused}
+        setPausedAction={setPaused}
+        id={selectedVideoId}
+      />
       <div
         ref={stageRef}
         className="relative  bg-black touch-pan-y select-none w-full h-full"

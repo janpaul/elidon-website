@@ -1,7 +1,7 @@
 import NextLink from "next/link";
-import { HouseIcon } from "lucide-react";
 import { getEroticImageIds, getImageUrl } from "@/app/ero/helpers";
 import { revalidate } from "@/app/ero/page";
+import { Controls } from "@/app/ero/[id]/controls";
 
 const EroImagePage = async ({
   params,
@@ -13,10 +13,7 @@ const EroImagePage = async ({
 
   return images.find((image) => image === id) ? (
     <div className="w-screen h-screen">
-      <NextLink href="/ero">
-        <HouseIcon className="m-4 h-4" />
-      </NextLink>
-      .
+      <Controls id={id} />
       <video
         src={getImageUrl(id)}
         loop
