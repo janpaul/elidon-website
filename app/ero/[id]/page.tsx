@@ -1,7 +1,7 @@
 import NextLink from "next/link";
+import { HouseIcon } from "lucide-react";
 import { getEroticImageIds, getImageUrl } from "@/app/ero/helpers";
 import { revalidate } from "@/app/ero/page";
-import { VideoPlayer } from "@/app/ero/video-player";
 
 const EroImagePage = async ({
   params,
@@ -12,14 +12,20 @@ const EroImagePage = async ({
   const images = await getEroticImageIds(revalidate);
 
   return images.find((image) => image === id) ? (
-    <video
-      src={getImageUrl(id)}
-      loop
-      autoPlay
-      muted
-      playsInline
-      className="w-screen h-screen object-contain grayscale-100"
-    />
+    <div className="w-screen h-screen">
+      <NextLink href="/ero">
+        <HouseIcon className="m-4 h-4" />
+      </NextLink>
+      .
+      <video
+        src={getImageUrl(id)}
+        loop
+        autoPlay
+        muted
+        playsInline
+        className="w-screen h-screen object-contain grayscale-100"
+      />
+    </div>
   ) : (
     <div>
       <h1 className="text-3xl">Image not found</h1>

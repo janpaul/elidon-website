@@ -1,8 +1,15 @@
 "use client";
 
 import { useCallback, useEffect, useState, useRef } from "react";
-import { PauseCircleIcon, ClipboardEditIcon } from "lucide-react";
+import {
+  PauseCircleIcon,
+  ClipboardCopyIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  PlayCircleIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
 import { useClipboard } from "@/hooks";
 import { VideoPlayer } from "@/app/ero/video-player";
 import { useSwipe } from "@/app/ero/hooks/useSwipe";
@@ -20,8 +27,7 @@ export const Slideshow = ({ images }: Props) => {
   const stageRef = useRef<HTMLDivElement>(null);
   const [order, setOrder] = useState<readonly string[]>([]);
   const selectedVideoId = order[cursor];
-  const [, copyToClipboard] = useClipboard();
-
+  const [hasClipboard, copyToClipboard] = useClipboard();
   useSwipe(stageRef, {
     onLeft: () => onHandleNext(),
     onRight: () => onHandleNext(-1),
@@ -81,32 +87,52 @@ export const Slideshow = ({ images }: Props) => {
   }, [images.length, onHandleNext]);
 
   return (
-    <div
-      ref={stageRef}
-      className="relative  bg-black touch-pan-y select-none w-full h-full"
-    >
-      <div className="flex flex-row justify-end pl-2">
+    <>
+      <ButtonGroup className="">
+        <Button size="icon" onClick={() => onHandleNext(-1)}>
+          <ArrowLeftIcon className="w-4 h-4" />
+        </Button>
+        <Button size="icon" onClick={() => onHandleNext(1)}>
+          <ArrowRightIcon className="w-4 h-4" />
+        </Button>
         <Button
           size="icon"
-          onClick={() =>
-            copyToClipboard(`${getUriBase()}/ero/${selectedVideoId}`)
-          }
+          onClick={() => setPaused((prevPaused) => !prevPaused)}
         >
-          <ClipboardEditIcon className="w-4 h-4" />
+          {paused ? (
+            <PlayCircleIcon className="w-4 h-4" />
+          ) : (
+            <PauseCircleIcon className="w-4 h-4" />
+          )}
         </Button>
+        {hasClipboard && (
+          <Button
+            size="icon"
+            onClick={() =>
+              copyToClipboard(`${getUriBase()}/ero/${selectedVideoId}`)
+            }
+          >
+            <ClipboardCopyIcon className="w-4 h-4" />
+          </Button>
+        )}
+      </ButtonGroup>
+
+      <div
+        ref={stageRef}
+        className="relative  bg-black touch-pan-y select-none w-full h-full"
+      >
+        {paused && (
+          <div className="fixed top-3/6 left-3/6 z-10">
+            <PauseCircleIcon className="w-12 h-12 text-white" />
+          </div>
+        )}
+        <VideoPlayer
+          id={selectedVideoId}
+          minDurationMs={interval}
+          isPaused={paused}
+          handleNextAction={onHandleNext}
+        />
       </div>
-      v
-      {paused && (
-        <div className="fixed inset-0 z-50 flex items-center p-4 justify-center">
-          <PauseCircleIcon className="w-12 h-12 text-white" />
-        </div>
-      )}
-      <VideoPlayer
-        id={selectedVideoId}
-        minDurationMs={interval}
-        isPaused={paused}
-        handleNextAction={onHandleNext}
-      />
-    </div>
+    </>
   );
 };
