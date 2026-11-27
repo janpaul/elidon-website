@@ -11,8 +11,13 @@ const EroGalleryPage = async () => {
     <>
       <Controls />
       <div className="flex flex-row flex-wrap gap-0.5">
-        {sortedImages.map((imageId) => (
-          <GalleryItem key={imageId} imageId={imageId} />
+        {sortedImages.map((imageId, index) => (
+          <GalleryItem
+            key={imageId}
+            imageId={imageId}
+            index={index}
+            total={sortedImages.length}
+          />
         ))}
       </div>
     </>
